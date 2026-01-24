@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OpenEOS Landing Page
 
-## Getting Started
+> Marketing-Website für OpenEOS - Das moderne Kassensystem für Vereine & Events.
 
-First, run the development server:
+## Entwicklung & Lizenz
+
+**Entwickelt von:** LUXCODE by Lukas Lukic-Spitznagel
+
+**Lizenz:** [AGPLv3](./LICENSE) (GNU Affero General Public License v3.0)
+
+## Beschreibung
+
+Die OpenEOS Landing Page ist die offizielle Marketing- und Informationswebsite für das OpenEOS Kassensystem. Sie bietet:
+
+- Produktübersicht und Feature-Beschreibungen
+- Preismodelle (Self-Hosted & SaaS)
+- Open Source Informationen
+- Zugang zu Login und Registrierung
+- Rechtliche Seiten (Impressum, Datenschutz, AGB)
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Styling:** TailwindCSS + Untitled UI
+- **Animationen:** Framer Motion
+- **i18n:** next-intl (Deutsch & Englisch)
+- **Themes:** next-themes (Dark/Light Mode)
+
+## Entwicklung
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Voraussetzungen
 
-## Learn More
+- K3s Cluster mit Traefik und cert-manager (siehe [openeos-infrastructure](../openeos-infrastructure/))
+- GitHub Repository unter `OpenEOS-Project/openeos-landing`
+- DNS-Einträge für `openeos.de` und `www.openeos.de`
 
-To learn more about Next.js, take a look at the following resources:
+### Manuelles Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# 1. Docker Image bauen
+docker build -t ghcr.io/openeos-project/openeos-landing:latest .
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 2. Image pushen (GitHub Login erforderlich)
+echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
+docker push ghcr.io/openeos-project/openeos-landing:latest
 
-## Deploy on Vercel
+# 3. Auf K3s deployen
+kubectl apply -k k8s/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 4. Status prüfen
+kubectl get pods -n openeos -l app=openeos-landing
+kubectl get ingress -n openeos
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Automatisches Deployment (CI/CD)
+
+Bei jedem Push auf `main` wird automatisch:
+
+1. **Lint & Build** geprüft
+2. **Docker Image** gebaut und zu `ghcr.io` gepusht
+3. **Deployment** auf K3s aktualisiert
+
+#### GitHub Secrets einrichten
+
+Im Repository unter **Settings → Secrets and variables → Actions**:
+
+| Secret | Beschreibung |
+|--------|--------------|
+| `KUBECONFIG` | Kubeconfig-Datei für K3s Cluster |
+
+Die kubeconfig vom K3s Server holen:
+```bash
+# Auf dem K3s Master
+sudo cat /etc/rancher/k3s/k3s.yaml
+
+# WICHTIG: "127.0.0.1" durch die externe Node-IP ersetzen!
+```
+
+### Kubernetes Ressourcen
+
+```
+k8s/
+├── deployment.yaml    # 2 Replicas, Port 3000
+├── service.yaml       # ClusterIP Service
+├── ingress.yaml       # TLS für openeos.de + www.openeos.de
+└── kustomization.yaml
+```
+
+### Domain anpassen
+
+Falls du eine andere Domain verwendest, ändere in `k8s/ingress.yaml`:
+
+```yaml
+spec:
+  tls:
+    - hosts:
+        - deine-domain.de
+      secretName: openeos-landing-tls
+  rules:
+    - host: deine-domain.de
+```
+
+### Troubleshooting
+
+```bash
+# Pod-Status
+kubectl get pods -n openeos -l app=openeos-landing
+
+# Pod-Logs
+kubectl logs -n openeos -l app=openeos-landing
+
+# Ingress prüfen
+kubectl get ingress -n openeos
+kubectl describe ingress openeos-landing -n openeos
+
+# Zertifikat-Status
+kubectl get certificate -n openeos
+kubectl describe certificate openeos-landing-tls -n openeos
+```
+
+---
+
+## Links
+
+- **Hauptprojekt:** [OpenEOS](https://github.com/OpenEOS-Project)
+- **Infrastructure:** [openeos-infrastructure](../openeos-infrastructure/)
+- **Dokumentation:** [PLAN/](../PLAN/)

@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "title": "OpenEOS - Das moderne Kassensystem für Vereine & Events",
+    "description": "Flexibles, mobiles und Open Source Kassensystem. Von der kleinen Vereinsfesten bis zu großen Veranstaltungen."
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Preise",
+    "openSource": "Open Source",
+    "login": "Anmelden",
+    "register": "Registrieren"
+  },
+  "hero": {
+    "title": "Das moderne Kassensystem",
+    "titleHighlight": "für Vereine & Events",
+    "subtitle": "Flexibel, mobil und Open Source. Von der kleinen Vereinsfesten bis zu großen Veranstaltungen.",
+    "cta": {
+      "start": "Kostenlos starten",
+      "demo": "Demo anfragen"
+    }
+  },
+  "features": {
+    "title": "Alles was du brauchst",
+    "subtitle": "Ein System für alle Anforderungen deiner Veranstaltung",
+    "items": {
+      "mobile": {
+        "title": "Mobile Kasse",
+        "description": "Bedienung über Smartphone oder Tablet - überall auf dem Gelände"
+      },
+      "qrOrder": {
+        "title": "Online-Bestellung",
+        "description": "Gäste bestellen per QR-Code selbst - weniger Wartezeit, mehr Umsatz"
+      },
+      "display": {
+        "title": "Küchen-Display",
+        "description": "Echtzeit-Anzeige für Küche & Ausgabe - keine verlorenen Bons mehr"
+      },
+      "payment": {
+        "title": "Digitale Zahlung",
+        "description": "SumUp Integration für Kartenzahlung - schnell und sicher"
+      },
+      "printer": {
+        "title": "Bondruck",
+        "description": "Automatischer Druck über Raspberry Pi - günstige Hardware"
+      },
+      "workflow": {
+        "title": "Workflow-Engine",
+        "description": "Automatisiere Abläufe wie Bestellweiterleitung oder Benachrichtigungen"
+      },
+      "stats": {
+        "title": "Statistiken",
+        "description": "Echtzeit-Auswertungen und Berichte - immer den Überblick"
+      },
+      "openSource": {
+        "title": "Open Source",
+        "description": "AGPLv3 Lizenz, selbst hosten - volle Kontrolle über deine Daten"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Einfache, faire Preise",
+    "subtitle": "Keine versteckten Kosten - zahle nur was du brauchst",
+    "selfHosted": {
+      "title": "Self-Hosted",
+      "price": "Kostenlos",
+      "period": "",
+      "description": "Für technisch Versierte",
+      "features": [
+        "Alle Features inklusive",
+        "Unbegrenzte Events",
+        "Eigener Server",
+        "Community Support"
+      ],
+      "cta": "Dokumentation"
+    },
+    "saas": {
+      "title": "SaaS",
+      "price": "25 €",
+      "period": "pro Event-Tag",
+      "description": "Wir kümmern uns um alles",
+      "features": [
+        "Alle Features inklusive",
+        "Hosting & Backups",
+        "Premium Support (E-Mail, Telefon, WhatsApp)",
+        "Keine Einrichtung nötig"
+      ],
+      "cta": "Jetzt starten"
+    },
+    "saasPro": {
+      "title": "SaaS Pro",
+      "price": "20 €",
+      "period": "pro Tag (10er Paket)",
+      "description": "Für Vielnutzer",
+      "features": [
+        "Alle Features inklusive",
+        "Hosting & Backups",
+        "Premium Support (E-Mail, Telefon, WhatsApp)",
+        "20% Ersparnis"
+      ],
+      "cta": "Paket kaufen"
+    },
+    "hardware": {
+      "title": "Hardware-Vermietung",
+      "description": "Drucker und Displays auf Anfrage",
+      "price": "50 € pro Gerät pro Tag"
+    },
+    "packages": {
+      "title": "Prepaid-Pakete",
+      "perDay": "pro Tag",
+      "savings": "Ersparnis"
+    }
+  },
+  "openSource": {
+    "title": "100% Open Source",
+    "subtitle": "OpenEOS ist unter der AGPLv3-Lizenz verfügbar. Hoste es selbst, passe es an, trage bei.",
+    "github": "GitHub",
+    "docs": "Dokumentation",
+    "community": "Community"
+  },
+  "cta": {
+    "title": "Bereit für dein nächstes Event?",
+    "subtitle": "Starte jetzt kostenlos und überzeuge dich selbst.",
+    "button": "Organisation registrieren"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "responsible": {
+      "title": "Angaben gemäß § 5 TMG",
+      "content": "Lukas [Nachname]\n[Straße Hausnummer]\n[PLZ Ort]\nDeutschland"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "E-Mail: kontakt@openeos.de\nTelefon: [Telefonnummer]"
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "liability": {
+        "title": "Haftung für Inhalte",
+        "content": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen."
+      },
+      "links": {
+        "title": "Haftung für Links",
+        "content": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich."
+      }
+    },
+    "copyright": {
+      "title": "Urheberrecht",
+      "content": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Stand: Januar 2025",
+    "overview": {
+      "title": "1. Datenschutz auf einen Blick",
+      "content": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."
+    },
+    "responsible": {
+      "title": "2. Verantwortliche Stelle",
+      "content": "Lukas [Nachname]\n[Straße Hausnummer]\n[PLZ Ort]\nDeutschland\n\nE-Mail: kontakt@openeos.de"
+    },
+    "dataCollection": {
+      "title": "3. Datenerfassung auf dieser Website",
+      "server": {
+        "title": "Server-Log-Dateien",
+        "content": "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind: Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Diese Website verwendet nur technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind (z.B. zur Speicherung Ihrer Spracheinstellung und Theme-Präferenz). Diese Cookies werden ohne Ihre Einwilligung gesetzt, da sie für die Grundfunktionen der Website erforderlich sind."
+      },
+      "contact": {
+        "title": "Kontaktaufnahme",
+        "content": "Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."
+      }
+    },
+    "hosting": {
+      "title": "4. Hosting",
+      "content": "Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln."
+    },
+    "rights": {
+      "title": "5. Ihre Rechte",
+      "content": "Sie haben jederzeit das Recht:\n• Auskunft über Ihre bei uns gespeicherten Daten zu erhalten\n• Diese Daten berichtigen oder löschen zu lassen\n• Die Verarbeitung einzuschränken\n• Der Verarbeitung zu widersprechen\n• Ihre Daten in einem übertragbaren Format zu erhalten\n• Eine Beschwerde bei einer Aufsichtsbehörde einzureichen"
+    },
+    "changes": {
+      "title": "6. Änderungen",
+      "content": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung."
+    }
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "lastUpdated": "Stand: Januar 2025",
+    "scope": {
+      "title": "1. Geltungsbereich",
+      "content": "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen OpenEOS (nachfolgend \"Anbieter\") und dem Kunden über die Nutzung der OpenEOS Software-as-a-Service (SaaS) Plattform sowie damit verbundener Dienstleistungen."
+    },
+    "services": {
+      "title": "2. Leistungsbeschreibung",
+      "content": "Der Anbieter stellt dem Kunden eine webbasierte Kassensystem-Lösung (POS) zur Verfügung. Die Leistungen umfassen:\n• Zugang zur OpenEOS Plattform\n• Hosting und Wartung der Infrastruktur\n• Regelmäßige Updates und Sicherheitspatches\n• Support per E-Mail, Telefon und WhatsApp (bei SaaS-Tarifen)\n• Datensicherung und Backup"
+    },
+    "registration": {
+      "title": "3. Registrierung und Vertragsschluss",
+      "content": "Die Registrierung erfolgt durch Anlegen einer Organisation auf der Plattform. Mit Abschluss der Registrierung kommt ein Vertrag zwischen dem Kunden und dem Anbieter zustande. Der Kunde versichert, dass alle angegebenen Daten korrekt und vollständig sind."
+    },
+    "pricing": {
+      "title": "4. Preise und Tarife",
+      "content": "Es gelten die zum Zeitpunkt der Buchung auf der Website ausgewiesenen Preise:\n• SaaS: 25 € pro Event-Tag\n• SaaS Pro (10er Paket): 20 € pro Tag\n• Hardware-Vermietung: 50 € pro Gerät pro Tag\n\nAlle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer."
+    },
+    "payment": {
+      "title": "5. Zahlung",
+      "content": "Die Zahlung erfolgt per Prepaid-Guthaben. Das Guthaben wird vor Nutzung der Dienste erworben und bei Nutzung entsprechend abgebucht. Nicht genutztes Guthaben verfällt nicht und kann jederzeit eingesetzt werden."
+    },
+    "obligations": {
+      "title": "6. Pflichten des Kunden",
+      "content": "Der Kunde verpflichtet sich:\n• Die Zugangsdaten vertraulich zu behandeln\n• Die Plattform nicht missbräuchlich zu nutzen\n• Keine rechtswidrigen Inhalte zu verarbeiten\n• Die geltenden Datenschutzbestimmungen einzuhalten\n• Für die Richtigkeit der eingegebenen Daten zu sorgen"
+    },
+    "liability": {
+      "title": "7. Haftung",
+      "content": "Der Anbieter haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie für vorsätzlich oder grob fahrlässig verursachte Schäden. Im Übrigen ist die Haftung auf vorhersehbare, vertragstypische Schäden begrenzt. Eine Haftung für entgangenen Gewinn, mittelbare Schäden oder Datenverlust ist ausgeschlossen, soweit gesetzlich zulässig."
+    },
+    "termination": {
+      "title": "8. Vertragslaufzeit und Kündigung",
+      "content": "Der Vertrag wird auf unbestimmte Zeit geschlossen. Beide Parteien können den Vertrag jederzeit mit einer Frist von 14 Tagen zum Monatsende kündigen. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Bei Kündigung wird verbleibendes Guthaben nicht erstattet."
+    },
+    "changes": {
+      "title": "9. Änderungen der AGB",
+      "content": "Der Anbieter behält sich vor, diese AGB zu ändern. Änderungen werden dem Kunden mindestens 30 Tage vor Inkrafttreten mitgeteilt. Widerspricht der Kunde nicht innerhalb von 14 Tagen nach Zugang der Mitteilung, gelten die geänderten AGB als angenommen."
+    },
+    "jurisdiction": {
+      "title": "10. Schlussbestimmungen",
+      "content": "Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten aus diesem Vertrag ist, soweit gesetzlich zulässig, der Sitz des Anbieters. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
+    }
+  },
+  "footer": {
+    "product": "Produkt",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "follow": "Folgen",
+    "features": "Features",
+    "pricing": "Preise",
+    "demo": "Demo anfragen",
+    "docs": "Dokumentation",
+    "api": "API Docs",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "copyright": "© {year} OpenEOS",
+    "madeWith": "Made with",
+    "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel"
+  }
+}

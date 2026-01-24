@@ -1,0 +1,93 @@
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return (
+    <>
+      <Header />
+      <main className="pt-24 pb-16 min-h-screen">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <PrivacyContent />
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function PrivacyContent() {
+  const t = useTranslations("privacy");
+
+  return (
+    <article className="prose prose-gray dark:prose-invert max-w-none">
+      <h1 className="text-display-sm font-semibold text-primary mb-4">
+        {t("title")}
+      </h1>
+      <p className="text-tertiary mb-8">{t("lastUpdated")}</p>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("overview.title")}
+        </h2>
+        <p className="text-tertiary">{t("overview.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("responsible.title")}
+        </h2>
+        <p className="text-tertiary whitespace-pre-line">{t("responsible.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("dataCollection.title")}
+        </h2>
+        <h3 className="text-lg font-medium text-secondary mb-2">
+          {t("dataCollection.server.title")}
+        </h3>
+        <p className="text-tertiary mb-4">{t("dataCollection.server.content")}</p>
+
+        <h3 className="text-lg font-medium text-secondary mb-2">
+          {t("dataCollection.cookies.title")}
+        </h3>
+        <p className="text-tertiary mb-4">{t("dataCollection.cookies.content")}</p>
+
+        <h3 className="text-lg font-medium text-secondary mb-2">
+          {t("dataCollection.contact.title")}
+        </h3>
+        <p className="text-tertiary">{t("dataCollection.contact.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("hosting.title")}
+        </h2>
+        <p className="text-tertiary">{t("hosting.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("rights.title")}
+        </h2>
+        <p className="text-tertiary whitespace-pre-line">{t("rights.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("changes.title")}
+        </h2>
+        <p className="text-tertiary">{t("changes.content")}</p>
+      </section>
+    </article>
+  );
+}

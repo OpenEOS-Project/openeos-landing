@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import "../styles/theme.css";
-@import "../styles/typography.css";
+@import "./theme.css";
+@import "./typography.css";
 
 @plugin "@tailwindcss/typography";
 @plugin "tailwindcss-react-aria-components";

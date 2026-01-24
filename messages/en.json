@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "title": "OpenEOS - The Modern POS System for Clubs & Events",
+    "description": "Flexible, mobile and open source POS system. From small club parties to large festivals."
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "openSource": "Open Source",
+    "login": "Login",
+    "register": "Register"
+  },
+  "hero": {
+    "title": "The Modern POS System",
+    "titleHighlight": "for Clubs & Events",
+    "subtitle": "Flexible, mobile and open source. From small club parties to large festivals.",
+    "cta": {
+      "start": "Start for Free",
+      "demo": "Request Demo"
+    }
+  },
+  "features": {
+    "title": "Everything You Need",
+    "subtitle": "One system for all your event requirements",
+    "items": {
+      "mobile": {
+        "title": "Mobile POS",
+        "description": "Operate via smartphone or tablet - anywhere on the venue"
+      },
+      "qrOrder": {
+        "title": "Online Ordering",
+        "description": "Guests order via QR code - less waiting, more revenue"
+      },
+      "display": {
+        "title": "Kitchen Display",
+        "description": "Real-time display for kitchen & pickup - no more lost tickets"
+      },
+      "payment": {
+        "title": "Digital Payment",
+        "description": "SumUp integration for card payments - fast and secure"
+      },
+      "printer": {
+        "title": "Receipt Printing",
+        "description": "Automatic printing via Raspberry Pi - affordable hardware"
+      },
+      "workflow": {
+        "title": "Workflow Engine",
+        "description": "Automate processes like order routing or notifications"
+      },
+      "stats": {
+        "title": "Statistics",
+        "description": "Real-time analytics and reports - always stay on top"
+      },
+      "openSource": {
+        "title": "Open Source",
+        "description": "AGPLv3 License, self-host - full control over your data"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple, Fair Pricing",
+    "subtitle": "No hidden costs - pay only for what you need",
+    "selfHosted": {
+      "title": "Self-Hosted",
+      "price": "Free",
+      "period": "",
+      "description": "For the technically savvy",
+      "features": [
+        "All features included",
+        "Unlimited events",
+        "Your own server",
+        "Community support"
+      ],
+      "cta": "Documentation"
+    },
+    "saas": {
+      "title": "SaaS",
+      "price": "€25",
+      "period": "per event day",
+      "description": "We take care of everything",
+      "features": [
+        "All features included",
+        "Hosting & backups",
+        "Premium Support (Email, Phone, WhatsApp)",
+        "No setup required"
+      ],
+      "cta": "Get Started"
+    },
+    "saasPro": {
+      "title": "SaaS Pro",
+      "price": "€20",
+      "period": "per day (10-pack)",
+      "description": "For frequent users",
+      "features": [
+        "All features included",
+        "Hosting & backups",
+        "Premium Support (Email, Phone, WhatsApp)",
+        "20% savings"
+      ],
+      "cta": "Buy Package"
+    },
+    "hardware": {
+      "title": "Hardware Rental",
+      "description": "Printers and displays available on request",
+      "price": "€50 per device per day"
+    },
+    "packages": {
+      "title": "Prepaid Packages",
+      "perDay": "per day",
+      "savings": "savings"
+    }
+  },
+  "openSource": {
+    "title": "100% Open Source",
+    "subtitle": "OpenEOS is available under the AGPLv3 License. Self-host it, customize it, contribute.",
+    "github": "GitHub",
+    "docs": "Documentation",
+    "community": "Community"
+  },
+  "cta": {
+    "title": "Ready for Your Next Event?",
+    "subtitle": "Start for free and see for yourself.",
+    "button": "Register Organization"
+  },
+  "imprint": {
+    "title": "Imprint",
+    "responsible": {
+      "title": "Information according to § 5 TMG",
+      "content": "Lukas [Last Name]\n[Street Number]\n[Postal Code City]\nGermany"
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Email: kontakt@openeos.de\nPhone: [Phone Number]"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "liability": {
+        "title": "Liability for Content",
+        "content": "As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 Abs.1 TMG. However, according to §§ 8 to 10 TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity."
+      },
+      "links": {
+        "title": "Liability for Links",
+        "content": "Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages."
+      }
+    },
+    "copyright": {
+      "title": "Copyright",
+      "content": "The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2025",
+    "overview": {
+      "title": "1. Privacy at a Glance",
+      "content": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you."
+    },
+    "responsible": {
+      "title": "2. Responsible Party",
+      "content": "Lukas [Last Name]\n[Street Number]\n[Postal Code City]\nGermany\n\nEmail: kontakt@openeos.de"
+    },
+    "dataCollection": {
+      "title": "3. Data Collection on this Website",
+      "server": {
+        "title": "Server Log Files",
+        "content": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are: browser type and version, operating system used, referrer URL, hostname of the accessing computer, time of the server request, and IP address. This data is not merged with other data sources."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "This website only uses technically necessary cookies that are required for the operation of the website (e.g., to store your language setting and theme preference). These cookies are set without your consent as they are necessary for the basic functions of the website."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "If you contact us by email, your details including the contact data you provide will be stored for the purpose of processing the inquiry and for possible follow-up questions. We will not share this data without your consent."
+      }
+    },
+    "hosting": {
+      "title": "4. Hosting",
+      "content": "This website is hosted by an external service provider (hoster). The personal data collected on this website is stored on the hoster's servers. This may include IP addresses, contact requests, meta and communication data, contract data, contact details, names, website accesses, and other data generated via a website."
+    },
+    "rights": {
+      "title": "5. Your Rights",
+      "content": "You have the right at any time to:\n• Obtain information about your data stored with us\n• Have this data corrected or deleted\n• Restrict processing\n• Object to processing\n• Receive your data in a transferable format\n• File a complaint with a supervisory authority"
+    },
+    "changes": {
+      "title": "6. Changes",
+      "content": "We reserve the right to adapt this privacy policy so that it always complies with current legal requirements or to implement changes to our services in the privacy policy. The new privacy policy will then apply to your next visit."
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "lastUpdated": "Last updated: January 2025",
+    "scope": {
+      "title": "1. Scope",
+      "content": "These Terms and Conditions apply to all contracts between OpenEOS (hereinafter \"Provider\") and the Customer regarding the use of the OpenEOS Software-as-a-Service (SaaS) platform and related services."
+    },
+    "services": {
+      "title": "2. Service Description",
+      "content": "The Provider provides the Customer with a web-based point-of-sale (POS) system solution. Services include:\n• Access to the OpenEOS platform\n• Hosting and infrastructure maintenance\n• Regular updates and security patches\n• Support via email, phone, and WhatsApp (for SaaS plans)\n• Data backup and recovery"
+    },
+    "registration": {
+      "title": "3. Registration and Contract Formation",
+      "content": "Registration is completed by creating an organization on the platform. Upon completion of registration, a contract is formed between the Customer and the Provider. The Customer warrants that all provided information is accurate and complete."
+    },
+    "pricing": {
+      "title": "4. Prices and Plans",
+      "content": "The prices displayed on the website at the time of booking apply:\n• SaaS: €25 per event day\n• SaaS Pro (10-pack): €20 per day\n• Hardware rental: €50 per device per day\n\nAll prices include applicable VAT."
+    },
+    "payment": {
+      "title": "5. Payment",
+      "content": "Payment is made via prepaid credit. Credit is purchased before using the services and deducted accordingly upon use. Unused credit does not expire and can be used at any time."
+    },
+    "obligations": {
+      "title": "6. Customer Obligations",
+      "content": "The Customer agrees to:\n• Keep access credentials confidential\n• Not misuse the platform\n• Not process any illegal content\n• Comply with applicable data protection regulations\n• Ensure the accuracy of entered data"
+    },
+    "liability": {
+      "title": "7. Liability",
+      "content": "The Provider is fully liable for damages resulting from injury to life, body, or health, as well as for damages caused intentionally or through gross negligence. Otherwise, liability is limited to foreseeable, contract-typical damages. Liability for lost profits, indirect damages, or data loss is excluded to the extent permitted by law."
+    },
+    "termination": {
+      "title": "8. Contract Duration and Termination",
+      "content": "The contract is concluded for an indefinite period. Either party may terminate the contract at any time with 14 days' notice to the end of the month. The right to extraordinary termination for good cause remains unaffected. Upon termination, remaining credit will not be refunded."
+    },
+    "changes": {
+      "title": "9. Changes to Terms",
+      "content": "The Provider reserves the right to modify these Terms. Changes will be communicated to the Customer at least 30 days before taking effect. If the Customer does not object within 14 days of receiving notice, the modified Terms are deemed accepted."
+    },
+    "jurisdiction": {
+      "title": "10. Final Provisions",
+      "content": "The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods. The place of jurisdiction for all disputes arising from this contract is, to the extent permitted by law, the Provider's place of business. Should individual provisions of these Terms be invalid, the validity of the remaining provisions remains unaffected."
+    }
+  },
+  "footer": {
+    "product": "Product",
+    "resources": "Resources",
+    "legal": "Legal",
+    "follow": "Follow",
+    "features": "Features",
+    "pricing": "Pricing",
+    "demo": "Request Demo",
+    "docs": "Documentation",
+    "api": "API Docs",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© {year} OpenEOS",
+    "madeWith": "Made with",
+    "productBy": "A product by LUXCODE by Lukas Lukic-Spitznagel"
+  }
+}
