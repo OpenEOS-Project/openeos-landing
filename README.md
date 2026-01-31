@@ -39,9 +39,17 @@ pnpm dev
 
 ### Voraussetzungen
 
-- K3s Cluster mit Traefik und cert-manager (siehe [openeos-infrastructure](../openeos-infrastructure/))
+- Docker & Docker Compose auf dem Server
 - GitHub Repository unter `OpenEOS-Project/openeos-landing`
-- DNS-Einträge für `openeos.de` und `www.openeos.de`
+- DNS-Einträge für `openeos.de` und `www.openeos.de` (A-Record auf Server-IP)
+
+### Docker Netzwerk erstellen
+
+Das externe Netzwerk muss einmalig erstellt werden:
+
+```bash
+docker network create frontend
+```
 
 ### Manuelles Deployment
 
@@ -53,12 +61,8 @@ docker build -t ghcr.io/openeos-project/openeos-landing:latest .
 echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
 docker push ghcr.io/openeos-project/openeos-landing:latest
 
-# 3. Auf K3s deployen
-kubectl apply -k k8s/
-
-# 4. Status prüfen
-kubectl get pods -n openeos -l app=openeos-landing
-kubectl get ingress -n openeos
+# 3. Auf Server deployen
+docker compose up -d
 ```
 
 ### Automatisches Deployment (CI/CD)
@@ -67,64 +71,76 @@ Bei jedem Push auf `main` wird automatisch:
 
 1. **Lint & Build** geprüft
 2. **Docker Image** gebaut und zu `ghcr.io` gepusht
-3. **Deployment** auf K3s aktualisiert
 
-#### GitHub Secrets einrichten
+Das Image kann dann auf dem Server mit `docker compose pull && docker compose up -d` aktualisiert werden.
 
-Im Repository unter **Settings → Secrets and variables → Actions**:
+### Docker Compose Konfiguration
 
-| Secret | Beschreibung |
-|--------|--------------|
-| `KUBECONFIG` | Kubeconfig-Datei für K3s Cluster |
+Die `docker-compose.yml` enthält:
 
-Die kubeconfig vom K3s Server holen:
+- **openeos-landing**: Die Next.js Landing Page (Port 3000 intern)
+- **traefik**: Reverse Proxy mit automatischem Let's Encrypt
+
+#### Traefik Features
+
+- Automatische HTTPS-Zertifikate via Let's Encrypt
+- HTTP → HTTPS Redirect
+- www.openeos.de → openeos.de Redirect
+- Dashboard unter `traefik.openeos.de` (optional aktivierbar)
+
+### Server Setup
+
 ```bash
-# Auf dem K3s Master
-sudo cat /etc/rancher/k3s/k3s.yaml
+# 1. Repository klonen oder docker-compose.yml kopieren
+git clone https://github.com/OpenEOS-Project/openeos-landing.git
+cd openeos-landing
 
-# WICHTIG: "127.0.0.1" durch die externe Node-IP ersetzen!
+# 2. Netzwerk erstellen (falls noch nicht vorhanden)
+docker network create frontend
+
+# 3. Bei GHCR anmelden
+echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
+
+# 4. Services starten
+docker compose up -d
+
+# 5. Logs prüfen
+docker compose logs -f
 ```
 
-### Kubernetes Ressourcen
+### Update auf neue Version
 
-```
-k8s/
-├── deployment.yaml    # 2 Replicas, Port 3000
-├── service.yaml       # ClusterIP Service
-├── ingress.yaml       # TLS für openeos.de + www.openeos.de
-└── kustomization.yaml
-```
-
-### Domain anpassen
-
-Falls du eine andere Domain verwendest, ändere in `k8s/ingress.yaml`:
-
-```yaml
-spec:
-  tls:
-    - hosts:
-        - deine-domain.de
-      secretName: openeos-landing-tls
-  rules:
-    - host: deine-domain.de
+```bash
+docker compose pull
+docker compose up -d
 ```
 
 ### Troubleshooting
 
 ```bash
-# Pod-Status
-kubectl get pods -n openeos -l app=openeos-landing
+# Container-Status
+docker compose ps
 
-# Pod-Logs
-kubectl logs -n openeos -l app=openeos-landing
+# Logs anzeigen
+docker compose logs openeos-landing
+docker compose logs traefik
 
-# Ingress prüfen
-kubectl get ingress -n openeos
-kubectl describe ingress openeos-landing -n openeos
+# Zertifikat-Status prüfen
+docker compose exec traefik cat /letsencrypt/acme.json | jq '.letsencrypt.Certificates'
 
-# Zertifikat-Status
-kubectl get certificate -n openeos
-kubectl describe certificate openeos-landing-tls -n openeos
+# Container neu starten
+docker compose restart openeos-landing
+```
+
+### Traefik Dashboard absichern
+
+Um das Dashboard zu aktivieren, generiere einen Passwort-Hash und füge ihn in `docker-compose.yml` ein:
+
+```bash
+# Passwort-Hash generieren
+htpasswd -nb admin dein-passwort
+
+# Ausgabe in docker-compose.yml einfügen und Labels auskommentieren
 ```
 
 ---
@@ -132,5 +148,4 @@ kubectl describe certificate openeos-landing-tls -n openeos
 ## Links
 
 - **Hauptprojekt:** [OpenEOS](https://github.com/OpenEOS-Project)
-- **Infrastructure:** [openeos-infrastructure](../openeos-infrastructure/)
 - **Dokumentation:** [PLAN/](../PLAN/)

@@ -1,0 +1,32 @@
+services:
+  openeos-landing:
+    image: ghcr.io/openeos-project/openeos-landing:latest
+    container_name: openeos-landing
+    restart: unless-stopped
+    networks:
+      - frontend
+    labels:
+      - "traefik.enable=true"
+      # HTTP Router - openeos.de
+      - "traefik.http.routers.openeos-landing.rule=Host(`openeos.de`) || Host(`www.openeos.de`)"
+      - "traefik.http.routers.openeos-landing.entrypoints=web"
+      - "traefik.http.routers.openeos-landing.middlewares=redirect-to-https"
+      # HTTPS Router - openeos.de
+      - "traefik.http.routers.openeos-landing-secure.rule=Host(`openeos.de`) || Host(`www.openeos.de`)"
+      - "traefik.http.routers.openeos-landing-secure.entrypoints=websecure"
+      - "traefik.http.routers.openeos-landing-secure.tls=true"
+      - "traefik.http.routers.openeos-landing-secure.tls.certresolver=letsencrypt"
+      # Redirect www to non-www
+      - "traefik.http.routers.openeos-landing-secure.middlewares=redirect-www-to-non-www"
+      - "traefik.http.middlewares.redirect-www-to-non-www.redirectregex.regex=^https://www\\.openeos\\.de/(.*)"
+      - "traefik.http.middlewares.redirect-www-to-non-www.redirectregex.replacement=https://openeos.de/$${1}"
+      - "traefik.http.middlewares.redirect-www-to-non-www.redirectregex.permanent=true"
+      # HTTP to HTTPS redirect
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+      # Service
+      - "traefik.http.services.openeos-landing.loadbalancer.server.port=3000"
+
+networks:
+  frontend:
+    external: true
