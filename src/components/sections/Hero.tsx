@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -42,13 +43,13 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <a
-              href="/register"
+            <Link
+              href="/register/"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-md font-semibold text-white bg-brand-solid hover:bg-brand-solid_hover rounded-lg transition-colors shadow-xs-skeumorphic w-full sm:w-auto"
             >
               {t("cta.start")}
               <ArrowRight className="w-5 h-5" />
-            </a>
+            </Link>
             <a
               href="#demo"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-md font-semibold text-secondary bg-primary hover:bg-primary_hover ring-1 ring-primary ring-inset rounded-lg transition-colors shadow-xs-skeumorphic w-full sm:w-auto"

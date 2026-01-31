@@ -14,6 +14,7 @@ export function Logo({ className }: LogoProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Required for hydration handling with next-themes
     setMounted(true);
   }, []);
 

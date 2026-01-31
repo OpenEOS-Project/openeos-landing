@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
-import { locales, type Locale } from "@/i18n/config";
+import { locales } from "@/i18n/config";
 
 const inter = Inter({
   variable: "--font-inter",

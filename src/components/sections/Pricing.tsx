@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Check, Server, Cloud, Zap } from "lucide-react";
+import Link from "next/link";
 
 const packages = [
   { days: 1, price: 25, perDay: 25, discount: null },
@@ -67,12 +68,12 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a
-              href="/docs"
+            <Link
+              href="/docs/"
               className="mt-8 block w-full text-center px-6 py-3 text-md font-semibold text-secondary bg-primary hover:bg-primary_hover ring-1 ring-primary ring-inset rounded-lg transition-colors"
             >
               {t("selfHosted.cta")}
-            </a>
+            </Link>
           </motion.div>
 
           {/* SaaS - Featured */}
@@ -109,12 +110,12 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a
-              href="/register"
+            <Link
+              href="/register/"
               className="mt-8 block w-full text-center px-6 py-3 text-md font-semibold text-white bg-brand-solid hover:bg-brand-solid_hover rounded-lg transition-colors shadow-xs-skeumorphic"
             >
               {t("saas.cta")}
-            </a>
+            </Link>
           </motion.div>
 
           {/* SaaS Pro */}
@@ -146,12 +147,12 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a
-              href="/register"
+            <Link
+              href="/register/"
               className="mt-8 block w-full text-center px-6 py-3 text-md font-semibold text-secondary bg-primary hover:bg-primary_hover ring-1 ring-primary ring-inset rounded-lg transition-colors"
             >
               {t("saasPro.cta")}
-            </a>
+            </Link>
           </motion.div>
         </div>
 

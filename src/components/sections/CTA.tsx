@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function CTA() {
   const t = useTranslations("cta");
@@ -31,13 +32,13 @@ export function CTA() {
               {t("subtitle")}
             </p>
             <div className="mt-8">
-              <a
-                href="/register"
+              <Link
+                href="/register/"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 text-md font-semibold text-brand-700 bg-white hover:bg-brand-50 rounded-lg transition-colors"
               >
                 {t("button")}
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>
