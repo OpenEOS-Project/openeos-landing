@@ -10,21 +10,19 @@ export function LanguageSwitch() {
   const pathname = usePathname();
 
   const handleChange = (newLocale: Locale) => {
+    if (newLocale === locale) return;
     router.replace(pathname, { locale: newLocale });
   };
 
   return (
-    <div className="flex items-center gap-1 text-sm">
+    <div className="lang" role="group" aria-label="Sprache">
       {locales.map((loc, index) => (
         <span key={loc} className="flex items-center">
-          {index > 0 && <span className="text-fg-disabled mx-1">|</span>}
+          {index > 0 && <span className="lang__sep">/</span>}
           <button
+            type="button"
+            className={`lang__btn ${locale === loc ? "is-active" : ""}`}
             onClick={() => handleChange(loc)}
-            className={`px-1 py-0.5 rounded transition-colors ${
-              locale === loc
-                ? "text-fg-brand-primary font-medium"
-                : "text-fg-quaternary hover:text-fg-quaternary_hover"
-            }`}
           >
             {loc.toUpperCase()}
           </button>

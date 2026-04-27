@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, JetBrains_Mono, Archivo_Black } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { locales } from "@/i18n/config";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geist = Geist({
+  variable: "--f-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--f-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+const archivoBlack = Archivo_Black({
+  variable: "--f-display",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export function generateStaticParams() {
@@ -42,15 +55,17 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} antialiased bg-primary text-primary`}>
+      <body className={`${geist.variable} ${jetbrainsMono.variable} ${archivoBlack.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           value={{ light: "light-mode", dark: "dark-mode" }}
-          enableSystem
-          defaultTheme="system"
+          forcedTheme="light"
         >
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <div className="landing">
+              <div className="grain" aria-hidden="true" />
+              {children}
+            </div>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

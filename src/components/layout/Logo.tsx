@@ -1,8 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { cx } from "@/utils/cx";
 
 interface LogoProps {
@@ -10,22 +6,9 @@ interface LogoProps {
 }
 
 export function Logo({ className }: LogoProps) {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- Required for hydration handling with next-themes
-    setMounted(true);
-  }, []);
-
-  // Show light logo by default during SSR, then switch based on theme
-  const logoSrc = mounted && resolvedTheme === "dark"
-    ? "/logo_light_trans.png"
-    : "/logo_dark_trans.png";
-
   return (
     <Image
-      src={logoSrc}
+      src="/logo_dark_trans.png"
       alt="OpenEOS"
       width={160}
       height={40}

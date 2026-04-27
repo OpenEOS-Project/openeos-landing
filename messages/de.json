@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OpenEOS - Das moderne Kassensystem für Vereine & Events",
-    "description": "Flexibles, mobiles und Open Source Kassensystem. Von der kleinen Vereinsfesten bis zu großen Veranstaltungen."
+    "title": "OpenEOS — Das moderne Kassensystem für Vereine & Events",
+    "description": "Flexibel, mobil, Open Source. Vom Vereinsfest bis zur Großveranstaltung — ein System für Bestellung, Küche, Kasse und Auswertung."
   },
   "nav": {
     "features": "Features",
@@ -11,116 +11,255 @@
     "register": "Registrieren"
   },
   "hero": {
-    "title": "Das moderne Kassensystem",
-    "titleHighlight": "für Vereine & Events",
-    "subtitle": "Flexibel, mobil und Open Source. Von der kleinen Vereinsfesten bis zu großen Veranstaltungen.",
-    "cta": {
-      "start": "Kostenlos starten",
-      "demo": "Demo anfragen"
-    }
+    "pill": "Neue Version in Kürze verfügbar",
+    "titleL1": "Das Kassensystem,",
+    "titleL2": "das für dein Fest",
+    "titleL3": "mitdenkt.",
+    "sub": "Flexibel, mobil, Open Source. Vom Vereinsfest bis zur Großveranstaltung — ein System für Planung, Bestellung, Küche, Kasse und Auswertung.",
+    "ctaStart": "Kostenlos starten",
+    "ctaDemo": "Demo anfragen →",
+    "stat1Label": "Einrichtungsgebühr",
+    "stat1Value": "0 €",
+    "stat2Label": "Starterbonus auf erste Events",
+    "stat2Value": "20 %",
+    "stat3Label": "Open Source · AGPLv3",
+    "stat3Value": "100 %",
+    "receiptTotal": "Summe",
+    "receiptKasse": "Kasse 03 · Zelt A",
+    "devicePicker": "Kasse 03",
+    "deviceLocation": "Zelt A · openeos"
   },
+  "marquee": [
+    "Schützenfest Oberried",
+    "TSV Sommerfest",
+    "Weinfest Kaiserstuhl",
+    "FF Maibaumfest",
+    "Musikverein Jahreskonzert",
+    "Dorffest Reute"
+  ],
   "features": {
-    "title": "Alles was du brauchst",
-    "subtitle": "Ein System für alle Anforderungen deiner Veranstaltung",
+    "eyebrow": "Features",
+    "titleL1": "Alles was du",
+    "titleL2": "brauchst.",
+    "sub": "Ein System für alle Anforderungen deiner Veranstaltung.",
     "items": {
       "mobile": {
         "title": "Mobile Kasse",
-        "description": "Bedienung über Smartphone oder Tablet - überall auf dem Gelände"
+        "copy": "Bedienung über Smartphone oder Tablet — überall auf dem Gelände."
       },
       "qrOrder": {
         "title": "Online-Bestellung",
-        "description": "Gäste bestellen per QR-Code selbst - weniger Wartezeit, mehr Umsatz"
+        "copy": "Gäste bestellen per QR-Code selbst — weniger Wartezeit, mehr Umsatz."
       },
-      "display": {
+      "kitchen": {
         "title": "Küchen-Display",
-        "description": "Echtzeit-Anzeige für Küche & Ausgabe - keine verlorenen Bons mehr"
+        "copy": "Echtzeit-Anzeige für Küche & Ausgabe — keine verlorenen Bons mehr."
       },
       "payment": {
         "title": "Digitale Zahlung",
-        "description": "SumUp Integration für Kartenzahlung - schnell und sicher"
+        "copy": "SumUp-Integration für Kartenzahlung — schnell und sicher."
       },
       "printer": {
         "title": "Bondruck",
-        "description": "Automatischer Druck über Raspberry Pi - günstige Hardware"
+        "copy": "Automatischer Druck über Raspberry Pi — günstige Hardware."
       },
-      "workflow": {
-        "title": "Workflow-Engine",
-        "description": "Automatisiere Abläufe wie Bestellweiterleitung oder Benachrichtigungen"
+      "shifts": {
+        "title": "Schichtplan",
+        "copy": "Schichten planen und einteilen — Mitarbeiter melden sich online an."
       },
       "stats": {
         "title": "Statistiken",
-        "description": "Echtzeit-Auswertungen und Berichte - immer den Überblick"
+        "copy": "Echtzeit-Auswertungen und Berichte — immer den Überblick."
       },
       "openSource": {
         "title": "Open Source",
-        "description": "AGPLv3 Lizenz, selbst hosten - volle Kontrolle über deine Daten"
+        "copy": "AGPLv3-Lizenz, selbst hosten — volle Kontrolle über deine Daten."
       }
+    },
+    "_legacy": {
+    "tabs": {
+      "planning": {
+        "label": "Planung",
+        "title": "Plane dein Event von A bis Z.",
+        "copy": "Events anlegen, Mitglieder & Rollen verwalten, Schichten planen — alles in einem Dashboard.",
+        "checks": [
+          "Events anlegen, aktivieren, abschließen",
+          "Mitglieder, Rollen & Einladungen",
+          "Schichtplan mit Online-Anmeldung",
+          "QR-Codes pro Tisch oder Standort"
+        ],
+        "mockTitle": "Events",
+        "mockChip": "3 aktiv",
+        "shiftsLabel": "Schichtplan"
+      },
+      "pos": {
+        "label": "Mobile Kasse",
+        "title": "Kassieren, wo der Gast steht.",
+        "copy": "Tablet oder Smartphone — überall auf dem Gelände. Artikelgruppen, Modifier, Split-Payment. Bondruck über Raspberry Pi oder Netzwerkdrucker.",
+        "checks": [
+          "Kategorien, Produkte, Modifier",
+          "Barzahlung & SumUp-Kartenzahlung",
+          "Split-Payment, Gutscheine, Rabatte",
+          "Z-Bon & CSV-Export per Knopfdruck"
+        ],
+        "mockLocation": "Zelt A · Theke",
+        "mockPos": "Kasse 03",
+        "mockSum": "Summe",
+        "mockPayCash": "Bar",
+        "mockPayCard": "Karte · SumUp"
+      },
+      "order": {
+        "label": "Online-Bestellung",
+        "title": "QR scannen. Bestellen. Abholen.",
+        "copy": "Gäste bestellen am Tisch oder in der Schlange selbst. Weniger Warten, mehr Umsatz — und deine Theke hat Luft.",
+        "checks": [
+          "QR pro Tisch oder Standort",
+          "Bezahlung per SumUp (inkl. Apple Pay & Google Pay)",
+          "Warenkorb, Bestellstatus, Abholnummer",
+          "Aufruf an der Ausgabe inkl. Bestellnummer"
+        ],
+        "mockTitle": "Tisch 12 · Festzelt",
+        "mockCta": "Jetzt bestellen",
+        "mockHint": "Abholung bei"
+      },
+      "kds": {
+        "label": "Küchen-Display",
+        "title": "Keine verlorenen Bons mehr.",
+        "copy": "Echtzeit-Anzeige für Küche und Ausgabe. Farbige Timer pro Ticket, Routing pro Station, Artikel als fertig oder geliefert markieren.",
+        "checks": [
+          "Routing pro Station (Theke, Küche, Ausgabe)",
+          "Timer pro Ticket mit Eskalation",
+          "Artikel als fertig / geliefert markieren",
+          "WebSocket-Echtzeit-Sync über alle Displays"
+        ]
+      },
+      "stats": {
+        "label": "Statistik",
+        "title": "Weißt du nach 5 Minuten, was läuft.",
+        "copy": "Umsatz live, Bestseller, Stundenbericht, Lagerbewegungen. Export als CSV oder JSON.",
+        "checks": [
+          "Live-Dashboard pro Event",
+          "Bestseller & Renner/Penner",
+          "Stunden- und Inventurberichte",
+          "CSV- und JSON-Export"
+        ],
+        "kpi1": "Umsatz heute",
+        "kpi2": "Bestellungen",
+        "kpi3": "Ø Ticket"
+      }
+    },
+    "cards": {
+      "sumup": {
+        "title": "SumUp-Kartenzahlung",
+        "copy": "SumUp-Gerät vor Ort und SumUp-API online — kontaktlos, Apple Pay, Google Pay."
+      },
+      "shifts": {
+        "title": "Schichtplan & Anmeldung",
+        "copy": "Schichten planen, Mitarbeiter einteilen, Online-Anmeldung mit Bestätigung."
+      },
+      "printer": {
+        "title": "Bondruck via Pi",
+        "copy": "Python-Agent für ESC/POS-Drucker. Netzwerk-IP, kein Lizenz-Zoo, günstige Hardware."
+      },
+      "realtime": {
+        "title": "Echtzeit-Sync",
+        "copy": "WebSocket-Gateway hält Kassen, Küche, Ausgabe und Drucker im Gleichschritt."
+      }
+    }
     }
   },
   "pricing": {
-    "title": "Einfache, faire Preise",
-    "subtitle": "Keine versteckten Kosten - zahle nur was du brauchst",
+    "eyebrow": "Preise",
+    "titleL1": "Zahl, was du brauchst.",
+    "titleL2": "Nicht mehr.",
+    "sub": "Keine Einrichtungsgebühr. Keine Mindestlaufzeit. Keine versteckten Kosten.",
     "selfHosted": {
       "title": "Self-Hosted",
+      "tag": "AGPLv3",
       "price": "Kostenlos",
-      "period": "",
-      "description": "Für technisch Versierte",
+      "unit": "€ / immer",
       "features": [
         "Alle Features inklusive",
         "Unbegrenzte Events",
-        "Eigener Server",
-        "Community Support"
+        "Eigener Server, volle Kontrolle",
+        "Community-Support"
       ],
-      "cta": "Dokumentation"
+      "cta": "Dokumentation →"
     },
     "saas": {
       "title": "SaaS",
+      "tag": "Empfohlen",
       "price": "25 €",
-      "period": "pro Event-Tag",
-      "description": "Wir kümmern uns um alles",
+      "unit": "/ Event-Tag",
+      "bonus": "20% Starterbonus auf deine ersten Events",
       "features": [
         "Alle Features inklusive",
-        "Hosting & Backups",
-        "Premium Support (E-Mail, Telefon, WhatsApp)",
-        "Keine Einrichtung nötig"
+        "Hosting, Backups, automatische Updates",
+        "Premium-Support (E-Mail, Telefon, WhatsApp)",
+        "Abrechnung nach Nutzung auf Rechnung"
       ],
-      "cta": "Jetzt starten"
-    },
-    "saasPro": {
-      "title": "SaaS Pro",
-      "price": "20 €",
-      "period": "pro Tag (10er Paket)",
-      "description": "Für Vielnutzer",
-      "features": [
-        "Alle Features inklusive",
-        "Hosting & Backups",
-        "Premium Support (E-Mail, Telefon, WhatsApp)",
-        "20% Ersparnis"
-      ],
-      "cta": "Paket kaufen"
+      "cta": "Jetzt starten →"
     },
     "hardware": {
-      "title": "Hardware-Vermietung",
-      "description": "Drucker und Displays auf Anfrage",
-      "price": "50 € pro Gerät pro Tag"
+      "title": "Hardware",
+      "tag": "Vermietung",
+      "price": "50 €",
+      "unit": "/ Gerät / Tag",
+      "features": [
+        "Tablets für Kassen",
+        "ESC/POS-Bondrucker",
+        "Küchen- und Ausgabe-Displays",
+        "Auf Anfrage konfiguriert"
+      ],
+      "cta": "Anfragen →"
     },
-    "packages": {
-      "title": "Prepaid-Pakete",
-      "perDay": "pro Tag",
-      "savings": "Ersparnis"
+    "gateway": {
+      "badge": "Neuheit",
+      "title": "Internet-Gateway zum Mieten",
+      "copy": "LTE/5G-Router mit WLAN, LAN-Ports und unbegrenzter Datenflat — Internet für dein Kassensystem an jedem Ort, auch wo's keins gibt.",
+      "features": [
+        "LTE/5G mit unbegrenzter Datenflat",
+        "WLAN-Access-Point für mehrere Geräte",
+        "LAN-Ports für Drucker, Displays & Co.",
+        "Plug & Play, sofort einsatzbereit"
+      ],
+      "price": "30 €",
+      "unit": "/ Tag",
+      "cta": "Anfragen →"
     }
   },
   "openSource": {
-    "title": "100% Open Source",
-    "subtitle": "OpenEOS ist unter der AGPLv3-Lizenz verfügbar. Hoste es selbst, passe es an, trage bei.",
-    "github": "GitHub",
-    "docs": "Dokumentation",
-    "community": "Community"
+    "eyebrow": "Open Source",
+    "titleL1": "100% Open",
+    "titleL2": "Source.",
+    "body": "OpenEOS ist unter der AGPLv3-Lizenz verfügbar. Hoste es selbst, passe es an, trage bei.",
+    "ctaGithub": "GitHub",
+    "ctaDocs": "Dokumentation",
+    "ctaCommunity": "Community"
   },
   "cta": {
-    "title": "Bereit für dein nächstes Event?",
-    "subtitle": "Starte jetzt kostenlos und überzeuge dich selbst.",
-    "button": "Organisation registrieren"
+    "titleL1": "Bereit für dein",
+    "titleL2": "nächstes Event?",
+    "sub": "Registrierung in wenigen Minuten. Erstes Event sofort möglich.",
+    "ctaRegister": "Organisation registrieren →",
+    "ctaDemo": "Demo anfragen"
+  },
+  "footer": {
+    "tagline": "Das moderne Kassensystem für Vereine, Veranstaltungen und Festbewirtungen.",
+    "product": "Produkt",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "features": "Features",
+    "pricing": "Preise",
+    "demo": "Demo anfragen",
+    "docs": "Dokumentation",
+    "github": "GitHub",
+    "changelog": "Changelog",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "copyright": "© {year} OpenEOS · Made with ❤️",
+    "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel"
   },
   "imprint": {
     "title": "Impressum",
@@ -204,11 +343,11 @@
     },
     "pricing": {
       "title": "4. Preise und Tarife",
-      "content": "Es gelten die zum Zeitpunkt der Buchung auf der Website ausgewiesenen Preise:\n• SaaS: 25 € pro Event-Tag\n• SaaS Pro (10er Paket): 20 € pro Tag\n• Hardware-Vermietung: 50 € pro Gerät pro Tag\n\nAlle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer."
+      "content": "Es gelten die zum Zeitpunkt der Buchung auf der Website ausgewiesenen Preise:\n• SaaS: 25 € pro Event-Tag\n• Starterbonus: 20% Rabatt auf die ersten Event-Tage (Neukunden)\n• Hardware-Vermietung: 50 € pro Gerät pro Tag\n\nAlle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer."
     },
     "payment": {
       "title": "5. Zahlung",
-      "content": "Die Zahlung erfolgt per Prepaid-Guthaben. Das Guthaben wird vor Nutzung der Dienste erworben und bei Nutzung entsprechend abgebucht. Nicht genutztes Guthaben verfällt nicht und kann jederzeit eingesetzt werden."
+      "content": "Die Abrechnung erfolgt nach tatsächlicher Nutzung auf Rechnung. Event-Tage werden am Monatsende zusammengefasst und in Rechnung gestellt. Zahlungsziel: 14 Tage netto."
     },
     "obligations": {
       "title": "6. Pflichten des Kunden",
@@ -220,7 +359,7 @@
     },
     "termination": {
       "title": "8. Vertragslaufzeit und Kündigung",
-      "content": "Der Vertrag wird auf unbestimmte Zeit geschlossen. Beide Parteien können den Vertrag jederzeit mit einer Frist von 14 Tagen zum Monatsende kündigen. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Bei Kündigung wird verbleibendes Guthaben nicht erstattet."
+      "content": "Der Vertrag wird auf unbestimmte Zeit geschlossen. Beide Parteien können den Vertrag jederzeit mit einer Frist von 14 Tagen zum Monatsende kündigen. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
     },
     "changes": {
       "title": "9. Änderungen der AGB",
@@ -230,24 +369,5 @@
       "title": "10. Schlussbestimmungen",
       "content": "Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten aus diesem Vertrag ist, soweit gesetzlich zulässig, der Sitz des Anbieters. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
     }
-  },
-  "footer": {
-    "product": "Produkt",
-    "resources": "Ressourcen",
-    "legal": "Rechtliches",
-    "follow": "Folgen",
-    "features": "Features",
-    "pricing": "Preise",
-    "demo": "Demo anfragen",
-    "docs": "Dokumentation",
-    "api": "API Docs",
-    "blog": "Blog",
-    "changelog": "Changelog",
-    "imprint": "Impressum",
-    "privacy": "Datenschutz",
-    "terms": "AGB",
-    "copyright": "© {year} OpenEOS",
-    "madeWith": "Made with",
-    "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel"
   }
 }

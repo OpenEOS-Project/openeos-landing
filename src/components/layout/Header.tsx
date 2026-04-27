@@ -2,117 +2,114 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+import { useEffect, useState } from "react";
 import { LanguageSwitch } from "./LanguageSwitch";
-import { Logo } from "./Logo";
 
 export function Header() {
   const t = useTranslations("nav");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const navItems = [
-    { href: "/#features", label: t("features") },
-    { href: "/#pricing", label: t("pricing") },
-    { href: "/#open-source", label: t("openSource") },
-  ];
+  useEffect(() => {
+    if (!open) return;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  const close = () => setOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/80 backdrop-blur-lg border-b border-primary">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo + Navigation (Left side) */}
-          <div className="flex items-center gap-8">
-            <Link href="/" className="flex items-center">
-              <Logo />
-            </Link>
+    <>
+      <header className={`nav ${open ? "is-open" : ""}`}>
+        <Link href="/" className="nav__logo" aria-label="OpenEOS" onClick={close}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo_dark_trans.png" alt="OpenEOS" />
+        </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-6">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-medium text-tertiary hover:text-tertiary_hover transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
+        <div className="nav__inner">
+          <nav className="nav__links" aria-label="Hauptnavigation">
+            <Link href="/#features">{t("features")}</Link>
+            <Link href="/#pricing">{t("pricing")}</Link>
+            <Link href="/#open-source">{t("openSource")}</Link>
+          </nav>
+        </div>
 
-          {/* Desktop Actions (Right side) */}
-          <div className="hidden md:flex items-center gap-4">
+        <div className="nav__right">
+          <div className="nav__desktop-only">
             <LanguageSwitch />
-            <ThemeToggle />
-            <Link
-              href="/login"
-              className="text-sm font-semibold text-tertiary hover:text-tertiary_hover transition-colors"
-            >
-              {t("login")}
-            </Link>
-            <Link
-              href="/register"
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-brand-solid hover:bg-brand-solid_hover rounded-lg transition-colors shadow-xs-skeumorphic"
-            >
-              {t("register")}
-            </Link>
           </div>
-
-          {/* Mobile menu button */}
-          <div className="flex md:hidden items-center gap-2">
-            <ThemeToggle />
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg hover:bg-primary_hover transition-colors text-fg-quaternary"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
+          <a href="#" className="btn btn--ghost nav__login">
+            {t("login")}
+          </a>
+          <a href="#" className="btn btn--primary nav__register">
+            <span>{t("register")}</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path
+                d="M5 10h10M10 5l5 5-5 5"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                fill="none"
+                strokeLinecap="square"
+              />
+            </svg>
+          </a>
+          <button
+            type="button"
+            className="nav__burger"
+            aria-label="Menü"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-primary border-b border-primary">
-          <div className="px-4 py-4 space-y-4">
-            <nav className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-base font-medium text-tertiary hover:text-tertiary_hover transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-            <div className="pt-4 border-t border-primary flex items-center justify-between">
-              <LanguageSwitch />
-              <div className="flex items-center gap-3">
-                <Link
-                  href="/login"
-                  className="text-sm font-semibold text-tertiary hover:text-tertiary_hover transition-colors"
-                >
-                  {t("login")}
-                </Link>
-                <Link
-                  href="/register"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-brand-solid hover:bg-brand-solid_hover rounded-lg transition-colors"
-                >
-                  {t("register")}
-                </Link>
-              </div>
+      {open && (
+        <>
+          <div className="nav__backdrop" onClick={close} aria-hidden="true" />
+          <aside className="nav__panel" role="dialog" aria-label="Mobile-Navigation">
+            <div className="nav__panel-head">
+              <Link href="/" className="nav__panel-logo" aria-label="OpenEOS" onClick={close}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo_dark_trans.png" alt="OpenEOS" />
+              </Link>
+              <button
+                type="button"
+                className="nav__close"
+                aria-label="Menü schließen"
+                onClick={close}
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6 6l12 12M18 6L6 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
             </div>
-          </div>
-        </div>
+            <nav className="nav__panel-links" aria-label="Hauptnavigation">
+              <Link href="/#features" onClick={close}>{t("features")}</Link>
+              <Link href="/#pricing" onClick={close}>{t("pricing")}</Link>
+              <Link href="/#open-source" onClick={close}>{t("openSource")}</Link>
+            </nav>
+            <div className="nav__panel-actions">
+              <LanguageSwitch />
+              <a href="#" className="btn btn--ghost btn--block" onClick={close}>
+                {t("login")}
+              </a>
+              <a href="#" className="btn btn--primary btn--block" onClick={close}>
+                {t("register")}
+              </a>
+            </div>
+          </aside>
+        </>
       )}
-    </header>
+    </>
   );
 }

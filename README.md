@@ -148,4 +148,3 @@ htpasswd -nb admin dein-passwort
 ## Links
 
 - **Hauptprojekt:** [OpenEOS](https://github.com/OpenEOS-Project)
-- **Dokumentation:** [PLAN/](../PLAN/)
