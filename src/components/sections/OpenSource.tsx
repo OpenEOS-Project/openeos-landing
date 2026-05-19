@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
-import { Github, BookOpen, Users } from "lucide-react";
+import { Github, BookOpen } from "lucide-react";
+
+const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
 
 export function OpenSource() {
   const t = useTranslations("openSource");
@@ -25,18 +27,9 @@ export function OpenSource() {
             <Github />
             <span>{t("ctaGithub")}</span>
           </a>
-          <a href="#" className="oss-card">
+          <a href={DOCS_URL} className="oss-card">
             <BookOpen />
             <span>{t("ctaDocs")}</span>
-          </a>
-          <a
-            href="https://discord.gg/openeos"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="oss-card"
-          >
-            <Users />
-            <span>{t("ctaCommunity")}</span>
           </a>
         </div>
       </div>

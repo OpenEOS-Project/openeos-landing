@@ -17,12 +17,23 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Build arguments for environment variables at build time
+# (NEXT_PUBLIC_* values are baked into the client bundle)
 ARG NEXT_PUBLIC_API_URL
 ARG NEXT_PUBLIC_APP_URL
+ARG NEXT_PUBLIC_DOCS_URL
+ARG NEXT_PUBLIC_CONTACT_EMAIL
+ARG NEXT_PUBLIC_DEMO_EMAIL
 
 ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
 ENV NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
+ENV NEXT_PUBLIC_DOCS_URL=${NEXT_PUBLIC_DOCS_URL}
+ENV NEXT_PUBLIC_CONTACT_EMAIL=${NEXT_PUBLIC_CONTACT_EMAIL}
+ENV NEXT_PUBLIC_DEMO_EMAIL=${NEXT_PUBLIC_DEMO_EMAIL}
 ENV NEXT_TELEMETRY_DISABLED=1
+
+# Imprint / Privacy data is read at request time (no NEXT_PUBLIC_ prefix), so
+# it does NOT need to be baked in at build time — it's injected by the
+# orchestrator (docker compose, GitHub Actions, etc.) at runtime.
 
 RUN pnpm build
 

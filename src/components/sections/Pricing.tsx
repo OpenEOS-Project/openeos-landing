@@ -1,5 +1,9 @@
 import { useTranslations } from "next-intl";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
+const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
+const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "kontakt@openeos.de";
+
 export interface PricingPackage {
   slug: string;
   name: string;
@@ -56,7 +60,7 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
               <li key={f}>{f}</li>
             ))}
           </ul>
-          <a href="#" className="btn btn--ghost btn--block">
+          <a href={DOCS_URL} className="btn btn--ghost btn--block">
             {t("selfHosted.cta")}
           </a>
         </article>
@@ -77,7 +81,7 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
               <li key={f}>{f}</li>
             ))}
           </ul>
-          <a href="#" className="btn btn--light btn--block">
+          <a href={`${APP_URL}/register`} className="btn btn--light btn--block">
             {t("saas.cta")}
           </a>
         </article>
@@ -97,7 +101,7 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
               <li key={f}>{f}</li>
             ))}
           </ul>
-          <a href="#" className="btn btn--ghost btn--block">
+          <a href={`mailto:${CONTACT_EMAIL}?subject=Hardware-Vermietung`} className="btn btn--ghost btn--block">
             {t("hardware.cta")}
           </a>
         </article>
@@ -119,7 +123,7 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
             <b>{t("gateway.price")}</b>
             <span>{t("gateway.unit")}</span>
           </div>
-          <a href="#" className="btn btn--light btn--block">
+          <a href={`mailto:${CONTACT_EMAIL}?subject=Kassen-Gateway`} className="btn btn--light btn--block">
             {t("gateway.cta")}
           </a>
         </div>

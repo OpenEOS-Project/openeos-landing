@@ -1,6 +1,9 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
+const DEMO_EMAIL = process.env.NEXT_PUBLIC_DEMO_EMAIL ?? "hello@openeos.de";
+const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
+
 export function Footer() {
   const t = useTranslations("footer");
   const year = new Date().getFullYear();
@@ -19,11 +22,11 @@ export function Footer() {
             <b>{t("product")}</b>
             <Link href="/#features">{t("features")}</Link>
             <Link href="/#pricing">{t("pricing")}</Link>
-            <a href="#demo">{t("demo")}</a>
+            <a href={`mailto:${DEMO_EMAIL}?subject=Demo-Anfrage%20OpenEOS`}>{t("demo")}</a>
           </div>
           <div>
             <b>{t("resources")}</b>
-            <a href="#">{t("docs")}</a>
+            <a href={DOCS_URL}>{t("docs")}</a>
             <a
               href="https://github.com/OpenEOS-Project"
               target="_blank"
@@ -31,7 +34,6 @@ export function Footer() {
             >
               {t("github")}
             </a>
-            <a href="#">{t("changelog")}</a>
           </div>
           <div>
             <b>{t("legal")}</b>

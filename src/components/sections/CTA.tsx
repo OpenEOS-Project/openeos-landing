@@ -1,5 +1,8 @@
 import { useTranslations } from "next-intl";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
+const DEMO_EMAIL = process.env.NEXT_PUBLIC_DEMO_EMAIL ?? "hello@openeos.de";
+
 export function CTA() {
   const t = useTranslations("cta");
 
@@ -11,10 +14,13 @@ export function CTA() {
       </h2>
       <p>{t("sub")}</p>
       <div className="cta-block__row">
-        <a href="#" className="btn btn--primary btn--lg">
+        <a href={`${APP_URL}/register`} className="btn btn--primary btn--lg">
           {t("ctaRegister")}
         </a>
-        <a href="#demo" className="btn btn--ghost btn--lg">
+        <a
+          href={`mailto:${DEMO_EMAIL}?subject=Demo-Anfrage%20OpenEOS`}
+          className="btn btn--ghost btn--lg"
+        >
           {t("ctaDemo")}
         </a>
       </div>

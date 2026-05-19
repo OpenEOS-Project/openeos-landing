@@ -5,6 +5,8 @@ import { Link } from "@/i18n/navigation";
 import { useEffect, useState } from "react";
 import { LanguageSwitch } from "./LanguageSwitch";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
+
 export function Header() {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
@@ -39,10 +41,10 @@ export function Header() {
           <div className="nav__desktop-only">
             <LanguageSwitch />
           </div>
-          <a href="#" className="btn btn--ghost nav__login">
+          <a href={`${APP_URL}/login`} className="btn btn--ghost nav__login">
             {t("login")}
           </a>
-          <a href="#" className="btn btn--primary nav__register">
+          <a href={`${APP_URL}/register`} className="btn btn--primary nav__register">
             <span>{t("register")}</span>
             <svg viewBox="0 0 20 20" aria-hidden="true">
               <path
@@ -100,10 +102,10 @@ export function Header() {
             </nav>
             <div className="nav__panel-actions">
               <LanguageSwitch />
-              <a href="#" className="btn btn--ghost btn--block" onClick={close}>
+              <a href={`${APP_URL}/login`} className="btn btn--ghost btn--block" onClick={close}>
                 {t("login")}
               </a>
-              <a href="#" className="btn btn--primary btn--block" onClick={close}>
+              <a href={`${APP_URL}/register`} className="btn btn--primary btn--block" onClick={close}>
                 {t("register")}
               </a>
             </div>

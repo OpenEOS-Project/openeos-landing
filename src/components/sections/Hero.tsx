@@ -1,6 +1,9 @@
 import { useTranslations } from "next-intl";
 import { HeroDemo } from "./HeroDemo";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
+const DEMO_EMAIL = process.env.NEXT_PUBLIC_DEMO_EMAIL ?? "hello@openeos.de";
+
 export function Hero() {
   const t = useTranslations("hero");
 
@@ -22,7 +25,7 @@ export function Hero() {
           <p className="hero__sub">{t("sub")}</p>
 
           <div className="hero__cta">
-            <a href="#" className="btn btn--primary btn--lg">
+            <a href={`${APP_URL}/register`} className="btn btn--primary btn--lg">
               <span>{t("ctaStart")}</span>
               <svg viewBox="0 0 20 20" aria-hidden="true">
                 <path
@@ -34,7 +37,10 @@ export function Hero() {
                 />
               </svg>
             </a>
-            <a href="#demo" className="btn btn--ghost btn--lg">
+            <a
+              href={`mailto:${DEMO_EMAIL}?subject=Demo-Anfrage%20OpenEOS`}
+              className="btn btn--ghost btn--lg"
+            >
               {t("ctaDemo")}
             </a>
           </div>

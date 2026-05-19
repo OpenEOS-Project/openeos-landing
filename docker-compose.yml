@@ -5,6 +5,19 @@ services:
     restart: unless-stopped
     networks:
       - frontend
+    # Runtime env (imprint/privacy data). Server Components read these at
+    # request time, so they can be set/changed without rebuilding the image.
+    # Provide values via a .env file next to this compose file or via the
+    # deploy pipeline (GitHub Actions secrets etc.). Real values must NOT
+    # be committed to the repo.
+    environment:
+      - IMPRINT_NAME=${IMPRINT_NAME:-}
+      - IMPRINT_STREET=${IMPRINT_STREET:-}
+      - IMPRINT_CITY=${IMPRINT_CITY:-}
+      - IMPRINT_COUNTRY=${IMPRINT_COUNTRY:-Deutschland}
+      - IMPRINT_EMAIL=${IMPRINT_EMAIL:-kontakt@openeos.de}
+      - IMPRINT_PHONE=${IMPRINT_PHONE:-}
+      - IMPRINT_VAT_ID=${IMPRINT_VAT_ID:-}
     labels:
       - "traefik.enable=true"
       # HTTP Router - openeos.de

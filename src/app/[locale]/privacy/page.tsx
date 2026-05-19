@@ -3,6 +3,28 @@ import { setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
+// Render at request time so env vars set at deploy time take effect without rebuild.
+export const dynamic = "force-dynamic";
+
+type ResponsibleData = {
+  name: string;
+  street: string;
+  city: string;
+  country: string;
+  email: string;
+};
+
+function getResponsibleData(locale: string): ResponsibleData {
+  const defaultCountry = locale === "de" ? "Deutschland" : "Germany";
+  return {
+    name: process.env.IMPRINT_NAME ?? "",
+    street: process.env.IMPRINT_STREET ?? "",
+    city: process.env.IMPRINT_CITY ?? "",
+    country: process.env.IMPRINT_COUNTRY ?? defaultCountry,
+    email: process.env.IMPRINT_EMAIL ?? "kontakt@openeos.de",
+  };
+}
+
 export default async function PrivacyPage({
   params,
 }: {
@@ -10,13 +32,14 @@ export default async function PrivacyPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const responsible = getResponsibleData(locale);
 
   return (
     <>
       <Header />
       <main className="pt-24 pb-16 min-h-screen">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <PrivacyContent />
+          <PrivacyContent responsible={responsible} locale={locale} />
         </div>
       </main>
       <Footer />
@@ -24,8 +47,15 @@ export default async function PrivacyPage({
   );
 }
 
-function PrivacyContent() {
+function PrivacyContent({
+  responsible,
+  locale,
+}: {
+  responsible: ResponsibleData;
+  locale: string;
+}) {
   const t = useTranslations("privacy");
+  const emailLabel = locale === "de" ? "E-Mail" : "Email";
 
   return (
     <article className="prose prose-gray dark:prose-invert max-w-none">
@@ -45,7 +75,17 @@ function PrivacyContent() {
         <h2 className="text-xl font-semibold text-primary mb-4">
           {t("responsible.title")}
         </h2>
-        <p className="text-tertiary whitespace-pre-line">{t("responsible.content")}</p>
+        <address className="text-tertiary not-italic whitespace-pre-line">
+          {[responsible.name, responsible.street, responsible.city, responsible.country]
+            .filter(Boolean)
+            .join("\n")}
+        </address>
+        <p className="text-tertiary mt-2">
+          {emailLabel}:{" "}
+          <a href={`mailto:${responsible.email}`} className="underline">
+            {responsible.email}
+          </a>
+        </p>
       </section>
 
       <section className="mb-8">

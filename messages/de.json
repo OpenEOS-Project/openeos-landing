@@ -3,6 +3,100 @@
     "title": "OpenEOS — Das moderne Kassensystem für Vereine & Events",
     "description": "Flexibel, mobil, Open Source. Vom Vereinsfest bis zur Großveranstaltung — ein System für Bestellung, Küche, Kasse und Auswertung."
   },
+  "auth": {
+    "login": {
+      "metaTitle": "Anmelden — OpenEOS",
+      "title": "Willkommen zurück.",
+      "subtitle": "Melde dich mit deinem OpenEOS-Konto an.",
+      "email": "E-Mail",
+      "emailPlaceholder": "name@beispiel.de",
+      "password": "Passwort",
+      "passwordPlaceholder": "Dein Passwort",
+      "remember": "Eingeloggt bleiben",
+      "forgot": "Passwort vergessen?",
+      "submit": "Anmelden",
+      "noAccount": "Noch kein Konto?",
+      "register": "Jetzt registrieren →",
+      "highlightsHead": "Was OpenEOS für dich tut",
+      "highlights": [
+        {
+          "title": "Mobile Kasse",
+          "copy": "Bedienung über Smartphone oder Tablet — überall auf dem Gelände."
+        },
+        {
+          "title": "Online-Bestellung",
+          "copy": "Gäste bestellen per QR-Code selbst — weniger Wartezeit, mehr Umsatz."
+        },
+        {
+          "title": "Schichtplan",
+          "copy": "Schichten planen, Mitarbeiter melden sich online an — alles automatisch."
+        },
+        {
+          "title": "Echtzeit-Statistiken",
+          "copy": "Umsatz, Bestseller, Wartezeiten — immer den Überblick behalten."
+        }
+      ]
+    },
+    "register": {
+      "metaTitle": "Registrieren — OpenEOS",
+      "title": "Konto erstellen.",
+      "stepLabel": "Schritt {current} von {total}",
+      "back": "Zurück",
+      "next": "Weiter",
+      "submit": "Konto erstellen",
+      "haveAccount": "Bereits registriert?",
+      "login": "Hier anmelden →",
+      "successTitle": "Fast geschafft!",
+      "successCopy": "Wir haben dir eine Bestätigungs-E-Mail an {email} gesendet. Klicke den Link darin, um dein Konto zu aktivieren.",
+      "successCta": "Zur Anmeldung",
+      "steps": {
+        "account": {
+          "label": "Konto",
+          "title": "Dein Konto",
+          "copy": "E-Mail-Adresse und Passwort für deinen OpenEOS-Account.",
+          "email": "E-Mail-Adresse",
+          "password": "Passwort",
+          "passwordHint": "Mindestens 8 Zeichen, Groß- und Kleinbuchstaben sowie eine Zahl.",
+          "passwordConfirm": "Passwort bestätigen"
+        },
+        "personal": {
+          "label": "Du",
+          "title": "Über dich",
+          "copy": "Damit wir wissen, mit wem wir es zu tun haben — für Rechnungen und Support.",
+          "firstName": "Vorname",
+          "lastName": "Nachname",
+          "phone": "Telefonnummer (optional)"
+        },
+        "organization": {
+          "label": "Organisation",
+          "title": "Deine Organisation",
+          "copy": "Verein, Veranstalter oder Betrieb — der Name erscheint auf Rechnungen und Bons.",
+          "orgName": "Name der Organisation",
+          "street": "Straße & Hausnummer",
+          "zip": "PLZ",
+          "city": "Stadt",
+          "country": "Land"
+        },
+        "confirm": {
+          "label": "Bestätigung",
+          "title": "Letzter Check",
+          "copy": "Bitte überprüfe deine Angaben und bestätige die Bedingungen.",
+          "summaryAccount": "Konto",
+          "summaryPersonal": "Person",
+          "summaryOrganization": "Organisation",
+          "terms": "Ich akzeptiere die AGB und die Datenschutzerklärung.",
+          "newsletter": "Ich möchte gelegentlich Updates und Neuigkeiten erhalten."
+        }
+      },
+      "errors": {
+        "required": "Pflichtfeld",
+        "emailInvalid": "Ungültige E-Mail-Adresse",
+        "passwordShort": "Mindestens 8 Zeichen",
+        "passwordMismatch": "Passwörter stimmen nicht überein",
+        "termsRequired": "Bitte akzeptiere die Bedingungen"
+      }
+    }
+  },
   "nav": {
     "features": "Features",
     "pricing": "Preise",
@@ -264,12 +358,10 @@
   "imprint": {
     "title": "Impressum",
     "responsible": {
-      "title": "Angaben gemäß § 5 TMG",
-      "content": "Lukas [Nachname]\n[Straße Hausnummer]\n[PLZ Ort]\nDeutschland"
+      "title": "Angaben gemäß § 5 TMG"
     },
     "contact": {
-      "title": "Kontakt",
-      "content": "E-Mail: kontakt@openeos.de\nTelefon: [Telefonnummer]"
+      "title": "Kontakt"
     },
     "disclaimer": {
       "title": "Haftungsausschluss",
@@ -295,8 +387,7 @@
       "content": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."
     },
     "responsible": {
-      "title": "2. Verantwortliche Stelle",
-      "content": "Lukas [Nachname]\n[Straße Hausnummer]\n[PLZ Ort]\nDeutschland\n\nE-Mail: kontakt@openeos.de"
+      "title": "2. Verantwortliche Stelle"
     },
     "dataCollection": {
       "title": "3. Datenerfassung auf dieser Website",
