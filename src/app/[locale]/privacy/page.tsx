@@ -21,7 +21,7 @@ function getResponsibleData(locale: string): ResponsibleData {
     street: process.env.IMPRINT_STREET ?? "",
     city: process.env.IMPRINT_CITY ?? "",
     country: process.env.IMPRINT_COUNTRY ?? defaultCountry,
-    email: process.env.IMPRINT_EMAIL ?? "kontakt@openeos.de",
+    email: process.env.IMPRINT_EMAIL ?? "hello@openeos.de",
   };
 }
 

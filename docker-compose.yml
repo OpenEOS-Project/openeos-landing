@@ -15,7 +15,7 @@ services:
       - IMPRINT_STREET=${IMPRINT_STREET:-}
       - IMPRINT_CITY=${IMPRINT_CITY:-}
       - IMPRINT_COUNTRY=${IMPRINT_COUNTRY:-Deutschland}
-      - IMPRINT_EMAIL=${IMPRINT_EMAIL:-kontakt@openeos.de}
+      - IMPRINT_EMAIL=${IMPRINT_EMAIL:-hello@openeos.de}
       - IMPRINT_PHONE=${IMPRINT_PHONE:-}
       - IMPRINT_VAT_ID=${IMPRINT_VAT_ID:-}
     labels:

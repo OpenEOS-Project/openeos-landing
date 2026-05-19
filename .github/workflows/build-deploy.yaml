@@ -97,5 +97,5 @@ jobs:
             NEXT_PUBLIC_APP_URL=https://app.openeos.de
             NEXT_PUBLIC_API_URL=https://api.openeos.de
             NEXT_PUBLIC_DOCS_URL=https://docs.openeos.de
-            NEXT_PUBLIC_CONTACT_EMAIL=kontakt@openeos.de
+            NEXT_PUBLIC_CONTACT_EMAIL=hello@openeos.de
             NEXT_PUBLIC_DEMO_EMAIL=hello@openeos.de

@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
 const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
-const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "kontakt@openeos.de";
+const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@openeos.de";
 
 export interface PricingPackage {
   slug: string;

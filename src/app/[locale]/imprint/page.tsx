@@ -23,7 +23,7 @@ function getImprintData(locale: string): ImprintData {
     street: process.env.IMPRINT_STREET ?? "",
     city: process.env.IMPRINT_CITY ?? "",
     country: process.env.IMPRINT_COUNTRY ?? defaultCountry,
-    email: process.env.IMPRINT_EMAIL ?? "kontakt@openeos.de",
+    email: process.env.IMPRINT_EMAIL ?? "hello@openeos.de",
     phone: process.env.IMPRINT_PHONE ?? "",
     vatId: process.env.IMPRINT_VAT_ID ?? "",
   };
