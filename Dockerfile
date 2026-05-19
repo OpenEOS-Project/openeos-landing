@@ -2,7 +2,7 @@
 
 # Base image with pnpm enabled
 FROM node:22-alpine AS base
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@10 --activate
 
 # Install dependencies
 FROM base AS deps
