@@ -105,7 +105,7 @@
     "register": "Sign up"
   },
   "hero": {
-    "pill": "New version coming soon",
+    "pill": "New version available now",
     "titleL1": "The POS system",
     "titleL2": "that thinks along",
     "titleL3": "with your event.",
@@ -358,10 +358,18 @@
   "imprint": {
     "title": "Imprint",
     "responsible": {
-      "title": "Information according to § 5 TMG"
+      "title": "Information according to § 5 DDG"
     },
     "contact": {
       "title": "Contact"
+    },
+    "editorial": {
+      "title": "Responsible for content pursuant to § 18 para. 2 MStV",
+      "content": "Responsible for journalistic-editorial content on this website is the person (or their legal representative) named above under „Information according to § 5 DDG“."
+    },
+    "dispute": {
+      "title": "EU dispute resolution",
+      "content": "The European Commission provides a platform for online dispute resolution (ODR), available at https://ec.europa.eu/consumers/odr/. You can find our email address above in the imprint. We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
     },
     "disclaimer": {
       "title": "Disclaimer",
@@ -381,7 +389,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "As of January 2025",
+    "lastUpdated": "As of July 2026",
     "overview": {
       "title": "1. Privacy at a glance",
       "content": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally."
@@ -393,27 +401,39 @@
       "title": "3. Data collection on this website",
       "server": {
         "title": "Server log files",
-        "content": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are: browser type and browser version, operating system used, referrer URL, hostname of the accessing computer, time of the server request and IP address. This data is not merged with other data sources."
+        "content": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are: browser type and browser version, operating system used, referrer URL, hostname of the accessing computer, time of the server request and IP address. This data is not merged with other data sources. See the „Hosting with IONOS SE“ section for details on processing by our host."
       },
       "cookies": {
-        "title": "Cookies",
-        "content": "This website only uses technically necessary cookies that are required for the operation of the website (e.g. to save your language setting and theme preference). These cookies are set without your consent because they are necessary for the basic functions of the website."
+        "title": "Cookies and local storage",
+        "content": "This website does not use tracking, analytics, or advertising cookies. Only technically necessary data is used: your language preference is stored via a cookie (NEXT_LOCALE), and your theme preference (light/dark) is stored in your browser's local storage (localStorage). Both serve solely to display the website according to your settings and are not evaluated for analytics or advertising purposes. No separate consent is required for these purely technical purposes (§ 25 para. 2 TTDSG, Art. 6 para. 1 lit. f GDPR)."
       },
       "contact": {
         "title": "Contact",
-        "content": "If you contact us by email, your information including the contact details you provide there will be stored with us for the purpose of processing the request and in the event of follow-up questions. We do not pass on this data without your consent."
+        "content": "If you contact us by email, your information including the contact details you provide there will be stored with us for the purpose of processing the request and in the event of follow-up questions. We do not pass on this data without your consent. The legal basis is Art. 6 para. 1 lit. b or lit. f GDPR."
+      },
+      "account": {
+        "title": "Registration and customer account",
+        "content": "If you register for the OpenEOS platform or create an organization, we collect and store the account data required to perform the contract (e.g. name, email address, and organization details). Processing is carried out to fulfil the usage agreement pursuant to Art. 6 para. 1 lit. b GDPR and is not shared with third parties beyond what is necessary for contract fulfilment."
       }
     },
     "hosting": {
-      "title": "4. Hosting",
-      "content": "This website is hosted by an external service provider (host). The personal data collected on this website is stored on the host's servers. This may include IP addresses, contact requests, meta and communication data, contract data, contact details, names, website accesses and other data generated via a website."
+      "title": "4. Hosting with IONOS SE",
+      "content": "This website is hosted by IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. When you access the website, our host automatically collects and stores server logfiles transmitted by your browser (including IP address, date and time of the request, page requested, browser type and version). We have a data processing agreement with IONOS pursuant to Art. 28 GDPR, which obliges IONOS to process the data of our website visitors solely on our instructions and for the contractually agreed purposes, and to protect it appropriately."
+    },
+    "ssl": {
+      "title": "5. SSL/TLS encryption",
+      "content": "For security reasons and to protect the transmission of confidential content, such as requests you send to us as the site operator, this website uses SSL/TLS encryption. You can recognize an encrypted connection by the fact that the address line of your browser changes from „http://“ to „https://“ and by the lock icon in your browser's address bar."
+    },
+    "storage": {
+      "title": "6. Storage duration",
+      "content": "Unless a more specific storage period is stated within this privacy policy, your personal data will remain with us until the purpose for the data processing no longer applies. We delete contact inquiries once they have been fully processed, provided no statutory retention obligations apply. Data from a customer account is stored for the duration of the contractual relationship and beyond, in accordance with commercial and tax law retention periods (generally 6 or 10 years)."
     },
     "rights": {
-      "title": "5. Your rights",
+      "title": "7. Your rights",
       "content": "You always have the right to:\n• Receive information about your data stored by us\n• Have this data corrected or deleted\n• Restrict processing\n• Object to processing\n• Receive your data in a transferable format\n• File a complaint with a supervisory authority"
     },
     "changes": {
-      "title": "6. Changes",
+      "title": "8. Changes",
       "content": "We reserve the right to adapt this privacy policy so that it always complies with current legal requirements or to implement changes to our services in the privacy policy. The new privacy policy will then apply to your next visit."
     }
   },

@@ -102,6 +102,20 @@ function ImprintContent({ data, locale }: { data: ImprintData; locale: string })
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("editorial.title")}
+        </h2>
+        <p className="text-tertiary">{t("editorial.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("dispute.title")}
+        </h2>
+        <p className="text-tertiary">{t("dispute.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
           {t("disclaimer.title")}
         </h2>
         <h3 className="text-lg font-medium text-secondary mb-2">

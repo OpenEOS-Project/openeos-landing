@@ -46,7 +46,14 @@ export function Footer() {
 
       <div className="foot__bot">
         <span>{t("copyright", { year })}</span>
-        <span>{t("productBy")}</span>
+        <a
+          href="https://luxcode.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="foot__by"
+        >
+          {t("productBy")}
+        </a>
       </div>
     </footer>
   );

@@ -105,7 +105,12 @@ function PrivacyContent({
         <h3 className="text-lg font-medium text-secondary mb-2">
           {t("dataCollection.contact.title")}
         </h3>
-        <p className="text-tertiary">{t("dataCollection.contact.content")}</p>
+        <p className="text-tertiary mb-4">{t("dataCollection.contact.content")}</p>
+
+        <h3 className="text-lg font-medium text-secondary mb-2">
+          {t("dataCollection.account.title")}
+        </h3>
+        <p className="text-tertiary">{t("dataCollection.account.content")}</p>
       </section>
 
       <section className="mb-8">
@@ -113,6 +118,20 @@ function PrivacyContent({
           {t("hosting.title")}
         </h2>
         <p className="text-tertiary">{t("hosting.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("ssl.title")}
+        </h2>
+        <p className="text-tertiary">{t("ssl.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("storage.title")}
+        </h2>
+        <p className="text-tertiary">{t("storage.content")}</p>
       </section>
 
       <section className="mb-8">
