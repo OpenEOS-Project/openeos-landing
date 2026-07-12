@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { ContactTrigger } from "@/components/ContactTrigger";
 
-const DEMO_EMAIL = process.env.NEXT_PUBLIC_DEMO_EMAIL ?? "hello@openeos.de";
 const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
 
 export function Footer() {
@@ -22,7 +22,7 @@ export function Footer() {
             <b>{t("product")}</b>
             <Link href="/#features">{t("features")}</Link>
             <Link href="/#pricing">{t("pricing")}</Link>
-            <a href={`mailto:${DEMO_EMAIL}?subject=Demo-Anfrage%20OpenEOS`}>{t("demo")}</a>
+            <ContactTrigger type="demo">{t("demo")}</ContactTrigger>
           </div>
           <div>
             <b>{t("resources")}</b>

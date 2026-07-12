@@ -1563,8 +1563,13 @@
 .landing .foot__brand p { color: var(--mute); font-size: 14px; max-width: 320px; }
 .landing .foot__cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .landing .foot__cols b { font-size: 13px; display: block; margin-bottom: 14px; letter-spacing: -.01em; }
-.landing .foot__cols a { display: block; padding: 4px 0; font-size: 14px; color: var(--mute); }
-.landing .foot__cols a:hover { color: var(--ink); }
+.landing .foot__cols a,
+.landing .foot__cols button {
+  display: block; width: 100%; padding: 4px 0; font-size: 14px; color: var(--mute);
+  background: none; border: 0; text-align: left; cursor: pointer;
+}
+.landing .foot__cols a:hover,
+.landing .foot__cols button:hover { color: var(--ink); }
 .landing .foot__bot {
   max-width: var(--max); margin: 40px auto 0;
   padding-top: 20px;
@@ -1700,4 +1705,132 @@
 @media (prefers-reduced-motion: reduce) {
   .landing .pill__dot,
   .landing .marquee__track { animation: none !important; }
+}
+
+/* ============================= CONTACT MODAL ============================= */
+.landing .contact-modal-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: color-mix(in oklab, var(--ink) 55%, transparent);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  animation: landing-fadeIn .2s ease;
+}
+.landing .contact-modal {
+  position: relative;
+  width: 100%; max-width: 520px;
+  margin: auto;
+  background: var(--paper);
+  border: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
+  border-radius: var(--r-lg);
+  box-shadow: 0 40px 100px -30px rgba(0,0,0,0.45);
+  padding: clamp(28px, 4vw, 40px);
+  animation: landing-fadeUp .25s ease;
+}
+.landing .contact-modal__close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: none; border: 0; border-radius: 8px;
+  color: var(--mute); cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.landing .contact-modal__close:hover { background: color-mix(in oklab, var(--ink) 6%, transparent); color: var(--ink); }
+.landing .contact-modal__close svg { width: 20px; height: 20px; }
+
+.landing .contact-modal__title {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800; letter-spacing: -.02em;
+  margin: 0 0 22px; padding-right: 40px;
+}
+.landing .contact-modal__title--center { padding-right: 0; margin: 0; }
+
+.landing .contact-modal__fields { display: flex; flex-direction: column; gap: 16px; }
+
+.landing .contact-modal .field { display: flex; flex-direction: column; gap: 6px; }
+.landing .contact-modal .field > label {
+  font-family: var(--f-mono, "JetBrains Mono", ui-monospace, monospace);
+  font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--mute); font-weight: 500;
+}
+.landing .contact-modal .field > label em {
+  font-style: normal; text-transform: none; letter-spacing: 0; opacity: .75; margin-left: 2px;
+}
+.landing .contact-modal .field input,
+.landing .contact-modal .field select,
+.landing .contact-modal .field textarea {
+  font: inherit;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  border-radius: var(--r);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  width: 100%;
+  transition: border-color .15s, box-shadow .15s;
+}
+.landing .contact-modal .field textarea { resize: vertical; min-height: 100px; }
+.landing .contact-modal .field select { cursor: pointer; }
+.landing .contact-modal .field input:focus,
+.landing .contact-modal .field select:focus,
+.landing .contact-modal .field textarea:focus {
+  outline: none;
+  border-color: var(--green-ink);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--green) 22%, transparent);
+}
+.landing .contact-modal .field--error input,
+.landing .contact-modal .field--error select,
+.landing .contact-modal .field--error textarea { border-color: #d24545; }
+.landing .contact-modal .field--error input:focus,
+.landing .contact-modal .field--error select:focus,
+.landing .contact-modal .field--error textarea:focus {
+  box-shadow: 0 0 0 3px color-mix(in oklab, #d24545 18%, transparent);
+}
+.landing .contact-modal .field__error { font-size: 12px; color: #b13838; font-weight: 500; }
+
+.landing .contact-modal__hp {
+  position: absolute; left: -9999px; top: -9999px;
+  width: 1px; height: 1px; overflow: hidden;
+}
+
+.landing .contact-modal__banner {
+  font-size: 13px; font-weight: 500;
+  padding: 12px 14px;
+  border-radius: var(--r);
+  margin-bottom: 16px;
+}
+.landing .contact-modal__banner--error {
+  background: color-mix(in oklab, #d24545 10%, var(--paper));
+  color: #b13838;
+  border: 1px solid color-mix(in oklab, #d24545 25%, transparent);
+}
+.landing .contact-modal__banner-row { display: flex; align-items: center; gap: 8px; }
+.landing .contact-modal__banner-row svg { width: 16px; height: 16px; flex-shrink: 0; }
+.landing .contact-modal__banner ul { margin: 8px 0 0; padding-left: 20px; list-style: disc; }
+
+.landing .contact-modal__actions { margin-top: 4px; }
+.landing .contact-modal__actions .btn { width: 100%; }
+.landing .contact-modal__actions .btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.landing .contact-modal__spinner { width: 16px; height: 16px; animation: landing-spin .8s linear infinite; }
+@keyframes landing-spin { to { transform: rotate(360deg); } }
+
+.landing .contact-modal__success {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: 14px; padding: 8px 0 4px;
+}
+.landing .contact-modal__success-icon {
+  width: 64px; height: 64px;
+  border-radius: 18px;
+  background: color-mix(in oklab, var(--green) 22%, transparent);
+  color: var(--green-ink);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.landing .contact-modal__success-icon svg { width: 32px; height: 32px; stroke-width: 1.75; }
+.landing .contact-modal__success p { color: var(--mute); font-size: 15px; margin: 0; max-width: 380px; }
+.landing .contact-modal__success .contact-modal__actions { width: 100%; max-width: 220px; }
+
+@media (max-width: 540px) {
+  .landing .contact-modal { padding: 24px 20px; }
+  .landing .contact-modal__title { font-size: 22px; }
 }

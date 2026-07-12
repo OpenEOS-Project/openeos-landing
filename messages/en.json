@@ -171,95 +171,95 @@
       }
     },
     "_legacy": {
-    "tabs": {
-      "planning": {
-        "label": "Planning",
-        "title": "Plan your event end-to-end.",
-        "copy": "Create events, manage members & roles, plan shifts — all in one dashboard.",
-        "checks": [
-          "Create, activate, close events",
-          "Members, roles & invitations",
-          "Shift planning with online sign-up",
-          "QR codes per table or location"
-        ],
-        "mockTitle": "Events",
-        "mockChip": "3 active",
-        "shiftsLabel": "Shift plan"
+      "tabs": {
+        "planning": {
+          "label": "Planning",
+          "title": "Plan your event end-to-end.",
+          "copy": "Create events, manage members & roles, plan shifts — all in one dashboard.",
+          "checks": [
+            "Create, activate, close events",
+            "Members, roles & invitations",
+            "Shift planning with online sign-up",
+            "QR codes per table or location"
+          ],
+          "mockTitle": "Events",
+          "mockChip": "3 active",
+          "shiftsLabel": "Shift plan"
+        },
+        "pos": {
+          "label": "Mobile POS",
+          "title": "Ring up where the guest is.",
+          "copy": "Tablet or phone — anywhere on site. Categories, modifiers, split-payment. Receipt printing via Raspberry Pi or network printer.",
+          "checks": [
+            "Categories, products, modifiers",
+            "Cash & SumUp card payments",
+            "Split-payment, vouchers, discounts",
+            "Z-report & CSV export in one click"
+          ],
+          "mockLocation": "Tent A · Counter",
+          "mockPos": "POS 03",
+          "mockSum": "Total",
+          "mockPayCash": "Cash",
+          "mockPayCard": "Card · SumUp"
+        },
+        "order": {
+          "label": "Self-order (QR)",
+          "title": "Scan. Order. Pick up.",
+          "copy": "Guests order at the table or in line themselves. Less waiting, more revenue — and your bar has breathing room.",
+          "checks": [
+            "QR per table or location",
+            "Payment via SumUp (incl. Apple Pay & Google Pay)",
+            "Cart, order status, pickup number",
+            "Pickup call-out with order number"
+          ],
+          "mockTitle": "Table 12 · Tent",
+          "mockCta": "Place order",
+          "mockHint": "Pickup at"
+        },
+        "kds": {
+          "label": "Kitchen Display",
+          "title": "No more lost tickets.",
+          "copy": "Real-time display for kitchen and pickup. Color-coded timers per ticket, routing per station, mark items ready or delivered.",
+          "checks": [
+            "Routing per station (bar, kitchen, pickup)",
+            "Per-ticket timer with escalation",
+            "Mark items ready / delivered",
+            "WebSocket real-time sync across all displays"
+          ]
+        },
+        "stats": {
+          "label": "Analytics",
+          "title": "Know what's happening in 5 minutes.",
+          "copy": "Live revenue, best sellers, hourly reports, stock movements. Export as CSV or JSON.",
+          "checks": [
+            "Live dashboard per event",
+            "Best sellers & slow movers",
+            "Hourly and inventory reports",
+            "CSV and JSON export"
+          ],
+          "kpi1": "Revenue today",
+          "kpi2": "Orders",
+          "kpi3": "Avg. ticket"
+        }
       },
-      "pos": {
-        "label": "Mobile POS",
-        "title": "Ring up where the guest is.",
-        "copy": "Tablet or phone — anywhere on site. Categories, modifiers, split-payment. Receipt printing via Raspberry Pi or network printer.",
-        "checks": [
-          "Categories, products, modifiers",
-          "Cash & SumUp card payments",
-          "Split-payment, vouchers, discounts",
-          "Z-report & CSV export in one click"
-        ],
-        "mockLocation": "Tent A · Counter",
-        "mockPos": "POS 03",
-        "mockSum": "Total",
-        "mockPayCash": "Cash",
-        "mockPayCard": "Card · SumUp"
-      },
-      "order": {
-        "label": "Self-order (QR)",
-        "title": "Scan. Order. Pick up.",
-        "copy": "Guests order at the table or in line themselves. Less waiting, more revenue — and your bar has breathing room.",
-        "checks": [
-          "QR per table or location",
-          "Payment via SumUp (incl. Apple Pay & Google Pay)",
-          "Cart, order status, pickup number",
-          "Pickup call-out with order number"
-        ],
-        "mockTitle": "Table 12 · Tent",
-        "mockCta": "Place order",
-        "mockHint": "Pickup at"
-      },
-      "kds": {
-        "label": "Kitchen Display",
-        "title": "No more lost tickets.",
-        "copy": "Real-time display for kitchen and pickup. Color-coded timers per ticket, routing per station, mark items ready or delivered.",
-        "checks": [
-          "Routing per station (bar, kitchen, pickup)",
-          "Per-ticket timer with escalation",
-          "Mark items ready / delivered",
-          "WebSocket real-time sync across all displays"
-        ]
-      },
-      "stats": {
-        "label": "Analytics",
-        "title": "Know what's happening in 5 minutes.",
-        "copy": "Live revenue, best sellers, hourly reports, stock movements. Export as CSV or JSON.",
-        "checks": [
-          "Live dashboard per event",
-          "Best sellers & slow movers",
-          "Hourly and inventory reports",
-          "CSV and JSON export"
-        ],
-        "kpi1": "Revenue today",
-        "kpi2": "Orders",
-        "kpi3": "Avg. ticket"
+      "cards": {
+        "sumup": {
+          "title": "SumUp card payments",
+          "copy": "SumUp terminal on site and SumUp API online — contactless, Apple Pay, Google Pay."
+        },
+        "shifts": {
+          "title": "Shift planning & sign-up",
+          "copy": "Plan shifts, assign volunteers, online sign-up with confirmation."
+        },
+        "printer": {
+          "title": "Receipt printing via Pi",
+          "copy": "Python agent for ESC/POS printers. Network IP, no license zoo, cheap hardware."
+        },
+        "realtime": {
+          "title": "Real-time sync",
+          "copy": "WebSocket gateway keeps POS, kitchen, pickup and printers in lockstep."
+        }
       }
-    },
-    "cards": {
-      "sumup": {
-        "title": "SumUp card payments",
-        "copy": "SumUp terminal on site and SumUp API online — contactless, Apple Pay, Google Pay."
-      },
-      "shifts": {
-        "title": "Shift planning & sign-up",
-        "copy": "Plan shifts, assign volunteers, online sign-up with confirmation."
-      },
-      "printer": {
-        "title": "Receipt printing via Pi",
-        "copy": "Python agent for ESC/POS printers. Network IP, no license zoo, cheap hardware."
-      },
-      "realtime": {
-        "title": "Real-time sync",
-        "copy": "WebSocket gateway keeps POS, kitchen, pickup and printers in lockstep."
-      }
-    }
     }
   },
   "pricing": {
@@ -337,6 +337,40 @@
     "sub": "Sign up in minutes. Run your first event right away.",
     "ctaRegister": "Register organization →",
     "ctaDemo": "Request demo"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "typeLabel": "Request type",
+    "type": {
+      "demo": "Request demo",
+      "contact": "General inquiry",
+      "hardware": "Hardware rental",
+      "gateway": "POS gateway"
+    },
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "organizationLabel": "Organization",
+    "organizationOptional": "optional",
+    "organizationPlaceholder": "Club, company, organization",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help?",
+    "submit": "Send",
+    "submitting": "Sending …",
+    "close": "Close",
+    "successTitle": "Thank you!",
+    "successBody": "Thank you! We'll get back to you shortly.",
+    "successClose": "Close",
+    "errors": {
+      "nameRequired": "Please enter your name.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageRequired": "Please enter a message.",
+      "messageTooShort": "Your message should be at least 10 characters long.",
+      "rateLimit": "Too many requests — please try again later.",
+      "generic": "Something went wrong. Please try again."
+    }
   },
   "footer": {
     "tagline": "The modern POS system for clubs, events and festival catering.",

@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
+import { ContactTrigger } from "@/components/ContactTrigger";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
-const DEMO_EMAIL = process.env.NEXT_PUBLIC_DEMO_EMAIL ?? "hello@openeos.de";
 
 export function CTA() {
   const t = useTranslations("cta");
@@ -17,12 +17,9 @@ export function CTA() {
         <a href={`${APP_URL}/register`} className="btn btn--primary btn--lg">
           {t("ctaRegister")}
         </a>
-        <a
-          href={`mailto:${DEMO_EMAIL}?subject=Demo-Anfrage%20OpenEOS`}
-          className="btn btn--ghost btn--lg"
-        >
+        <ContactTrigger type="demo" className="btn btn--ghost btn--lg">
           {t("ctaDemo")}
-        </a>
+        </ContactTrigger>
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl";
 import { HeroDemo } from "./HeroDemo";
+import { ContactTrigger } from "@/components/ContactTrigger";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
-const DEMO_EMAIL = process.env.NEXT_PUBLIC_DEMO_EMAIL ?? "hello@openeos.de";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -37,12 +37,9 @@ export function Hero() {
                 />
               </svg>
             </a>
-            <a
-              href={`mailto:${DEMO_EMAIL}?subject=Demo-Anfrage%20OpenEOS`}
-              className="btn btn--ghost btn--lg"
-            >
+            <ContactTrigger type="demo" className="btn btn--ghost btn--lg">
               {t("ctaDemo")}
-            </a>
+            </ContactTrigger>
           </div>
         </div>
 

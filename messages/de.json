@@ -171,95 +171,95 @@
       }
     },
     "_legacy": {
-    "tabs": {
-      "planning": {
-        "label": "Planung",
-        "title": "Plane dein Event von A bis Z.",
-        "copy": "Events anlegen, Mitglieder & Rollen verwalten, Schichten planen — alles in einem Dashboard.",
-        "checks": [
-          "Events anlegen, aktivieren, abschließen",
-          "Mitglieder, Rollen & Einladungen",
-          "Schichtplan mit Online-Anmeldung",
-          "QR-Codes pro Tisch oder Standort"
-        ],
-        "mockTitle": "Events",
-        "mockChip": "3 aktiv",
-        "shiftsLabel": "Schichtplan"
+      "tabs": {
+        "planning": {
+          "label": "Planung",
+          "title": "Plane dein Event von A bis Z.",
+          "copy": "Events anlegen, Mitglieder & Rollen verwalten, Schichten planen — alles in einem Dashboard.",
+          "checks": [
+            "Events anlegen, aktivieren, abschließen",
+            "Mitglieder, Rollen & Einladungen",
+            "Schichtplan mit Online-Anmeldung",
+            "QR-Codes pro Tisch oder Standort"
+          ],
+          "mockTitle": "Events",
+          "mockChip": "3 aktiv",
+          "shiftsLabel": "Schichtplan"
+        },
+        "pos": {
+          "label": "Mobile Kasse",
+          "title": "Kassieren, wo der Gast steht.",
+          "copy": "Tablet oder Smartphone — überall auf dem Gelände. Artikelgruppen, Modifier, Split-Payment. Bondruck über Raspberry Pi oder Netzwerkdrucker.",
+          "checks": [
+            "Kategorien, Produkte, Modifier",
+            "Barzahlung & SumUp-Kartenzahlung",
+            "Split-Payment, Gutscheine, Rabatte",
+            "Z-Bon & CSV-Export per Knopfdruck"
+          ],
+          "mockLocation": "Zelt A · Theke",
+          "mockPos": "Kasse 03",
+          "mockSum": "Summe",
+          "mockPayCash": "Bar",
+          "mockPayCard": "Karte · SumUp"
+        },
+        "order": {
+          "label": "Online-Bestellung",
+          "title": "QR scannen. Bestellen. Abholen.",
+          "copy": "Gäste bestellen am Tisch oder in der Schlange selbst. Weniger Warten, mehr Umsatz — und deine Theke hat Luft.",
+          "checks": [
+            "QR pro Tisch oder Standort",
+            "Bezahlung per SumUp (inkl. Apple Pay & Google Pay)",
+            "Warenkorb, Bestellstatus, Abholnummer",
+            "Aufruf an der Ausgabe inkl. Bestellnummer"
+          ],
+          "mockTitle": "Tisch 12 · Festzelt",
+          "mockCta": "Jetzt bestellen",
+          "mockHint": "Abholung bei"
+        },
+        "kds": {
+          "label": "Küchen-Display",
+          "title": "Keine verlorenen Bons mehr.",
+          "copy": "Echtzeit-Anzeige für Küche und Ausgabe. Farbige Timer pro Ticket, Routing pro Station, Artikel als fertig oder geliefert markieren.",
+          "checks": [
+            "Routing pro Station (Theke, Küche, Ausgabe)",
+            "Timer pro Ticket mit Eskalation",
+            "Artikel als fertig / geliefert markieren",
+            "WebSocket-Echtzeit-Sync über alle Displays"
+          ]
+        },
+        "stats": {
+          "label": "Statistik",
+          "title": "Weißt du nach 5 Minuten, was läuft.",
+          "copy": "Umsatz live, Bestseller, Stundenbericht, Lagerbewegungen. Export als CSV oder JSON.",
+          "checks": [
+            "Live-Dashboard pro Event",
+            "Bestseller & Renner/Penner",
+            "Stunden- und Inventurberichte",
+            "CSV- und JSON-Export"
+          ],
+          "kpi1": "Umsatz heute",
+          "kpi2": "Bestellungen",
+          "kpi3": "Ø Ticket"
+        }
       },
-      "pos": {
-        "label": "Mobile Kasse",
-        "title": "Kassieren, wo der Gast steht.",
-        "copy": "Tablet oder Smartphone — überall auf dem Gelände. Artikelgruppen, Modifier, Split-Payment. Bondruck über Raspberry Pi oder Netzwerkdrucker.",
-        "checks": [
-          "Kategorien, Produkte, Modifier",
-          "Barzahlung & SumUp-Kartenzahlung",
-          "Split-Payment, Gutscheine, Rabatte",
-          "Z-Bon & CSV-Export per Knopfdruck"
-        ],
-        "mockLocation": "Zelt A · Theke",
-        "mockPos": "Kasse 03",
-        "mockSum": "Summe",
-        "mockPayCash": "Bar",
-        "mockPayCard": "Karte · SumUp"
-      },
-      "order": {
-        "label": "Online-Bestellung",
-        "title": "QR scannen. Bestellen. Abholen.",
-        "copy": "Gäste bestellen am Tisch oder in der Schlange selbst. Weniger Warten, mehr Umsatz — und deine Theke hat Luft.",
-        "checks": [
-          "QR pro Tisch oder Standort",
-          "Bezahlung per SumUp (inkl. Apple Pay & Google Pay)",
-          "Warenkorb, Bestellstatus, Abholnummer",
-          "Aufruf an der Ausgabe inkl. Bestellnummer"
-        ],
-        "mockTitle": "Tisch 12 · Festzelt",
-        "mockCta": "Jetzt bestellen",
-        "mockHint": "Abholung bei"
-      },
-      "kds": {
-        "label": "Küchen-Display",
-        "title": "Keine verlorenen Bons mehr.",
-        "copy": "Echtzeit-Anzeige für Küche und Ausgabe. Farbige Timer pro Ticket, Routing pro Station, Artikel als fertig oder geliefert markieren.",
-        "checks": [
-          "Routing pro Station (Theke, Küche, Ausgabe)",
-          "Timer pro Ticket mit Eskalation",
-          "Artikel als fertig / geliefert markieren",
-          "WebSocket-Echtzeit-Sync über alle Displays"
-        ]
-      },
-      "stats": {
-        "label": "Statistik",
-        "title": "Weißt du nach 5 Minuten, was läuft.",
-        "copy": "Umsatz live, Bestseller, Stundenbericht, Lagerbewegungen. Export als CSV oder JSON.",
-        "checks": [
-          "Live-Dashboard pro Event",
-          "Bestseller & Renner/Penner",
-          "Stunden- und Inventurberichte",
-          "CSV- und JSON-Export"
-        ],
-        "kpi1": "Umsatz heute",
-        "kpi2": "Bestellungen",
-        "kpi3": "Ø Ticket"
+      "cards": {
+        "sumup": {
+          "title": "SumUp-Kartenzahlung",
+          "copy": "SumUp-Gerät vor Ort und SumUp-API online — kontaktlos, Apple Pay, Google Pay."
+        },
+        "shifts": {
+          "title": "Schichtplan & Anmeldung",
+          "copy": "Schichten planen, Mitarbeiter einteilen, Online-Anmeldung mit Bestätigung."
+        },
+        "printer": {
+          "title": "Bondruck via Pi",
+          "copy": "Python-Agent für ESC/POS-Drucker. Netzwerk-IP, kein Lizenz-Zoo, günstige Hardware."
+        },
+        "realtime": {
+          "title": "Echtzeit-Sync",
+          "copy": "WebSocket-Gateway hält Kassen, Küche, Ausgabe und Drucker im Gleichschritt."
+        }
       }
-    },
-    "cards": {
-      "sumup": {
-        "title": "SumUp-Kartenzahlung",
-        "copy": "SumUp-Gerät vor Ort und SumUp-API online — kontaktlos, Apple Pay, Google Pay."
-      },
-      "shifts": {
-        "title": "Schichtplan & Anmeldung",
-        "copy": "Schichten planen, Mitarbeiter einteilen, Online-Anmeldung mit Bestätigung."
-      },
-      "printer": {
-        "title": "Bondruck via Pi",
-        "copy": "Python-Agent für ESC/POS-Drucker. Netzwerk-IP, kein Lizenz-Zoo, günstige Hardware."
-      },
-      "realtime": {
-        "title": "Echtzeit-Sync",
-        "copy": "WebSocket-Gateway hält Kassen, Küche, Ausgabe und Drucker im Gleichschritt."
-      }
-    }
     }
   },
   "pricing": {
@@ -337,6 +337,40 @@
     "sub": "Registrierung in wenigen Minuten. Erstes Event sofort möglich.",
     "ctaRegister": "Organisation registrieren →",
     "ctaDemo": "Demo anfragen"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "typeLabel": "Anfrage-Typ",
+    "type": {
+      "demo": "Demo anfragen",
+      "contact": "Allgemeine Anfrage",
+      "hardware": "Hardware-Miete",
+      "gateway": "Kassen-Gateway"
+    },
+    "nameLabel": "Name",
+    "namePlaceholder": "Dein Name",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "du@beispiel.de",
+    "organizationLabel": "Organisation",
+    "organizationOptional": "optional",
+    "organizationPlaceholder": "Verein, Firma, Organisation",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Wie können wir dir helfen?",
+    "submit": "Absenden",
+    "submitting": "Wird gesendet …",
+    "close": "Schließen",
+    "successTitle": "Vielen Dank!",
+    "successBody": "Vielen Dank! Wir melden uns zeitnah.",
+    "successClose": "Schließen",
+    "errors": {
+      "nameRequired": "Bitte gib deinen Namen an.",
+      "emailRequired": "Bitte gib deine E-Mail-Adresse an.",
+      "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse an.",
+      "messageRequired": "Bitte gib eine Nachricht ein.",
+      "messageTooShort": "Deine Nachricht sollte mindestens 10 Zeichen lang sein.",
+      "rateLimit": "Zu viele Anfragen — bitte versuche es später erneut.",
+      "generic": "Da ist etwas schiefgelaufen. Bitte versuche es erneut."
+    }
   },
   "footer": {
     "tagline": "Das moderne Kassensystem für Vereine, Veranstaltungen und Festbewirtungen.",

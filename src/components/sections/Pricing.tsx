@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl";
+import { ContactTrigger } from "@/components/ContactTrigger";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
 const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
-const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@openeos.de";
 
 export interface PricingPackage {
   slug: string;
@@ -101,9 +101,9 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
               <li key={f}>{f}</li>
             ))}
           </ul>
-          <a href={`mailto:${CONTACT_EMAIL}?subject=Hardware-Vermietung`} className="btn btn--ghost btn--block">
+          <ContactTrigger type="hardware" className="btn btn--ghost btn--block">
             {t("hardware.cta")}
-          </a>
+          </ContactTrigger>
         </article>
       </div>
 
@@ -123,9 +123,9 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
             <b>{t("gateway.price")}</b>
             <span>{t("gateway.unit")}</span>
           </div>
-          <a href={`mailto:${CONTACT_EMAIL}?subject=Kassen-Gateway`} className="btn btn--light btn--block">
+          <ContactTrigger type="gateway" className="btn btn--light btn--block">
             {t("gateway.cta")}
-          </a>
+          </ContactTrigger>
         </div>
       </article>
     </section>

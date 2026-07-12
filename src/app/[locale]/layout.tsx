@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { locales } from "@/i18n/config";
+import { ContactModalProvider } from "@/providers/contact-modal";
 
 const geist = Geist({
   variable: "--f-sans",
@@ -62,9 +63,11 @@ export default async function LocaleLayout({
           forcedTheme="light"
         >
           <NextIntlClientProvider messages={messages}>
+            {/* Provider INSIDE .landing — das Modal rendert als Kind des Providers
+                und braucht den .landing-Scope, sonst greifen seine CSS-Regeln nicht */}
             <div className="landing">
               <div className="grain" aria-hidden="true" />
-              {children}
+              <ContactModalProvider>{children}</ContactModalProvider>
             </div>
           </NextIntlClientProvider>
         </ThemeProvider>
