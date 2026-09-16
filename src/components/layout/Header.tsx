@@ -34,7 +34,6 @@ export function Header() {
             <Link href="/#features">{t("features")}</Link>
             <Link href="/#pricing">{t("pricing")}</Link>
             <Link href="/#open-source">{t("openSource")}</Link>
-            <Link href="/changelog">{t("changelog")}</Link>
           </nav>
         </div>
 
