@@ -2058,3 +2058,57 @@
   line-height: 1.6;
   color: var(--mute, #5b6159);
 }
+
+/* ===================== BILDSCHIRMFOTOS =====================
+   Die Aufnahmen tragen den Abschnitt, der Text ordnet sie nur ein. */
+.landing .screens {
+  padding: 96px 0;
+}
+.landing .screens__grid {
+  max-width: var(--max);
+  margin: 48px auto 0;
+  padding: 0 var(--pad);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+/* Die Kasse ist das Herzstück und bekommt die ganze Breite. */
+.landing .screens__item--wide {
+  grid-column: 1 / -1;
+}
+.landing .screens__item {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.landing .screens__frame {
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  border-radius: var(--oe-r-lg, 14px);
+  background: var(--paper);
+  /* Leichter Schatten, damit die Aufnahme nicht in der Seite versinkt. */
+  box-shadow: 0 18px 40px -28px color-mix(in oklab, var(--ink) 55%, transparent);
+  line-height: 0;
+}
+.landing .screens__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.landing .screens__caption {
+  display: grid;
+  gap: 3px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--mute);
+}
+.landing .screens__caption b {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+@media (max-width: 860px) {
+  .landing .screens__grid {
+    grid-template-columns: 1fr;
+  }
+}

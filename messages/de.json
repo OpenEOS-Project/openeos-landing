@@ -563,5 +563,27 @@
       "rateLimit": "Sie haben gerade schon geschrieben. Bitte versuchen Sie es später erneut.",
       "generic": "Das hat leider nicht geklappt. Bitte versuchen Sie es später erneut."
     }
+  },
+  "screens": {
+    "titleL1": "So sieht",
+    "titleL2": "es aus",
+    "sub": "Bildschirmfotos aus dem laufenden System — nicht nachgestellt.",
+    "items": {
+      "pos": {
+        "title": "Die Kasse",
+        "text": "Kategorien links, Produkte in der Mitte, Warenkorb rechts. Bedienbar mit dem Finger.",
+        "alt": "Kassenoberfläche mit Produkten und gefülltem Warenkorb"
+      },
+      "display": {
+        "title": "Bildschirm verbinden",
+        "text": "Code eintippen oder QR-Code scannen — mehr braucht ein Monitor nicht.",
+        "alt": "Bildschirm zeigt einen sechsstelligen Kopplungscode und einen QR-Code"
+      },
+      "dashboard": {
+        "title": "Die Übersicht",
+        "text": "Umsatz, Bestellungen und der Zustand aller Geräte auf einen Blick.",
+        "alt": "Übersichtsseite mit Kennzahlen und Geräteliste"
+      }
+    }
   }
 }

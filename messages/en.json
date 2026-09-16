@@ -563,5 +563,27 @@
       "rateLimit": "You have just written to us. Please try again later.",
       "generic": "That did not work. Please try again later."
     }
+  },
+  "screens": {
+    "titleL1": "What it",
+    "titleL2": "looks like",
+    "sub": "Screenshots from the running system — nothing staged.",
+    "items": {
+      "pos": {
+        "title": "The till",
+        "text": "Categories on the left, products in the middle, basket on the right. Built for fingers.",
+        "alt": "Till interface showing products and a filled basket"
+      },
+      "display": {
+        "title": "Connecting a screen",
+        "text": "Type the code or scan the QR — that is all a monitor needs.",
+        "alt": "Screen showing a six-digit pairing code and a QR code"
+      },
+      "dashboard": {
+        "title": "The overview",
+        "text": "Revenue, orders and the state of every device at a glance.",
+        "alt": "Dashboard with key figures and device status"
+      }
+    }
   }
 }
