@@ -27,6 +27,8 @@ export function Footer() {
           <div>
             <b>{t("resources")}</b>
             <a href={DOCS_URL}>{t("docs")}</a>
+            <Link href="/changelog">{t("changelog")}</Link>
+            <Link href="/feedback">{t("feedback")}</Link>
             <a
               href="https://github.com/OpenEOS-Project"
               target="_blank"

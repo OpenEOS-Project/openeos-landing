@@ -1834,3 +1834,217 @@
   .landing .contact-modal { padding: 24px 20px; }
   .landing .contact-modal__title { font-size: 22px; }
 }
+
+/* ===================== NEUERUNGEN & FEEDBACK =====================
+   Zwei Unterseiten mit demselben schmalen Textmaß: beide werden
+   gelesen, nicht überflogen. */
+.landing .changelog,
+.landing .feedback {
+  padding: 132px 0 96px;
+}
+.landing .changelog__inner,
+.landing .feedback__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--pad, 20px);
+}
+
+/* ---------- Neuerungen ---------- */
+.landing .changelog__list {
+  margin-top: 48px;
+  display: grid;
+  gap: 44px;
+}
+.landing .changelog__date {
+  margin: 0 0 16px;
+  font: 500 12px var(--oe-f-mono, monospace);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--mute-2, #8a8f86);
+}
+.landing .changelog__entries {
+  display: grid;
+  gap: 22px;
+  /* Zeitstrahl: eine Linie trägt die Einträge eines Tages. */
+  border-left: 1px solid var(--oe-line, rgba(0, 0, 0, .1));
+  padding-left: 22px;
+}
+.landing .changelog__entry {
+  display: grid;
+  gap: 6px;
+}
+.landing .changelog__tag {
+  justify-self: start;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font: 600 11px var(--oe-f-sans, inherit);
+  letter-spacing: .02em;
+}
+.landing .changelog__tag--neu {
+  background: color-mix(in oklab, var(--oe-green, #74c69d) 30%, transparent);
+  color: var(--oe-green-ink, #1b4332);
+}
+.landing .changelog__tag--verbessert {
+  background: color-mix(in oklab, var(--ink, #111) 8%, transparent);
+  color: var(--ink, #111);
+}
+.landing .changelog__tag--behoben {
+  background: color-mix(in oklab, var(--warn, #d9a441) 25%, transparent);
+  color: color-mix(in oklab, var(--warn, #d9a441) 70%, var(--ink, #111));
+}
+.landing .changelog__title {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -.01em;
+}
+.landing .changelog__text {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--mute, #5b6159);
+}
+.landing .changelog__foot {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--oe-line, rgba(0, 0, 0, .1));
+  font-size: 14px;
+  color: var(--mute-2, #8a8f86);
+}
+
+/* ---------- Feedback ---------- */
+.landing .feedback__form {
+  margin-top: 40px;
+  display: grid;
+  gap: 22px;
+}
+.landing .feedback__kinds {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.landing .feedback__kind-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+/* Die ganze Kachel ist die Schaltfläche; der Radioknopf selbst wäre auf
+   einem Telefon ein zu kleines Ziel. */
+.landing .feedback__kind {
+  display: grid;
+  gap: 3px;
+  padding: 14px 16px;
+  border: 1px solid var(--oe-line, rgba(0, 0, 0, .12));
+  border-radius: var(--oe-r-md, 10px);
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.landing .feedback__kind input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.landing .feedback__kind:hover {
+  border-color: color-mix(in oklab, var(--oe-green-ink, #1b4332) 40%, transparent);
+}
+.landing .feedback__kind.is-active {
+  border-color: var(--oe-green-ink, #1b4332);
+  background: color-mix(in oklab, var(--oe-green, #74c69d) 12%, transparent);
+}
+.landing .feedback__kind-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+.landing .feedback__kind-hint {
+  font-size: 13px;
+  color: var(--mute, #5b6159);
+}
+.landing .feedback .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.landing .feedback .field__label {
+  font: 500 12px var(--oe-f-mono, monospace);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--mute, #5b6159);
+}
+.landing .feedback .input,
+.landing .feedback .textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--oe-line, rgba(0, 0, 0, .14));
+  border-radius: var(--oe-r-sm, 8px);
+  background: var(--surface, #fff);
+  color: var(--ink, #111);
+  font: inherit;
+  font-size: 15px;
+}
+.landing .feedback .textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+.landing .feedback .input:focus,
+.landing .feedback .textarea:focus {
+  outline: none;
+  border-color: var(--oe-green-ink, #1b4332);
+}
+.landing .feedback .field--error .input,
+.landing .feedback .field--error .textarea {
+  border-color: var(--danger, #c0392b);
+}
+.landing .feedback .field__error {
+  font-size: 13px;
+  color: var(--danger, #c0392b);
+}
+.landing .feedback .field__hint {
+  font-size: 13px;
+  color: var(--mute-2, #8a8f86);
+}
+.landing .feedback__error {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--oe-r-sm, 8px);
+  background: color-mix(in oklab, var(--danger, #c0392b) 12%, transparent);
+  color: var(--danger, #c0392b);
+  font-size: 14px;
+}
+/* Aus dem Blickfeld, aber nicht display:none — manche Ausfüllhilfen
+   überspringen versteckte Felder, und genau die sollen hier zugreifen. */
+.landing .feedback__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.landing .feedback__done {
+  margin-top: 48px;
+  text-align: center;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+.landing .feedback__done-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: var(--oe-green-ink, #1b4332);
+  color: var(--oe-on-accent, #fff);
+  font-size: 24px;
+}
+.landing .feedback__done-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+.landing .feedback__done-text {
+  margin: 0;
+  max-width: 44ch;
+  line-height: 1.6;
+  color: var(--mute, #5b6159);
+}

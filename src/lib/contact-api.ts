@@ -1,4 +1,10 @@
-export type ContactType = "demo" | "contact" | "hardware" | "gateway";
+export type ContactType =
+  | "demo"
+  | "contact"
+  | "hardware"
+  | "gateway"
+  | "feedback"
+  | "feature";
 
 export interface ContactPayload {
   type: ContactType;

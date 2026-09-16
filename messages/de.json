@@ -102,7 +102,8 @@
     "pricing": "Preise",
     "openSource": "Open Source",
     "login": "Anmelden",
-    "register": "Registrieren"
+    "register": "Registrieren",
+    "changelog": "Neuerungen"
   },
   "hero": {
     "pill": "Neue Version jetzt verfügbar",
@@ -382,12 +383,13 @@
     "demo": "Demo anfragen",
     "docs": "Dokumentation",
     "github": "GitHub",
-    "changelog": "Changelog",
+    "changelog": "Neuerungen",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "terms": "AGB",
     "copyright": "© {year} OpenEOS · Made with ❤️",
-    "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel"
+    "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel",
+    "feedback": "Feedback & Wünsche"
   },
   "imprint": {
     "title": "Impressum",
@@ -513,6 +515,53 @@
     "jurisdiction": {
       "title": "10. Schlussbestimmungen",
       "content": "Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten aus diesem Vertrag ist, soweit gesetzlich zulässig, der Sitz des Anbieters. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
+    }
+  },
+  "changelog": {
+    "metaTitle": "Neuerungen — OpenEOS",
+    "titleL1": "Was sich",
+    "titleL2": "geändert hat",
+    "sub": "Alle Neuerungen verständlich erklärt — ohne Fachbegriffe.",
+    "kinds": {
+      "neu": "Neu",
+      "verbessert": "Verbessert",
+      "behoben": "Behoben"
+    },
+    "foot": "Ältere Änderungen führen wir nicht auf. Fragen dazu? Schreiben Sie uns."
+  },
+  "feedback": {
+    "metaTitle": "Feedback & Wünsche — OpenEOS",
+    "titleL1": "Ihre Meinung",
+    "titleL2": "zählt",
+    "sub": "Was fehlt Ihnen? Was stört? Jede Rückmeldung landet direkt bei uns.",
+    "kindLabel": "Worum geht es?",
+    "kinds": {
+      "feature": {
+        "title": "Funktionswunsch",
+        "hint": "Etwas, das OpenEOS noch nicht kann.",
+        "placeholder": "Beschreiben Sie, was Sie gerne tun würden und warum es Ihnen helfen würde."
+      },
+      "feedback": {
+        "title": "Rückmeldung",
+        "hint": "Etwas gefällt Ihnen — oder stört Sie.",
+        "placeholder": "Was ist Ihnen aufgefallen? Je genauer, desto besser können wir etwas damit anfangen."
+      }
+    },
+    "name": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "emailHint": "Nur für Rückfragen — wir tragen Sie in keinen Verteiler ein.",
+    "message": "Ihre Nachricht",
+    "submit": "Absenden",
+    "successTitle": "Angekommen!",
+    "successBody": "Vielen Dank. Wir lesen jede Zuschrift und melden uns, wenn wir Fragen haben.",
+    "errors": {
+      "nameRequired": "Bitte geben Sie Ihren Namen an.",
+      "emailRequired": "Bitte geben Sie eine E-Mail-Adresse an.",
+      "emailInvalid": "Diese E-Mail-Adresse sieht nicht richtig aus.",
+      "messageRequired": "Bitte schreiben Sie uns ein paar Worte.",
+      "messageTooShort": "Ein bisschen ausführlicher, bitte — mindestens zehn Zeichen.",
+      "rateLimit": "Sie haben gerade schon geschrieben. Bitte versuchen Sie es später erneut.",
+      "generic": "Das hat leider nicht geklappt. Bitte versuchen Sie es später erneut."
     }
   }
 }

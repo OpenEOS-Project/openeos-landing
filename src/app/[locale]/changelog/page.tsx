@@ -1,0 +1,84 @@
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { CHANGELOG, type ChangelogArt } from '@/content/changelog';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('changelog');
+  return { title: t('metaTitle'), description: t('sub') };
+}
+
+const ART_KLASSE: Record<ChangelogArt, string> = {
+  neu: 'changelog__tag changelog__tag--neu',
+  verbessert: 'changelog__tag changelog__tag--verbessert',
+  behoben: 'changelog__tag changelog__tag--behoben',
+};
+
+/** Gruppiert nach Datum, damit ein Tag einmal statt fünfmal dasteht. */
+function nachDatum(eintraege: typeof CHANGELOG) {
+  const gruppen = new Map<string, typeof CHANGELOG>();
+  for (const eintrag of eintraege) {
+    const vorhanden = gruppen.get(eintrag.datum) ?? [];
+    vorhanden.push(eintrag);
+    gruppen.set(eintrag.datum, vorhanden);
+  }
+  return [...gruppen.entries()];
+}
+
+export default async function ChangelogPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('changelog');
+
+  const sprache = locale === 'en' ? 'en' : 'de';
+  const datumFormat = new Intl.DateTimeFormat(sprache === 'en' ? 'en-GB' : 'de-DE', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+
+  return (
+    <>
+      <Header />
+      <main className="changelog">
+        <div className="changelog__inner">
+          <header className="section-head">
+            <h1 className="section-title">
+              {t('titleL1')} <span className="u-accent">{t('titleL2')}</span>
+            </h1>
+            <p className="section-sub">{t('sub')}</p>
+          </header>
+
+          <div className="changelog__list">
+            {nachDatum(CHANGELOG).map(([datum, eintraege]) => (
+              <section key={datum} className="changelog__group">
+                <h2 className="changelog__date">
+                  <time dateTime={datum}>{datumFormat.format(new Date(datum))}</time>
+                </h2>
+
+                <div className="changelog__entries">
+                  {eintraege.map((eintrag) => (
+                    <article key={eintrag.titel.de} className="changelog__entry">
+                      <span className={ART_KLASSE[eintrag.art]}>{t(`kinds.${eintrag.art}`)}</span>
+                      <h3 className="changelog__title">{eintrag.titel[sprache]}</h3>
+                      <p className="changelog__text">{eintrag.text[sprache]}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+
+          <p className="changelog__foot">{t('foot')}</p>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
