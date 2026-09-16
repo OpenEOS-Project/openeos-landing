@@ -74,7 +74,11 @@
 .landing .nav__inner {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 var(--pad);
+  /* Links Platz fuer das Logo lassen: es liegt absolut am Fensterrand und
+     folgt damit einem anderen Raster als dieser zentrierte Block. Bei
+     mittleren Fensterbreiten trafen sich beide — der erste Menuepunkt lag
+     dann unter dem Logo. */
+  padding: 0 var(--pad) 0 max(var(--pad), 128px);
   display: flex;
   align-items: center;
 }
