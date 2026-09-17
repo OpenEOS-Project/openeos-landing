@@ -585,5 +585,37 @@
         "alt": "Übersichtsseite mit Kennzahlen und Geräteliste"
       }
     }
+  },
+  "journey": {
+    "titleL1": "Vom Zapfhahn",
+    "titleL2": "bis zur Küche",
+    "sub": "Was an einem Festabend passiert — und wo OpenEOS dabei hilft.",
+    "panels": {
+      "checkout": {
+        "step": "Schritt 1 · Kasse",
+        "copy": "Die Bestellung wird an der Theke aufgenommen — auf jedem Tablet, auch ohne Netz.",
+        "alt": "Bedienung nimmt an der Theke eine Bestellung auf einem Tablet auf"
+      },
+      "receipt": {
+        "step": "Schritt 2 · Bon",
+        "copy": "Küchen- und Thekenbons laufen automatisch auf dem richtigen Drucker aus.",
+        "alt": "Ein Bon läuft aus dem Drucker"
+      },
+      "runner": {
+        "step": "Schritt 3 · Ausgabe",
+        "copy": "Wer was wohin bringt, steht auf dem Bon. Keine Zurufe, keine Zettelwirtschaft.",
+        "alt": "Ein Läufer bringt Getränke an den Tisch"
+      },
+      "kitchen": {
+        "step": "Schritt 4 · Küche",
+        "copy": "Das Küchendisplay quittiert fertige Bestellungen mit einem Griff.",
+        "alt": "Küchenpersonal quittiert eine fertige Bestellung am Bildschirm"
+      },
+      "tent": {
+        "step": "Schritt 5 · Überblick",
+        "copy": "Umsatz, Bestseller und Wartezeiten laufen live im Dashboard zusammen.",
+        "alt": "Volles Festzelt am Abend"
+      }
+    }
   }
 }

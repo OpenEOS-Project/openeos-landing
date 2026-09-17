@@ -2112,3 +2112,72 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ===================== BILDSTRECKE =====================
+   Fünf Panels als Reihe. Auf schmalen Geräten wird daraus ein
+   Wischstreifen statt fünf untereinander gestapelter Hochformate. */
+.landing .journey {
+  padding: 96px 0;
+}
+.landing .journey__strip {
+  list-style: none;
+  max-width: var(--max);
+  margin: 48px auto 0;
+  padding: 0 var(--pad);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.landing .journey__panel {
+  display: grid;
+  gap: 12px;
+  /* Nummerierung kommt aus dem Text, nicht aus der Liste. */
+  list-style: none;
+}
+.landing .journey__frame {
+  overflow: hidden;
+  border-radius: var(--oe-r-md, 12px);
+  border: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
+  line-height: 0;
+  background: var(--paper);
+}
+.landing .journey__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.landing .journey__step {
+  display: block;
+  font: 500 11px var(--oe-f-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--oe-green-ink, #1b4332);
+  margin-bottom: 4px;
+}
+.landing .journey__copy p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--mute);
+}
+
+@media (max-width: 1100px) {
+  .landing .journey__strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  /* Wischen statt scrollen: fünf Hochformate untereinander wären eine
+     halbe Bildschirmhöhe pro Panel. */
+  .landing .journey__strip {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding-bottom: 8px;
+  }
+  .landing .journey__panel {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+}
