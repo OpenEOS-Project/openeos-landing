@@ -230,7 +230,7 @@
   transition: transform .15s ease, background .2s, color .2s, border-color .2s;
   white-space: nowrap;
 }
-.landing .btn svg { width: 16px; height: 16px; }
+.landing .btn svg { width: 16px; height: 16px; flex: none; }
 .landing .btn--lg { padding: 14px 22px; font-size: 15px; }
 .landing .btn--block { width: 100%; }
 
@@ -1875,9 +1875,9 @@
 .landing .changelog__entries {
   display: grid;
   gap: 22px;
-  /* Zeitstrahl: eine Linie trägt die Einträge eines Tages. */
-  border-left: 1px solid var(--oe-line, rgba(0, 0, 0, .1));
-  padding-left: 22px;
+  /* Ohne senkrechte Linie: als Zeitstrahl gedacht, sah sie aber aus wie
+     ein stehengebliebener Rahmen. Die Datumsüberschrift gruppiert
+     deutlich genug. */
 }
 .landing .changelog__entry {
   display: grid;
