@@ -2140,10 +2140,15 @@
   border: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
   line-height: 0;
   background: var(--paper);
+  /* Festes Verhaeltnis statt der Bildhoehe: sonst gerieten die Rahmen um
+     ein paar Pixel auseinander und die Bildunterschriften standen nicht
+     mehr auf einer Linie. */
+  aspect-ratio: 760 / 1013;
 }
 .landing .journey__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 .landing .journey__step {
