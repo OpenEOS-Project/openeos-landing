@@ -2133,6 +2133,11 @@
   gap: 12px;
   /* Nummerierung kommt aus dem Text, nicht aus der Liste. */
   list-style: none;
+  /* Zeilen oben halten: die Panels sind gleich hoch, ihre Texte aber
+     unterschiedlich lang. Verteilt das Raster die Resthoehe, waechst bei
+     kurzen Texten der Abstand und die Beschriftung rutscht aus der
+     Reihe. */
+  align-content: start;
 }
 .landing .journey__frame {
   overflow: hidden;
