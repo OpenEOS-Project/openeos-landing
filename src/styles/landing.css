@@ -30,8 +30,6 @@
      zwischen 80 und 160px, und weil sich oberer und unterer addieren,
      standen zwischen zwei Abschnitten bis zu 216px Leere. */
   --sec-y: clamp(36px, 4.5vw, 60px);
-  /* Abstand unter der fixierten Navigation auf Unterseiten. */
-  --nav-h: 66px;
 
   background: var(--paper);
   color: var(--ink);
@@ -1848,9 +1846,12 @@
 /* ===================== NEUERUNGEN & FEEDBACK =====================
    Zwei Unterseiten mit demselben schmalen Textmaß: beide werden
    gelesen, nicht überflogen. */
+/* Kein Ausgleich fuer die Navigation noetig: sie ist sticky und nimmt
+   ihren Platz im Fluss ein. Der fruehere Aufschlag stand einfach als
+   Leere unter ihr. */
 .landing .changelog,
 .landing .feedback {
-  padding: calc(var(--nav-h) + var(--sec-y)) 0 var(--sec-y);
+  padding: var(--sec-y) 0;
 }
 /* Die Titelgroesse der Startseite traegt eine Schlagzeile, keine
    Textseite: 84px brachen hier auf drei Zeilen um. */
