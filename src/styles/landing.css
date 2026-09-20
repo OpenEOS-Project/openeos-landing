@@ -88,8 +88,19 @@
 }
 
 .landing .nav__links {
-  display: flex; gap: 28px;
+  display: flex; align-items: center; gap: 20px;
   font-size: 14px; font-weight: 500;
+}
+.landing .nav__group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+/* Senkrechter Strich zwischen Sprungmarken und eigenen Seiten. */
+.landing .nav__sep {
+  width: 1px;
+  height: 15px;
+  background: color-mix(in oklab, var(--ink) 18%, transparent);
 }
 
 .landing .nav__right {

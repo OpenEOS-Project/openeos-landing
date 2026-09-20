@@ -30,12 +30,22 @@ export function Header() {
         </Link>
 
         <div className="nav__inner">
+          {/* Zwei Arten von Zielen, deshalb zwei Gruppen: links die
+              Abschnitte dieser Seite, rechts eigene Seiten. Gemischt war
+              nicht absehbar, ob ein Klick scrollt oder die Seite wechselt. */}
           <nav className="nav__links" aria-label="Hauptnavigation">
-            <Link href="/#features">{t("features")}</Link>
-            <Link href="/#pricing">{t("pricing")}</Link>
-            <Link href="/screens">{t("screens")}</Link>
-            <Link href="/#open-source">{t("openSource")}</Link>
-            <Link href="/changelog">{t("changelog")}</Link>
+            <span className="nav__group">
+              <Link href="/#features">{t("features")}</Link>
+              <Link href="/#pricing">{t("pricing")}</Link>
+              <Link href="/#open-source">{t("openSource")}</Link>
+            </span>
+
+            <span className="nav__sep" aria-hidden="true" />
+
+            <span className="nav__group">
+              <Link href="/screens">{t("screens")}</Link>
+              <Link href="/changelog">{t("changelog")}</Link>
+            </span>
           </nav>
         </div>
 

@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { CHANGELOG, type ChangelogArt } from '@/content/changelog';
+import { holeChangelog, type ChangelogArt, type ChangelogEintrag } from '@/lib/changelog-api';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('changelog');
@@ -17,8 +17,8 @@ const ART_KLASSE: Record<ChangelogArt, string> = {
 };
 
 /** Gruppiert nach Datum, damit ein Tag einmal statt fünfmal dasteht. */
-function nachDatum(eintraege: typeof CHANGELOG) {
-  const gruppen = new Map<string, typeof CHANGELOG>();
+function nachDatum(eintraege: ChangelogEintrag[]) {
+  const gruppen = new Map<string, ChangelogEintrag[]>();
   for (const eintrag of eintraege) {
     const vorhanden = gruppen.get(eintrag.datum) ?? [];
     vorhanden.push(eintrag);
@@ -35,6 +35,7 @@ export default async function ChangelogPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('changelog');
+  const eintraege = await holeChangelog();
 
   const sprache = locale === 'en' ? 'en' : 'de';
   const datumFormat = new Intl.DateTimeFormat(sprache === 'en' ? 'en-GB' : 'de-DE', {
@@ -56,7 +57,7 @@ export default async function ChangelogPage({
           </header>
 
           <div className="changelog__list">
-            {nachDatum(CHANGELOG).map(([datum, eintraege]) => (
+            {nachDatum(eintraege).map(([datum, eintraege]) => (
               <section key={datum} className="changelog__group">
                 <h2 className="changelog__date">
                   <time dateTime={datum}>{datumFormat.format(new Date(datum))}</time>
