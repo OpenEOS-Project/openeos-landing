@@ -103,7 +103,8 @@
     "openSource": "Open Source",
     "login": "Sign in",
     "register": "Sign up",
-    "changelog": "What's new"
+    "changelog": "What's new",
+    "screens": "A look inside"
   },
   "hero": {
     "pill": "New version available now",
@@ -389,7 +390,8 @@
     "terms": "Terms",
     "copyright": "© {year} OpenEOS · Made with ❤️",
     "productBy": "A product by LUXCODE by Lukas Lukic-Spitznagel",
-    "feedback": "Feedback & ideas"
+    "feedback": "Feedback & ideas",
+    "screens": "A look inside"
   },
   "imprint": {
     "title": "Imprint",
@@ -584,12 +586,13 @@
         "text": "Revenue, orders and the state of every device at a glance.",
         "alt": "Dashboard with key figures and device status"
       }
-    }
+    },
+    "metaTitle": "What it looks like — OpenEOS"
   },
   "journey": {
-    "titleL1": "From the tap",
-    "titleL2": "to the kitchen",
-    "sub": "What happens over a festival evening — and where OpenEOS helps.",
+    "titleL1": "An evening",
+    "titleL2": "in the tent",
+    "sub": "What happens between the first order and the last receipt.",
     "panels": {
       "checkout": {
         "step": "Step 1 · Checkout",

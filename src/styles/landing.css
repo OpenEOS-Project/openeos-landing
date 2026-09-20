@@ -26,6 +26,12 @@
 
   --max: 1280px;
   --pad: clamp(20px, 4vw, 56px);
+  /* Ein Mass fuer alle Abschnitte. Vorher trug jeder seinen eigenen Wert
+     zwischen 80 und 160px, und weil sich oberer und unterer addieren,
+     standen zwischen zwei Abschnitten bis zu 216px Leere. */
+  --sec-y: clamp(36px, 4.5vw, 60px);
+  /* Abstand unter der fixierten Navigation auf Unterseiten. */
+  --nav-h: 66px;
 
   background: var(--paper);
   color: var(--ink);
@@ -319,7 +325,7 @@
 /* ============================= HERO ============================= */
 .landing .hero {
   position: relative;
-  padding: clamp(40px, 6vw, 80px) var(--pad) 0;
+  padding: var(--sec-y) var(--pad) 0;
   max-width: var(--max);
   margin: 0 auto;
 }
@@ -558,7 +564,7 @@
 /* ============================= FEATURES ============================= */
 .landing .features {
   background: var(--paper-2);
-  padding: 0 0 clamp(60px, 9vw, 120px);
+  padding: 0 0 var(--sec-y);
   max-width: none;
   margin: clamp(48px, 7vw, 96px) 0 0;
   border-top: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
@@ -927,7 +933,7 @@
 }
 
 /* ============================= PRICING ============================= */
-.landing .pricing { padding: 0 var(--pad) clamp(60px, 9vw, 120px); max-width: var(--max); margin: 0 auto; }
+.landing .pricing { padding: 0 var(--pad) var(--sec-y); max-width: var(--max); margin: 0 auto; }
 .landing .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 @media (max-width: 900px) { .landing .plans { grid-template-columns: 1fr; } }
 
@@ -1085,7 +1091,7 @@
 .landing .oss {
   background: var(--ink);
   color: var(--paper);
-  padding: clamp(80px, 12vw, 140px) var(--pad);
+  padding: var(--sec-y) var(--pad);
   margin: clamp(40px, 6vw, 80px) 0 0;
   text-align: center;
 }
@@ -1178,7 +1184,7 @@
 /* ============================= CTA ============================= */
 .landing .cta-block {
   max-width: var(--max); margin: 0 auto;
-  padding: clamp(80px, 12vw, 160px) var(--pad) clamp(60px, 9vw, 120px);
+  padding: var(--sec-y) var(--pad);
   text-align: center;
 }
 .landing .cta-block h2 { font-size: clamp(44px, 7vw, 96px); line-height: 0.95; letter-spacing: -.03em; font-weight: 800; margin: 0; }
@@ -1844,7 +1850,7 @@
    gelesen, nicht überflogen. */
 .landing .changelog,
 .landing .feedback {
-  padding: 132px 0 96px;
+  padding: calc(var(--nav-h) + var(--sec-y)) 0 var(--sec-y);
 }
 /* Die Titelgroesse der Startseite traegt eine Schlagzeile, keine
    Textseite: 84px brachen hier auf drei Zeilen um. */
@@ -2062,7 +2068,7 @@
 /* ===================== BILDSCHIRMFOTOS =====================
    Die Aufnahmen tragen den Abschnitt, der Text ordnet sie nur ein. */
 .landing .screens {
-  padding: 96px 0;
+  padding: var(--sec-y) 0;
 }
 .landing .screens__grid {
   max-width: var(--max);
@@ -2117,7 +2123,7 @@
    Fünf Panels als Reihe. Auf schmalen Geräten wird daraus ein
    Wischstreifen statt fünf untereinander gestapelter Hochformate. */
 .landing .journey {
-  padding: 96px 0;
+  padding: var(--sec-y) 0;
 }
 .landing .journey__strip {
   list-style: none;

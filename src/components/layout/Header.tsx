@@ -33,6 +33,7 @@ export function Header() {
           <nav className="nav__links" aria-label="Hauptnavigation">
             <Link href="/#features">{t("features")}</Link>
             <Link href="/#pricing">{t("pricing")}</Link>
+            <Link href="/screens">{t("screens")}</Link>
             <Link href="/#open-source">{t("openSource")}</Link>
             <Link href="/changelog">{t("changelog")}</Link>
           </nav>

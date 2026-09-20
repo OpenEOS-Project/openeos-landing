@@ -21,6 +21,7 @@ export function Footer() {
           <div>
             <b>{t("product")}</b>
             <Link href="/#features">{t("features")}</Link>
+            <Link href="/screens">{t("screens")}</Link>
             <Link href="/#pricing">{t("pricing")}</Link>
             <ContactTrigger type="demo">{t("demo")}</ContactTrigger>
           </div>

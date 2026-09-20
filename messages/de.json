@@ -103,7 +103,8 @@
     "openSource": "Open Source",
     "login": "Anmelden",
     "register": "Registrieren",
-    "changelog": "Neuerungen"
+    "changelog": "Neuerungen",
+    "screens": "Einblicke"
   },
   "hero": {
     "pill": "Neue Version jetzt verfügbar",
@@ -389,7 +390,8 @@
     "terms": "AGB",
     "copyright": "© {year} OpenEOS · Made with ❤️",
     "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel",
-    "feedback": "Feedback & Wünsche"
+    "feedback": "Feedback & Wünsche",
+    "screens": "Einblicke"
   },
   "imprint": {
     "title": "Impressum",
@@ -584,12 +586,13 @@
         "text": "Umsatz, Bestellungen und der Zustand aller Geräte auf einen Blick.",
         "alt": "Übersichtsseite mit Kennzahlen und Geräteliste"
       }
-    }
+    },
+    "metaTitle": "So sieht es aus — OpenEOS"
   },
   "journey": {
-    "titleL1": "Vom Zapfhahn",
-    "titleL2": "bis zur Küche",
-    "sub": "Was an einem Festabend passiert — und wo OpenEOS dabei hilft.",
+    "titleL1": "Ein Abend",
+    "titleL2": "im Festzelt",
+    "sub": "Was zwischen erster Bestellung und letztem Bon passiert.",
     "panels": {
       "checkout": {
         "step": "Schritt 1 · Kasse",

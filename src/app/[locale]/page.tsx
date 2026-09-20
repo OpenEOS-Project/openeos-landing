@@ -3,8 +3,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
-import { Journey } from "@/components/sections/Journey";
-import { Screens } from "@/components/sections/Screens";
 import { Pricing, type PricingData } from "@/components/sections/Pricing";
 import { OpenSource } from "@/components/sections/OpenSource";
 import { CTA } from "@/components/sections/CTA";
@@ -42,8 +40,6 @@ export default async function HomePage({
       <main>
         <Hero />
         <Features />
-        <Journey />
-        <Screens />
         <Pricing pricingData={pricingData} />
         <OpenSource />
         <CTA />
