@@ -5,6 +5,13 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { holeChangelog, type ChangelogArt, type ChangelogEintrag } from '@/lib/changelog-api';
 
+/* Bei jedem Aufruf frisch holen statt einmal beim Bauen.
+   Statisch erzeugt fror die Seite den Stand des Build-Zeitpunkts ein —
+   beim ersten Mal sogar einen leeren, weil der Endpunkt da noch nicht
+   ausgerollt war. Neue Einträge sollen erscheinen, ohne die Website neu
+   zu bauen; die Antwort ist klein und die Seite wird selten aufgerufen. */
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('changelog');
   return { title: t('metaTitle'), description: t('sub') };

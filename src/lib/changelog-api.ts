@@ -20,17 +20,26 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
  * fehlender Änderungsverlauf ist kein Grund, die Website auszusperren.
  */
 export async function holeChangelog(): Promise<ChangelogEintrag[]> {
-  if (!API_URL) return [];
+  if (!API_URL) {
+    console.error('NEXT_PUBLIC_API_URL fehlt — Changelog bleibt leer.');
+    return [];
+  }
 
   try {
     const res = await fetch(`${API_URL}/api/public/changelog`, {
-      next: { revalidate: 300 },
+      cache: 'no-store',
     });
-    if (!res.ok) return [];
+    if (!res.ok) {
+      // Laut scheitern lassen, sonst steht die Seite still leer da und
+      // niemand erfaehrt, dass der Abruf nicht geklappt hat.
+      console.error(`Changelog nicht abrufbar: HTTP ${res.status}`);
+      return [];
+    }
 
     const json = await res.json();
     return json?.data?.entries ?? [];
-  } catch {
+  } catch (fehler) {
+    console.error('Changelog nicht abrufbar:', (fehler as Error).message);
     return [];
   }
 }
