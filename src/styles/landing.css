@@ -1853,11 +1853,25 @@
 .landing .feedback {
   padding: var(--sec-y) 0;
 }
-/* Die Titelgroesse der Startseite traegt eine Schlagzeile, keine
-   Textseite: 84px brachen hier auf drei Zeilen um. */
+/* Der Abschnittskopf ist fuer die Startseite gebaut: 120px daruber, 56px
+   darunter, 84px Titel. Auf einer Unterseite ist er das Erste, was man
+   sieht — er braucht keinen Anlauf und keine Schlagzeilengroesse. */
+.landing .changelog .section-head,
+.landing .feedback .section-head,
+.landing .screens-page .section-head {
+  padding-top: 0;
+  padding-bottom: 28px;
+}
 .landing .changelog .section-title,
-.landing .feedback .section-title {
+.landing .feedback .section-title,
+.landing .screens-page .section-title {
   font-size: clamp(34px, 5vw, 52px);
+}
+/* Auf der Einblicke-Seite folgen zwei Abschnitte aufeinander; der
+   zweite darf seinen Kopf nicht wieder von ganz oben anfangen lassen. */
+.landing .screens-page .journey__strip,
+.landing .screens-page .screens__grid {
+  margin-top: 8px;
 }
 .landing .changelog__inner,
 .landing .feedback__inner {
