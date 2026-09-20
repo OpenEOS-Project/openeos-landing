@@ -68,6 +68,11 @@ export default async function ChangelogPage({
               <section key={datum} className="changelog__group">
                 <h2 className="changelog__date">
                   <time dateTime={datum}>{datumFormat.format(new Date(datum))}</time>
+                  {eintraege[0]?.version && (
+                    <span className="changelog__version">
+                      {t('version', { version: eintraege[0].version })}
+                    </span>
+                  )}
                 </h2>
 
                 <div className="changelog__entries">

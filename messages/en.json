@@ -123,7 +123,8 @@
     "receiptTotal": "Total",
     "receiptKasse": "POS 03 · Tent A",
     "devicePicker": "POS 03",
-    "deviceLocation": "Tent A · openeos"
+    "deviceLocation": "Tent A · openeos",
+    "pillVersion": "Version {version} out now"
   },
   "marquee": [
     "Schützenfest Oberried",
@@ -529,7 +530,8 @@
       "verbessert": "Improved",
       "behoben": "Fixed"
     },
-    "foot": "We do not list older changes. Questions? Get in touch."
+    "foot": "We do not list older changes. Questions? Get in touch.",
+    "version": "Version {version}"
   },
   "feedback": {
     "metaTitle": "Feedback & ideas — OpenEOS",

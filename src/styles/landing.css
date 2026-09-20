@@ -1899,9 +1899,23 @@
 }
 .landing .changelog__date {
   margin: 0 0 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
   font: 500 12px var(--oe-f-mono, monospace);
   letter-spacing: .12em;
   text-transform: uppercase;
+  color: var(--mute-2, #8a8f86);
+}
+/* Dieselbe Nummer, die das Badge auf der Startseite nennt — sonst schickt
+   es Leute auf eine Seite, die seine Zahl nicht kennt. Als Farbakzent
+   statt als umrandeter Chip: eine Zeile mit Datum braucht keinen Kasten. */
+.landing .changelog__version {
+  color: var(--green-ink);
+}
+.landing .changelog__version::before {
+  content: "\00b7";
+  margin-right: 10px;
   color: var(--mute-2, #8a8f86);
 }
 .landing .changelog__entries {

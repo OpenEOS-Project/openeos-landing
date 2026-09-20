@@ -4,7 +4,12 @@ import { ContactTrigger } from "@/components/ContactTrigger";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
 
-export function Hero() {
+/**
+ * Die Version kommt als Eigenschaft statt aus einem eigenen Abruf: das
+ * Badge steht im serverseitig gerenderten Kopf, und ein zweiter Abruf an
+ * derselben Stelle waere nur eine zweite Gelegenheit zu scheitern.
+ */
+export function Hero({ version }: { version: string | null }) {
   const t = useTranslations("hero");
 
   return (
@@ -13,7 +18,9 @@ export function Hero() {
         <div className="hero__copy">
           <div className="pill">
             <span className="pill__dot" />
-            <span>{t("pill")}</span>
+            {/* Ohne erreichbare API lieber der Satz ohne Nummer als eine
+                veraltete Nummer. */}
+            <span>{version ? t("pillVersion", { version }) : t("pill")}</span>
           </div>
 
           <h1 className="hero__title">

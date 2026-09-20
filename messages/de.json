@@ -123,7 +123,8 @@
     "receiptTotal": "Summe",
     "receiptKasse": "Kasse 03 · Zelt A",
     "devicePicker": "Kasse 03",
-    "deviceLocation": "Zelt A · openeos"
+    "deviceLocation": "Zelt A · openeos",
+    "pillVersion": "Version {version} jetzt verfügbar"
   },
   "marquee": [
     "Schützenfest Oberried",
@@ -529,7 +530,8 @@
       "verbessert": "Verbessert",
       "behoben": "Behoben"
     },
-    "foot": "Ältere Änderungen führen wir nicht auf. Fragen dazu? Schreiben Sie uns."
+    "foot": "Ältere Änderungen führen wir nicht auf. Fragen dazu? Schreiben Sie uns.",
+    "version": "Version {version}"
   },
   "feedback": {
     "metaTitle": "Feedback & Wünsche — OpenEOS",

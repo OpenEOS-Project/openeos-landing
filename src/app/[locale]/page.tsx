@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
 import { Pricing, type PricingData } from "@/components/sections/Pricing";
+import { holeAktuelleVersion } from "@/lib/changelog-api";
 import { OpenSource } from "@/components/sections/OpenSource";
 import { CTA } from "@/components/sections/CTA";
 
@@ -32,13 +33,18 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const pricingData = await fetchPricingData();
+  /* Beides nebeneinander statt nacheinander — zwei Abrufe an dieselbe
+     API, die nichts voneinander wissen. */
+  const [pricingData, version] = await Promise.all([
+    fetchPricingData(),
+    holeAktuelleVersion(),
+  ]);
 
   return (
     <>
       <Header />
       <main>
-        <Hero />
+        <Hero version={version} />
         <Features />
         <Pricing pricingData={pricingData} />
         <OpenSource />
