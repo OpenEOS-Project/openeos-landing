@@ -477,7 +477,7 @@
     },
     "backup": {
       "title": "5. Sicherungen bei Hetzner",
-      "content": "Sicherungskopien der Datenbank werden bei der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, auf Servern in Deutschland gespeichert. Sie enthalten dieselben Daten wie das laufende System und dienen allein dazu, nach einem Ausfall oder einem Fehler den Betrieb wiederherzustellen. Mit Hetzner besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO. Die Sicherungen sind verschlüsselt abgelegt und werden nach einer festen Frist automatisch gelöscht."
+      "content": "Sicherungskopien der Datenbank werden bei der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, auf Servern in Deutschland gespeichert. Sie enthalten dieselben Daten wie das laufende System und dienen allein dazu, nach einem Ausfall oder einem Fehler den Betrieb wiederherzustellen. Mit Hetzner besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO. Die Sicherungen sind mit AES-256 verschlüsselt abgelegt. Tägliche Sicherungen werden 14 Tage aufbewahrt, wöchentliche acht Wochen; danach werden sie automatisch gelöscht."
     },
     "proxy": {
       "title": "6. Cloudflare als vorgeschalteter Dienst",

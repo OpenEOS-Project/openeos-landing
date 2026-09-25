@@ -477,7 +477,7 @@
     },
     "backup": {
       "title": "5. Backups at Hetzner",
-      "content": "Database backups are stored with Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany, on servers located in Germany. They hold the same data as the live system and exist solely to restore service after a failure or a mistake. A data processing agreement under Art. 28 GDPR is in place with Hetzner. Backups are stored encrypted and deleted automatically after a fixed period."
+      "content": "Database backups are stored with Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany, on servers located in Germany. They hold the same data as the live system and exist solely to restore service after a failure or a mistake. A data processing agreement under Art. 28 GDPR is in place with Hetzner. Backups are stored encrypted with AES-256. Daily backups are kept for 14 days and weekly backups for eight weeks, after which they are deleted automatically."
     },
     "proxy": {
       "title": "6. Cloudflare as an upstream service",
