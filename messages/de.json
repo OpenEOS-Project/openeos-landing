@@ -460,19 +460,19 @@
       "content": "Diese Website wird bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, gehostet. Beim Aufruf der Website erhebt und speichert unser Hoster automatisch Server-Logfiles, die Ihr Browser übermittelt (u.a. IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite, Browsertyp und -version). Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO, der IONOS dazu verpflichtet, die Daten unserer Websitebesucher ausschließlich nach unseren Weisungen und zu den vertraglich vereinbarten Zwecken zu verarbeiten und angemessen zu schützen."
     },
     "ssl": {
-      "title": "7. SSL-/TLS-Verschlüsselung",
+      "title": "8. SSL-/TLS-Verschlüsselung",
       "content": "Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile Ihres Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile."
     },
     "storage": {
-      "title": "8. Speicherdauer",
+      "title": "9. Speicherdauer",
       "content": "Sofern innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Kontaktanfragen löschen wir, sobald diese abschließend bearbeitet sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Daten aus einem Kundenkonto werden für die Dauer der Vertragsbeziehung sowie darüber hinaus entsprechend der handels- und steuerrechtlichen Aufbewahrungsfristen (in der Regel 6 bzw. 10 Jahre) gespeichert."
     },
     "rights": {
-      "title": "9. Ihre Rechte",
+      "title": "10. Ihre Rechte",
       "content": "Sie haben jederzeit das Recht:\n• Auskunft über Ihre bei uns gespeicherten Daten zu erhalten\n• Diese Daten berichtigen oder löschen zu lassen\n• Die Verarbeitung einzuschränken\n• Der Verarbeitung zu widersprechen\n• Ihre Daten in einem übertragbaren Format zu erhalten\n• Eine Beschwerde bei einer Aufsichtsbehörde einzureichen"
     },
     "changes": {
-      "title": "10. Änderungen",
+      "title": "11. Änderungen",
       "content": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung."
     },
     "backup": {
@@ -482,6 +482,10 @@
     "proxy": {
       "title": "6. Cloudflare als vorgeschalteter Dienst",
       "content": "Den Servern ist Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA vorgeschaltet. Cloudflare leitet die Anfragen weiter, liefert Inhalte beschleunigt aus und wehrt Überlastungsangriffe ab. Dabei verarbeitet Cloudflare technisch notwendige Daten, insbesondere Ihre IP-Adresse. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und verfügbaren Angebot (Art. 6 Abs. 1 lit. f DSGVO). Mit Cloudflare besteht ein Vertrag zur Auftragsverarbeitung. Da Cloudflare seinen Sitz in den USA hat, kann es zu einer Übermittlung in ein Drittland kommen; diese stützt sich auf die Standardvertragsklauseln der EU-Kommission sowie die Zertifizierung von Cloudflare nach dem EU-US Data Privacy Framework."
+    },
+    "errors": {
+      "title": "7. Fehlerdiagnose mit Sentry",
+      "content": "Damit Störungen erkannt und behoben werden können, übermittelt die Anwendung Fehlerberichte an Sentry, einen Dienst der Functional Software, Inc., 45 Fremont Street, San Francisco, CA 94105, USA. Ein Bericht entsteht nur, wenn ein Fehler auftritt, und enthält technische Angaben zum Vorgang: die aufgerufene Seite, Browser und Betriebssystem, den Zeitpunkt sowie Ihre IP-Adresse. Zusätzlich wird ein kleiner Teil der Sitzungen aufgezeichnet, um nachvollziehen zu können, welche Schritte zu einem Fehler geführt haben; eingegebene und angezeigte Texte sind dabei unkenntlich gemacht, Bilder und Videos werden nicht übertragen. Rechtsgrundlage ist unser berechtigtes Interesse an einem stabilen und sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Mit Sentry besteht ein Vertrag zur Auftragsverarbeitung. Da Sentry seinen Sitz in den USA hat, kann es zu einer Übermittlung in ein Drittland kommen; diese stützt sich auf die Standardvertragsklauseln der EU-Kommission."
     }
   },
   "terms": {

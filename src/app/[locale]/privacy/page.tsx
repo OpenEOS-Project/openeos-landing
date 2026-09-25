@@ -136,6 +136,13 @@ function PrivacyContent({
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-primary mb-4">
+          {t("errors.title")}
+        </h2>
+        <p className="text-tertiary">{t("errors.content")}</p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold text-primary mb-4">
           {t("ssl.title")}
         </h2>
         <p className="text-tertiary">{t("ssl.content")}</p>

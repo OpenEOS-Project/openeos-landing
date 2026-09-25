@@ -460,19 +460,19 @@
       "content": "This website is hosted by IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. When you access the website, our host automatically collects and stores server logfiles transmitted by your browser (including IP address, date and time of the request, page requested, browser type and version). We have a data processing agreement with IONOS pursuant to Art. 28 GDPR, which obliges IONOS to process the data of our website visitors solely on our instructions and for the contractually agreed purposes, and to protect it appropriately."
     },
     "ssl": {
-      "title": "7. SSL/TLS encryption",
+      "title": "8. SSL/TLS encryption",
       "content": "For security reasons and to protect the transmission of confidential content, such as requests you send to us as the site operator, this website uses SSL/TLS encryption. You can recognize an encrypted connection by the fact that the address line of your browser changes from „http://“ to „https://“ and by the lock icon in your browser's address bar."
     },
     "storage": {
-      "title": "8. Storage duration",
+      "title": "9. Storage duration",
       "content": "Unless a more specific storage period is stated within this privacy policy, your personal data will remain with us until the purpose for the data processing no longer applies. We delete contact inquiries once they have been fully processed, provided no statutory retention obligations apply. Data from a customer account is stored for the duration of the contractual relationship and beyond, in accordance with commercial and tax law retention periods (generally 6 or 10 years)."
     },
     "rights": {
-      "title": "9. Your rights",
+      "title": "10. Your rights",
       "content": "You always have the right to:\n• Receive information about your data stored by us\n• Have this data corrected or deleted\n• Restrict processing\n• Object to processing\n• Receive your data in a transferable format\n• File a complaint with a supervisory authority"
     },
     "changes": {
-      "title": "10. Changes",
+      "title": "11. Changes",
       "content": "We reserve the right to adapt this privacy policy so that it always complies with current legal requirements or to implement changes to our services in the privacy policy. The new privacy policy will then apply to your next visit."
     },
     "backup": {
@@ -482,6 +482,10 @@
     "proxy": {
       "title": "6. Cloudflare as an upstream service",
       "content": "Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA sits in front of our servers. Cloudflare forwards requests, speeds up delivery and fends off denial-of-service attacks. In doing so it processes technically necessary data, in particular your IP address. The legal basis is our legitimate interest in a secure and available service (Art. 6(1)(f) GDPR). A data processing agreement is in place with Cloudflare. As Cloudflare is based in the USA, data may be transferred to a third country; this is based on the European Commission's standard contractual clauses and on Cloudflare's certification under the EU-US Data Privacy Framework."
+    },
+    "errors": {
+      "title": "7. Error diagnostics with Sentry",
+      "content": "So that faults can be detected and fixed, the application sends error reports to Sentry, a service of Functional Software, Inc., 45 Fremont Street, San Francisco, CA 94105, USA. A report is only created when an error occurs and contains technical details about the event: the page you were on, your browser and operating system, the time, and your IP address. In addition, a small share of sessions is recorded so we can retrace the steps that led to an error; text you enter or see is masked, and images and videos are not transmitted. The legal basis is our legitimate interest in stable and secure operation (Art. 6(1)(f) GDPR). A data processing agreement is in place with Sentry. As Sentry is based in the USA, data may be transferred to a third country; this is based on the European Commission's standard contractual clauses."
     }
   },
   "terms": {
