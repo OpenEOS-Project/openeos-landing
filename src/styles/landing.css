@@ -31,10 +31,11 @@
      standen zwischen zwei Abschnitten bis zu 216px Leere. */
   --sec-y: clamp(36px, 4.5vw, 60px);
 
-  /* Schriften aus @openeos/ui/fonts (SiteShell): Geist, Bricolage
-     Grotesque, JetBrains Mono — lokal eingebunden. */
+  /* Schriften aus @openeos/ui/fonts (SiteShell): Geist und JetBrains
+     Mono — lokal eingebunden. Überschriften sind Geist 800 (seit
+     @openeos/ui 0.3.3), also dieselbe Datei wie der Fließtext. */
   --f-sans: var(--font-oe-sans), system-ui, sans-serif;
-  --f-display: var(--font-oe-display), var(--f-sans);
+  --f-display: var(--f-sans);
   --f-mono: var(--font-oe-mono), ui-monospace, monospace;
 
   background: var(--paper);
@@ -283,43 +284,43 @@
 .landing .btn--outline-light:hover { background: color-mix(in oklab, var(--paper) 10%, transparent); }
 
 /* ============================= TYPO HELPERS =============================
-   Display-Überschriften in Bricolage Grotesque (--f-display) mit
-   optischer Größe 96 wie .oe-display aus @openeos/ui. Die Akzentzeilen
+   Display-Überschriften in Geist Extra Bold (800) wie .oe-display aus
+   @openeos/ui. Geist läuft bei 800 recht breit, große Headlines stehen
+   deshalb eng (-0.04em, Hero und Schluss-CTA -0.045em). Die Akzentzeilen
    bleiben in derselben Schrift und heben sich über Farbe/Kontur ab. */
 .landing .hero__title,
 .landing .section-title,
 .landing .cta-block h2 {
   font-family: var(--f-display);
-  font-variation-settings: "opsz" 96;
-  /* Bricolage ist bei opsz 96 schon eng geschnitten; staerker
-     zusammengezogen beruehren sich die Buchstaben. */
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
+.landing .hero__title,
+.landing .cta-block h2 { letter-spacing: -0.045em; }
 .landing .u-stroke {
   /* Variable Fonts haben ueberlappende Konturen; eine reine Kontur
-     zeichnete sie im Inneren der Buchstaben nach. Deshalb doppelt so
-     breit, unter der Fuellung gemalt und mit Papierfarbe gefuellt —
-     sichtbar bleibt die aeussere Haelfte (1.5px, klein 1px). Etwas
-     mehr Laufweite, damit sich die Konturen nicht beruehren. */
-  -webkit-text-stroke: clamp(2px, 0.03em, 3px) var(--ink);
+     zeichnete sie im Inneren der Buchstaben nach (Geist: f, t, k …).
+     Deshalb doppelt so breit, unter der Fuellung gemalt und mit
+     Papierfarbe gefuellt — sichtbar bleibt die aeussere Haelfte
+     (ca. 1.5px, klein 1px). Die Laufweite ist etwas offener als in den
+     vollen Zeilen, damit sich die Konturen benachbarter Buchstaben nicht
+     beruehren und keine Naht entsteht. */
+  -webkit-text-stroke: clamp(2px, 0.028em, 3px) var(--ink);
   paint-order: stroke fill;
   color: var(--paper);
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   font-family: var(--f-display);
   font-weight: 800;
-  font-variation-settings: "opsz" 96;
 }
 .landing .u-accent {
   color: var(--green-ink);
   font-family: var(--f-display);
   font-weight: 800;
-  font-variation-settings: "opsz" 96;
 }
 .landing .u-accent-light {
   color: var(--green);
   font-family: var(--f-display);
   font-weight: 800;
-  font-variation-settings: "opsz" 96;
 }
 
 .landing .section-head {
@@ -1650,6 +1651,12 @@
     word-break: normal;
     hyphens: auto;
     text-wrap: pretty;
+  }
+  /* Klein laufen Geists Buchstaben so dicht, dass sich die Konturen
+     beruehren und Punzen zulaufen — hier offener und duenner. */
+  .landing .hero__title .u-stroke {
+    -webkit-text-stroke-width: 1.6px;
+    letter-spacing: 0.025em;
   }
   .landing .hero__sub { font-size: 16px; margin: 18px 0 24px; }
   .landing .pill { font-size: 11px; }

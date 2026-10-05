@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@openeos/ui": "0.3.2",
+    "@openeos/ui": "0.3.3",
     "@tailwindcss/typography": "^0.5.19",
     "clsx": "^2.1.1",
     "framer-motion": "^12.24.12",
