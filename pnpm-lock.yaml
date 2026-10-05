@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@openeos/ui':
-        specifier: 0.3.2
-        version: 0.3.2(next@16.1.1(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
+        specifier: 0.3.3
+        version: 0.3.3(next@16.1.1(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
       '@tailwindcss/typography':
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.1.18)
@@ -488,8 +488,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@openeos/ui@0.3.2':
-    resolution: {integrity: sha512-eY7Xjvi05OwKpzw96I1k6xsNPrcO0EwH4a/xfNTx0K6NX1KFFNh/KFMJTqbcH3GOMAWobBztJevPvp49g4F+7g==}
+  '@openeos/ui@0.3.3':
+    resolution: {integrity: sha512-3x2DCDNI6dWZuyiqbDoBs4rK6HhysPBeoYUIXdMXNiI0PWu0Lj3g9gxIv8joI7TvYxlb9Ob0XqyMZppAzXk7DQ==}
     peerDependencies:
       next: '>=15'
       react: '>=18'
@@ -3285,7 +3285,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@openeos/ui@0.3.2(next@16.1.1(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)':
+  '@openeos/ui@0.3.3(next@16.1.1(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)':
     dependencies:
       react: 19.2.3
     optionalDependencies:

@@ -15,7 +15,7 @@ export function SiteShell({
   children: ReactNode;
 }) {
   return (
-    /* Geist, Bricolage Grotesque und JetBrains Mono aus @openeos/ui —
+    /* Geist und JetBrains Mono aus @openeos/ui —
        lokal eingebunden (next/font/local), ohne Anfrage bei Google. Am
        <html>, damit auch die Tailwind-Variablen in :root (theme.css) die
        --font-oe-* sehen; landing.css verbindet sie mit den --f-*-Namen. */
