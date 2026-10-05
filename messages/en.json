@@ -303,7 +303,7 @@
         "All features included",
         "Hosting, backups, auto-updates",
         "Premium support (email, phone, WhatsApp)",
-        "Pay-as-you-go, monthly invoice"
+        "Pay by card or direct debit when you activate an event"
       ],
       "cta": "Get started →"
     },
@@ -417,14 +417,14 @@
       "content": "Responsible for journalistic-editorial content on this website is the person (or their legal representative) named above under „Information according to § 5 DDG“."
     },
     "dispute": {
-      "title": "EU dispute resolution",
-      "content": "The European Commission provides a platform for online dispute resolution (ODR), available at https://ec.europa.eu/consumers/odr/. You can find our email address above in the imprint. We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+      "title": "Consumer dispute resolution",
+      "content": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board."
     },
     "disclaimer": {
       "title": "Disclaimer",
       "liability": {
         "title": "Liability for content",
-        "content": "As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 para.1 TMG. According to §§ 8 to 10 TMG, however, we as a service provider are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity."
+        "content": "As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 para. 1 DDG. According to §§ 8 to 10 DDG, however, we as a service provider are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity."
       },
       "links": {
         "title": "Liability for links",
@@ -438,7 +438,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "As of July 2026",
+    "lastUpdated": "As of October 2026",
     "overview": {
       "title": "1. Privacy at a glance",
       "content": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally."
@@ -454,7 +454,7 @@
       },
       "cookies": {
         "title": "Cookies and local storage",
-        "content": "This website does not use tracking, analytics, or advertising cookies. Only technically necessary data is used: your language preference is stored via a cookie (NEXT_LOCALE), and your theme preference (light/dark) is stored in your browser's local storage (localStorage). Both serve solely to display the website according to your settings and are not evaluated for analytics or advertising purposes. No separate consent is required for these purely technical purposes (§ 25 para. 2 TTDSG, Art. 6 para. 1 lit. f GDPR)."
+        "content": "This website does not use tracking, analytics, or advertising cookies. Only technically necessary data is used: your language preference is stored via a cookie (NEXT_LOCALE), and your theme preference (light/dark) is stored in your browser's local storage (localStorage). Both serve solely to display the website according to your settings and are not evaluated for analytics or advertising purposes. No separate consent is required for these purely technical purposes (§ 25 para. 2 TDDDG, Art. 6 para. 1 lit. f GDPR)."
       },
       "contact": {
         "title": "Contact",
@@ -500,7 +500,7 @@
   },
   "terms": {
     "title": "Terms and Conditions",
-    "lastUpdated": "As of January 2025",
+    "lastUpdated": "As of October 2026",
     "scope": {
       "title": "1. Scope",
       "content": "These General Terms and Conditions (T&C) apply to all contracts between OpenEOS (hereinafter \"Provider\") and the customer regarding the use of the OpenEOS Software-as-a-Service (SaaS) platform and related services."
@@ -519,7 +519,7 @@
     },
     "payment": {
       "title": "5. Payment",
-      "content": "Billing is based on actual usage and invoiced. Event days are aggregated at the end of the month and invoiced. Payment terms: 14 days net."
+      "content": "Event days are paid for before they are used. A newly created event starts in test mode and can be used there free of charge for up to 25 orders. Before activation, the amount due is shown (number of event days × daily price, less any applicable discount). The event is activated upon payment of this amount by card or direct debit. On activation, the test orders are deleted; the event's setup (e.g. products, prices, devices and printers) is kept. The invoice is sent automatically by email and is also available for download in the customer account under \"Invoices\"."
     },
     "obligations": {
       "title": "6. Customer obligations",
