@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
+import { pageMetadata } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -23,6 +25,15 @@ async function fetchPricingData(): Promise<PricingData | null> {
   } catch {
     return null;
   }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata({ locale, path: "/" });
 }
 
 export default async function HomePage({

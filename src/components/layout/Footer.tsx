@@ -1,11 +1,11 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ContactTrigger } from "@/components/ContactTrigger";
-
-const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
+import { docsUrl } from "@/lib/site";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -27,7 +27,7 @@ export function Footer() {
           </div>
           <div>
             <b>{t("resources")}</b>
-            <a href={DOCS_URL}>{t("docs")}</a>
+            <a href={docsUrl(locale)}>{t("docs")}</a>
             <Link href="/changelog">{t("changelog")}</Link>
             <Link href="/feedback">{t("feedback")}</Link>
             <a

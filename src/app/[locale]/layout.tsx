@@ -1,28 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, JetBrains_Mono, Archivo_Black } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import { hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { ThemeProvider } from "next-themes";
 import { locales } from "@/i18n/config";
-import { ContactModalProvider } from "@/providers/contact-modal";
-
-const geist = Geist({
-  variable: "--f-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--f-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
-
-const archivoBlack = Archivo_Black({
-  variable: "--f-display",
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { routing } from "@/i18n/routing";
+import { pageMetadata } from "@/lib/site";
+import { SiteShell } from "@/components/layout/SiteShell";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -34,13 +17,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const messages = await getMessages({ locale });
-  const metadata = messages.metadata as { title: string; description: string };
-
-  return {
-    title: metadata.title,
-    description: metadata.description,
-  };
+  if (!hasLocale(routing.locales, locale)) return {};
+  /* Grundsatz fuer alles darunter; jede Seite setzt ihren eigenen Satz.
+     Ohne kanonische Adresse: die 404 erbt nur diesen Teil und soll nicht
+     auf die Startseite verweisen. */
+  const base = await pageMetadata({ locale, path: "/" });
+  delete base.alternates;
+  return base;
 }
 
 export default async function LocaleLayout({
@@ -51,27 +34,16 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  /* Die Middleware laesst Pfade mit Punkt durch (Dateien). Ohne diese
+     Pruefung landete z. B. /wp-login.php hier als Sprache "wp-login.php"
+     und bekam die Startseite mit Status 200. */
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={`${geist.variable} ${jetbrainsMono.variable} ${archivoBlack.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          value={{ light: "light-mode", dark: "dark-mode" }}
-          forcedTheme="light"
-        >
-          <NextIntlClientProvider messages={messages}>
-            {/* Provider INSIDE .landing — das Modal rendert als Kind des Providers
-                und braucht den .landing-Scope, sonst greifen seine CSS-Regeln nicht */}
-            <div className="landing">
-              <div className="grain" aria-hidden="true" />
-              <ContactModalProvider>{children}</ContactModalProvider>
-            </div>
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <SiteShell locale={locale} messages={messages}>
+      {children}
+    </SiteShell>
   );
 }

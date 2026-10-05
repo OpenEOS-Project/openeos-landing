@@ -41,5 +41,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# OMC working directory
-/.omc
+# OMC working directory (anywhere — one slipped into public/ once and was served)
+.omc/

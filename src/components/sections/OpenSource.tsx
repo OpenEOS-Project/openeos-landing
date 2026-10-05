@@ -1,10 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Github, BookOpen } from "lucide-react";
-
-const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
+import { docsUrl } from "@/lib/site";
 
 export function OpenSource() {
   const t = useTranslations("openSource");
+  const locale = useLocale();
 
   return (
     <section className="oss" id="open-source">
@@ -27,7 +27,7 @@ export function OpenSource() {
             <Github />
             <span>{t("ctaGithub")}</span>
           </a>
-          <a href={DOCS_URL} className="oss-card">
+          <a href={docsUrl(locale)} className="oss-card">
             <BookOpen />
             <span>{t("ctaDocs")}</span>
           </a>

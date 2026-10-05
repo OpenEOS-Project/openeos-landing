@@ -943,6 +943,9 @@
 
 /* ============================= PRICING ============================= */
 .landing .pricing { padding: 0 var(--pad) var(--sec-y); max-width: var(--max); margin: 0 auto; }
+/* Der Abschnitt hat seinen Seitenabstand schon; ohne das hier rueckte
+   der Kopf doppelt ein und stand nicht ueber den Karten. */
+.landing .pricing .section-head { padding-inline: 0; }
 .landing .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 @media (max-width: 900px) { .landing .plans { grid-template-columns: 1fr; } }
 
@@ -1873,6 +1876,13 @@
   padding-top: 0;
   padding-bottom: 28px;
 }
+/* Neuerungen und Feedback ruecken ihren Inhalt schon ueber __inner ein;
+   der Kopf darf das nicht ein zweites Mal tun, sonst steht die
+   Ueberschrift 56px (mobil 20px) rechts vom Text darunter. */
+.landing .changelog .section-head,
+.landing .feedback .section-head {
+  padding-inline: 0;
+}
 .landing .changelog .section-title,
 .landing .feedback .section-title,
 .landing .screens-page .section-title {
@@ -1902,7 +1912,7 @@
   display: flex;
   align-items: baseline;
   gap: 10px;
-  font: 500 12px var(--oe-f-mono, monospace);
+  font: 500 12px var(--f-mono, ui-monospace, monospace);
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--mute-2, #8a8f86);
@@ -1933,12 +1943,12 @@
   justify-self: start;
   padding: 2px 9px;
   border-radius: 999px;
-  font: 600 11px var(--oe-f-sans, inherit);
+  font: 600 11px var(--f-sans, system-ui, sans-serif);
   letter-spacing: .02em;
 }
 .landing .changelog__tag--neu {
-  background: color-mix(in oklab, var(--oe-green, #74c69d) 30%, transparent);
-  color: var(--oe-green-ink, #1b4332);
+  background: color-mix(in oklab, var(--green) 30%, transparent);
+  color: var(--green-ink);
 }
 .landing .changelog__tag--verbessert {
   background: color-mix(in oklab, var(--ink, #111) 8%, transparent);
@@ -1962,10 +1972,16 @@
 .landing .changelog__foot {
   margin-top: 56px;
   padding-top: 20px;
-  border-top: 1px solid var(--oe-line, rgba(0, 0, 0, .1));
+  border-top: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
   font-size: 14px;
   color: var(--mute-2, #8a8f86);
 }
+.landing .changelog__foot a {
+  color: var(--green-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.landing .changelog__foot a:hover { text-decoration-thickness: 2px; }
 
 /* ---------- Feedback ---------- */
 .landing .feedback__form {
@@ -1990,8 +2006,8 @@
   display: grid;
   gap: 3px;
   padding: 14px 16px;
-  border: 1px solid var(--oe-line, rgba(0, 0, 0, .12));
-  border-radius: var(--oe-r-md, 10px);
+  border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  border-radius: var(--r);
   cursor: pointer;
   transition: border-color .15s, background .15s;
 }
@@ -2001,11 +2017,11 @@
   pointer-events: none;
 }
 .landing .feedback__kind:hover {
-  border-color: color-mix(in oklab, var(--oe-green-ink, #1b4332) 40%, transparent);
+  border-color: color-mix(in oklab, var(--green-ink) 40%, transparent);
 }
 .landing .feedback__kind.is-active {
-  border-color: var(--oe-green-ink, #1b4332);
-  background: color-mix(in oklab, var(--oe-green, #74c69d) 12%, transparent);
+  border-color: var(--green-ink);
+  background: color-mix(in oklab, var(--green) 12%, transparent);
 }
 .landing .feedback__kind-title {
   font-weight: 600;
@@ -2021,7 +2037,7 @@
   gap: 6px;
 }
 .landing .feedback .field__label {
-  font: 500 12px var(--oe-f-mono, monospace);
+  font: 500 12px var(--f-mono, ui-monospace, monospace);
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--mute, #5b6159);
@@ -2030,8 +2046,8 @@
 .landing .feedback .textarea {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid var(--oe-line, rgba(0, 0, 0, .14));
-  border-radius: var(--oe-r-sm, 8px);
+  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  border-radius: 8px;
   background: var(--surface, #fff);
   color: var(--ink, #111);
   font: inherit;
@@ -2044,7 +2060,7 @@
 .landing .feedback .input:focus,
 .landing .feedback .textarea:focus {
   outline: none;
-  border-color: var(--oe-green-ink, #1b4332);
+  border-color: var(--green-ink);
 }
 .landing .feedback .field--error .input,
 .landing .feedback .field--error .textarea {
@@ -2061,7 +2077,7 @@
 .landing .feedback__error {
   margin: 0;
   padding: 12px 14px;
-  border-radius: var(--oe-r-sm, 8px);
+  border-radius: 8px;
   background: color-mix(in oklab, var(--danger, #c0392b) 12%, transparent);
   color: var(--danger, #c0392b);
   font-size: 14px;
@@ -2089,8 +2105,8 @@
   width: 54px;
   height: 54px;
   border-radius: 999px;
-  background: var(--oe-green-ink, #1b4332);
-  color: var(--oe-on-accent, #fff);
+  background: var(--green-ink);
+  color: var(--paper);
   font-size: 24px;
 }
 .landing .feedback__done-title {
@@ -2130,7 +2146,7 @@
 .landing .screens__frame {
   overflow: hidden;
   border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
-  border-radius: var(--oe-r-lg, 14px);
+  border-radius: 14px;
   background: var(--paper);
   /* Leichter Schatten, damit die Aufnahme nicht in der Seite versinkt. */
   box-shadow: 0 18px 40px -28px color-mix(in oklab, var(--ink) 55%, transparent);
@@ -2187,7 +2203,7 @@
 }
 .landing .journey__frame {
   overflow: hidden;
-  border-radius: var(--oe-r-md, 12px);
+  border-radius: 12px;
   border: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
   line-height: 0;
   background: var(--paper);
@@ -2204,10 +2220,10 @@
 }
 .landing .journey__step {
   display: block;
-  font: 500 11px var(--oe-f-mono);
+  font: 500 11px var(--f-mono, ui-monospace, monospace);
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--oe-green-ink, #1b4332);
+  color: var(--green-ink);
   margin-bottom: 4px;
 }
 .landing .journey__copy p {
@@ -2229,6 +2245,9 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    /* Ohne das rastet das erste Bild am Bildschirmrand ein statt am
+       Seitenabstand, und der Streifen klebt links an der Kante. */
+    scroll-padding-inline: var(--pad);
     gap: 14px;
     padding-bottom: 8px;
   }
@@ -2236,4 +2255,32 @@
     flex: 0 0 78%;
     scroll-snap-align: start;
   }
+}
+
+/* ===================== 404 =====================
+   Gleiche Bauart wie Neuerungen/Feedback: schmales Mass, Kopf ohne
+   Startseiten-Anlauf, darunter zwei Wege zurueck. */
+.landing .not-found {
+  padding: var(--sec-y) 0 calc(var(--sec-y) * 2);
+  min-height: 60vh;
+}
+.landing .not-found__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(24px, 6vw, 80px) var(--pad) 0;
+}
+.landing .not-found__code {
+  margin: 0 0 16px;
+  font: 500 12px var(--f-mono, ui-monospace, monospace);
+  letter-spacing: .12em;
+  color: var(--green-ink);
+}
+.landing .not-found .section-title {
+  font-size: clamp(34px, 5vw, 52px);
+}
+.landing .not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
 }

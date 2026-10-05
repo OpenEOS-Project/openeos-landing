@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
+import { pageMetadata } from '@/lib/site';
+import { Link } from '@/i18n/navigation';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { holeChangelog, type ChangelogArt, type ChangelogEintrag } from '@/lib/changelog-api';
@@ -12,9 +14,14 @@ import { holeChangelog, type ChangelogArt, type ChangelogEintrag } from '@/lib/c
    zu bauen; die Antwort ist klein und die Seite wird selten aufgerufen. */
 export const dynamic = 'force-dynamic';
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('changelog');
-  return { title: t('metaTitle'), description: t('sub') };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'changelog' });
+  return pageMetadata({ locale, path: '/changelog', title: t('metaTitle'), description: t('sub') });
 }
 
 const ART_KLASSE: Record<ChangelogArt, string> = {
@@ -88,7 +95,11 @@ export default async function ChangelogPage({
             ))}
           </div>
 
-          <p className="changelog__foot">{t('foot')}</p>
+          <p className="changelog__foot">
+            {t.rich('foot', {
+              link: (chunks) => <Link href="/feedback">{chunks}</Link>,
+            })}
+          </p>
         </div>
       </main>
       <Footer />

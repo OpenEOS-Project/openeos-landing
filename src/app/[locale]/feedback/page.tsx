@@ -1,13 +1,19 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
+import { pageMetadata } from '@/lib/site';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FeedbackForm } from '@/components/sections/FeedbackForm';
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('feedback');
-  return { title: t('metaTitle'), description: t('sub') };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'feedback' });
+  return pageMetadata({ locale, path: '/feedback', title: t('metaTitle'), description: t('sub') });
 }
 
 export default async function FeedbackPage({
