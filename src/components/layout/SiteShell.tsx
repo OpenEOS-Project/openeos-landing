@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { NextIntlClientProvider, type AbstractIntlMessages } from "next-intl";
 import { ThemeProvider } from "next-themes";
 import { ContactModalProvider } from "@/providers/contact-modal";
-import { fontVariables } from "@/lib/fonts";
+import { openEosFonts } from "@openeos/ui/fonts";
 
 /** <html> bis .landing — geteilt vom Sprach-Layout und der Wurzel-404. */
 export function SiteShell({
@@ -15,8 +15,12 @@ export function SiteShell({
   children: ReactNode;
 }) {
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={`${fontVariables} antialiased`}>
+    /* Geist, Bricolage Grotesque und JetBrains Mono aus @openeos/ui —
+       lokal eingebunden (next/font/local), ohne Anfrage bei Google. Am
+       <html>, damit auch die Tailwind-Variablen in :root (theme.css) die
+       --font-oe-* sehen; landing.css verbindet sie mit den --f-*-Namen. */
+    <html lang={locale} className={openEosFonts.className} suppressHydrationWarning>
+      <body className="antialiased">
         <ThemeProvider
           attribute="class"
           value={{ light: "light-mode", dark: "dark-mode" }}
