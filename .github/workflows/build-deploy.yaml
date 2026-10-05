@@ -7,9 +7,14 @@ on:
       - dev
     paths-ignore:
       - "**.md"
+  # Auch Pull Requests gegen dev pruefen (wie in openeos-shop). Veroeffentlicht
+  # wird dabei nichts: der Push ins Registry haengt an
+  # `github.event_name != 'pull_request'`, und die Deploy-Jobs verlangen ein
+  # `push`-Ereignis.
   pull_request:
     branches:
       - main
+      - dev
   workflow_dispatch:
 
 env:
