@@ -1,8 +1,8 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ContactTrigger } from "@/components/ContactTrigger";
+import { docsUrl } from "@/lib/site";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
-const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? "#";
 
 export interface PricingPackage {
   slug: string;
@@ -29,6 +29,7 @@ function formatEuro(value: number) {
 
 export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
   const t = useTranslations("pricing");
+  const locale = useLocale();
 
   // Optional override from API: if a "1-day" package is available, use its price.
   const oneDayPkg = pricingData?.packages?.find((p) => p.slug === "1-day");
@@ -60,7 +61,7 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
               <li key={f}>{f}</li>
             ))}
           </ul>
-          <a href={DOCS_URL} className="btn btn--ghost btn--block">
+          <a href={docsUrl(locale, "selbst-betreiben/intro/")} className="btn btn--ghost btn--block">
             {t("selfHosted.cta")}
           </a>
         </article>

@@ -100,6 +100,8 @@ jobs:
             NEXT_PUBLIC_DOCS_URL=https://docs.openeos.de
             NEXT_PUBLIC_CONTACT_EMAIL=hello@openeos.de
             NEXT_PUBLIC_DEMO_EMAIL=hello@openeos.de
+            NEXT_PUBLIC_SITE_URL=${{ github.ref == 'refs/heads/dev' && 'https://staging.openeos.de' || 'https://openeos.de' }}
+            NEXT_PUBLIC_SITE_ENV=${{ github.ref == 'refs/heads/dev' && 'staging' || 'production' }}
 
   deploy:
     name: Deploy to production

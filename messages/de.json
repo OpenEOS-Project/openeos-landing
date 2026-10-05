@@ -1,7 +1,8 @@
 {
   "metadata": {
     "title": "OpenEOS — Das moderne Kassensystem für Vereine & Events",
-    "description": "Flexibel, mobil, Open Source. Vom Vereinsfest bis zur Großveranstaltung — ein System für Bestellung, Küche, Kasse und Auswertung."
+    "description": "Flexibel, mobil, Open Source. Vom Vereinsfest bis zur Großveranstaltung — ein System für Bestellung, Küche, Kasse und Auswertung.",
+    "ogImageAlt": "OpenEOS — Das moderne Kassensystem für Vereine & Events"
   },
   "auth": {
     "login": {
@@ -104,7 +105,12 @@
     "login": "Anmelden",
     "register": "Registrieren",
     "changelog": "Neuerungen",
-    "screens": "Einblicke"
+    "screens": "Einblicke",
+    "mainNav": "Hauptnavigation",
+    "mobileNav": "Navigation",
+    "menu": "Menü",
+    "closeMenu": "Menü schließen",
+    "language": "Sprache"
   },
   "hero": {
     "pill": "Neue Version jetzt verfügbar",
@@ -113,7 +119,7 @@
     "titleL3": "mitdenkt.",
     "sub": "Flexibel, mobil, Open Source. Vom Vereinsfest bis zur Großveranstaltung — ein System für Planung, Bestellung, Küche, Kasse und Auswertung.",
     "ctaStart": "Kostenlos starten",
-    "ctaDemo": "Demo anfragen →",
+    "ctaDemo": "Demo anfragen",
     "stat1Label": "Einrichtungsgebühr",
     "stat1Value": "0 €",
     "stat2Label": "Starterbonus auf erste Events",
@@ -124,7 +130,10 @@
     "receiptKasse": "Kasse 03 · Zelt A",
     "devicePicker": "Kasse 03",
     "deviceLocation": "Zelt A · openeos",
-    "pillVersion": "Version {version} jetzt verfügbar"
+    "pillVersion": "Version {version} jetzt verfügbar",
+    "receiptPaid": "✓ BEZAHLT · SumUp",
+    "receiptPending": "— SumUp · Kontaktlos —",
+    "receiptThanks": "openeos.de · danke! 🍻"
   },
   "marquee": [
     "Schützenfest Oberried",
@@ -274,9 +283,10 @@
       "title": "Self-Hosted",
       "tag": "AGPLv3",
       "price": "Kostenlos",
-      "unit": "€ / immer",
+      "unit": "/ für immer",
       "features": [
         "Alle Features inklusive",
+        "Eine Organisation",
         "Unbegrenzte Events",
         "Eigener Server, volle Kontrolle",
         "Community-Support"
@@ -338,7 +348,7 @@
     "titleL1": "Bereit für dein",
     "titleL2": "nächstes Event?",
     "sub": "Registrierung in wenigen Minuten. Erstes Event sofort möglich.",
-    "ctaRegister": "Organisation registrieren →",
+    "ctaRegister": "Organisation registrieren",
     "ctaDemo": "Demo anfragen"
   },
   "contact": {
@@ -542,7 +552,7 @@
       "verbessert": "Verbessert",
       "behoben": "Behoben"
     },
-    "foot": "Ältere Änderungen führen wir nicht auf. Fragen dazu? Schreiben Sie uns.",
+    "foot": "Ältere Änderungen führen wir nicht auf. Fragen dazu? <link>Schreiben Sie uns.</link>",
     "version": "Version {version}"
   },
   "feedback": {
@@ -634,5 +644,13 @@
         "alt": "Volles Festzelt am Abend"
       }
     }
+  },
+  "notFound": {
+    "metaTitle": "Seite nicht gefunden — OpenEOS",
+    "titleL1": "Diese Seite",
+    "titleL2": "gibt es nicht.",
+    "sub": "Vielleicht hat sich die Adresse geändert, oder sie war nie richtig. Von der Startseite aus findest du alles Weitere.",
+    "home": "Zur Startseite",
+    "changelog": "Neuerungen ansehen"
   }
 }

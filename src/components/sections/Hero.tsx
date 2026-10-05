@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { HeroDemo } from "./HeroDemo";
 import { ContactTrigger } from "@/components/ContactTrigger";
+import { ArrowIcon } from "@/components/ArrowIcon";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
 
@@ -34,18 +35,11 @@ export function Hero({ version }: { version: string | null }) {
           <div className="hero__cta">
             <a href={`${APP_URL}/register`} className="btn btn--primary btn--lg">
               <span>{t("ctaStart")}</span>
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path
-                  d="M5 10h10M10 5l5 5-5 5"
-                  stroke="currentColor"
-                  strokeWidth="1.75"
-                  fill="none"
-                  strokeLinecap="square"
-                />
-              </svg>
+              <ArrowIcon />
             </a>
             <ContactTrigger type="demo" className="btn btn--ghost btn--lg">
-              {t("ctaDemo")}
+              <span>{t("ctaDemo")}</span>
+              <ArrowIcon />
             </ContactTrigger>
           </div>
         </div>

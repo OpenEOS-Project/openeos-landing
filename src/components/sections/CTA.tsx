@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { ContactTrigger } from "@/components/ContactTrigger";
+import { ArrowIcon } from "@/components/ArrowIcon";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
 
@@ -15,10 +16,12 @@ export function CTA() {
       <p>{t("sub")}</p>
       <div className="cta-block__row">
         <a href={`${APP_URL}/register`} className="btn btn--primary btn--lg">
-          {t("ctaRegister")}
+          <span>{t("ctaRegister")}</span>
+          <ArrowIcon />
         </a>
         <ContactTrigger type="demo" className="btn btn--ghost btn--lg">
-          {t("ctaDemo")}
+          <span>{t("ctaDemo")}</span>
+          <ArrowIcon />
         </ContactTrigger>
       </div>
     </section>

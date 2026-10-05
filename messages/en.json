@@ -1,7 +1,8 @@
 {
   "metadata": {
     "title": "OpenEOS — The modern POS for clubs & events",
-    "description": "Flexible, mobile, open source. From the village festival to large-scale events — one system for ordering, kitchen, checkout and analytics."
+    "description": "Flexible, mobile, open source. From the village festival to large-scale events — one system for ordering, kitchen, checkout and analytics.",
+    "ogImageAlt": "OpenEOS — The modern POS for clubs & events"
   },
   "auth": {
     "login": {
@@ -104,16 +105,21 @@
     "login": "Sign in",
     "register": "Sign up",
     "changelog": "What's new",
-    "screens": "A look inside"
+    "screens": "A look inside",
+    "mainNav": "Main navigation",
+    "mobileNav": "Navigation",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
   },
   "hero": {
     "pill": "New version available now",
     "titleL1": "The POS system",
-    "titleL2": "that thinks along",
-    "titleL3": "with your event.",
+    "titleL2": "that thinks",
+    "titleL3": "ahead.",
     "sub": "Flexible, mobile, open source. From the village festival to large-scale events — one system for planning, ordering, kitchen, checkout and analytics.",
     "ctaStart": "Start for free",
-    "ctaDemo": "Request demo →",
+    "ctaDemo": "Request demo",
     "stat1Label": "Setup fee",
     "stat1Value": "€ 0",
     "stat2Label": "Starter bonus on first events",
@@ -124,7 +130,10 @@
     "receiptKasse": "POS 03 · Tent A",
     "devicePicker": "POS 03",
     "deviceLocation": "Tent A · openeos",
-    "pillVersion": "Version {version} out now"
+    "pillVersion": "Version {version} out now",
+    "receiptPaid": "✓ PAID · SumUp",
+    "receiptPending": "— SumUp · Contactless —",
+    "receiptThanks": "openeos.de · thank you! 🍻"
   },
   "marquee": [
     "Schützenfest Oberried",
@@ -274,9 +283,10 @@
       "title": "Self-hosted",
       "tag": "AGPLv3",
       "price": "Free",
-      "unit": "€ / forever",
+      "unit": "/ forever",
       "features": [
         "All features included",
+        "One organization",
         "Unlimited events",
         "Your server, your rules",
         "Community support"
@@ -338,7 +348,7 @@
     "titleL1": "Ready for your",
     "titleL2": "next event?",
     "sub": "Sign up in minutes. Run your first event right away.",
-    "ctaRegister": "Register organization →",
+    "ctaRegister": "Register organization",
     "ctaDemo": "Request demo"
   },
   "contact": {
@@ -390,7 +400,7 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "copyright": "© {year} OpenEOS · Made with ❤️",
-    "productBy": "A product by LUXCODE by Lukas Lukic-Spitznagel",
+    "productBy": "A product of LUXCODE by Lukas Lukic-Spitznagel",
     "feedback": "Feedback & ideas",
     "screens": "A look inside"
   },
@@ -542,7 +552,7 @@
       "verbessert": "Improved",
       "behoben": "Fixed"
     },
-    "foot": "We do not list older changes. Questions? Get in touch.",
+    "foot": "We do not list older changes. Questions? <link>Get in touch.</link>",
     "version": "Version {version}"
   },
   "feedback": {
@@ -634,5 +644,13 @@
         "alt": "A busy festival tent in the evening"
       }
     }
+  },
+  "notFound": {
+    "metaTitle": "Page not found — OpenEOS",
+    "titleL1": "This page",
+    "titleL2": "does not exist.",
+    "sub": "The address may have changed, or it was never right. Everything else is one click away from the home page.",
+    "home": "Go to home page",
+    "changelog": "See what's new"
   }
 }

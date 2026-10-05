@@ -1,10 +1,22 @@
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { pageMetadata } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 // Render at request time so env vars set at deploy time take effect without rebuild.
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
+  return pageMetadata({ locale, path: "/privacy", title: `${t("title")} — OpenEOS` });
+}
 
 type ResponsibleData = {
   name: string;

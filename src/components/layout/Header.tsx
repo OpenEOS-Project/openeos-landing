@@ -33,7 +33,7 @@ export function Header() {
           {/* Zwei Arten von Zielen, deshalb zwei Gruppen: links die
               Abschnitte dieser Seite, rechts eigene Seiten. Gemischt war
               nicht absehbar, ob ein Klick scrollt oder die Seite wechselt. */}
-          <nav className="nav__links" aria-label="Hauptnavigation">
+          <nav className="nav__links" aria-label={t("mainNav")}>
             <span className="nav__group">
               <Link href="/#features">{t("features")}</Link>
               <Link href="/#pricing">{t("pricing")}</Link>
@@ -71,7 +71,7 @@ export function Header() {
           <button
             type="button"
             className="nav__burger"
-            aria-label="Menü"
+            aria-label={t("menu")}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
@@ -85,7 +85,7 @@ export function Header() {
       {open && (
         <>
           <div className="nav__backdrop" onClick={close} aria-hidden="true" />
-          <aside className="nav__panel" role="dialog" aria-label="Mobile-Navigation">
+          <aside className="nav__panel" role="dialog" aria-label={t("mobileNav")}>
             <div className="nav__panel-head">
               <Link href="/" className="nav__panel-logo" aria-label="OpenEOS" onClick={close}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -94,7 +94,7 @@ export function Header() {
               <button
                 type="button"
                 className="nav__close"
-                aria-label="Menü schließen"
+                aria-label={t("closeMenu")}
                 onClick={close}
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -107,10 +107,12 @@ export function Header() {
                 </svg>
               </button>
             </div>
-            <nav className="nav__panel-links" aria-label="Hauptnavigation">
+            <nav className="nav__panel-links" aria-label={t("mainNav")}>
               <Link href="/#features" onClick={close}>{t("features")}</Link>
               <Link href="/#pricing" onClick={close}>{t("pricing")}</Link>
               <Link href="/#open-source" onClick={close}>{t("openSource")}</Link>
+              <Link href="/screens" onClick={close}>{t("screens")}</Link>
+              <Link href="/changelog" onClick={close}>{t("changelog")}</Link>
             </nav>
             <div className="nav__panel-actions">
               <LanguageSwitch />

@@ -171,9 +171,9 @@ export function HeroDemo() {
           className="receipt__pay"
           style={paid ? { color: "var(--green-ink)" } : undefined}
         >
-          {paid ? "✓ BEZAHLT · SumUp" : "— SumUp · Kontaktlos —"}
+          {paid ? t("receiptPaid") : t("receiptPending")}
         </div>
-        <div className="receipt__foot">openeos.de · danke! 🍻</div>
+        <div className="receipt__foot">{t("receiptThanks")}</div>
       </div>
     </div>
   );
