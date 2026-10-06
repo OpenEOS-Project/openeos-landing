@@ -302,7 +302,7 @@
       "features": [
         "All features included",
         "Hosting, backups, auto-updates",
-        "Premium support (email, phone, WhatsApp)",
+        "Support",
         "Pay by card or direct debit when you activate an event"
       ],
       "cta": "Get started →"
@@ -519,7 +519,7 @@
     },
     "services": {
       "title": "2. Description of services",
-      "content": "The provider offers the customer a web-based POS solution. The services include:\n• Access to the OpenEOS platform\n• Hosting and maintenance of the infrastructure\n• Regular updates and security patches\n• Support via email, phone and WhatsApp (with SaaS plans)\n• Data backup"
+      "content": "The provider offers the customer a web-based POS solution. The services include:\n• Access to the OpenEOS platform\n• Hosting and maintenance of the infrastructure\n• Regular updates and security patches\n• Support (with SaaS plans)\n• Data backup"
     },
     "registration": {
       "title": "3. Registration and conclusion of contract",

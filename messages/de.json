@@ -302,7 +302,7 @@
       "features": [
         "Alle Features inklusive",
         "Hosting, Backups, automatische Updates",
-        "Premium-Support (E-Mail, Telefon, WhatsApp)",
+        "Support",
         "Bezahlung beim Freischalten per Karte oder Lastschrift"
       ],
       "cta": "Jetzt starten →"
@@ -519,7 +519,7 @@
     },
     "services": {
       "title": "2. Leistungsbeschreibung",
-      "content": "Der Anbieter stellt dem Kunden eine webbasierte Kassensystem-Lösung (POS) zur Verfügung. Die Leistungen umfassen:\n• Zugang zur OpenEOS Plattform\n• Hosting und Wartung der Infrastruktur\n• Regelmäßige Updates und Sicherheitspatches\n• Support per E-Mail, Telefon und WhatsApp (bei SaaS-Tarifen)\n• Datensicherung und Backup"
+      "content": "Der Anbieter stellt dem Kunden eine webbasierte Kassensystem-Lösung (POS) zur Verfügung. Die Leistungen umfassen:\n• Zugang zur OpenEOS Plattform\n• Hosting und Wartung der Infrastruktur\n• Regelmäßige Updates und Sicherheitspatches\n• Support (bei SaaS-Tarifen)\n• Datensicherung und Backup"
     },
     "registration": {
       "title": "3. Registrierung und Vertragsschluss",
