@@ -458,11 +458,11 @@
       },
       "contact": {
         "title": "Contact",
-        "content": "If you contact us by email or through a form on this website (e.g. contact, demo request or feedback), we process the information you provide (name, email address, organization if given, and your message) to handle the request and any follow-up questions. Form submissions are stored in our database, reported to us by email and also forwarded to our support channel on Telegram (see section 10). Beyond that, we do not pass on this data without your consent. The legal basis is Art. 6 para. 1 lit. b or lit. f GDPR."
+        "content": "If you contact us by email or through a form on this website (e.g. contact, demo request or feedback), we process the information you provide (name, email address, organization if given, and your message) to handle the request and any follow-up questions. Form submissions are stored in our database and reported to us by email through our own mail server (see section 8). Messages you send through the support chat of the OpenEOS platform and the replies from support are also stored in our database; we are notified of new messages by email. Beyond that, we do not pass on this data without your consent. The legal basis is Art. 6 para. 1 lit. b or lit. f GDPR."
       },
       "account": {
         "title": "Registration and customer account",
-        "content": "If you register for the OpenEOS platform or create an organization, we collect and store the account data required to perform the contract (e.g. name, email address and organization details, and the billing address when you place an order). Processing is carried out to fulfil the usage agreement pursuant to Art. 6 para. 1 lit. b GDPR. We only share this data with third parties where this is necessary to fulfil the contract (see sections 8 to 10)."
+        "content": "If you register for the OpenEOS platform or create an organization, we collect and store the account data required to perform the contract (e.g. name, email address and organization details, and the billing address when you place an order). Processing is carried out to fulfil the usage agreement pursuant to Art. 6 para. 1 lit. b GDPR. We only share this data with third parties where this is necessary to fulfil the contract (see sections 8 and 9)."
       }
     },
     "hosting": {
@@ -470,19 +470,19 @@
       "content": "The website, the web app, the online shop, the documentation and the programming interface (api.openeos.de) of the OpenEOS platform, including the database, run on a server operated by IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. When you access them, our host automatically collects and stores server logfiles transmitted by your browser (including IP address, date and time of the request, page requested, browser type and version). We have a data processing agreement with IONOS pursuant to Art. 28 GDPR, which obliges IONOS to process the data of our website visitors solely on our instructions and for the contractually agreed purposes, and to protect it appropriately."
     },
     "ssl": {
-      "title": "12. SSL/TLS encryption",
+      "title": "11. SSL/TLS encryption",
       "content": "For security reasons and to protect the transmission of confidential content, such as requests you send to us as the site operator, this website uses SSL/TLS encryption. You can recognize an encrypted connection by the fact that the address line of your browser changes from „http://“ to „https://“ and by the lock icon in your browser's address bar."
     },
     "storage": {
-      "title": "13. Storage duration",
+      "title": "12. Storage duration",
       "content": "Unless a more specific storage period is stated within this privacy policy, your personal data will remain with us until the purpose for the data processing no longer applies. We delete contact inquiries once they have been fully processed, provided no statutory retention obligations apply. Data from a customer account is stored for the duration of the contractual relationship and beyond, in accordance with commercial and tax law retention periods (generally 6 or 10 years)."
     },
     "rights": {
-      "title": "14. Your rights",
+      "title": "13. Your rights",
       "content": "You always have the right to:\n• Receive information about your data stored by us\n• Have this data corrected or deleted\n• Restrict processing\n• Object to processing\n• Receive your data in a transferable format\n• File a complaint with a supervisory authority"
     },
     "changes": {
-      "title": "15. Changes",
+      "title": "14. Changes",
       "content": "We reserve the right to adapt this privacy policy so that it always complies with current legal requirements or to implement changes to our services in the privacy policy. The new privacy policy will then apply to your next visit."
     },
     "backup": {
@@ -505,12 +505,8 @@
       "title": "9. Payment with Stripe",
       "content": "If an event is activated by card or direct debit, payment is processed by Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, D02 H210, Ireland. For this purpose we transmit to Stripe the name of the organization, the billing email address (or, if none is set, the email address of the user placing the order), the amount, a description of the service and internal identifiers of the organization and the event. You enter your payment details (e.g. card or account details) directly on Stripe's payment page; they are not transmitted to us. Stripe also creates the invoice, which you can retrieve in your customer account. The legal basis is Art. 6(1)(b) GDPR. Stripe may also transfer data to Stripe, Inc. in the USA and bases this on the EU-US Data Privacy Framework and on the European Commission's standard contractual clauses. For more information, see Stripe's privacy policy at https://stripe.com/privacy."
     },
-    "support": {
-      "title": "10. Forwarding of inquiries to Telegram",
-      "content": "So that we can answer inquiries quickly, we forward messages you send through a form on this website or through the support chat of the OpenEOS platform to a closed group of our support team on the messaging service Telegram (Telegram Messenger Inc., Commerce House, Wickhams Cay 1, Road Town, Tortola, British Virgin Islands). For forms, we forward the type of inquiry, your name, your email address, your organization if given, and your message; for the support chat, your name, the name of your organization and your message. Replies from support are stored there as well. The legal basis is our legitimate interest in handling inquiries quickly (Art. 6(1)(f) GDPR). Telegram is based outside the EU and the EEA; there is no adequacy decision of the European Commission for its country of establishment."
-    },
     "organizations": {
-      "title": "11. Data of guests and volunteers; card payments with SumUp",
+      "title": "10. Data of guests and volunteers; card payments with SumUp",
       "content": "Organizations use the OpenEOS platform to take their guests' orders (at the till or through the online shop) and to plan their volunteer shifts. The respective organization is responsible for this data – e.g. orders; for online shop orders, your email address and, if given, your name for the order confirmation; for volunteers, name, email address and shifts – and we process it on its behalf (Art. 28 GDPR). If an organization has connected its own SumUp account, card payments at the till and in the online shop are processed through SumUp. The platform only transmits the amount, currency, a description and a transaction reference to SumUp; you enter your card details directly on the card terminal or on SumUp's payment page. The respective organization is responsible for these payments; you can obtain information about data processing from it."
     }
   },
@@ -535,7 +531,7 @@
     },
     "payment": {
       "title": "5. Payment",
-      "content": "Event days are paid for before they are used. A newly created event starts in test mode and can be used there free of charge for up to 25 orders. Before activation, the amount due is shown (number of event days × daily price, less any applicable discount). The event is activated upon payment of this amount by card or direct debit through the payment service provider Stripe. The event's setup (e.g. products, prices, devices and printers) is kept on activation. The invoice is sent automatically by email and is also available for download in the customer account under \"Invoices\".\n\nBy way of exception, payment on invoice may be agreed in individual cases. The event is then activated as soon as it is ordered; the amount is calculated as above. The invoice is issued separately and is payable within the period stated in it."
+      "content": "Event days are paid for before they are used. A newly created event starts in test mode and can be used there free of charge for up to 25 orders. Before activation, the amount due is shown (number of event days × daily price, less any applicable discount). The event is activated upon payment of this amount by card or direct debit through the payment service provider Stripe. On activation, the test orders are deleted; the event's setup (e.g. products, prices, devices and printers) is kept. The invoice is sent automatically by email and is also available for download in the customer account under \"Invoices\".\n\nBy way of exception, payment on invoice may be agreed in individual cases. The event is then activated as soon as it is ordered; the amount is calculated as above. The invoice is issued separately and is payable within the period stated in it."
     },
     "obligations": {
       "title": "6. Customer obligations",

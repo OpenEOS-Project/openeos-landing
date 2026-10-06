@@ -458,11 +458,11 @@
       },
       "contact": {
         "title": "Kontaktaufnahme",
-        "content": "Wenn Sie uns per E-Mail oder über ein Formular dieser Website (z. B. Kontakt, Demo-Anfrage oder Rückmeldung) kontaktieren, verarbeiten wir Ihre Angaben (Name, E-Mail-Adresse, ggf. Organisation und Ihre Nachricht) zur Bearbeitung der Anfrage und für Anschlussfragen. Formularanfragen werden in unserer Datenbank gespeichert, uns per E-Mail gemeldet und zusätzlich in unseren Support-Kanal bei Telegram weitergeleitet (siehe Abschnitt 10). Darüber hinaus geben wir diese Daten nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO."
+        "content": "Wenn Sie uns per E-Mail oder über ein Formular dieser Website (z. B. Kontakt, Demo-Anfrage oder Rückmeldung) kontaktieren, verarbeiten wir Ihre Angaben (Name, E-Mail-Adresse, ggf. Organisation und Ihre Nachricht) zur Bearbeitung der Anfrage und für Anschlussfragen. Formularanfragen werden in unserer Datenbank gespeichert und uns per E-Mail über unseren eigenen Mailserver gemeldet (siehe Abschnitt 8). Nachrichten, die Sie über den Support-Chat der OpenEOS-Plattform senden, und die Antworten des Supports werden ebenfalls in unserer Datenbank gespeichert; über neue Nachrichten werden wir per E-Mail benachrichtigt. Darüber hinaus geben wir diese Daten nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO."
       },
       "account": {
         "title": "Registrierung und Kundenkonto",
-        "content": "Wenn Sie sich für die OpenEOS-Plattform registrieren oder eine Organisation anlegen, erheben und speichern wir die zur Vertragsdurchführung erforderlichen Bestandsdaten (z. B. Name, E-Mail-Adresse und Organisationsangaben, bei Bestellungen auch die Rechnungsanschrift). Die Verarbeitung erfolgt zur Erfüllung des Nutzungsvertrags gemäß Art. 6 Abs. 1 lit. b DSGVO. An Dritte geben wir diese Daten nur weiter, soweit dies zur Vertragserfüllung erforderlich ist (siehe Abschnitte 8 bis 10)."
+        "content": "Wenn Sie sich für die OpenEOS-Plattform registrieren oder eine Organisation anlegen, erheben und speichern wir die zur Vertragsdurchführung erforderlichen Bestandsdaten (z. B. Name, E-Mail-Adresse und Organisationsangaben, bei Bestellungen auch die Rechnungsanschrift). Die Verarbeitung erfolgt zur Erfüllung des Nutzungsvertrags gemäß Art. 6 Abs. 1 lit. b DSGVO. An Dritte geben wir diese Daten nur weiter, soweit dies zur Vertragserfüllung erforderlich ist (siehe Abschnitte 8 und 9)."
       }
     },
     "hosting": {
@@ -470,19 +470,19 @@
       "content": "Die Website, die Web-App, der Online-Shop, die Dokumentation und die Programmierschnittstelle (api.openeos.de) der OpenEOS-Plattform einschließlich der Datenbank werden auf einem Server der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, betrieben. Beim Aufruf erhebt und speichert unser Hoster automatisch Server-Logfiles, die Ihr Browser übermittelt (u. a. IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite, Browsertyp und -version). Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO, der IONOS dazu verpflichtet, die Daten unserer Websitebesucher ausschließlich nach unseren Weisungen und zu den vertraglich vereinbarten Zwecken zu verarbeiten und angemessen zu schützen."
     },
     "ssl": {
-      "title": "12. SSL-/TLS-Verschlüsselung",
+      "title": "11. SSL-/TLS-Verschlüsselung",
       "content": "Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile Ihres Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile."
     },
     "storage": {
-      "title": "13. Speicherdauer",
+      "title": "12. Speicherdauer",
       "content": "Sofern innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Kontaktanfragen löschen wir, sobald diese abschließend bearbeitet sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Daten aus einem Kundenkonto werden für die Dauer der Vertragsbeziehung sowie darüber hinaus entsprechend der handels- und steuerrechtlichen Aufbewahrungsfristen (in der Regel 6 bzw. 10 Jahre) gespeichert."
     },
     "rights": {
-      "title": "14. Ihre Rechte",
+      "title": "13. Ihre Rechte",
       "content": "Sie haben jederzeit das Recht:\n• Auskunft über Ihre bei uns gespeicherten Daten zu erhalten\n• Diese Daten berichtigen oder löschen zu lassen\n• Die Verarbeitung einzuschränken\n• Der Verarbeitung zu widersprechen\n• Ihre Daten in einem übertragbaren Format zu erhalten\n• Eine Beschwerde bei einer Aufsichtsbehörde einzureichen"
     },
     "changes": {
-      "title": "15. Änderungen",
+      "title": "14. Änderungen",
       "content": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung."
     },
     "backup": {
@@ -505,12 +505,8 @@
       "title": "9. Bezahlung mit Stripe",
       "content": "Wird eine Veranstaltung per Karte oder Lastschrift freigeschaltet, erfolgt die Zahlung über Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, D02 H210, Irland. Dazu übermitteln wir an Stripe den Namen der Organisation, die Rechnungs-E-Mail-Adresse (ersatzweise die E-Mail-Adresse des bestellenden Nutzers), den Betrag, eine Beschreibung der Leistung sowie interne Kennungen der Organisation und der Veranstaltung. Ihre Zahlungsdaten (z. B. Karten- oder Kontodaten) geben Sie direkt auf der Bezahlseite von Stripe ein; sie werden nicht an uns übermittelt. Stripe erstellt auch die Rechnung, die Sie im Kundenkonto abrufen können. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Stripe kann Daten auch an Stripe, Inc. in den USA übermitteln und stützt dies auf das EU-US Data Privacy Framework sowie auf Standardvertragsklauseln der EU-Kommission. Weitere Informationen finden Sie in der Datenschutzerklärung von Stripe unter https://stripe.com/de/privacy."
     },
-    "support": {
-      "title": "10. Weiterleitung von Anfragen an Telegram",
-      "content": "Damit wir Anfragen schnell beantworten können, leiten wir Nachrichten, die Sie über ein Formular dieser Website oder über den Support-Chat der OpenEOS-Plattform senden, in eine geschlossene Gruppe unseres Support-Teams beim Messenger-Dienst Telegram weiter (Telegram Messenger Inc., Commerce House, Wickhams Cay 1, Road Town, Tortola, Britische Jungferninseln). Weitergeleitet werden bei Formularen die Art der Anfrage, Ihr Name, Ihre E-Mail-Adresse, ggf. Ihre Organisation und Ihre Nachricht; beim Support-Chat Ihr Name, der Name Ihrer Organisation und Ihre Nachricht. Antworten des Supports werden dort ebenfalls abgelegt. Rechtsgrundlage ist unser berechtigtes Interesse an einer schnellen Bearbeitung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO). Telegram hat seinen Sitz außerhalb der EU und des EWR; für das Sitzland besteht kein Angemessenheitsbeschluss der EU-Kommission."
-    },
     "organizations": {
-      "title": "11. Daten von Gästen und Helfern; Kartenzahlung mit SumUp",
+      "title": "10. Daten von Gästen und Helfern; Kartenzahlung mit SumUp",
       "content": "Organisationen nutzen die OpenEOS-Plattform, um Bestellungen ihrer Gäste aufzunehmen (an der Kasse oder über den Online-Shop) und ihre Helferschichten zu planen. Für diese Daten – z. B. Bestellungen, bei Bestellungen im Online-Shop Ihre E-Mail-Adresse und ggf. Ihr Name für die Bestellbestätigung, bei Helfern Name, E-Mail-Adresse und Schichten – ist die jeweilige Organisation verantwortlich; wir verarbeiten sie in ihrem Auftrag (Art. 28 DSGVO). Hat eine Organisation ihr eigenes SumUp-Konto verbunden, werden Kartenzahlungen an der Kasse und im Online-Shop über SumUp abgewickelt. Die Plattform übermittelt an SumUp dabei nur Betrag, Währung, eine Beschreibung und eine Vorgangsnummer; Ihre Kartendaten geben Sie direkt am Kartenterminal oder auf der Bezahlseite von SumUp ein. Verantwortlich für diese Zahlungen ist die jeweilige Organisation; Informationen zur Datenverarbeitung erhalten Sie bei ihr."
     }
   },
@@ -535,7 +531,7 @@
     },
     "payment": {
       "title": "5. Zahlung",
-      "content": "Veranstaltungstage werden vor ihrer Nutzung bezahlt. Eine neu angelegte Veranstaltung startet im Testmodus und kann darin mit bis zu 25 Bestellungen kostenlos genutzt werden. Vor dem Freischalten wird der zu zahlende Betrag angezeigt (Anzahl der Veranstaltungstage × Tagespreis, abzüglich eines etwaigen Nachlasses). Die Freischaltung erfolgt gegen Zahlung dieses Betrags per Karte oder Lastschrift über den Zahlungsdienstleister Stripe. Die Einrichtung der Veranstaltung (z. B. Produkte, Preise, Geräte und Drucker) bleibt beim Freischalten erhalten. Die Rechnung wird automatisch per E-Mail versandt und steht zusätzlich im Kundenkonto unter „Rechnungen“ zum Herunterladen bereit.\n\nAbweichend kann im Einzelfall die Zahlung auf Rechnung vereinbart werden. Dann wird die Veranstaltung bereits mit der Bestellung freigeschaltet; der Betrag wird wie oben berechnet. Die Rechnung wird gesondert gestellt und ist innerhalb der darin genannten Frist zu zahlen."
+      "content": "Veranstaltungstage werden vor ihrer Nutzung bezahlt. Eine neu angelegte Veranstaltung startet im Testmodus und kann darin mit bis zu 25 Bestellungen kostenlos genutzt werden. Vor dem Freischalten wird der zu zahlende Betrag angezeigt (Anzahl der Veranstaltungstage × Tagespreis, abzüglich eines etwaigen Nachlasses). Die Freischaltung erfolgt gegen Zahlung dieses Betrags per Karte oder Lastschrift über den Zahlungsdienstleister Stripe. Beim Freischalten werden die Testbestellungen gelöscht; die Einrichtung der Veranstaltung (z. B. Produkte, Preise, Geräte und Drucker) bleibt erhalten. Die Rechnung wird automatisch per E-Mail versandt und steht zusätzlich im Kundenkonto unter „Rechnungen“ zum Herunterladen bereit.\n\nAbweichend kann im Einzelfall die Zahlung auf Rechnung vereinbart werden. Dann wird die Veranstaltung bereits mit der Bestellung freigeschaltet; der Betrag wird wie oben berechnet. Die Rechnung wird gesondert gestellt und ist innerhalb der darin genannten Frist zu zahlen."
     },
     "obligations": {
       "title": "6. Pflichten des Kunden",
