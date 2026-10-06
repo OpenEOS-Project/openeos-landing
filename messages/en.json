@@ -122,7 +122,7 @@
     "ctaDemo": "Request demo",
     "stat1Label": "Setup fee",
     "stat1Value": "€ 0",
-    "stat2Label": "Starter bonus on first events",
+    "stat2Label": "Starter bonus on your first event",
     "stat2Value": "20 %",
     "stat3Label": "Open Source · AGPLv3",
     "stat3Value": "100 %",
@@ -298,7 +298,7 @@
       "tag": "Recommended",
       "price": "€ 25",
       "unit": "/ event day",
-      "bonus": "20% starter bonus on your first events",
+      "bonus": "20% starter bonus on your first event",
       "features": [
         "All features included",
         "Hosting, backups, auto-updates",
@@ -441,7 +441,7 @@
     "lastUpdated": "As of October 2026",
     "overview": {
       "title": "1. Privacy at a glance",
-      "content": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally."
+      "content": "The following information provides a simple overview of what happens to your personal data when you visit this website or use the OpenEOS platform (web app at app.openeos.de, online shop at shop.openeos.de and documentation at docs.openeos.de). Personal data is any data that can be used to identify you personally."
     },
     "responsible": {
       "title": "2. Responsible party"
@@ -450,52 +450,68 @@
       "title": "3. Data collection on this website",
       "server": {
         "title": "Server log files",
-        "content": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are: browser type and browser version, operating system used, referrer URL, hostname of the accessing computer, time of the server request and IP address. This data is not merged with other data sources. See the „Hosting with IONOS SE“ section for details on processing by our host."
+        "content": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are: browser type and browser version, operating system used, referrer URL, hostname of the accessing computer, time of the server request and IP address. This data is not merged with other data sources. See sections 4 and 6 for details on processing by our host and by Cloudflare."
       },
       "cookies": {
         "title": "Cookies and local storage",
-        "content": "This website does not use tracking, analytics, or advertising cookies. Only technically necessary data is used: your language preference is stored via a cookie (NEXT_LOCALE), and your theme preference (light/dark) is stored in your browser's local storage (localStorage). Both serve solely to display the website according to your settings and are not evaluated for analytics or advertising purposes. No separate consent is required for these purely technical purposes (§ 25 para. 2 TDDDG, Art. 6 para. 1 lit. f GDPR)."
+        "content": "This website does not use tracking, analytics, or advertising cookies. Only technically necessary data is used: your language preference is stored via a cookie (NEXT_LOCALE), and your theme preference (light/dark) is stored in your browser's local storage (localStorage). When you use the OpenEOS platform, technically necessary cookies for signing in are added, as well as a cookie (openeos_server) that routes your requests during a session to the same server process; session details and device settings are kept in your browser's local storage. All of this serves solely to provide the website and the platform according to your settings and is not evaluated for analytics or advertising purposes. No separate consent is required for these purely technical purposes (§ 25 para. 2 TDDDG, Art. 6 para. 1 lit. f GDPR)."
       },
       "contact": {
         "title": "Contact",
-        "content": "If you contact us by email, your information including the contact details you provide there will be stored with us for the purpose of processing the request and in the event of follow-up questions. We do not pass on this data without your consent. The legal basis is Art. 6 para. 1 lit. b or lit. f GDPR."
+        "content": "If you contact us by email or through a form on this website (e.g. contact, demo request or feedback), we process the information you provide (name, email address, organization if given, and your message) to handle the request and any follow-up questions. Form submissions are stored in our database, reported to us by email and also forwarded to our support channel on Telegram (see section 10). Beyond that, we do not pass on this data without your consent. The legal basis is Art. 6 para. 1 lit. b or lit. f GDPR."
       },
       "account": {
         "title": "Registration and customer account",
-        "content": "If you register for the OpenEOS platform or create an organization, we collect and store the account data required to perform the contract (e.g. name, email address, and organization details). Processing is carried out to fulfil the usage agreement pursuant to Art. 6 para. 1 lit. b GDPR and is not shared with third parties beyond what is necessary for contract fulfilment."
+        "content": "If you register for the OpenEOS platform or create an organization, we collect and store the account data required to perform the contract (e.g. name, email address and organization details, and the billing address when you place an order). Processing is carried out to fulfil the usage agreement pursuant to Art. 6 para. 1 lit. b GDPR. We only share this data with third parties where this is necessary to fulfil the contract (see sections 8 to 10)."
       }
     },
     "hosting": {
       "title": "4. Hosting with IONOS SE",
-      "content": "This website is hosted by IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. When you access the website, our host automatically collects and stores server logfiles transmitted by your browser (including IP address, date and time of the request, page requested, browser type and version). We have a data processing agreement with IONOS pursuant to Art. 28 GDPR, which obliges IONOS to process the data of our website visitors solely on our instructions and for the contractually agreed purposes, and to protect it appropriately."
+      "content": "The website, the web app, the online shop, the documentation and the programming interface (api.openeos.de) of the OpenEOS platform, including the database, run on a server operated by IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. When you access them, our host automatically collects and stores server logfiles transmitted by your browser (including IP address, date and time of the request, page requested, browser type and version). We have a data processing agreement with IONOS pursuant to Art. 28 GDPR, which obliges IONOS to process the data of our website visitors solely on our instructions and for the contractually agreed purposes, and to protect it appropriately."
     },
     "ssl": {
-      "title": "8. SSL/TLS encryption",
+      "title": "12. SSL/TLS encryption",
       "content": "For security reasons and to protect the transmission of confidential content, such as requests you send to us as the site operator, this website uses SSL/TLS encryption. You can recognize an encrypted connection by the fact that the address line of your browser changes from „http://“ to „https://“ and by the lock icon in your browser's address bar."
     },
     "storage": {
-      "title": "9. Storage duration",
+      "title": "13. Storage duration",
       "content": "Unless a more specific storage period is stated within this privacy policy, your personal data will remain with us until the purpose for the data processing no longer applies. We delete contact inquiries once they have been fully processed, provided no statutory retention obligations apply. Data from a customer account is stored for the duration of the contractual relationship and beyond, in accordance with commercial and tax law retention periods (generally 6 or 10 years)."
     },
     "rights": {
-      "title": "10. Your rights",
+      "title": "14. Your rights",
       "content": "You always have the right to:\n• Receive information about your data stored by us\n• Have this data corrected or deleted\n• Restrict processing\n• Object to processing\n• Receive your data in a transferable format\n• File a complaint with a supervisory authority"
     },
     "changes": {
-      "title": "11. Changes",
+      "title": "15. Changes",
       "content": "We reserve the right to adapt this privacy policy so that it always complies with current legal requirements or to implement changes to our services in the privacy policy. The new privacy policy will then apply to your next visit."
     },
     "backup": {
       "title": "5. Backups at Hetzner",
-      "content": "Database backups are stored with Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany, on servers located in Germany. They hold the same data as the live system and exist solely to restore service after a failure or a mistake. A data processing agreement under Art. 28 GDPR is in place with Hetzner. Backups are stored encrypted with AES-256. Daily backups are kept for 14 days and weekly backups for eight weeks, after which they are deleted automatically."
+      "content": "Once a day, backups of the database and of the files needed for a restore are transferred, encrypted with AES-256, to a Storage Box of Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany, located in a data centre in Germany. They hold the same data as the live system and exist solely to restore service after a failure or a mistake. On the Storage Box, daily backups are kept for 14 days and weekly backups for eight weeks, after which they are deleted automatically. In addition, the two most recent backups remain encrypted on our server at IONOS. A data processing agreement under Art. 28 GDPR is in place with Hetzner."
     },
     "proxy": {
-      "title": "6. Cloudflare as an upstream service",
-      "content": "Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA sits in front of our servers. Cloudflare forwards requests, speeds up delivery and fends off denial-of-service attacks. In doing so it processes technically necessary data, in particular your IP address. The legal basis is our legitimate interest in a secure and available service (Art. 6(1)(f) GDPR). A data processing agreement is in place with Cloudflare. As Cloudflare is based in the USA, data may be transferred to a third country; this is based on the European Commission's standard contractual clauses and on Cloudflare's certification under the EU-US Data Privacy Framework."
+      "title": "6. Cloudflare (DNS and upstream service)",
+      "content": "Name resolution (DNS) for openeos.de and all its subdomains is provided by Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. In addition, Cloudflare sits in front of this website (openeos.de), the web app (app.openeos.de), the online shop (shop.openeos.de) and the documentation (docs.openeos.de): Cloudflare forwards the requests to our server, serves immutable files such as scripts and stylesheets from its cache and fends off denial-of-service attacks. In doing so it processes technically necessary data, in particular your IP address and the address requested. Requests to the programming interface (api.openeos.de) and to the addresses for displays and printers (display.openeos.de, printer.openeos.de) do not pass through Cloudflare but go directly to our server; for these, Cloudflare only answers the DNS query. The legal basis is our legitimate interest in a secure and available service (Art. 6(1)(f) GDPR). A data processing agreement is in place with Cloudflare. As Cloudflare is based in the USA, data may be transferred to a third country; this is based on the European Commission's standard contractual clauses and on Cloudflare's certification under the EU-US Data Privacy Framework."
     },
     "errors": {
       "title": "7. Error diagnostics with Sentry",
-      "content": "So that faults can be detected and fixed, the application sends error reports to Sentry, a service of Functional Software, Inc., 45 Fremont Street, San Francisco, CA 94105, USA. A report is only created when an error occurs and contains technical details about the event: the page you were on, your browser and operating system, the time, and your IP address. In addition, a small share of sessions is recorded so we can retrace the steps that led to an error; text you enter or see is masked, and images and videos are not transmitted. The legal basis is our legitimate interest in stable and secure operation (Art. 6(1)(f) GDPR). A data processing agreement is in place with Sentry. As Sentry is based in the USA, data may be transferred to a third country; this is based on the European Commission's standard contractual clauses."
+      "content": "So that faults can be detected and fixed, the servers of the web app (app.openeos.de) and of the programming interface (api.openeos.de) send diagnostic data to Sentry, a service of Functional Software, Inc., 45 Fremont Street, San Francisco, CA 94105, USA. If an error occurs while a request is being processed, an error report is created with technical details about the event: the address requested, details from the request (e.g. browser and operating system), the time and, where applicable, your IP address; if you are signed in, error reports from the programming interface also contain your user ID and email address. In addition, performance data on requests to these servers (address requested, course and duration of processing) is sent even when no error occurs. No data is sent to Sentry from your browser, and your sessions are not recorded. The data is stored in Sentry's EU data region. The legal basis is our legitimate interest in stable and secure operation (Art. 6(1)(f) GDPR). A data processing agreement is in place with Sentry. As Sentry is based in the USA, data may be transferred to a third country; this is based on the European Commission's standard contractual clauses."
+    },
+    "email": {
+      "title": "8. Sending email",
+      "content": "Emails from the OpenEOS platform (e.g. sign-in and confirmation codes, invitations, notifications, messages about volunteer shifts and order confirmations from the online shop) are sent through our own mail server, which also handles emails you send to addresses at openeos.de. The mail server is operated at Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany, in a data centre in Finland (EU). Sender and recipient addresses, subject and content of the message are processed. The legal basis is Art. 6(1)(b) GDPR, and additionally Art. 6(1)(f) GDPR for inquiries and notifications. A data processing agreement under Art. 28 GDPR is in place with Hetzner."
+    },
+    "payment": {
+      "title": "9. Payment with Stripe",
+      "content": "If an event is activated by card or direct debit, payment is processed by Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, D02 H210, Ireland. For this purpose we transmit to Stripe the name of the organization, the billing email address (or, if none is set, the email address of the user placing the order), the amount, a description of the service and internal identifiers of the organization and the event. You enter your payment details (e.g. card or account details) directly on Stripe's payment page; they are not transmitted to us. Stripe also creates the invoice, which you can retrieve in your customer account. The legal basis is Art. 6(1)(b) GDPR. Stripe may also transfer data to Stripe, Inc. in the USA and bases this on the EU-US Data Privacy Framework and on the European Commission's standard contractual clauses. For more information, see Stripe's privacy policy at https://stripe.com/privacy."
+    },
+    "support": {
+      "title": "10. Forwarding of inquiries to Telegram",
+      "content": "So that we can answer inquiries quickly, we forward messages you send through a form on this website or through the support chat of the OpenEOS platform to a closed group of our support team on the messaging service Telegram (Telegram Messenger Inc., Commerce House, Wickhams Cay 1, Road Town, Tortola, British Virgin Islands). For forms, we forward the type of inquiry, your name, your email address, your organization if given, and your message; for the support chat, your name, the name of your organization and your message. Replies from support are stored there as well. The legal basis is our legitimate interest in handling inquiries quickly (Art. 6(1)(f) GDPR). Telegram is based outside the EU and the EEA; there is no adequacy decision of the European Commission for its country of establishment."
+    },
+    "organizations": {
+      "title": "11. Data of guests and volunteers; card payments with SumUp",
+      "content": "Organizations use the OpenEOS platform to take their guests' orders (at the till or through the online shop) and to plan their volunteer shifts. The respective organization is responsible for this data – e.g. orders; for online shop orders, your email address and, if given, your name for the order confirmation; for volunteers, name, email address and shifts – and we process it on its behalf (Art. 28 GDPR). If an organization has connected its own SumUp account, card payments at the till and in the online shop are processed through SumUp. The platform only transmits the amount, currency, a description and a transaction reference to SumUp; you enter your card details directly on the card terminal or on SumUp's payment page. The respective organization is responsible for these payments; you can obtain information about data processing from it."
     }
   },
   "terms": {
@@ -515,11 +531,11 @@
     },
     "pricing": {
       "title": "4. Prices and tariffs",
-      "content": "The prices displayed on the website at the time of booking apply:\n• SaaS: €25 per event day\n• Starter bonus: 20% discount on the first event days (new customers)\n• Hardware rental: €50 per device per day\n\nAll prices include statutory value added tax."
+      "content": "The prices displayed on the website at the time of booking apply:\n• SaaS: €25 per event day\n• Starter bonus: 20% discount on the price of an organization's first event that is paid for or ordered on invoice (for all days of that event). If an individual discount has been agreed for the organization, only the higher of the two discounts applies.\n• Hardware rental: €50 per device per day\n\nAll prices include statutory value added tax."
     },
     "payment": {
       "title": "5. Payment",
-      "content": "Event days are paid for before they are used. A newly created event starts in test mode and can be used there free of charge for up to 25 orders. Before activation, the amount due is shown (number of event days × daily price, less any applicable discount). The event is activated upon payment of this amount by card or direct debit. On activation, the test orders are deleted; the event's setup (e.g. products, prices, devices and printers) is kept. The invoice is sent automatically by email and is also available for download in the customer account under \"Invoices\"."
+      "content": "Event days are paid for before they are used. A newly created event starts in test mode and can be used there free of charge for up to 25 orders. Before activation, the amount due is shown (number of event days × daily price, less any applicable discount). The event is activated upon payment of this amount by card or direct debit through the payment service provider Stripe. The event's setup (e.g. products, prices, devices and printers) is kept on activation. The invoice is sent automatically by email and is also available for download in the customer account under \"Invoices\".\n\nBy way of exception, payment on invoice may be agreed in individual cases. The event is then activated as soon as it is ordered; the amount is calculated as above. The invoice is issued separately and is payable within the period stated in it."
     },
     "obligations": {
       "title": "6. Customer obligations",
