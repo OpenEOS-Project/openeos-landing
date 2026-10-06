@@ -153,7 +153,7 @@ function PrivacyContent({
         <p className="text-tertiary">{t("errors.content")}</p>
       </section>
 
-      {(["email", "payment", "support", "organizations"] as const).map((key) => (
+      {(["email", "payment", "organizations"] as const).map((key) => (
         <section key={key} className="mb-8">
           <h2 className="text-xl font-semibold text-primary mb-4">
             {t(`${key}.title`)}
