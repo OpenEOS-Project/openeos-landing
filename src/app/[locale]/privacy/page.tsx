@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { pageMetadata } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { localizeCountry } from "@/lib/country";
 
 // Render at request time so env vars set at deploy time take effect without rebuild.
 export const dynamic = "force-dynamic";
@@ -27,12 +28,11 @@ type ResponsibleData = {
 };
 
 function getResponsibleData(locale: string): ResponsibleData {
-  const defaultCountry = locale === "de" ? "Deutschland" : "Germany";
   return {
     name: process.env.IMPRINT_NAME ?? "",
     street: process.env.IMPRINT_STREET ?? "",
     city: process.env.IMPRINT_CITY ?? "",
-    country: process.env.IMPRINT_COUNTRY ?? defaultCountry,
+    country: localizeCountry(process.env.IMPRINT_COUNTRY || "DE", locale),
     email: process.env.IMPRINT_EMAIL ?? "hello@openeos.de",
   };
 }
@@ -152,6 +152,15 @@ function PrivacyContent({
         </h2>
         <p className="text-tertiary">{t("errors.content")}</p>
       </section>
+
+      {(["email", "payment", "support", "organizations"] as const).map((key) => (
+        <section key={key} className="mb-8">
+          <h2 className="text-xl font-semibold text-primary mb-4">
+            {t(`${key}.title`)}
+          </h2>
+          <p className="text-tertiary">{t(`${key}.content`)}</p>
+        </section>
+      ))}
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-primary mb-4">
