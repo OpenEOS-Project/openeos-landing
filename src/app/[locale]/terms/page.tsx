@@ -26,8 +26,8 @@ export default async function TermsPage({
   return (
     <>
       <Header />
-      <main className="pt-24 pb-16 min-h-screen">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="legal">
+        <div className="page-wrap">
           <TermsContent />
         </div>
       </main>
@@ -40,7 +40,7 @@ function TermsContent() {
   const t = useTranslations("terms");
 
   return (
-    <article className="prose prose-gray dark:prose-invert max-w-none">
+    <article className="legal__article prose prose-gray dark:prose-invert">
       <h1 className="text-display-sm font-semibold text-primary mb-4">
         {t("title")}
       </h1>

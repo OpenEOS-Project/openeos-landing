@@ -26,6 +26,9 @@
 
   --max: 1280px;
   --pad: clamp(20px, 4vw, 56px);
+  /* Lesemass fuer Fliesstext auf Unterseiten (Neuerungen, Feedback,
+     Rechtstexte). Der Rahmen bleibt --max, nur die Zeilen enden frueher. */
+  --measure: 760px;
   /* Ein Mass fuer alle Abschnitte. Vorher trug jeder seinen eigenen Wert
      zwischen 80 und 160px, und weil sich oberer und unterer addieren,
      standen zwischen zwei Abschnitten bis zu 216px Leere. */
@@ -1887,9 +1890,21 @@
   .landing .contact-modal__title { font-size: 22px; }
 }
 
-/* ===================== NEUERUNGEN & FEEDBACK =====================
-   Zwei Unterseiten mit demselben schmalen Textmaß: beide werden
-   gelesen, nicht überflogen. */
+/* ===================== UNTERSEITEN: EIN RAHMEN =====================
+   Einblicke, Neuerungen, Feedback, Rechtstexte und 404 stehen im selben
+   Rahmen wie die Abschnitte der Startseite: hoechstens --max breit, links
+   und rechts --pad. Vorher hatte jede Seite ihr eigenes Mass (1168, 648
+   und 704px Inhalt bei 1440px Fensterbreite) und die Ueberschrift sprang
+   beim Wechsel zwischen Einblicke und Neuerungen um 260px nach rechts.
+   Lesetext haelt sein Mass (--measure), steht aber buendig an derselben
+   linken Kante statt mittig. */
+.landing .page-wrap {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+/* ===================== NEUERUNGEN & FEEDBACK ===================== */
 /* Kein Ausgleich fuer die Navigation noetig: sie ist sticky und nimmt
    ihren Platz im Fluss ein. Der fruehere Aufschlag stand einfach als
    Leere unter ihr. */
@@ -1906,8 +1921,8 @@
   padding-top: 0;
   padding-bottom: 28px;
 }
-/* Neuerungen und Feedback ruecken ihren Inhalt schon ueber __inner ein;
-   der Kopf darf das nicht ein zweites Mal tun, sonst steht die
+/* Neuerungen und Feedback ruecken ihren Inhalt schon ueber .page-wrap
+   ein; der Kopf darf das nicht ein zweites Mal tun, sonst steht die
    Ueberschrift 56px (mobil 20px) rechts vom Text darunter. */
 .landing .changelog .section-head,
 .landing .feedback .section-head {
@@ -1923,12 +1938,6 @@
 .landing .screens-page .journey__strip,
 .landing .screens-page .screens__grid {
   margin-top: 8px;
-}
-.landing .changelog__inner,
-.landing .feedback__inner {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 var(--pad, 20px);
 }
 
 /* ---------- Neuerungen ---------- */
@@ -2013,8 +2022,30 @@
 }
 .landing .changelog__foot a:hover { text-decoration-thickness: 2px; }
 
+/* Auf breiten Fenstern steht das Datum links neben seinen Eintraegen —
+   so fuellt die Liste den gemeinsamen Rahmen, ohne dass die Zeilen
+   ueber das Lesemass hinaus wachsen. */
+@media (min-width: 900px) {
+  .landing .changelog__group {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(0, var(--measure));
+    column-gap: clamp(32px, 5vw, 80px);
+    align-items: start;
+  }
+  .landing .changelog__date {
+    position: sticky;
+    top: 96px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .landing .changelog__version::before { content: none; }
+  .landing .changelog__foot { max-width: var(--measure); }
+}
+
 /* ---------- Feedback ---------- */
 .landing .feedback__form {
+  max-width: var(--measure);
   margin-top: 40px;
   display: grid;
   gap: 22px;
@@ -2172,6 +2203,10 @@
   margin: 0;
   display: grid;
   gap: 14px;
+  /* Zeilen oben halten: hat das Nachbarbild eine laengere Unterschrift,
+     verteilte das Raster die Resthoehe sonst auf den Bildrahmen, und der
+     Rahmen wurde hoeher als sein Bild. */
+  align-content: start;
 }
 .landing .screens__frame {
   overflow: hidden;
@@ -2295,9 +2330,7 @@
   min-height: 60vh;
 }
 .landing .not-found__inner {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: clamp(24px, 6vw, 80px) var(--pad) 0;
+  padding-top: clamp(24px, 6vw, 80px);
 }
 .landing .not-found__code {
   margin: 0 0 16px;
@@ -2313,4 +2346,16 @@
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 32px;
+}
+
+/* ===================== RECHTSTEXTE =====================
+   Impressum, Datenschutz, AGB: derselbe Rahmen und derselbe Abstand
+   unter der Navigation wie Neuerungen und Feedback. Der Text selbst
+   behaelt das Lesemass. */
+.landing .legal {
+  padding: var(--sec-y) 0 calc(var(--sec-y) * 1.5);
+  min-height: 100vh;
+}
+.landing .legal__article {
+  max-width: var(--measure);
 }

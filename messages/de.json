@@ -609,18 +609,38 @@
     "items": {
       "pos": {
         "title": "Die Kasse",
-        "text": "Kategorien links, Produkte in der Mitte, Warenkorb rechts. Bedienbar mit dem Finger.",
-        "alt": "Kassenoberfläche mit Produkten und gefülltem Warenkorb"
+        "text": "Favoriten ganz oben, Kategorien mit eigener Farbe, jeder Artikel mit Bild. Rechts der Warenkorb mit Pfand und Gesamtbetrag.",
+        "alt": "Kasse an Tisch A04: Favoriten mit Produktbildern, daneben der Warenkorb mit Pils, Apfelschorle, Pommes und Bratwurst"
       },
-      "display": {
-        "title": "Bildschirm verbinden",
-        "text": "Code eintippen oder QR-Code scannen — mehr braucht ein Monitor nicht.",
-        "alt": "Bildschirm zeigt einen sechsstelligen Kopplungscode und einen QR-Code"
+      "floor": {
+        "title": "Tische auf einen Blick",
+        "text": "Die Kasse zeigt deinen Tischplan. Offene Tische sind grün, wartende gelb, rechts stehen die offenen Beträge.",
+        "alt": "Kasse mit dem Tischplan von Zelt A, offenen und wartenden Tischen und einer Liste der offenen Tische"
+      },
+      "editor": {
+        "title": "Tischplan-Editor",
+        "text": "Tische ziehen, Wände zeichnen, Zonen wie Küche oder Notausgang markieren. Die Kasse übernimmt den Plan.",
+        "alt": "Tischplan-Editor in der Verwaltung mit Zelt A, Bühne, Theke, Küche und Notausgang, rechts die Eigenschaften von Tisch A06"
+      },
+      "station": {
+        "title": "Die Küchenanzeige",
+        "text": "Jede Station sieht nur ihre Bestellungen, getrennt nach Bedienung und Abholung. Ein Tipp meldet eine Position fertig.",
+        "alt": "Küchenanzeige mit fünf offenen Bestellungen, Wartezeiten und Fertig-Knöpfen"
+      },
+      "customer": {
+        "title": "Das Kundendisplay",
+        "text": "Deine Gäste sehen live, was du in die Kasse tippst, mit Pfand und Gesamtbetrag.",
+        "alt": "Kundendisplay mit laufender Bestellung: Pils, Bratwurst, Pommes und Apfelschorle samt Pfand und Gesamtbetrag"
       },
       "dashboard": {
         "title": "Die Übersicht",
-        "text": "Umsatz, Bestellungen und der Zustand aller Geräte auf einen Blick.",
-        "alt": "Übersichtsseite mit Kennzahlen und Geräteliste"
+        "text": "Umsatz, Bestellungen, Geräte und die meistverkauften Produkte, laufend aktualisiert.",
+        "alt": "Dashboard mit Kennzahlen, Gerätestatus, Umsatz nach Stunde und Top-Produkten"
+      },
+      "shifts": {
+        "title": "Schichtplan für Helfer",
+        "text": "Helfer tragen sich über einen Link selbst ein, ohne Konto. Überschneidende Schichten sind gesperrt.",
+        "alt": "Öffentliche Helferseite eines Schichtplans mit zwei ausgewählten Schichten"
       }
     },
     "metaTitle": "So sieht es aus — OpenEOS"

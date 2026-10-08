@@ -53,8 +53,8 @@ export default async function ImprintPage({
   return (
     <>
       <Header />
-      <main className="pt-24 pb-16 min-h-screen">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="legal">
+        <div className="page-wrap">
           <ImprintContent data={data} locale={locale} />
         </div>
       </main>
@@ -70,7 +70,7 @@ function ImprintContent({ data, locale }: { data: ImprintData; locale: string })
   const vatLabel = locale === "de" ? "Umsatzsteuer-ID" : "VAT ID";
 
   return (
-    <article className="prose prose-gray dark:prose-invert max-w-none">
+    <article className="legal__article prose prose-gray dark:prose-invert">
       <h1 className="text-display-sm font-semibold text-primary mb-8">
         {t("title")}
       </h1>
