@@ -652,7 +652,7 @@
     "panels": {
       "checkout": {
         "step": "Step 1 · Checkout",
-        "copy": "Orders are taken right at the counter — on any tablet, even without a connection.",
+        "copy": "Orders are taken right at the counter — on any tablet or phone.",
         "alt": "Staff taking an order on a tablet at the counter"
       },
       "receipt": {

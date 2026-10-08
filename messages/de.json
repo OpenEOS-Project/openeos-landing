@@ -652,7 +652,7 @@
     "panels": {
       "checkout": {
         "step": "Schritt 1 · Kasse",
-        "copy": "Die Bestellung wird an der Theke aufgenommen — auf jedem Tablet, auch ohne Netz.",
+        "copy": "Die Bestellung wird an der Theke aufgenommen — auf jedem Tablet oder Smartphone.",
         "alt": "Bedienung nimmt an der Theke eine Bestellung auf einem Tablet auf"
       },
       "receipt": {
