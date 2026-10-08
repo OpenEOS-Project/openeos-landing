@@ -62,7 +62,7 @@ export default async function ChangelogPage({
     <>
       <Header />
       <main className="changelog">
-        <div className="changelog__inner">
+        <div className="changelog__inner page-wrap">
           <header className="section-head">
             <h1 className="section-title">
               {t('titleL1')} <span className="u-accent">{t('titleL2')}</span>

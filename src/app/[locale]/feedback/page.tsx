@@ -29,7 +29,7 @@ export default async function FeedbackPage({
     <>
       <Header />
       <main className="feedback">
-        <div className="feedback__inner">
+        <div className="feedback__inner page-wrap">
           <header className="section-head">
             <h1 className="section-title">
               {t('titleL1')} <span className="u-accent">{t('titleL2')}</span>

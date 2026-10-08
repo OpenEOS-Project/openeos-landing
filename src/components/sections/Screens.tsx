@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 /**
  * Echte Bildschirmfotos statt gezeichneter Andeutungen.
@@ -7,14 +7,24 @@ import { useTranslations } from 'next-intl';
  * Aufnahmen aus der laufenden Oberfläche, nicht nachgebaut: Wer wissen
  * will, ob ihm das System gefällt, soll es sehen, wie es ist.
  */
+/* Je Sprache ein eigener Satz unter /screens/<sprache>/, damit die
+   englische Seite keine deutsche Kasse zeigt. Alle Aufnahmen 2400x1500
+   (16:10, doppelte Auflösung) — so stehen die Rahmen im Raster gleich
+   hoch und die Bildunterschriften auf einer Linie. Nachgestellt per
+   Skript gegen Staging, ohne echte Bestellungen. */
 const SCREENS = [
-  { key: 'pos', src: '/screens/kasse.webp', breit: true },
-  { key: 'display', src: '/screens/anzeige.webp', breit: false },
-  { key: 'dashboard', src: '/screens/dashboard.webp', breit: false },
+  { key: 'pos', file: 'pos-order', breit: true },
+  { key: 'floor', file: 'pos-floor', breit: false },
+  { key: 'editor', file: 'tables-editor', breit: false },
+  { key: 'station', file: 'station', breit: false },
+  { key: 'customer', file: 'customer', breit: false },
+  { key: 'dashboard', file: 'dashboard', breit: false },
+  { key: 'shifts', file: 'shifts', breit: false },
 ] as const;
 
 export function Screens() {
   const t = useTranslations('screens');
+  const sprache = useLocale() === 'en' ? 'en' : 'de';
 
   return (
     <section className="screens" id="screens">
@@ -33,12 +43,12 @@ export function Screens() {
           >
             <div className="screens__frame">
               <Image
-                src={screen.src}
+                src={`/screens/${sprache}/${screen.file}.webp`}
                 alt={t(`items.${screen.key}.alt`)}
-                width={1200}
-                height={screen.breit ? 703 : 750}
+                width={2400}
+                height={1500}
                 className="screens__img"
-                sizes="(max-width: 900px) 100vw, 50vw"
+                sizes={screen.breit ? '(max-width: 1280px) 100vw, 1168px' : '(max-width: 860px) 100vw, 570px'}
               />
             </div>
             <figcaption className="screens__caption">

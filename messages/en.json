@@ -609,18 +609,38 @@
     "items": {
       "pos": {
         "title": "The till",
-        "text": "Categories on the left, products in the middle, basket on the right. Built for fingers.",
-        "alt": "Till interface showing products and a filled basket"
+        "text": "Favorites on top, categories in their own color, every item with a picture. On the right, the cart with deposit and total.",
+        "alt": "Till at table A04: favorites with product pictures, next to it the cart with lager, apple spritzer, fries and bratwurst"
       },
-      "display": {
-        "title": "Connecting a screen",
-        "text": "Type the code or scan the QR — that is all a monitor needs.",
-        "alt": "Screen showing a six-digit pairing code and a QR code"
+      "floor": {
+        "title": "Tables at a glance",
+        "text": "The till shows your floor plan. Open tables are green, waiting ones yellow, with the open amounts on the right.",
+        "alt": "Till showing the floor plan of Tent A with open and waiting tables and a list of open tables"
+      },
+      "editor": {
+        "title": "Floor plan editor",
+        "text": "Drag tables, draw walls, mark zones like the kitchen or an emergency exit. The till picks up the plan.",
+        "alt": "Floor plan editor in the admin area with Tent A, stage, bar, kitchen and emergency exit, the properties of table A06 on the right"
+      },
+      "station": {
+        "title": "The kitchen screen",
+        "text": "Each station only sees its own orders, split into table service and pickup. One tap marks an item as ready.",
+        "alt": "Kitchen screen with five open orders, waiting times and ready buttons"
+      },
+      "customer": {
+        "title": "The customer display",
+        "text": "Your guests see live what you type into the till, including deposit and total.",
+        "alt": "Customer display during an order: lager, bratwurst, fries and apple spritzer with deposit and total"
       },
       "dashboard": {
         "title": "The overview",
-        "text": "Revenue, orders and the state of every device at a glance.",
-        "alt": "Dashboard with key figures and device status"
+        "text": "Revenue, orders, devices and your best-selling products, updated as you go.",
+        "alt": "Dashboard with key figures, device status, revenue by hour and top products"
+      },
+      "shifts": {
+        "title": "Shift plan for helpers",
+        "text": "Helpers sign up themselves via a link, no account needed. Overlapping shifts are locked.",
+        "alt": "Public helper page of a shift plan with two shifts selected"
       }
     },
     "metaTitle": "What it looks like — OpenEOS"

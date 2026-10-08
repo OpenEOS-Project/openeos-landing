@@ -15,7 +15,7 @@ export function NotFoundContent() {
       <meta name="robots" content="noindex" />
       <Header />
       <main className="not-found">
-        <div className="not-found__inner">
+        <div className="not-found__inner page-wrap">
           <p className="not-found__code">404</p>
           <h1 className="section-title">
             {t("titleL1")} <span className="u-accent">{t("titleL2")}</span>
