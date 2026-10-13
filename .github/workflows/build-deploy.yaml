@@ -16,6 +16,12 @@ on:
       - main
       - dev
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Produktion: Deploy-Schutz übergehen (auch während eines Festes ausrollen)'
+        required: false
+        default: false
+        type: boolean
 
 env:
   REGISTRY: ghcr.io
@@ -112,8 +118,23 @@ jobs:
     name: Deploy to production
     runs-on: ubuntu-latest
     needs: build-and-push
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
+    # Auch per "Run workflow" auf main — mit force=true ohne Deploy-Schutz.
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
+    # Der Deploy-Schutz wartet bis zu 90 Minuten.
+    timeout-minutes: 120
+    concurrency:
+      group: deploy-production-${{ github.repository }}
+      cancel-in-progress: false
     steps:
+      # Kein Ausrollen, solange eine Veranstaltung verkauft (echte Bestellungen
+      # in den letzten 30 min): alle 5 min neu fragen, nach 90 min abbrechen.
+      - name: Deploy guard
+        uses: OpenEOS-Project/.github/actions/deploy-guard@main
+        with:
+          token: ${{ secrets.DEPLOY_GUARD_TOKEN }}
+          url: ${{ vars.DEPLOY_GUARD_URL }}
+          force: ${{ inputs.force && 'true' || 'false' }}
+
       - name: Determine SSH port
         id: ssh-port
         run: echo "port=${DEPLOY_PORT:-22}" >> "$GITHUB_OUTPUT"
