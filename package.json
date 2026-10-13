@@ -2,6 +2,8 @@
   "name": "openeos-landing",
   "version": "0.1.0",
   "private": true,
+  "license": "AGPL-3.0-or-later",
+  "author": "LUXCODE by Lukas Lukic-Spitznagel",
   "scripts": {
     "dev": "next dev -p 3003",
     "build": "next build",

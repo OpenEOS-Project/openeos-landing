@@ -6,7 +6,11 @@
 
 **Entwickelt von:** LUXCODE by Lukas Lukic-Spitznagel
 
-**Lizenz:** [AGPLv3](./LICENSE) (GNU Affero General Public License v3.0)
+**Copyright:** Copyright (C) 2026 LUXCODE by Lukas Lukic-Spitznagel und Mitwirkende
+
+**Lizenz:** GNU Affero General Public License v3.0 oder (nach deiner Wahl) jede spätere Version (`AGPL-3.0-or-later`), siehe [LICENSE](./LICENSE) und [NOTICE](./NOTICE)
+
+**Bildherkunft:** Comic-Illustrationen (`public/comic/`): erstellt vom Rechteinhaber mit Higgsfield AI. Screenshots (`public/screens/`): Aufnahmen von OpenEOS selbst.
 
 ## Beschreibung
 
