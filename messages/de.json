@@ -301,6 +301,7 @@
       "bonus": "20% Starterbonus auf deine erste Veranstaltung",
       "features": [
         "Alle Features inklusive",
+        "Ein Event-Tag geht von 6 bis 6 Uhr – die Nacht zählt zum Vortag",
         "Hosting, Backups, automatische Updates",
         "Support",
         "Bezahlung beim Freischalten per Karte oder Lastschrift"
@@ -527,7 +528,7 @@
     },
     "pricing": {
       "title": "4. Preise und Tarife",
-      "content": "Es gelten die zum Zeitpunkt der Buchung auf der Website ausgewiesenen Preise:\n• SaaS: 25 € pro Event-Tag\n• Starterbonus: 20 % Nachlass auf den Preis der ersten Veranstaltung einer Organisation, die bezahlt oder auf Rechnung bestellt wird (für alle Tage dieser Veranstaltung). Ist für die Organisation ein individueller Nachlass vereinbart, gilt nur der höhere der beiden Nachlässe.\n• Hardware-Vermietung: 50 € pro Gerät pro Tag\n\nAlle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer."
+      "content": "Es gelten die zum Zeitpunkt der Buchung auf der Website ausgewiesenen Preise:\n• SaaS: 25 € pro Event-Tag\n• Starterbonus: 20 % Nachlass auf den Preis der ersten Veranstaltung einer Organisation, die bezahlt oder auf Rechnung bestellt wird (für alle Tage dieser Veranstaltung). Ist für die Organisation ein individueller Nachlass vereinbart, gilt nur der höhere der beiden Nachlässe.\n• Hardware-Vermietung: 50 € pro Gerät pro Tag\n\nEin Veranstaltungstag (Event-Tag) beginnt um 6:00 Uhr und endet um 6:00 Uhr des Folgetags (Ortszeit der Organisation).\n\nAlle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer."
     },
     "payment": {
       "title": "5. Zahlung",
