@@ -301,6 +301,7 @@
       "bonus": "20% starter bonus on your first event",
       "features": [
         "All features included",
+        "An event day runs from 6:00 to 6:00 – the night counts towards the day before",
         "Hosting, backups, auto-updates",
         "Support",
         "Pay by card or direct debit when you activate an event"
@@ -527,7 +528,7 @@
     },
     "pricing": {
       "title": "4. Prices and tariffs",
-      "content": "The prices displayed on the website at the time of booking apply:\n• SaaS: €25 per event day\n• Starter bonus: 20% discount on the price of an organization's first event that is paid for or ordered on invoice (for all days of that event). If an individual discount has been agreed for the organization, only the higher of the two discounts applies.\n• Hardware rental: €50 per device per day\n\nAll prices include statutory value added tax."
+      "content": "The prices displayed on the website at the time of booking apply:\n• SaaS: €25 per event day\n• Starter bonus: 20% discount on the price of an organization's first event that is paid for or ordered on invoice (for all days of that event). If an individual discount has been agreed for the organization, only the higher of the two discounts applies.\n• Hardware rental: €50 per device per day\n\nAn event day begins at 6:00 a.m. and ends at 6:00 a.m. on the following day (local time of the organization).\n\nAll prices include statutory value added tax."
     },
     "payment": {
       "title": "5. Payment",
