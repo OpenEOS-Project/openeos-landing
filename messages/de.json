@@ -110,7 +110,8 @@
     "mobileNav": "Navigation",
     "menu": "Menü",
     "closeMenu": "Menü schließen",
-    "language": "Sprache"
+    "language": "Sprache",
+    "faq": "FAQ"
   },
   "hero": {
     "pill": "Neue Version jetzt verfügbar",
@@ -404,7 +405,8 @@
     "copyright": "© {year} LUXCODE by Lukas Lukic-Spitznagel · OpenEOS",
     "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel",
     "feedback": "Feedback & Wünsche",
-    "screens": "Einblicke"
+    "screens": "Einblicke",
+    "faq": "Häufige Fragen"
   },
   "imprint": {
     "title": "Impressum",
@@ -686,5 +688,176 @@
     "sub": "Vielleicht hat sich die Adresse geändert, oder sie war nie richtig. Von der Startseite aus findest du alles Weitere.",
     "home": "Zur Startseite",
     "changelog": "Neuerungen ansehen"
+  },
+  "faq": {
+    "metaTitle": "Häufige Fragen — OpenEOS",
+    "metaDescription": "Antworten rund um OpenEOS: Kasse, Bargeld und TSE, Kosten, Open Source, Daten und Geräte.",
+    "titleL1": "Häufige",
+    "titleL2": "Fragen",
+    "sub": "Kurz und verständlich beantwortet – von Kasse, Bargeld und TSE bis zu Kosten und Geräten.",
+    "topics": "Themen",
+    "foot": "Deine Frage ist nicht dabei? <link>Schreib uns.</link>",
+    "sections": {
+      "tse": {
+        "title": "Kasse, Bargeld und TSE",
+        "items": {
+          "was-ist-eine-tse": {
+            "q": "Was ist eine TSE und wann brauche ich eine?",
+            "a": [
+              "Eine TSE (technische Sicherheitseinrichtung) ist ein zertifizierter Baustein, der die Aufzeichnungen einer elektronischen Kasse vor nachträglicher Veränderung schützt. Grundlage sind § 146a der Abgabenordnung (AO) und die Kassensicherungsverordnung (KassenSichV).",
+              "Eine TSE brauchst du, wenn du mit einem elektronischen System kassierst, das <b>Bargeld annehmen kann</b> – das Gesetz spricht von „Kassenfunktion“. Dafür reicht schon, dass sich Barzahlung einschalten lässt. Vor Ort angenommene Gutscheine, Guthabenkarten oder Wertmarken zählen dabei wie Bargeld.",
+              "Das gilt auch für Vereine und Vereinsfeste; Rechtsform und Gemeinnützigkeit spielen keine Rolle. Der Verkauf von Speisen und Getränken auf einem Fest ist in der Regel ein steuerpflichtiger wirtschaftlicher Geschäftsbetrieb. Nutzt du dafür eine elektronische Kasse mit Kassenfunktion, braucht sie eine TSE – auch wenn sie nur ein paarmal im Jahr läuft. Eine Ausnahme für gelegentliche Nutzung gibt es nicht.",
+              "Verstöße sind Ordnungswidrigkeiten und können mit einem Bußgeld von bis zu 25.000 € geahndet werden."
+            ]
+          },
+          "bargeldlos": {
+            "q": "Kann ich OpenEOS ohne TSE nutzen?",
+            "a": [
+              "Ja, mit dem <b>bargeldlosen Modus</b>. Eine TSE brauchen nur Systeme mit Kassenfunktion, also solche, die Bargeld annehmen können (Anwendungserlass zur Abgabenordnung, AEAO zu § 146a). Kann deine Kasse technisch kein Bargeld annehmen, hat sie keine Kassenfunktion und braucht keine TSE.",
+              "Im bargeldlosen Modus sperrt OpenEOS Bargeld überall:",
+              [
+                "keine Barzahlung an der Kasse",
+                "keine Erstattung in bar",
+                "keine Auszahlung von Pfand in bar"
+              ],
+              "Kartenzahlung über SumUp sowie Online- und Vorkasse-Zahlungen funktionieren weiter. Du schaltest den Modus in den Zahlungseinstellungen deiner Organisation ein.",
+              "Beachte: Nach Auffassung des Bundesfinanzministeriums liegt eine Kassenfunktion schon vor, wenn sich Barzahlung einschalten lässt, und vor Ort angenommene Gutscheine, Guthabenkarten oder Wertmarken zählen wie Bargeld. Ob der bargeldlose Modus in deinem Fall genügt, klärst du am besten mit deiner Steuerberatung."
+            ]
+          },
+          "bargeld": {
+            "q": "Kann ich weiterhin Bargeld über OpenEOS annehmen?",
+            "a": [
+              "Ja. Barzahlung ist heute die Standardeinstellung, daran ändert sich nichts.",
+              "Die Anbindung einer TSE ist in Arbeit, aber noch nicht verfügbar. Bis dahin entscheidest du als Verein selbst, ob du Barzahlungen in OpenEOS erfasst. Denk dabei an die <tse>TSE-Pflicht</tse> für Kassen, die Bargeld annehmen, und stimm dich am besten mit deiner Steuerberatung ab."
+            ]
+          },
+          "offene-ladenkasse": {
+            "q": "Was ist mit einer offenen Ladenkasse?",
+            "a": [
+              "Eine offene Ladenkasse – Bargeld in einer Kassette, ohne elektronisches Kassensystem – ist zulässig. Dann brauchst du keine TSE und musst auch keine Belege ausgeben. Die Aufzeichnungspflichten nach § 146 AO gelten aber weiterhin."
+            ]
+          },
+          "tse-integration": {
+            "q": "Wie geht es weiter – wann kommt die TSE?",
+            "a": [
+              "Wir arbeiten an der Anbindung einer Cloud-TSE. Damit sollst du mit OpenEOS Bargeld annehmen können, ohne zusätzliche Hardware anzuschaffen. Einen Termin nennen wir noch nicht. Sobald es so weit ist, kündigen wir es in den <changelog>Neuerungen</changelog> an."
+            ]
+          }
+        },
+        "note": "Allgemeine Information, keine Steuer- oder Rechtsberatung. Stand: 14. Oktober 2026. Ob und wie die Regeln für deinen Verein gelten, klärst du am besten mit deiner Steuerberatung."
+      },
+      "allgemein": {
+        "title": "Allgemein",
+        "items": {
+          "was-ist-openeos": {
+            "q": "Was ist OpenEOS?",
+            "a": [
+              "OpenEOS ist ein Kassensystem für Vereine, Veranstaltungen und Festbewirtungen. Vom Vereinsfest bis zur Großveranstaltung deckt es Planung, Bestellung, Küche, Kasse und Auswertung in einem System ab – flexibel, mobil und Open Source."
+            ]
+          },
+          "funktionen": {
+            "q": "Was kann OpenEOS?",
+            "a": [
+              "Die wichtigsten Bausteine:",
+              [
+                "Mobile Kasse auf Smartphone oder Tablet, überall auf dem Gelände",
+                "Online-Bestellung: Gäste bestellen per QR-Code selbst",
+                "Küchen-Display mit Echtzeit-Anzeige für Küche und Ausgabe",
+                "Kundendisplay, auf dem deine Gäste ihre Bestellung live sehen",
+                "Kartenzahlung über SumUp",
+                "Automatischer Bondruck über Raspberry Pi",
+                "Tischplan, den du in der Verwaltung zeichnest und den die Kasse übernimmt",
+                "Schichtplan: Helfer tragen sich über einen Link selbst ein, ohne Konto",
+                "Statistiken und Berichte in Echtzeit"
+              ],
+              "Wie das aussieht, zeigen die <screens>Einblicke</screens>."
+            ]
+          },
+          "loslegen": {
+            "q": "Wie fange ich an?",
+            "a": [
+              "Die Registrierung deiner Organisation dauert nur wenige Minuten, eine Einrichtungsgebühr gibt es nicht. Dein erstes Event ist sofort möglich. Lieber erst einmal sehen, wie es funktioniert? Dann <demo>frag eine Demo an</demo>."
+            ]
+          }
+        }
+      },
+      "kosten": {
+        "title": "Kosten",
+        "items": {
+          "preise": {
+            "q": "Was kostet OpenEOS?",
+            "a": [
+              "Es gibt zwei Wege:",
+              [
+                "<b>Self-Hosted:</b> kostenlos, für immer. Du betreibst OpenEOS auf deinem eigenen Server – mit allen Features, einer Organisation, unbegrenzten Events und Community-Support.",
+                "<b>SaaS:</b> 25 € pro Event-Tag. Alle Features, Hosting, Backups, automatische Updates und Support sind inklusive."
+              ],
+              "Keine Einrichtungsgebühr, keine Mindestlaufzeit, keine versteckten Kosten. Auf deine erste Veranstaltung bekommst du 20 % Starterbonus. Alle Details findest du bei den <pricing>Preisen</pricing>."
+            ]
+          },
+          "event-tag": {
+            "q": "Was zählt als Event-Tag, und wann zahle ich?",
+            "a": [
+              "Ein Event-Tag geht von 6 bis 6 Uhr – die Nacht zählt also zum Vortag. Bezahlt wird beim Freischalten einer Veranstaltung, per Karte oder Lastschrift. Bis 7 Tage vor Beginn kannst du kostenlos stornieren."
+            ]
+          }
+        }
+      },
+      "open-source": {
+        "title": "Open Source",
+        "items": {
+          "lizenz": {
+            "q": "Ist OpenEOS wirklich Open Source?",
+            "a": [
+              "Ja, zu 100 %. OpenEOS steht unter der AGPLv3-Lizenz: Du kannst es selbst hosten, anpassen und zur Entwicklung beitragen. Den Quellcode findest du auf <github>GitHub</github>."
+            ]
+          },
+          "selbst-hosten": {
+            "q": "Kann ich OpenEOS selbst betreiben?",
+            "a": [
+              "Ja. Die Self-Hosted-Variante ist kostenlos und enthält alle Features – für eine Organisation mit unbegrenzten Events. Sie läuft auf deinem eigenen Server, du behältst die volle Kontrolle über deine Daten. Hilfe gibt es von der Community, die Anleitung steht in der <selfhost>Dokumentation</selfhost>."
+            ]
+          }
+        }
+      },
+      "daten": {
+        "title": "Daten & Sicherheit",
+        "items": {
+          "speicherort": {
+            "q": "Wo liegen meine Daten?",
+            "a": [
+              "Im gehosteten Angebot laufen Plattform und Datenbank auf einem Server der IONOS SE. Einmal täglich geht eine verschlüsselte Sicherung (AES-256) in ein Rechenzentrum der Hetzner Online GmbH in Deutschland. Tägliche Sicherungen bleiben 14 Tage, wöchentliche acht Wochen, dann werden sie automatisch gelöscht.",
+              "Betreibst du OpenEOS selbst, liegen die Daten auf deinem eigenen Server. Alle Einzelheiten stehen in der <privacy>Datenschutzerklärung</privacy>."
+            ]
+          },
+          "gaeste-und-helfer": {
+            "q": "Wer ist für die Daten meiner Gäste und Helfer verantwortlich?",
+            "a": [
+              "Deine Organisation. Bestellungen deiner Gäste und die Daten deiner Helfer verarbeiten wir in deinem Auftrag (Art. 28 DSGVO).",
+              "Kartenzahlungen laufen über dein eigenes SumUp-Konto. OpenEOS übermittelt an SumUp nur Betrag, Währung, eine Beschreibung und eine Vorgangsnummer. Ihre Kartendaten geben deine Gäste direkt am Kartenterminal oder auf der Bezahlseite von SumUp ein."
+            ]
+          }
+        }
+      },
+      "geraete": {
+        "title": "Geräte",
+        "items": {
+          "welche-geraete": {
+            "q": "Welche Geräte brauche ich?",
+            "a": [
+              "Die Kasse läuft auf Smartphones und Tablets. Bons druckt OpenEOS automatisch über einen Raspberry Pi – günstige Hardware. Für Küche und Ausgabe nimmst du ein Display, für deine Gäste auf Wunsch ein Kundendisplay.",
+              "Keine eigenen Geräte? Wir vermieten Tablets für Kassen, ESC/POS-Bondrucker sowie Küchen- und Ausgabe-Displays für 50 € pro Gerät und Tag, auf Anfrage fertig eingerichtet."
+            ]
+          },
+          "internet": {
+            "q": "Brauche ich vor Ort eine Internetverbindung?",
+            "a": [
+              "Kasse, Küchen-Display und Drucker arbeiten über den OpenEOS-Server zusammen. Deshalb brauchen alle Geräte eine Verbindung zu ihm – beim gehosteten Angebot also Internet.",
+              "Wo es vor Ort keins gibt, mietest du bei uns ein Internet-Gateway: einen LTE/5G-Router mit unbegrenzter Datenflat, WLAN-Access-Point und LAN-Ports für Drucker und Displays. Plug & Play, für 30 € pro Tag."
+            ]
+          }
+        }
+      }
+    }
   }
 }
