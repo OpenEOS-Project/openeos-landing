@@ -734,7 +734,15 @@
           "offene-ladenkasse": {
             "q": "Was ist mit einer offenen Ladenkasse?",
             "a": [
-              "Eine offene Ladenkasse – Bargeld in einer Kassette, ohne elektronisches Kassensystem – ist zulässig. Dann brauchst du keine TSE und musst auch keine Belege ausgeben. Die Aufzeichnungspflichten nach § 146 AO gelten aber weiterhin."
+              "Eine offene Ladenkasse – Bargeld in einer Kassette, ohne elektronisches Kassensystem – ist zulässig. Dann brauchst du keine TSE und musst auch keine Belege ausgeben. Die Aufzeichnungspflichten nach § 146 AO gelten aber weiterhin. Konkret heißt das:",
+              [
+                "<b>Täglich festhalten:</b> Einnahmen und Ausgaben der Kasse hältst du an jedem Verkaufstag fest (§ 146 Abs. 1 Satz 2 AO).",
+                "<b>Keine Einzelaufzeichnung nötig:</b> Verkaufst du Waren wie Essen und Getränke gegen Bargeld an viele Gäste, die du nicht kennst, musst du nicht jeden Verkauf einzeln notieren (§ 146 Abs. 1 Satz 3 AO). Das gilt nur, solange du dafür kein elektronisches Kassensystem einsetzt.",
+                "<b>Kassenbericht:</b> Am Ende des Tages zählst du die Kasse und ermittelst die Einnahmen rückwärts: gezählter Endbestand − Anfangsbestand (Wechselgeld) + Ausgaben aus der Kasse + Entnahmen − Einlagen = Tageseinnahmen. Ein Zählprotokoll mit den gezählten Scheinen und Münzen hilft dir beim Nachweis.",
+                "<b>Belege:</b> Für jede Ausgabe, Einlage und Entnahme brauchst du einen Beleg, zum Beispiel für das Wechselgeld vom Konto, den Einkauf beim Getränkehändler oder die Abgabe an den Kassenwart.",
+                "<b>Aufbewahren:</b> Kassenberichte, Zählprotokolle und Belege bewahrst du nach § 147 AO auf, je nach Unterlage 8 bis 10 Jahre."
+              ],
+              "Hast du auf einem Fest mehrere Kassen, etwa an Theke, Grill und Bonverkauf, zählst du sie am besten getrennt und fasst sie im Kassenbericht zusammen."
             ]
           },
           "tse-integration": {
