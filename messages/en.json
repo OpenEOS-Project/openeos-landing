@@ -734,7 +734,15 @@
           "offene-ladenkasse": {
             "q": "What about an open cash box (offene Ladenkasse)?",
             "a": [
-              "An open cash box – cash in a box, without an electronic register – is allowed. You then need no TSE and don’t have to issue receipts. The record-keeping obligations under § 146 AO still apply."
+              "An open cash box – cash in a box, without an electronic register – is allowed. You then need no TSE and don’t have to issue receipts. The record-keeping obligations under § 146 AO still apply. In practice this means:",
+              [
+                "<b>Record daily:</b> you record the cash box’s takings and expenses on every day you sell (§ 146 (1) sentence 2 AO).",
+                "<b>No itemised records needed:</b> if you sell goods such as food and drinks for cash to many guests you don’t know, you don’t have to note every single sale (§ 146 (1) sentence 3 AO). This only applies as long as you don’t use an electronic register for it.",
+                "<b>Cash report (Kassenbericht):</b> at the end of the day you count the cash and work out the takings backwards: counted closing balance − opening balance (float) + expenses paid from the box + withdrawals − deposits = daily takings. A counting record listing the notes and coins helps you prove it.",
+                "<b>Receipts:</b> every expense, deposit and withdrawal needs a voucher, for example the float taken from the bank account, the purchase from the drinks supplier or the hand-over to the treasurer.",
+                "<b>Retention:</b> keep cash reports, counting records and vouchers as required by § 147 AO, 8 to 10 years depending on the document."
+              ],
+              "If a festival has several cash points, such as bar, grill and token sales, it’s best to count them separately and combine them in the cash report."
             ]
           },
           "tse-integration": {
