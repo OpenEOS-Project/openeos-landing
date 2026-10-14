@@ -29,6 +29,7 @@ export function Footer() {
             <b>{t("resources")}</b>
             <a href={docsUrl(locale)}>{t("docs")}</a>
             <Link href="/changelog">{t("changelog")}</Link>
+            <Link href="/faq">{t("faq")}</Link>
             <Link href="/feedback">{t("feedback")}</Link>
             <a
               href="https://github.com/OpenEOS-Project"

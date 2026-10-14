@@ -1631,6 +1631,12 @@
 .landing .foot__by:hover { color: var(--ink); text-decoration: underline; }
 
 /* ============================= RESPONSIVE ============================= */
+/* Zwischen 961 und 1100px wird es neben Sprache und Anmelde-Knöpfen eng
+   (englische Beschriftungen sind laenger): Abstaende etwas kleiner. */
+@media (max-width: 1100px) {
+  .landing .nav__links { gap: 14px; }
+  .landing .nav__group { gap: 16px; }
+}
 @media (max-width: 960px) {
   .landing .nav__links { display: none; }
 }
@@ -2358,4 +2364,186 @@
 }
 .landing .legal__article {
   max-width: var(--measure);
+}
+
+/* ===================== HÄUFIGE FRAGEN =====================
+   Gleicher Rahmen wie die Neuerungen: Kopf ohne Startseiten-Anlauf, auf
+   breiten Fenstern steht der Abschnittstitel links neben seinen Fragen.
+   Die Fragen sind native <details>: aufklappbar ohne Skript, per Tastatur
+   bedienbar und von der Suche im Browser auffindbar. */
+.landing .faq {
+  padding: var(--sec-y) 0 calc(var(--sec-y) * 1.5);
+}
+.landing .faq .section-head {
+  padding: 0 0 28px;
+}
+.landing .faq .section-title {
+  font-size: clamp(34px, 5vw, 52px);
+}
+/* Sprungziele nicht unter der klebenden Navigation verstecken. */
+.landing .faq [id] {
+  scroll-margin-top: 96px;
+}
+
+.landing .faq__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.landing .faq__topic {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid color-mix(in oklab, var(--ink) 15%, transparent);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color .15s ease, background .15s ease;
+}
+.landing .faq__topic svg {
+  width: 16px;
+  height: 16px;
+  color: var(--green-ink);
+}
+.landing .faq__topic:hover {
+  border-color: var(--green-ink);
+  background: color-mix(in oklab, var(--green) 14%, transparent);
+}
+
+.landing .faq__list {
+  margin-top: 48px;
+  display: grid;
+  gap: 56px;
+}
+.landing .faq__group-title {
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.landing .faq__group-title svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  color: var(--green-ink);
+}
+.landing .faq__items {
+  border-top: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+}
+.landing .faq__item {
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+}
+.landing .faq__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  line-height: 1.4;
+}
+.landing .faq__q::-webkit-details-marker { display: none; }
+.landing .faq__q:hover { color: var(--green-ink); }
+.landing .faq__q:focus-visible {
+  outline: 2px solid var(--green-ink);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.landing .faq__chevron {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--mute);
+  transition: transform .2s ease;
+}
+.landing .faq__item[open] > .faq__q .faq__chevron {
+  transform: rotate(180deg);
+  color: var(--green-ink);
+}
+.landing .faq__a {
+  padding: 0 36px 22px 0;
+  line-height: 1.65;
+  color: var(--mute);
+}
+.landing .faq__a p { margin: 0 0 12px; }
+.landing .faq__a p:last-child { margin-bottom: 0; }
+.landing .faq__a ul {
+  margin: 0 0 12px;
+  padding-left: 22px;
+  list-style: disc;
+}
+.landing .faq__a li { margin: 4px 0; }
+.landing .faq__a li::marker { color: var(--green-ink); }
+.landing .faq__a strong { color: var(--ink); font-weight: 650; }
+.landing .faq__a a,
+.landing .faq__inline-btn,
+.landing .faq__foot a {
+  color: var(--green-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.landing .faq__a a:hover,
+.landing .faq__inline-btn:hover,
+.landing .faq__foot a:hover { text-decoration-thickness: 2px; }
+.landing .faq__inline-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Hinweis unter den Fragen eines Abschnitts (z. B. "keine Steuerberatung"). */
+.landing .faq__note {
+  margin: 20px 0 0;
+  display: flex;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: var(--r);
+  background: color-mix(in oklab, var(--ink) 5%, transparent);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--mute);
+}
+.landing .faq__note svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  color: var(--ink);
+}
+
+.landing .faq__foot {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
+  font-size: 14px;
+  color: var(--mute-2, #8a8f86);
+}
+
+@media (min-width: 900px) {
+  .landing .faq__group {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(0, var(--measure));
+    column-gap: clamp(32px, 5vw, 80px);
+    align-items: start;
+  }
+  .landing .faq__group-title {
+    position: sticky;
+    top: 96px;
+    margin: 18px 0 0;
+  }
+  .landing .faq__foot { max-width: var(--measure); }
+}
+@media (max-width: 720px) {
+  .landing .faq__q { font-size: 16px; }
+  .landing .faq__a { padding-right: 0; }
 }

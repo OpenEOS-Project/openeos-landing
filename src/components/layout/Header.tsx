@@ -45,6 +45,7 @@ export function Header() {
             <span className="nav__group">
               <Link href="/screens">{t("screens")}</Link>
               <Link href="/changelog">{t("changelog")}</Link>
+              <Link href="/faq">{t("faq")}</Link>
             </span>
           </nav>
         </div>
@@ -113,6 +114,7 @@ export function Header() {
               <Link href="/#open-source" onClick={close}>{t("openSource")}</Link>
               <Link href="/screens" onClick={close}>{t("screens")}</Link>
               <Link href="/changelog" onClick={close}>{t("changelog")}</Link>
+              <Link href="/faq" onClick={close}>{t("faq")}</Link>
             </nav>
             <div className="nav__panel-actions">
               <LanguageSwitch />

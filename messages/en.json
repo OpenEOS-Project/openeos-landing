@@ -110,7 +110,8 @@
     "mobileNav": "Navigation",
     "menu": "Menu",
     "closeMenu": "Close menu",
-    "language": "Language"
+    "language": "Language",
+    "faq": "FAQ"
   },
   "hero": {
     "pill": "New version available now",
@@ -404,7 +405,8 @@
     "copyright": "© {year} LUXCODE by Lukas Lukic-Spitznagel · OpenEOS",
     "productBy": "A product of LUXCODE by Lukas Lukic-Spitznagel",
     "feedback": "Feedback & ideas",
-    "screens": "A look inside"
+    "screens": "A look inside",
+    "faq": "FAQ"
   },
   "imprint": {
     "title": "Imprint",
@@ -686,5 +688,176 @@
     "sub": "The address may have changed, or it was never right. Everything else is one click away from the home page.",
     "home": "Go to home page",
     "changelog": "See what's new"
+  },
+  "faq": {
+    "metaTitle": "FAQ — OpenEOS",
+    "metaDescription": "Answers about OpenEOS: cash, the register and TSE, pricing, open source, data and devices.",
+    "titleL1": "Frequently asked",
+    "titleL2": "questions",
+    "sub": "Short, plain answers – from cash, the register and TSE to pricing and devices.",
+    "topics": "Topics",
+    "foot": "Your question isn’t here? <link>Get in touch.</link>",
+    "sections": {
+      "tse": {
+        "title": "Cash, POS and TSE",
+        "items": {
+          "was-ist-eine-tse": {
+            "q": "What is a TSE and when do I need one?",
+            "a": [
+              "A TSE (technische Sicherheitseinrichtung, a technical security system) is a certified component that protects the records of an electronic cash register against later changes. It is required by German law: § 146a of the Fiscal Code (Abgabenordnung, AO) and the Cash Register Security Ordinance (KassenSichV).",
+              "You need a TSE if you take payments with an electronic system that <b>can accept cash</b> – the law calls this a “cash register function” (Kassenfunktion). It is enough that cash payment can be switched on. Vouchers, prepaid cards or tokens accepted on site count as cash.",
+              "This also applies to clubs and club festivals; legal form and non-profit status make no difference. Selling food and drinks at a festival is usually a taxable business activity (wirtschaftlicher Geschäftsbetrieb). If you use an electronic register with a cash register function for it, it needs a TSE – even if it only runs a few times a year. There is no exemption for occasional use.",
+              "Violations are administrative offences and can be fined up to € 25,000."
+            ]
+          },
+          "bargeldlos": {
+            "q": "Can I use OpenEOS without a TSE?",
+            "a": [
+              "Yes, with <b>cashless mode</b>. Only systems with a cash register function, i.e. systems that can accept cash, need a TSE (tax administration guidance AEAO on § 146a). If your register technically cannot accept cash, it has no cash register function and needs no TSE.",
+              "In cashless mode, OpenEOS blocks cash everywhere:",
+              [
+                "no cash payments at the register",
+                "no cash refunds",
+                "no cash payout of deposits (Pfand)"
+              ],
+              "Card payments via SumUp as well as online and prepaid payments keep working. You switch the mode on in your organization’s payment settings.",
+              "Please note: the German Federal Ministry of Finance considers a cash register function to exist as soon as cash payment can be switched on, and vouchers, prepaid cards or tokens accepted on site count as cash. Whether cashless mode is enough in your case is best clarified with your tax advisor."
+            ]
+          },
+          "bargeld": {
+            "q": "Can I still accept cash with OpenEOS?",
+            "a": [
+              "Yes. Cash payment is the default today, and that doesn’t change.",
+              "The TSE integration is in progress but not available yet. Until then, your club decides for itself whether to record cash payments in OpenEOS. Keep the <tse>TSE requirement</tse> for registers that accept cash in mind, and ideally check with your tax advisor."
+            ]
+          },
+          "offene-ladenkasse": {
+            "q": "What about an open cash box (offene Ladenkasse)?",
+            "a": [
+              "An open cash box – cash in a box, without an electronic register – is allowed. You then need no TSE and don’t have to issue receipts. The record-keeping obligations under § 146 AO still apply."
+            ]
+          },
+          "tse-integration": {
+            "q": "What’s next – when is the TSE coming?",
+            "a": [
+              "We are working on a cloud TSE integration. It is meant to let you accept cash with OpenEOS without buying extra hardware. We are not giving a date yet. As soon as it’s ready, we’ll announce it under <changelog>What’s new</changelog>."
+            ]
+          }
+        },
+        "note": "General information, not tax or legal advice. As of 14 October 2026. Whether and how the rules apply to your club is best clarified with your tax advisor."
+      },
+      "allgemein": {
+        "title": "General",
+        "items": {
+          "was-ist-openeos": {
+            "q": "What is OpenEOS?",
+            "a": [
+              "OpenEOS is a POS system for clubs, events and festival catering. From the club fête to the large-scale event, it covers planning, ordering, kitchen, checkout and reporting in one system – flexible, mobile and open source."
+            ]
+          },
+          "funktionen": {
+            "q": "What can OpenEOS do?",
+            "a": [
+              "The main building blocks:",
+              [
+                "Mobile POS on phone or tablet, anywhere on the venue",
+                "Self-ordering: guests order via QR code themselves",
+                "Kitchen display with a real-time view for kitchen and pickup",
+                "Customer display where your guests see their order live",
+                "Card payments via SumUp",
+                "Automatic receipt printing via Raspberry Pi",
+                "Floor plan you draw in the admin area and the POS picks up",
+                "Shift planning: volunteers sign up via a link, no account needed",
+                "Real-time analytics and reports"
+              ],
+              "See what it looks like in <screens>A look inside</screens>."
+            ]
+          },
+          "loslegen": {
+            "q": "How do I get started?",
+            "a": [
+              "Registering your organization takes just a few minutes, and there is no setup fee. Your first event is possible right away. Would you rather see it in action first? Then <demo>request a demo</demo>."
+            ]
+          }
+        }
+      },
+      "kosten": {
+        "title": "Pricing",
+        "items": {
+          "preise": {
+            "q": "How much does OpenEOS cost?",
+            "a": [
+              "There are two ways:",
+              [
+                "<b>Self-hosted:</b> free, forever. You run OpenEOS on your own server – with all features, one organization, unlimited events and community support.",
+                "<b>SaaS:</b> € 25 per event day. All features, hosting, backups, automatic updates and support are included."
+              ],
+              "No setup fee, no minimum term, no hidden costs. You get a 20% starter bonus on your first event. All details are under <pricing>Pricing</pricing>."
+            ]
+          },
+          "event-tag": {
+            "q": "What counts as an event day, and when do I pay?",
+            "a": [
+              "An event day runs from 6:00 to 6:00 – the night counts towards the day before. You pay by card or direct debit when you activate an event. Cancellation is free up to 7 days before the start."
+            ]
+          }
+        }
+      },
+      "open-source": {
+        "title": "Open source",
+        "items": {
+          "lizenz": {
+            "q": "Is OpenEOS really open source?",
+            "a": [
+              "Yes, 100%. OpenEOS is released under the AGPLv3 license: you can self-host it, customize it and contribute. The source code is on <github>GitHub</github>."
+            ]
+          },
+          "selbst-hosten": {
+            "q": "Can I run OpenEOS myself?",
+            "a": [
+              "Yes. The self-hosted edition is free and includes all features – for one organization with unlimited events. It runs on your own server, and you keep full control over your data. Help comes from the community; the guide is in the <selfhost>documentation</selfhost>."
+            ]
+          }
+        }
+      },
+      "daten": {
+        "title": "Data & security",
+        "items": {
+          "speicherort": {
+            "q": "Where is my data stored?",
+            "a": [
+              "In the hosted service, the platform and database run on a server of IONOS SE. Once a day, an encrypted backup (AES-256) is sent to a data centre of Hetzner Online GmbH in Germany. Daily backups are kept for 14 days and weekly ones for eight weeks, then they are deleted automatically.",
+              "If you run OpenEOS yourself, the data stays on your own server. All details are in the <privacy>privacy policy</privacy>."
+            ]
+          },
+          "gaeste-und-helfer": {
+            "q": "Who is responsible for the data of my guests and volunteers?",
+            "a": [
+              "Your organization. We process your guests’ orders and your volunteers’ data on your behalf (Art. 28 GDPR).",
+              "Card payments go through your own SumUp account. OpenEOS only sends SumUp the amount, currency, a description and a transaction number. Your guests enter their card details directly on the card terminal or on SumUp’s payment page."
+            ]
+          }
+        }
+      },
+      "geraete": {
+        "title": "Devices",
+        "items": {
+          "welche-geraete": {
+            "q": "Which devices do I need?",
+            "a": [
+              "The POS runs on phones and tablets. OpenEOS prints receipts automatically via a Raspberry Pi – affordable hardware. For kitchen and pickup you use a display, and optionally a customer display for your guests.",
+              "No devices of your own? We rent out tablets for POS, ESC/POS receipt printers and kitchen and pickup displays for € 50 per device per day, configured on request."
+            ]
+          },
+          "internet": {
+            "q": "Do I need an internet connection on site?",
+            "a": [
+              "The POS, kitchen display and printers work together through the OpenEOS server. That’s why every device needs a connection to it – with the hosted service, that means internet.",
+              "Where there isn’t any on site, you can rent an internet gateway from us: an LTE/5G router with unlimited data, a Wi-Fi access point and LAN ports for printers and displays. Plug & play, € 30 per day."
+            ]
+          }
+        }
+      }
+    }
   }
 }
