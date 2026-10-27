@@ -1,8 +1,6 @@
 export type ContactType =
   | "demo"
   | "contact"
-  | "hardware"
-  | "gateway"
   | "feedback"
   | "feature";
 

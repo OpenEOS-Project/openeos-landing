@@ -168,7 +168,7 @@
       },
       "printer": {
         "title": "Receipt printing",
-        "copy": "Auto print via Raspberry Pi — affordable hardware."
+        "copy": "Automatic via the OpenEOS printer agent — runs on any Windows or Linux PC, finds USB and network printers by itself."
       },
       "shifts": {
         "title": "Shift planning",
@@ -202,7 +202,7 @@
         "pos": {
           "label": "Mobile POS",
           "title": "Ring up where the guest is.",
-          "copy": "Tablet or phone — anywhere on site. Categories, modifiers, split-payment. Receipt printing via Raspberry Pi or network printer.",
+          "copy": "Tablet or phone — anywhere on site. Categories, modifiers, split-payment. Receipt printing via the OpenEOS printer agent on USB or network printers.",
           "checks": [
             "Categories, products, modifiers",
             "Cash & SumUp card payments",
@@ -265,8 +265,8 @@
           "copy": "Plan shifts, assign volunteers, online sign-up with confirmation."
         },
         "printer": {
-          "title": "Receipt printing via Pi",
-          "copy": "Python agent for ESC/POS printers. Network IP, no license zoo, cheap hardware."
+          "title": "Receipt printing via printer agent",
+          "copy": "Runs on a Windows or Linux PC (Raspberry Pi included), finds USB and network printers automatically – set up in the web app. ESC/POS, no license zoo."
         },
         "realtime": {
           "title": "Real-time sync",
@@ -309,33 +309,6 @@
         "Free cancellation up to 7 days before the start"
       ],
       "cta": "Get started →"
-    },
-    "hardware": {
-      "title": "Hardware",
-      "tag": "Rental",
-      "price": "€ 50",
-      "unit": "/ device / day",
-      "features": [
-        "Tablets for POS",
-        "ESC/POS receipt printers",
-        "Kitchen and pickup displays",
-        "Configured on request"
-      ],
-      "cta": "Request →"
-    },
-    "gateway": {
-      "badge": "New",
-      "title": "Internet gateway rental",
-      "copy": "LTE/5G router with Wi-Fi, LAN ports and unlimited data — internet for your POS anywhere, even where there isn't any.",
-      "features": [
-        "LTE/5G with unlimited data plan",
-        "Wi-Fi access point for multiple devices",
-        "LAN ports for printers, displays & co.",
-        "Plug & play, ready instantly"
-      ],
-      "price": "€ 30",
-      "unit": "/ day",
-      "cta": "Request →"
     }
   },
   "openSource": {
@@ -359,9 +332,7 @@
     "typeLabel": "Request type",
     "type": {
       "demo": "Request demo",
-      "contact": "General inquiry",
-      "hardware": "Hardware rental",
-      "gateway": "POS gateway"
+      "contact": "General inquiry"
     },
     "nameLabel": "Name",
     "namePlaceholder": "Your name",
@@ -531,7 +502,7 @@
     },
     "pricing": {
       "title": "4. Prices and tariffs",
-      "content": "The prices displayed on the website at the time of booking apply:\n• SaaS: €25 per event day\n• Starter bonus: 20% discount on the price of an organization's first event that is paid for or ordered on invoice (for all days of that event). If an individual discount has been agreed for the organization, only the higher of the two discounts applies.\n• Hardware rental: €50 per device per day\n\nAn event day begins at 6:00 a.m. and ends at 6:00 a.m. on the following day (local time of the organization).\n\nAll prices include statutory value added tax."
+      "content": "The prices displayed on the website at the time of booking apply:\n• SaaS: €25 per event day\n• Starter bonus: 20% discount on the price of an organization's first event that is paid for or ordered on invoice (for all days of that event). If an individual discount has been agreed for the organization, only the higher of the two discounts applies.\n\nAn event day begins at 6:00 a.m. and ends at 6:00 a.m. on the following day (local time of the organization).\n\nAll prices include statutory value added tax."
     },
     "payment": {
       "title": "5. Payment",
@@ -661,7 +632,7 @@
       },
       "receipt": {
         "step": "Step 2 · Receipt",
-        "copy": "Kitchen and bar tickets print automatically on the right printer.",
+        "copy": "Kitchen and bar tickets print automatically on the right printer – the printer agent on your PC takes care of it.",
         "alt": "A receipt coming out of the printer"
       },
       "runner": {
@@ -773,7 +744,7 @@
                 "Kitchen display with a real-time view for kitchen and pickup",
                 "Customer display where your guests see their order live",
                 "Card payments via SumUp",
-                "Automatic receipt printing via Raspberry Pi",
+                "Automatic receipt printing via the OpenEOS printer agent on a Windows or Linux PC",
                 "Floor plan you draw in the admin area and the POS picks up",
                 "Shift planning: volunteers sign up via a link, no account needed",
                 "Real-time analytics and reports"
@@ -853,15 +824,15 @@
           "welche-geraete": {
             "q": "Which devices do I need?",
             "a": [
-              "The POS runs on phones and tablets. OpenEOS prints receipts automatically via a Raspberry Pi – affordable hardware. For kitchen and pickup you use a display, and optionally a customer display for your guests.",
-              "No devices of your own? We rent out tablets for POS, ESC/POS receipt printers and kitchen and pickup displays for € 50 per device per day, configured on request."
+              "The POS runs on phones and tablets. OpenEOS prints receipts via the OpenEOS printer agent: it runs on a Windows or Linux PC (Raspberry Pi included), finds your USB and network printers automatically – everything is set up in the web app. For kitchen and pickup you use a display, and optionally a customer display for your guests.",
+              "You bring your own devices: ESC/POS receipt printers with a USB or network connection, tablets or phones for the POS, and any device with a browser for the displays."
             ]
           },
           "internet": {
             "q": "Do I need an internet connection on site?",
             "a": [
               "The POS, kitchen display and printers work together through the OpenEOS server. That’s why every device needs a connection to it – with the hosted service, that means internet.",
-              "Where there isn’t any on site, you can rent an internet gateway from us: an LTE/5G router with unlimited data, a Wi-Fi access point and LAN ports for printers and displays. Plug & play, € 30 per day."
+              "If there is no internet on site, a mobile hotspot or an LTE router of your club is enough – all devices simply join that network."
             ]
           }
         }
