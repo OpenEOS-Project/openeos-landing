@@ -168,7 +168,7 @@
       },
       "printer": {
         "title": "Bondruck",
-        "copy": "Automatischer Druck über Raspberry Pi — günstige Hardware."
+        "copy": "Automatisch über den OpenEOS Drucker-Agent — läuft auf jedem Windows- oder Linux-PC, findet USB- und Netzwerkdrucker von selbst."
       },
       "shifts": {
         "title": "Schichtplan",
@@ -202,7 +202,7 @@
         "pos": {
           "label": "Mobile Kasse",
           "title": "Kassieren, wo der Gast steht.",
-          "copy": "Tablet oder Smartphone — überall auf dem Gelände. Artikelgruppen, Modifier, Split-Payment. Bondruck über Raspberry Pi oder Netzwerkdrucker.",
+          "copy": "Tablet oder Smartphone — überall auf dem Gelände. Artikelgruppen, Modifier, Split-Payment. Bondruck über den OpenEOS Drucker-Agent auf USB- oder Netzwerkdruckern.",
           "checks": [
             "Kategorien, Produkte, Modifier",
             "Barzahlung & SumUp-Kartenzahlung",
@@ -265,8 +265,8 @@
           "copy": "Schichten planen, Mitarbeiter einteilen, Online-Anmeldung mit Bestätigung."
         },
         "printer": {
-          "title": "Bondruck via Pi",
-          "copy": "Python-Agent für ESC/POS-Drucker. Netzwerk-IP, kein Lizenz-Zoo, günstige Hardware."
+          "title": "Bondruck per Drucker-Agent",
+          "copy": "Läuft auf einem Windows- oder Linux-PC (auch Raspberry Pi), findet USB- und Netzwerkdrucker automatisch – eingerichtet wird in der Web-App. ESC/POS, kein Lizenz-Zoo."
         },
         "realtime": {
           "title": "Echtzeit-Sync",
@@ -309,33 +309,6 @@
         "Kostenlos stornierbar bis 7 Tage vor Beginn"
       ],
       "cta": "Jetzt starten →"
-    },
-    "hardware": {
-      "title": "Hardware",
-      "tag": "Vermietung",
-      "price": "50 €",
-      "unit": "/ Gerät / Tag",
-      "features": [
-        "Tablets für Kassen",
-        "ESC/POS-Bondrucker",
-        "Küchen- und Ausgabe-Displays",
-        "Auf Anfrage konfiguriert"
-      ],
-      "cta": "Anfragen →"
-    },
-    "gateway": {
-      "badge": "Neuheit",
-      "title": "Internet-Gateway zum Mieten",
-      "copy": "LTE/5G-Router mit WLAN, LAN-Ports und unbegrenzter Datenflat — Internet für dein Kassensystem an jedem Ort, auch wo's keins gibt.",
-      "features": [
-        "LTE/5G mit unbegrenzter Datenflat",
-        "WLAN-Access-Point für mehrere Geräte",
-        "LAN-Ports für Drucker, Displays & Co.",
-        "Plug & Play, sofort einsatzbereit"
-      ],
-      "price": "30 €",
-      "unit": "/ Tag",
-      "cta": "Anfragen →"
     }
   },
   "openSource": {
@@ -359,9 +332,7 @@
     "typeLabel": "Anfrage-Typ",
     "type": {
       "demo": "Demo anfragen",
-      "contact": "Allgemeine Anfrage",
-      "hardware": "Hardware-Miete",
-      "gateway": "Kassen-Gateway"
+      "contact": "Allgemeine Anfrage"
     },
     "nameLabel": "Name",
     "namePlaceholder": "Dein Name",
@@ -531,7 +502,7 @@
     },
     "pricing": {
       "title": "4. Preise und Tarife",
-      "content": "Es gelten die zum Zeitpunkt der Buchung auf der Website ausgewiesenen Preise:\n• SaaS: 25 € pro Event-Tag\n• Starterbonus: 20 % Nachlass auf den Preis der ersten Veranstaltung einer Organisation, die bezahlt oder auf Rechnung bestellt wird (für alle Tage dieser Veranstaltung). Ist für die Organisation ein individueller Nachlass vereinbart, gilt nur der höhere der beiden Nachlässe.\n• Hardware-Vermietung: 50 € pro Gerät pro Tag\n\nEin Veranstaltungstag (Event-Tag) beginnt um 6:00 Uhr und endet um 6:00 Uhr des Folgetags (Ortszeit der Organisation).\n\nAlle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer."
+      "content": "Es gelten die zum Zeitpunkt der Buchung auf der Website ausgewiesenen Preise:\n• SaaS: 25 € pro Event-Tag\n• Starterbonus: 20 % Nachlass auf den Preis der ersten Veranstaltung einer Organisation, die bezahlt oder auf Rechnung bestellt wird (für alle Tage dieser Veranstaltung). Ist für die Organisation ein individueller Nachlass vereinbart, gilt nur der höhere der beiden Nachlässe.\n\nEin Veranstaltungstag (Event-Tag) beginnt um 6:00 Uhr und endet um 6:00 Uhr des Folgetags (Ortszeit der Organisation).\n\nAlle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer."
     },
     "payment": {
       "title": "5. Zahlung",
@@ -661,7 +632,7 @@
       },
       "receipt": {
         "step": "Schritt 2 · Bon",
-        "copy": "Küchen- und Thekenbons laufen automatisch auf dem richtigen Drucker aus.",
+        "copy": "Küchen- und Thekenbons laufen automatisch auf dem richtigen Drucker aus – der Drucker-Agent auf deinem PC kümmert sich darum.",
         "alt": "Ein Bon läuft aus dem Drucker"
       },
       "runner": {
@@ -773,7 +744,7 @@
                 "Küchen-Display mit Echtzeit-Anzeige für Küche und Ausgabe",
                 "Kundendisplay, auf dem deine Gäste ihre Bestellung live sehen",
                 "Kartenzahlung über SumUp",
-                "Automatischer Bondruck über Raspberry Pi",
+                "Automatischer Bondruck über den OpenEOS Drucker-Agent auf einem Windows- oder Linux-PC",
                 "Tischplan, den du in der Verwaltung zeichnest und den die Kasse übernimmt",
                 "Schichtplan: Helfer tragen sich über einen Link selbst ein, ohne Konto",
                 "Statistiken und Berichte in Echtzeit"
@@ -853,15 +824,15 @@
           "welche-geraete": {
             "q": "Welche Geräte brauche ich?",
             "a": [
-              "Die Kasse läuft auf Smartphones und Tablets. Bons druckt OpenEOS automatisch über einen Raspberry Pi – günstige Hardware. Für Küche und Ausgabe nimmst du ein Display, für deine Gäste auf Wunsch ein Kundendisplay.",
-              "Keine eigenen Geräte? Wir vermieten Tablets für Kassen, ESC/POS-Bondrucker sowie Küchen- und Ausgabe-Displays für 50 € pro Gerät und Tag, auf Anfrage fertig eingerichtet."
+              "Die Kasse läuft auf Smartphones und Tablets. Bons druckt OpenEOS über den OpenEOS Drucker-Agent: Er läuft auf einem Windows- oder Linux-PC (auch Raspberry Pi), findet deine USB- und Netzwerkdrucker automatisch – eingerichtet wird alles in der Web-App. Für Küche und Ausgabe nimmst du ein Display, für deine Gäste auf Wunsch ein Kundendisplay.",
+              "Du bringst deine eigenen Geräte mit: ESC/POS-Bondrucker mit USB- oder Netzwerkanschluss, Tablets oder Smartphones für die Kasse und für die Displays ein beliebiges Gerät mit Browser."
             ]
           },
           "internet": {
             "q": "Brauche ich vor Ort eine Internetverbindung?",
             "a": [
               "Kasse, Küchen-Display und Drucker arbeiten über den OpenEOS-Server zusammen. Deshalb brauchen alle Geräte eine Verbindung zu ihm – beim gehosteten Angebot also Internet.",
-              "Wo es vor Ort keins gibt, mietest du bei uns ein Internet-Gateway: einen LTE/5G-Router mit unbegrenzter Datenflat, WLAN-Access-Point und LAN-Ports für Drucker und Displays. Plug & Play, für 30 € pro Tag."
+              "Gibt es vor Ort kein Internet, reicht ein mobiler Hotspot oder ein LTE-Router deines Vereins – alle Geräte hängen dann einfach in diesem Netz."
             ]
           }
         }

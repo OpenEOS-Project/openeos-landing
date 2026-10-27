@@ -6,7 +6,7 @@ import { X, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { submitContact, type ContactType } from "@/lib/contact-api";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const CONTACT_TYPES: ContactType[] = ["demo", "contact", "hardware", "gateway"];
+const CONTACT_TYPES: ContactType[] = ["demo", "contact"];
 
 type FieldErrors = Partial<Record<"name" | "email" | "message", string>>;
 

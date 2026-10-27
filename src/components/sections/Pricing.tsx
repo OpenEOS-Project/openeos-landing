@@ -1,5 +1,4 @@
 import { useLocale, useTranslations } from "next-intl";
-import { ContactTrigger } from "@/components/ContactTrigger";
 import { docsUrl } from "@/lib/site";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
@@ -86,49 +85,7 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
             {t("saas.cta")}
           </a>
         </article>
-
-        {/* Hardware */}
-        <article className="plan">
-          <header>
-            <h3>{t("hardware.title")}</h3>
-            <span className="plan__tag">{t("hardware.tag")}</span>
-          </header>
-          <div className="plan__price">
-            <b>{t("hardware.price")}</b>
-            <span>{t("hardware.unit")}</span>
-          </div>
-          <ul>
-            {(t.raw("hardware.features") as string[]).map((f) => (
-              <li key={f}>{f}</li>
-            ))}
-          </ul>
-          <ContactTrigger type="hardware" className="btn btn--ghost btn--block">
-            {t("hardware.cta")}
-          </ContactTrigger>
-        </article>
       </div>
-
-      <article className="price-gateway">
-        <span className="price-gateway__badge">{t("gateway.badge")}</span>
-        <div className="price-gateway__copy">
-          <h3>{t("gateway.title")}</h3>
-          <p>{t("gateway.copy")}</p>
-          <ul className="price-gateway__features">
-            {(t.raw("gateway.features") as string[]).map((f) => (
-              <li key={f}>{f}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="price-gateway__buy">
-          <div className="price-gateway__price">
-            <b>{t("gateway.price")}</b>
-            <span>{t("gateway.unit")}</span>
-          </div>
-          <ContactTrigger type="gateway" className="btn btn--light btn--block">
-            {t("gateway.cta")}
-          </ContactTrigger>
-        </div>
-      </article>
     </section>
   );
 }
