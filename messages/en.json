@@ -676,7 +676,8 @@
             "q": "What is a TSE and when do I need one?",
             "a": [
               "A TSE (technische Sicherheitseinrichtung, a technical security system) is a certified component that protects the records of an electronic cash register against later changes. It is required by German law: § 146a of the Fiscal Code (Abgabenordnung, AO) and the Cash Register Security Ordinance (KassenSichV).",
-              "You need a TSE if you take payments with an electronic system that <b>can accept cash</b> – the law calls this a “cash register function” (Kassenfunktion). It is enough that cash payment can be switched on. Vouchers, prepaid cards or tokens accepted on site count as cash.",
+              "You need a TSE if you take payments with an electronic system that <b>can accept cash</b> – the law calls this a “cash register function” (Kassenfunktion). According to the German Federal Ministry of Finance, it is enough that you can switch cash payment on yourself; whether you actually do so makes no difference. Vouchers, prepaid cards or tokens accepted on site count as cash.",
+              "A pure ordering system without a cash register module has no cash register function. How that works with OpenEOS is explained under <order>“Order only”</order>.",
               "This also applies to clubs and club festivals; legal form and non-profit status make no difference. Selling food and drinks at a festival is usually a taxable business activity (wirtschaftlicher Geschäftsbetrieb). If you use an electronic register with a cash register function for it, it needs a TSE – even if it only runs a few times a year. There is no exemption for occasional use.",
               "Violations are administrative offences and can be fined up to € 25,000."
             ]
@@ -684,22 +685,33 @@
           "bargeldlos": {
             "q": "Can I use OpenEOS without a TSE?",
             "a": [
-              "Yes, with <b>cashless mode</b>. Only systems with a cash register function, i.e. systems that can accept cash, need a TSE (tax administration guidance AEAO on § 146a). If your register technically cannot accept cash, it has no cash register function and needs no TSE.",
-              "In cashless mode, OpenEOS blocks cash everywhere:",
+              "Yes, but not with <b>cashless mode</b> alone. You switch it on and off yourself in the payment settings. According to the German Federal Ministry of Finance, however, a cash register function already exists if your club can switch cash on itself. Switching off cash in the settings therefore does not exempt you from the TSE requirement.",
+              "According to the ministry, you can only do without a TSE if your club cannot switch cash on itself and this is proven in the system documentation, for example by a certificate from the manufacturer. That is what the <order>“Order only”</order> operating mode is for; only our support can switch it.",
+              "If you want to accept cash with OpenEOS, you need a TSE. The <integration>TSE integration</integration> is in progress.",
+              "You can still use cashless mode, for example if your tills should only accept cards. It blocks cash everywhere in OpenEOS:",
               [
                 "no cash payments at the register",
                 "no cash refunds",
                 "no cash payout of deposits (Pfand)"
               ],
-              "Card payments via SumUp as well as online and prepaid payments keep working. You switch the mode on in your organization’s payment settings.",
-              "Please note: the German Federal Ministry of Finance considers a cash register function to exist as soon as cash payment can be switched on, and vouchers, prepaid cards or tokens accepted on site count as cash. Whether cashless mode is enough in your case is best clarified with your tax advisor."
+              "Card payments via SumUp as well as online and prepaid payments keep working."
+            ]
+          },
+          "nur-bestellen": {
+            "q": "Can I use OpenEOS for ordering only?",
+            "a": [
+              "Yes, with the <b>“Order only”</b> operating mode (Nur Bestellen). OpenEOS then takes orders and passes them on, for example to the kitchen and the bar. There is no cash register module in this mode: cash can neither be accepted in OpenEOS nor switched on by your club itself.",
+              "Payment happens outside OpenEOS, for example with an <ladenkasse>open cash box</ladenkasse>. Its record-keeping obligations still apply.",
+              "Only our support can switch this mode on or off, not your club. For your system documentation you get a certificate from us as the manufacturer stating that your club cannot switch cash on itself. According to the German Federal Ministry of Finance, ordering systems without a cash register module are not subject to the TSE requirement.",
+              "How to get this mode and what exactly it covers is described in the <orderdocs>documentation</orderdocs>. Or <contact>write to us</contact>."
             ]
           },
           "bargeld": {
             "q": "Can I still accept cash with OpenEOS?",
             "a": [
-              "Yes. Cash payment is the default today, and that doesn’t change.",
-              "The TSE integration is in progress but not available yet. Until then, your club decides for itself whether to record cash payments in OpenEOS. Keep the <tse>TSE requirement</tse> for registers that accept cash in mind, and ideally check with your tax advisor."
+              "Yes. Cash payment is the default, and that doesn’t change.",
+              "The TSE integration is in progress but not available yet. Until then, your club decides for itself whether to record cash payments in OpenEOS. Keep the <tse>TSE requirement</tse> for registers that can accept cash in mind, and ideally check with your tax advisor.",
+              "Cashless mode does not change the TSE requirement, because you can switch cash back on yourself. Without a TSE, you can use OpenEOS in <order>“Order only”</order> mode and take the money in an <ladenkasse>open cash box</ladenkasse>."
             ]
           },
           "offene-ladenkasse": {
@@ -723,7 +735,7 @@
             ]
           }
         },
-        "note": "General information, not tax or legal advice. As of 14 October 2026. Whether and how the rules apply to your club is best clarified with your tax advisor."
+        "note": "General information, not tax or legal advice. As of 1 November 2026. Whether and how the rules apply to your club is best clarified with your tax advisor."
       },
       "allgemein": {
         "title": "General",
