@@ -676,7 +676,8 @@
             "q": "Was ist eine TSE und wann brauche ich eine?",
             "a": [
               "Eine TSE (technische Sicherheitseinrichtung) ist ein zertifizierter Baustein, der die Aufzeichnungen einer elektronischen Kasse vor nachträglicher Veränderung schützt. Grundlage sind § 146a der Abgabenordnung (AO) und die Kassensicherungsverordnung (KassenSichV).",
-              "Eine TSE brauchst du, wenn du mit einem elektronischen System kassierst, das <b>Bargeld annehmen kann</b> – das Gesetz spricht von „Kassenfunktion“. Dafür reicht schon, dass sich Barzahlung einschalten lässt. Vor Ort angenommene Gutscheine, Guthabenkarten oder Wertmarken zählen dabei wie Bargeld.",
+              "Eine TSE brauchst du, wenn du mit einem elektronischen System kassierst, das <b>Bargeld annehmen kann</b> – das Gesetz spricht von „Kassenfunktion“. Nach Auskunft des Bundesfinanzministeriums reicht dafür schon, dass du Barzahlung selbst einschalten kannst; ob du es tatsächlich tust, spielt keine Rolle. Vor Ort angenommene Gutscheine, Guthabenkarten oder Wertmarken zählen dabei wie Bargeld.",
+              "Ein reines Bestellsystem ohne Kassenmodul hat keine Kassenfunktion. Wie das mit OpenEOS geht, steht unter <order>„Nur Bestellen“</order>.",
               "Das gilt auch für Vereine und Vereinsfeste; Rechtsform und Gemeinnützigkeit spielen keine Rolle. Der Verkauf von Speisen und Getränken auf einem Fest ist in der Regel ein steuerpflichtiger wirtschaftlicher Geschäftsbetrieb. Nutzt du dafür eine elektronische Kasse mit Kassenfunktion, braucht sie eine TSE – auch wenn sie nur ein paarmal im Jahr läuft. Eine Ausnahme für gelegentliche Nutzung gibt es nicht.",
               "Verstöße sind Ordnungswidrigkeiten und können mit einem Bußgeld von bis zu 25.000 € geahndet werden."
             ]
@@ -684,22 +685,33 @@
           "bargeldlos": {
             "q": "Kann ich OpenEOS ohne TSE nutzen?",
             "a": [
-              "Ja, mit dem <b>bargeldlosen Modus</b>. Eine TSE brauchen nur Systeme mit Kassenfunktion, also solche, die Bargeld annehmen können (Anwendungserlass zur Abgabenordnung, AEAO zu § 146a). Kann deine Kasse technisch kein Bargeld annehmen, hat sie keine Kassenfunktion und braucht keine TSE.",
-              "Im bargeldlosen Modus sperrt OpenEOS Bargeld überall:",
+              "Ja, aber nicht allein mit dem <b>bargeldlosen Modus</b>. Den schaltest du in den Zahlungseinstellungen selbst ein und aus. Nach Auskunft des Bundesfinanzministeriums liegt eine Kassenfunktion aber schon vor, wenn dein Verein Bargeld selbst einschalten kann. Bargeld in den Einstellungen auszuschalten befreit deshalb nicht von der TSE-Pflicht.",
+              "Ohne TSE geht es danach nur, wenn dein Verein Bargeld nicht selbst einschalten kann und das in der Systemdokumentation nachgewiesen ist, zum Beispiel durch eine Bescheinigung des Herstellers. Dafür gibt es die Betriebsart <order>„Nur Bestellen“</order>, die nur unser Support umschaltet.",
+              "Willst du mit OpenEOS Bargeld annehmen, brauchst du eine TSE. Die <integration>TSE-Anbindung</integration> ist in Arbeit.",
+              "Den bargeldlosen Modus kannst du trotzdem nutzen, etwa wenn an deinen Kassen nur Karte angenommen werden soll. Er sperrt Bargeld in OpenEOS überall:",
               [
                 "keine Barzahlung an der Kasse",
                 "keine Erstattung in bar",
                 "keine Auszahlung von Pfand in bar"
               ],
-              "Kartenzahlung über SumUp sowie Online- und Vorkasse-Zahlungen funktionieren weiter. Du schaltest den Modus in den Zahlungseinstellungen deiner Organisation ein.",
-              "Beachte: Nach Auffassung des Bundesfinanzministeriums liegt eine Kassenfunktion schon vor, wenn sich Barzahlung einschalten lässt, und vor Ort angenommene Gutscheine, Guthabenkarten oder Wertmarken zählen wie Bargeld. Ob der bargeldlose Modus in deinem Fall genügt, klärst du am besten mit deiner Steuerberatung."
+              "Kartenzahlung über SumUp sowie Online- und Vorkasse-Zahlungen funktionieren weiter."
+            ]
+          },
+          "nur-bestellen": {
+            "q": "Kann ich OpenEOS nur zum Bestellen nutzen?",
+            "a": [
+              "Ja, mit der Betriebsart <b>„Nur Bestellen“</b>. OpenEOS nimmt dann Bestellungen auf und leitet sie weiter, zum Beispiel an Küche und Ausschank. Ein Kassenmodul gibt es in dieser Betriebsart nicht: Bargeld lässt sich in OpenEOS weder annehmen noch von deinem Verein selbst einschalten.",
+              "Kassiert wird außerhalb von OpenEOS, zum Beispiel mit einer <ladenkasse>offenen Ladenkasse</ladenkasse>. Deren Aufzeichnungspflichten gelten weiter.",
+              "Die Betriebsart schaltet nur unser Support ein oder aus, nicht dein Verein. Für deine Systemdokumentation bekommst du von uns als Hersteller eine Bescheinigung, dass sich Bargeld in deiner Organisation nicht selbst einschalten lässt. Nach Auskunft des Bundesfinanzministeriums fallen Bestellsysteme ohne Kassenmodul nicht unter die TSE-Pflicht.",
+              "Wie du die Betriebsart bekommst und was sie genau umfasst, steht in der <orderdocs>Dokumentation</orderdocs>. Oder <contact>schreib uns</contact>."
             ]
           },
           "bargeld": {
             "q": "Kann ich weiterhin Bargeld über OpenEOS annehmen?",
             "a": [
-              "Ja. Barzahlung ist heute die Standardeinstellung, daran ändert sich nichts.",
-              "Die Anbindung einer TSE ist in Arbeit, aber noch nicht verfügbar. Bis dahin entscheidest du als Verein selbst, ob du Barzahlungen in OpenEOS erfasst. Denk dabei an die <tse>TSE-Pflicht</tse> für Kassen, die Bargeld annehmen, und stimm dich am besten mit deiner Steuerberatung ab."
+              "Ja. Barzahlung ist die Standardeinstellung, daran ändert sich nichts.",
+              "Die Anbindung einer TSE ist in Arbeit, aber noch nicht verfügbar. Bis dahin entscheidest du als Verein selbst, ob du Barzahlungen in OpenEOS erfasst. Denk dabei an die <tse>TSE-Pflicht</tse> für Kassen, die Bargeld annehmen können, und stimm dich am besten mit deiner Steuerberatung ab.",
+              "Der bargeldlose Modus ändert an der TSE-Pflicht nichts, weil du Bargeld selbst wieder einschalten kannst. Ohne TSE kannst du OpenEOS mit <order>„Nur Bestellen“</order> nutzen und das Geld in einer <ladenkasse>offenen Ladenkasse</ladenkasse> annehmen."
             ]
           },
           "offene-ladenkasse": {
@@ -723,7 +735,7 @@
             ]
           }
         },
-        "note": "Allgemeine Information, keine Steuer- oder Rechtsberatung. Stand: 14. Oktober 2026. Ob und wie die Regeln für deinen Verein gelten, klärst du am besten mit deiner Steuerberatung."
+        "note": "Allgemeine Information, keine Steuer- oder Rechtsberatung. Stand: 1. November 2026. Ob und wie die Regeln für deinen Verein gelten, klärst du am besten mit deiner Steuerberatung."
       },
       "allgemein": {
         "title": "Allgemein",

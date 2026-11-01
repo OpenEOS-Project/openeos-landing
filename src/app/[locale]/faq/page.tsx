@@ -77,6 +77,15 @@ export default async function FaqPage({
   const tags = {
     b: (chunks: ReactNode) => <strong>{chunks}</strong>,
     tse: (chunks: ReactNode) => <a href="#was-ist-eine-tse">{chunks}</a>,
+    order: (chunks: ReactNode) => <a href="#nur-bestellen">{chunks}</a>,
+    ladenkasse: (chunks: ReactNode) => <a href="#offene-ladenkasse">{chunks}</a>,
+    integration: (chunks: ReactNode) => <a href="#tse-integration">{chunks}</a>,
+    orderdocs: (chunks: ReactNode) => <a href={docsUrl(locale, 'nur-bestellen')}>{chunks}</a>,
+    contact: (chunks: ReactNode) => (
+      <ContactTrigger type="contact" className="faq__inline-btn">
+        {chunks}
+      </ContactTrigger>
+    ),
     changelog: (chunks: ReactNode) => <Link href="/changelog">{chunks}</Link>,
     screens: (chunks: ReactNode) => <Link href="/screens">{chunks}</Link>,
     pricing: (chunks: ReactNode) => <Link href="/#pricing">{chunks}</Link>,
