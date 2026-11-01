@@ -700,8 +700,8 @@
           "nur-bestellen": {
             "q": "Kann ich OpenEOS nur zum Bestellen nutzen?",
             "a": [
-              "Ja, mit der Betriebsart <b>„Nur Bestellen“</b>. OpenEOS nimmt dann Bestellungen auf und leitet sie weiter, zum Beispiel an Küche und Ausschank. Ein Kassenmodul gibt es in dieser Betriebsart nicht: Bargeld lässt sich in OpenEOS weder annehmen noch von deinem Verein selbst einschalten.",
-              "Kassiert wird außerhalb von OpenEOS, zum Beispiel mit einer <ladenkasse>offenen Ladenkasse</ladenkasse>. Deren Aufzeichnungspflichten gelten weiter.",
+              "Ja, mit der Betriebsart <b>„Nur Bestellen“</b>. OpenEOS nimmt dann Bestellungen auf und leitet sie an deine Stationen weiter, zum Beispiel an Küche und Ausschank. An der Theke schließt du eine Bestellung mit „Abgeholt“ ab, im Tischbetrieb mit „Tisch abschließen“. Ein Kassenmodul gibt es in dieser Betriebsart nicht: Bargeld lässt sich in OpenEOS weder annehmen noch von deinem Verein selbst einschalten.",
+              "Vor Ort kassierst du außerhalb von OpenEOS, zum Beispiel mit einer <ladenkasse>offenen Ladenkasse</ladenkasse>. Deren Aufzeichnungspflichten gelten weiter. Vorkasse im Online-Shop bleibt möglich: Deine Gäste können dort weiterhin vorab online bezahlen.",
               "Die Betriebsart schaltet nur unser Support ein oder aus, nicht dein Verein. Für deine Systemdokumentation bekommst du von uns als Hersteller eine Bescheinigung, dass sich Bargeld in deiner Organisation nicht selbst einschalten lässt. Nach Auskunft des Bundesfinanzministeriums fallen Bestellsysteme ohne Kassenmodul nicht unter die TSE-Pflicht.",
               "Wie du die Betriebsart bekommst und was sie genau umfasst, steht in der <orderdocs>Dokumentation</orderdocs>. Oder <contact>schreib uns</contact>."
             ]
