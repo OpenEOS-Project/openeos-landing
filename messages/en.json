@@ -686,7 +686,7 @@
             "q": "Can I use OpenEOS without a TSE?",
             "a": [
               "Yes, but not with <b>cashless mode</b> alone. You switch it on and off yourself in the payment settings. According to the German Federal Ministry of Finance, however, a cash register function already exists if your club can switch cash on itself. Switching off cash in the settings therefore does not exempt you from the TSE requirement.",
-              "According to the ministry, you can only do without a TSE if your club cannot switch cash on itself and this is proven in the system documentation, for example by a certificate from the manufacturer. That is what the <order>“Order only”</order> operating mode is for; only our support can switch it.",
+              "According to the ministry, you can only do without a TSE if your club cannot switch cash on itself and this is proven in the system documentation, for example by a certificate from the manufacturer. There are two ways to do that: <countrydocs>“Germany without cash”</countrydocs> – cash blocked, card and online payments stay; the default for new organizations in Germany, voluntary for existing ones – and the <order>“Order only”</order> operating mode without any till module, which only our support can switch. You get a manufacturer certificate for both.",
               "If you want to accept cash with OpenEOS, you need a TSE. The <integration>TSE integration</integration> is in progress.",
               "You can still use cashless mode, for example if your tills should only accept cards. It blocks cash everywhere in OpenEOS:",
               [
@@ -709,9 +709,20 @@
           "bargeld": {
             "q": "Can I still accept cash with OpenEOS?",
             "a": [
-              "Yes. Cash payment is the default, and that doesn’t change.",
-              "The TSE integration is in progress but not available yet. Until then, your club decides for itself whether to record cash payments in OpenEOS. Keep the <tse>TSE requirement</tse> for registers that can accept cash in mind, and ideally check with your tax advisor.",
-              "Cashless mode does not change the TSE requirement, because you can switch cash back on yourself. Without a TSE, you can use OpenEOS in <order>“Order only”</order> mode and take the money in an <ladenkasse>open cash box</ladenkasse>."
+              "That depends on your organization’s country. In Germany a register that can accept cash needs a <tse>TSE</tse>, and the TSE integration for OpenEOS is still in progress.",
+              "<b>New organizations in Germany</b> therefore use OpenEOS with “Germany without cash”: cash is blocked in OpenEOS and your club cannot switch it on. Card and online payments keep working. You take cash in an <ladenkasse>open cash box</ladenkasse> and close the order at the till with “Close without payment”. A manufacturer certificate is available for your records.",
+              "<b>Organizations that existed before</b> keep working as before – cash payment stays possible. Whether you record cash in OpenEOS without a TSE is then your own decision; ideally check with your tax advisor. You can switch to “Germany without cash” voluntarily at any time.",
+              "Cashless mode does not change the TSE requirement, because you can switch cash back on yourself. Without a TSE you can also use OpenEOS in <order>“Order only”</order> mode. For Austria, Switzerland and other countries see <laender>Does this also apply in Austria and Switzerland?</laender>"
+            ]
+          },
+          "laender": {
+            "q": "Does this also apply in Austria and Switzerland?",
+            "a": [
+              "No, the TSE requirement is a German rule – other countries have their own regulations. That is why OpenEOS asks every organization for its country and shows you a matching notice. The “Germany without cash” lock only applies to new organizations in Germany; in Austria, Switzerland and all other countries you can record cash as before.",
+              "<b>Austria:</b> The cash register obligation (RKSV) applies from €15,000 annual turnover per business if more than €7,500 of it is cash turnover. Card payments count as cash turnover in Austria. OpenEOS currently creates no RKSV signature. Exemptions exist, for example, for small festivals of non-profit clubs of up to 72 hours per calendar year and for canteens of non-profit clubs up to €45,000 annual turnover (net, on at most 52 days a year; limit since 2026). More on the <usp>Austrian business service portal (USP)</usp>.",
+              "<b>Switzerland:</b> To our knowledge there is no general cash register or fiscalisation obligation. Record-keeping and VAT rules still apply to clubs.",
+              "<b>Other countries:</b> Many countries have their own rules for tills (e.g. Italy, France, Poland, Czechia).",
+              "In any case, check yourself or with your tax advisor whether OpenEOS is permissible for your club and which obligations apply. More in the <countrydocs>documentation</countrydocs>."
             ]
           },
           "offene-ladenkasse": {

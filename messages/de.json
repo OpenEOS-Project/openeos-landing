@@ -686,7 +686,7 @@
             "q": "Kann ich OpenEOS ohne TSE nutzen?",
             "a": [
               "Ja, aber nicht allein mit dem <b>bargeldlosen Modus</b>. Den schaltest du in den Zahlungseinstellungen selbst ein und aus. Nach Auskunft des Bundesfinanzministeriums liegt eine Kassenfunktion aber schon vor, wenn dein Verein Bargeld selbst einschalten kann. Bargeld in den Einstellungen auszuschalten befreit deshalb nicht von der TSE-Pflicht.",
-              "Ohne TSE geht es danach nur, wenn dein Verein Bargeld nicht selbst einschalten kann und das in der Systemdokumentation nachgewiesen ist, zum Beispiel durch eine Bescheinigung des Herstellers. Dafür gibt es die Betriebsart <order>„Nur Bestellen“</order>, die nur unser Support umschaltet.",
+              "Ohne TSE geht es danach nur, wenn dein Verein Bargeld nicht selbst einschalten kann und das in der Systemdokumentation nachgewiesen ist, zum Beispiel durch eine Bescheinigung des Herstellers. Dafür gibt es zwei Wege: <countrydocs>„Deutschland ohne Bargeld“</countrydocs> – Bargeld gesperrt, Karte und Online-Zahlung bleiben; Standard für neue Organisationen in Deutschland, für bestehende freiwillig – und die Betriebsart <order>„Nur Bestellen“</order> ganz ohne Kassenmodul, die nur unser Support umschaltet. Für beide bekommst du eine Herstellerbescheinigung.",
               "Willst du mit OpenEOS Bargeld annehmen, brauchst du eine TSE. Die <integration>TSE-Anbindung</integration> ist in Arbeit.",
               "Den bargeldlosen Modus kannst du trotzdem nutzen, etwa wenn an deinen Kassen nur Karte angenommen werden soll. Er sperrt Bargeld in OpenEOS überall:",
               [
@@ -709,9 +709,20 @@
           "bargeld": {
             "q": "Kann ich weiterhin Bargeld über OpenEOS annehmen?",
             "a": [
-              "Ja. Barzahlung ist die Standardeinstellung, daran ändert sich nichts.",
-              "Die Anbindung einer TSE ist in Arbeit, aber noch nicht verfügbar. Bis dahin entscheidest du als Verein selbst, ob du Barzahlungen in OpenEOS erfasst. Denk dabei an die <tse>TSE-Pflicht</tse> für Kassen, die Bargeld annehmen können, und stimm dich am besten mit deiner Steuerberatung ab.",
-              "Der bargeldlose Modus ändert an der TSE-Pflicht nichts, weil du Bargeld selbst wieder einschalten kannst. Ohne TSE kannst du OpenEOS mit <order>„Nur Bestellen“</order> nutzen und das Geld in einer <ladenkasse>offenen Ladenkasse</ladenkasse> annehmen."
+              "Das hängt vom Land deiner Organisation ab. In Deutschland braucht eine Kasse, die Bargeld annehmen kann, eine <tse>TSE</tse>, und die TSE-Anbindung für OpenEOS ist noch in Arbeit.",
+              "<b>Neue Organisationen in Deutschland</b> nutzen OpenEOS deshalb mit „Deutschland ohne Bargeld“: Bargeld ist in OpenEOS gesperrt und lässt sich von deinem Verein nicht einschalten. Karte und Online-Zahlung gehen weiter. Bargeld nimmst du in einer <ladenkasse>offenen Ladenkasse</ladenkasse> an und schließt die Bestellung an der Kasse mit „Ohne Zahlung abschließen“ ab. Für deine Unterlagen gibt es eine Herstellerbescheinigung.",
+              "<b>Organisationen, die es schon vorher gab</b>, arbeiten wie bisher weiter – Barzahlung bleibt möglich. Ob du Bargeld ohne TSE in OpenEOS erfasst, entscheidest du dann selbst; stimm dich am besten mit deiner Steuerberatung ab. Du kannst jederzeit freiwillig zu „Deutschland ohne Bargeld“ wechseln.",
+              "Der bargeldlose Modus ändert an der TSE-Pflicht nichts, weil du Bargeld selbst wieder einschalten kannst. Ohne TSE kannst du OpenEOS auch mit <order>„Nur Bestellen“</order> nutzen. Für Österreich, die Schweiz und andere Länder siehe <laender>Gilt das auch in Österreich und der Schweiz?</laender>"
+            ]
+          },
+          "laender": {
+            "q": "Gilt das auch in Österreich und der Schweiz?",
+            "a": [
+              "Nein, die TSE-Pflicht ist eine deutsche Regel – andere Länder haben eigene Vorschriften. OpenEOS fragt deshalb bei jeder Organisation das Land ab und zeigt dir einen passenden Hinweis. Die Sperre „Deutschland ohne Bargeld“ gilt nur für neue Organisationen in Deutschland; in Österreich, der Schweiz und allen anderen Ländern kannst du Bargeld wie bisher erfassen.",
+              "<b>Österreich:</b> Es gilt die Registrierkassenpflicht (RKSV) ab 15.000 € Jahresumsatz je Betrieb, wenn davon mehr als 7.500 € Barumsätze sind. Kartenzahlungen zählen in Österreich als Barumsätze. OpenEOS erstellt derzeit keine RKSV-Signatur. Ausnahmen gibt es zum Beispiel für kleine Feste gemeinnütziger Vereine bis zu 72 Stunden im Kalenderjahr und für Kantinen gemeinnütziger Vereine bis 45.000 € Jahresumsatz (netto, an höchstens 52 Tagen im Jahr; Grenze seit 2026). Mehr beim <usp>Unternehmensserviceportal (USP)</usp>.",
+              "<b>Schweiz:</b> Nach unserem Kenntnisstand gibt es keine allgemeine Registrierkassen- oder Fiskalisierungspflicht. Aufbewahrungs- und Mehrwertsteuerregeln gelten aber auch für Vereine.",
+              "<b>Andere Länder:</b> Viele Länder haben eigene Kassenvorschriften (z. B. Italien, Frankreich, Polen, Tschechien).",
+              "Prüfe in jedem Fall selbst bzw. mit deiner Steuerberatung, ob OpenEOS für deinen Verein zulässig ist und welche Pflichten gelten. Mehr in der <countrydocs>Dokumentation</countrydocs>."
             ]
           },
           "offene-ladenkasse": {
