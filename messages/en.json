@@ -700,8 +700,8 @@
           "nur-bestellen": {
             "q": "Can I use OpenEOS for ordering only?",
             "a": [
-              "Yes, with the <b>“Order only”</b> operating mode (Nur Bestellen). OpenEOS then takes orders and passes them on, for example to the kitchen and the bar. There is no cash register module in this mode: cash can neither be accepted in OpenEOS nor switched on by your club itself.",
-              "Payment happens outside OpenEOS, for example with an <ladenkasse>open cash box</ladenkasse>. Its record-keeping obligations still apply.",
+              "Yes, with the <b>“Order only”</b> operating mode (Nur Bestellen). OpenEOS then takes orders and passes them on to your stations, for example the kitchen and the bar. At the counter you close an order with “Picked up”, in table service with “Close table”. There is no cash register module in this mode: cash can neither be accepted in OpenEOS nor switched on by your club itself.",
+              "On site, you take payment outside OpenEOS, for example with an <ladenkasse>open cash box</ladenkasse>. Its record-keeping obligations still apply. Prepayment in the online shop stays possible: your guests can still pay online in advance there.",
               "Only our support can switch this mode on or off, not your club. For your system documentation you get a certificate from us as the manufacturer stating that your club cannot switch cash on itself. According to the German Federal Ministry of Finance, ordering systems without a cash register module are not subject to the TSE requirement.",
               "How to get this mode and what exactly it covers is described in the <orderdocs>documentation</orderdocs>. Or <contact>write to us</contact>."
             ]
