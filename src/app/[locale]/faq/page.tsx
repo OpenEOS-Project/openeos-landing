@@ -80,9 +80,9 @@ export default async function FaqPage({
     order: (chunks: ReactNode) => <a href="#nur-bestellen">{chunks}</a>,
     ladenkasse: (chunks: ReactNode) => <a href="#offene-ladenkasse">{chunks}</a>,
     integration: (chunks: ReactNode) => <a href="#tse-integration">{chunks}</a>,
-    orderdocs: (chunks: ReactNode) => <a href={docsUrl(locale, 'nur-bestellen')}>{chunks}</a>,
+    notse: (chunks: ReactNode) => <a href="#bargeldlos">{chunks}</a>,
     laender: (chunks: ReactNode) => <a href="#laender">{chunks}</a>,
-    countrydocs: (chunks: ReactNode) => <a href={docsUrl(locale, 'land-und-bargeld')}>{chunks}</a>,
+    modesdocs: (chunks: ReactNode) => <a href={docsUrl(locale, 'betriebsarten')}>{chunks}</a>,
     usp: (chunks: ReactNode) => (
       <a
         href="https://www.usp.gv.at/themen/steuern-finanzen/steuerliche-rechte-und-pflichten/registrierkassen/registrierkassenpflicht.html"

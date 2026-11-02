@@ -677,7 +677,7 @@
             "a": [
               "A TSE (technische Sicherheitseinrichtung, a technical security system) is a certified component that protects the records of an electronic cash register against later changes. It is required by German law: § 146a of the Fiscal Code (Abgabenordnung, AO) and the Cash Register Security Ordinance (KassenSichV).",
               "You need a TSE if you take payments with an electronic system that <b>can accept cash</b> – the law calls this a “cash register function” (Kassenfunktion). According to the German Federal Ministry of Finance, it is enough that you can switch cash payment on yourself; whether you actually do so makes no difference. Vouchers, prepaid cards or tokens accepted on site count as cash.",
-              "A pure ordering system without a cash register module has no cash register function. How that works with OpenEOS is explained under <order>“Order only”</order>.",
+              "A pure ordering system without a cash register module has no cash register function. How that works with OpenEOS is explained under <order>“Orders only”</order>.",
               "This also applies to clubs and club festivals; legal form and non-profit status make no difference. Selling food and drinks at a festival is usually a taxable business activity (wirtschaftlicher Geschäftsbetrieb). If you use an electronic register with a cash register function for it, it needs a TSE – even if it only runs a few times a year. There is no exemption for occasional use.",
               "Violations are administrative offences and can be fined up to € 25,000."
             ]
@@ -685,44 +685,44 @@
           "bargeldlos": {
             "q": "Can I use OpenEOS without a TSE?",
             "a": [
-              "Yes, but not with <b>cashless mode</b> alone. You switch it on and off yourself in the payment settings. According to the German Federal Ministry of Finance, however, a cash register function already exists if your club can switch cash on itself. Switching off cash in the settings therefore does not exempt you from the TSE requirement.",
-              "According to the ministry, you can only do without a TSE if your club cannot switch cash on itself and this is proven in the system documentation, for example by a certificate from the manufacturer. There are two ways to do that: <countrydocs>“Germany without cash”</countrydocs> – cash blocked, card and online payments stay; the default for new organizations in Germany, voluntary for existing ones – and the <order>“Order only”</order> operating mode without any till module, which only our support can switch. You get a manufacturer certificate for both.",
-              "If you want to accept cash with OpenEOS, you need a TSE. The <integration>TSE integration</integration> is in progress.",
-              "You can still use cashless mode, for example if your tills should only accept cards. It blocks cash everywhere in OpenEOS:",
+              "Yes. In Germany you choose one of two operating modes in which there is no cash in OpenEOS:",
               [
-                "no cash payments at the register",
-                "no cash refunds",
-                "no cash payout of deposits (Pfand)"
+                "<b>“Orders only” (Nur Bons):</b> take orders, kitchen, pickup and order tickets – without prices and without payments. Payment happens outside OpenEOS, e.g. with an open cash box or tokens.",
+                "<b>“Cashless” (Bargeldlos):</b> all features with card payments (SumUp) and online prepayment. There is no cash in OpenEOS."
               ],
-              "Card payments via SumUp as well as online and prepaid payments keep working."
+              "According to the German Federal Ministry of Finance, a cash register function already exists if your club can switch cash on itself. That is why the third operating mode, <b>“All features”</b> with cash, can only be chosen in Germany with an active cloud TSE. You can switch between “Orders only” and “Cashless” yourself at any time under Settings → Organization → Operating mode – that does not bring cash back.",
+              "For your system documentation (Verfahrensdokumentation) you can download a manufacturer certificate (PDF) in both modes. It confirms that cash cannot be recorded in your organization and is only possible with an active certified TSE. In individual cases your tax office decides.",
+              "If you want to accept cash with OpenEOS, you need a TSE. The <integration>TSE integration</integration> is in preparation. More about all three operating modes in the <modesdocs>documentation</modesdocs>."
             ]
           },
           "nur-bestellen": {
             "q": "Can I use OpenEOS for ordering only?",
             "a": [
-              "Yes, with the <b>“Order only”</b> operating mode (Nur Bestellen). OpenEOS then takes orders and passes them on to your stations, for example the kitchen and the bar. At the counter you close an order with “Picked up”, in table service with “Close table”. There is no cash register module in this mode: cash can neither be accepted in OpenEOS nor switched on by your club itself.",
-              "On site, you take payment outside OpenEOS, for example with an <ladenkasse>open cash box</ladenkasse>. Its record-keeping obligations still apply. Prepayment in the online shop stays possible: your guests can still pay online in advance there.",
-              "Only our support can switch this mode on or off, not your club. For your system documentation you get a certificate from us as the manufacturer stating that your club cannot switch cash on itself. According to the German Federal Ministry of Finance, ordering systems without a cash register module are not subject to the TSE requirement.",
-              "How to get this mode and what exactly it covers is described in the <orderdocs>documentation</orderdocs>. Or <contact>write to us</contact>."
+              "Yes, with the <b>“Orders only”</b> operating mode (Nur Bons): take orders, kitchen, pickup and order tickets – without prices and without payments. Payment happens outside OpenEOS, e.g. with an open cash box or tokens.",
+              "OpenEOS takes the orders and passes them on to your stations, for example the kitchen and the bar. At the counter you complete an order with “Picked up”, in table service with “Close table”. The till, tickets and customer display show no prices, reports show quantities only. Orders in the online shop or via QR code, deposits and discounts are not available in this mode; the shop shows “orders on site only”.",
+              "The money you take on site is subject to the record-keeping obligations of an <ladenkasse>open cash box</ladenkasse>.",
+              "As an admin you choose the operating mode yourself under Settings → Organization → Operating mode and can switch it at any time. According to the German Federal Ministry of Finance, ordering systems without a cash register module are not subject to the TSE requirement. In Germany you get a manufacturer certificate for your system documentation.",
+              "What exactly the mode covers is described in the <modesdocs>documentation</modesdocs>. Or <contact>write to us</contact>."
             ]
           },
           "bargeld": {
             "q": "Can I still accept cash with OpenEOS?",
             "a": [
-              "That depends on your organization’s country. In Germany a register that can accept cash needs a <tse>TSE</tse>, and the TSE integration for OpenEOS is still in progress.",
-              "<b>New organizations in Germany</b> therefore use OpenEOS with “Germany without cash”: cash is blocked in OpenEOS and your club cannot switch it on. Card and online payments keep working. You take cash in an <ladenkasse>open cash box</ladenkasse> and close the order at the till with “Close without payment”. A manufacturer certificate is available for your records.",
-              "<b>Organizations that existed before</b> keep working as before – cash payment stays possible. Whether you record cash in OpenEOS without a TSE is then your own decision; ideally check with your tax advisor. You can switch to “Germany without cash” voluntarily at any time.",
-              "Cashless mode does not change the TSE requirement, because you can switch cash back on yourself. Without a TSE you can also use OpenEOS in <order>“Order only”</order> mode. For Austria, Switzerland and other countries see <laender>Does this also apply in Austria and Switzerland?</laender>"
+              "Yes, with the <b>“All features”</b> operating mode (Alle Funktionen): cash, card and online payment. Whether you can choose it depends on your organization’s country.",
+              "<b>In Germany</b> a register that can accept cash needs a <tse>TSE</tse>. “All features” is therefore only available there with an active cloud TSE; the integration is in preparation. Until then you choose <notse>“Orders only” or “Cashless”</notse> and take cash outside OpenEOS, for example in an <ladenkasse>open cash box</ladenkasse>.",
+              "<b>Organizations that existed before</b> keep working as before as “All features (existing)” – also in Germany, until you pick an operating mode. A notice in the dashboard and in the settings explains the TSE requirement and asks you to choose the country and operating mode. Whether you record cash in OpenEOS without a TSE until then is your own decision; ideally check with your tax advisor. Once you pick another mode in Germany, you can only go back to “All features” with an active TSE.",
+              "<b>In Austria, Switzerland and other countries</b> you can choose “All features” without a TSE as well. What applies there is described under <laender>Does this also apply in Austria and Switzerland?</laender>"
             ]
           },
           "laender": {
             "q": "Does this also apply in Austria and Switzerland?",
             "a": [
-              "No, the TSE requirement is a German rule – other countries have their own regulations. That is why OpenEOS asks every organization for its country and shows you a matching notice. The “Germany without cash” lock only applies to new organizations in Germany; in Austria, Switzerland and all other countries you can record cash as before.",
-              "<b>Austria:</b> The cash register obligation (RKSV) applies from €15,000 annual turnover per business if more than €7,500 of it is cash turnover. Card payments count as cash turnover in Austria. OpenEOS currently creates no RKSV signature. Exemptions exist, for example, for small festivals of non-profit clubs of up to 72 hours per calendar year and for canteens of non-profit clubs up to €45,000 annual turnover (net, on at most 52 days a year; limit since 2026). More on the <usp>Austrian business service portal (USP)</usp>.",
+              "No, the TSE requirement is a German rule – other countries have their own regulations. That is why every organization in OpenEOS has a country. It is required: new organizations choose it when registering or when they are created, existing ones are asked once. After that only our support can change it.",
+              "Outside Germany you can choose all three operating modes freely – “All features” with cash also without a TSE.",
+              "<b>Austria:</b> The cash register obligation (RKSV) applies from €15,000 annual turnover per business if more than €7,500 of it is cash turnover. Card payments count as cash turnover in Austria – also in the “Cashless” mode. OpenEOS currently creates no RKSV signature. Exemptions exist, for example, for small festivals of non-profit clubs of up to 72 hours per calendar year and for canteens of non-profit clubs up to €45,000 annual turnover (net, on at most 52 days a year; limit since 2026). More on the <usp>Austrian business service portal (USP)</usp>.",
               "<b>Switzerland:</b> To our knowledge there is no general cash register or fiscalisation obligation. Record-keeping and VAT rules still apply to clubs.",
-              "<b>Other countries:</b> Many countries have their own rules for tills (e.g. Italy, France, Poland, Czechia).",
-              "In any case, check yourself or with your tax advisor whether OpenEOS is permissible for your club and which obligations apply. More in the <countrydocs>documentation</countrydocs>."
+              "<b>Other countries:</b> Many countries have their own rules for tills (e.g. Italy, France, Poland, Czechia). Check yourself whether OpenEOS is permissible for you there.",
+              "In any case, check yourself or with your tax advisor whether OpenEOS is permissible for your club and which obligations apply. This is not tax advice. More in the <modesdocs>documentation</modesdocs>."
             ]
           },
           "offene-ladenkasse": {
@@ -742,11 +742,11 @@
           "tse-integration": {
             "q": "What’s next – when is the TSE coming?",
             "a": [
-              "We are working on a cloud TSE integration. It is meant to let you accept cash with OpenEOS without buying extra hardware. We are not giving a date yet. As soon as it’s ready, we’ll announce it under <changelog>What’s new</changelog>."
+              "We are working on a cloud TSE integration. It is meant to let you choose the “All features” operating mode in Germany and accept cash with OpenEOS without buying extra hardware. We are not giving a date yet. As soon as it’s ready, we’ll announce it under <changelog>What’s new</changelog>."
             ]
           }
         },
-        "note": "General information, not tax or legal advice. As of 1 November 2026. Whether and how the rules apply to your club is best clarified with your tax advisor."
+        "note": "General information, not tax or legal advice. As of 2 November 2026. Whether and how the rules apply to your club is best clarified with your tax advisor."
       },
       "allgemein": {
         "title": "General",
