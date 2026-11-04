@@ -4,16 +4,20 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  /* Deutsche Adressen fuer die Rechtstexte.
-     Die Routen heissen englisch (privacy, imprint, terms). Wer die
-     deutsche Adresse eintippt — und in Impressumsangaben steht sie oft —
-     landete bisher auf einer 404. */
+  /* Die Rechtstexte stehen unter ihren deutschen Adressen (/agb, /avv,
+     /datenschutz, /impressum) — andere Teile von OpenEOS verlinken
+     darauf. Die frueheren englischen Routen leiten dauerhaft weiter,
+     auch mit Sprache (/en/terms) und Fassung (/terms/2026-11-04). */
   async redirects() {
-    return [
-      { source: '/datenschutz', destination: '/privacy', permanent: true },
-      { source: '/impressum', destination: '/imprint', permanent: true },
-      { source: '/agb', destination: '/terms', permanent: true },
+    const moved: [string, string][] = [
+      ["terms", "agb"],
+      ["privacy", "datenschutz"],
+      ["imprint", "impressum"],
     ];
+    return moved.flatMap(([from, to]) => [
+      { source: `/${from}/:path*`, destination: `/${to}/:path*`, permanent: true },
+      { source: `/en/${from}/:path*`, destination: `/en/${to}/:path*`, permanent: true },
+    ]);
   },
 
   output: "standalone",

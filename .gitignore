@@ -43,3 +43,6 @@ next-env.d.ts
 
 # OMC working directory (anywhere — one slipped into public/ once and was served)
 .omc/
+
+# Rechtstexte-PDFs: beim Bauen aus content/legal erzeugt (scripts/build-legal.mjs)
+/public/rechtstexte/

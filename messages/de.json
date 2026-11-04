@@ -373,161 +373,46 @@
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "terms": "AGB",
+    "dpa": "AVV",
     "copyright": "© {year} LUXCODE by Lukas Lukic-Spitznagel · OpenEOS",
     "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel",
     "feedback": "Feedback & Wünsche",
     "screens": "Einblicke",
     "faq": "Häufige Fragen"
   },
-  "imprint": {
-    "title": "Impressum",
-    "responsible": {
-      "title": "Angaben gemäß § 5 DDG"
-    },
-    "contact": {
-      "title": "Kontakt"
-    },
-    "editorial": {
-      "title": "Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV",
-      "content": "Verantwortlich für journalistisch-redaktionelle Inhalte auf dieser Website ist die unter „Angaben gemäß § 5 DDG“ genannte Person bzw. der dort genannte gesetzliche Vertreter."
-    },
-    "dispute": {
-      "title": "Verbraucherstreitbeilegung",
-      "content": "Wir sind nicht bereit und nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
-    },
-    "disclaimer": {
-      "title": "Haftungsausschluss",
-      "liability": {
-        "title": "Haftung für Inhalte",
-        "content": "Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen."
+  "legal": {
+    "docs": {
+      "impressum": {
+        "label": "Impressum",
+        "metaTitle": "Impressum — OpenEOS",
+        "metaDescription": "Anbieterkennzeichnung von OpenEOS (LUXCODE by Lukas Lukic-Spitznagel)."
       },
-      "links": {
-        "title": "Haftung für Links",
-        "content": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich."
+      "datenschutz": {
+        "label": "Datenschutz",
+        "metaTitle": "Datenschutzerklärung — OpenEOS",
+        "metaDescription": "Wie OpenEOS personenbezogene Daten verarbeitet: Website, Kundenkonto, Zahlungen, Cloud-TSE und deine Rechte."
+      },
+      "agb": {
+        "label": "AGB",
+        "metaTitle": "Allgemeine Geschäftsbedingungen (AGB) — OpenEOS",
+        "metaDescription": "Allgemeine Geschäftsbedingungen für die Nutzung von OpenEOS als Software-as-a-Service."
+      },
+      "avv": {
+        "label": "AVV",
+        "metaTitle": "Auftragsverarbeitungsvertrag (AVV) — OpenEOS",
+        "metaDescription": "Auftragsverarbeitungsvertrag nach Art. 28 DSGVO (Anlage 2 zu den AGB) mit Unterauftragsverarbeitern und TOM."
       }
     },
-    "copyright": {
-      "title": "Urheberrecht",
-      "content": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
-    }
-  },
-  "privacy": {
-    "title": "Datenschutzerklärung",
-    "lastUpdated": "Stand: Oktober 2026",
-    "overview": {
-      "title": "1. Datenschutz auf einen Blick",
-      "content": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen oder die OpenEOS-Plattform nutzen (Web-App unter app.openeos.de, Online-Shop unter shop.openeos.de und Dokumentation unter docs.openeos.de). Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."
-    },
-    "responsible": {
-      "title": "2. Verantwortliche Stelle"
-    },
-    "dataCollection": {
-      "title": "3. Datenerfassung auf dieser Website",
-      "server": {
-        "title": "Server-Log-Dateien",
-        "content": "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind: Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Details zur Verarbeitung durch unseren Hoster und durch Cloudflare finden Sie in den Abschnitten 4 und 6."
-      },
-      "cookies": {
-        "title": "Cookies und lokale Speicherung",
-        "content": "Diese Website setzt keine Tracking- oder Analyse-Cookies und keine Werbe-Cookies ein. Verwendet werden ausschließlich technisch notwendige Daten: Ihre Spracheinstellung wird über ein Cookie (NEXT_LOCALE) gespeichert, Ihre Theme-Präferenz (hell/dunkel) im lokalen Speicher (localStorage) Ihres Browsers. Wenn Sie die OpenEOS-Plattform nutzen, kommen technisch notwendige Cookies für die Anmeldung hinzu sowie ein Cookie (openeos_server), das Ihre Anfragen während einer Sitzung demselben Server-Prozess zuordnet; Angaben zur Sitzung und zu Geräteeinstellungen werden im lokalen Speicher Ihres Browsers abgelegt. All dies dient allein der Bereitstellung der Website und der Plattform entsprechend Ihren Einstellungen und wird nicht zu Analyse- oder Werbezwecken ausgewertet. Für diese rein technisch notwendigen Zwecke ist keine gesonderte Einwilligung erforderlich (§ 25 Abs. 2 TDDDG, Art. 6 Abs. 1 lit. f DSGVO)."
-      },
-      "contact": {
-        "title": "Kontaktaufnahme",
-        "content": "Wenn Sie uns per E-Mail oder über ein Formular dieser Website (z. B. Kontakt, Demo-Anfrage oder Rückmeldung) kontaktieren, verarbeiten wir Ihre Angaben (Name, E-Mail-Adresse, ggf. Organisation und Ihre Nachricht) zur Bearbeitung der Anfrage und für Anschlussfragen. Formularanfragen werden in unserer Datenbank gespeichert und uns per E-Mail über unseren eigenen Mailserver gemeldet (siehe Abschnitt 8). Nachrichten, die Sie über den Support-Chat der OpenEOS-Plattform senden, und die Antworten des Supports werden ebenfalls in unserer Datenbank gespeichert; über neue Nachrichten werden wir per E-Mail benachrichtigt. Darüber hinaus geben wir diese Daten nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO."
-      },
-      "account": {
-        "title": "Registrierung und Kundenkonto",
-        "content": "Wenn Sie sich für die OpenEOS-Plattform registrieren oder eine Organisation anlegen, erheben und speichern wir die zur Vertragsdurchführung erforderlichen Bestandsdaten (z. B. Name, E-Mail-Adresse und Organisationsangaben, bei Bestellungen auch die Rechnungsanschrift). Die Verarbeitung erfolgt zur Erfüllung des Nutzungsvertrags gemäß Art. 6 Abs. 1 lit. b DSGVO. An Dritte geben wir diese Daten nur weiter, soweit dies zur Vertragserfüllung erforderlich ist (siehe Abschnitte 8 und 9)."
-      }
-    },
-    "hosting": {
-      "title": "4. Hosting bei IONOS SE",
-      "content": "Die Website, die Web-App, der Online-Shop, die Dokumentation und die Programmierschnittstelle (api.openeos.de) der OpenEOS-Plattform einschließlich der Datenbank werden auf einem Server der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, betrieben. Beim Aufruf erhebt und speichert unser Hoster automatisch Server-Logfiles, die Ihr Browser übermittelt (u. a. IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite, Browsertyp und -version). Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO, der IONOS dazu verpflichtet, die Daten unserer Websitebesucher ausschließlich nach unseren Weisungen und zu den vertraglich vereinbarten Zwecken zu verarbeiten und angemessen zu schützen."
-    },
-    "ssl": {
-      "title": "11. SSL-/TLS-Verschlüsselung",
-      "content": "Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile Ihres Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile."
-    },
-    "storage": {
-      "title": "12. Speicherdauer",
-      "content": "Sofern innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Kontaktanfragen löschen wir, sobald diese abschließend bearbeitet sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Daten aus einem Kundenkonto werden für die Dauer der Vertragsbeziehung sowie darüber hinaus entsprechend der handels- und steuerrechtlichen Aufbewahrungsfristen (in der Regel 6 bzw. 10 Jahre) gespeichert."
-    },
-    "rights": {
-      "title": "13. Ihre Rechte",
-      "content": "Sie haben jederzeit das Recht:\n• Auskunft über Ihre bei uns gespeicherten Daten zu erhalten\n• Diese Daten berichtigen oder löschen zu lassen\n• Die Verarbeitung einzuschränken\n• Der Verarbeitung zu widersprechen\n• Ihre Daten in einem übertragbaren Format zu erhalten\n• Eine Beschwerde bei einer Aufsichtsbehörde einzureichen"
-    },
-    "changes": {
-      "title": "14. Änderungen",
-      "content": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung."
-    },
-    "backup": {
-      "title": "5. Sicherungen bei Hetzner",
-      "content": "Sicherungskopien der Datenbank und der für eine Wiederherstellung nötigen Dateien werden einmal täglich verschlüsselt (AES-256) in eine Storage Box der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, übertragen; sie steht in einem Rechenzentrum in Deutschland. Die Sicherungen enthalten dieselben Daten wie das laufende System und dienen allein dazu, nach einem Ausfall oder einem Fehler den Betrieb wiederherzustellen. Auf der Storage Box werden die täglichen Sicherungen 14 Tage und die wöchentlichen acht Wochen aufbewahrt; danach werden sie automatisch gelöscht. Zusätzlich bleiben die beiden jüngsten Sicherungen verschlüsselt auf unserem Server bei IONOS. Mit Hetzner besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO."
-    },
-    "proxy": {
-      "title": "6. Cloudflare (DNS und vorgeschalteter Dienst)",
-      "content": "Die Namensauflösung (DNS) für openeos.de und alle Unteradressen erfolgt über Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Außerdem ist Cloudflare dieser Website (openeos.de), der Web-App (app.openeos.de), dem Online-Shop (shop.openeos.de) und der Dokumentation (docs.openeos.de) vorgeschaltet: Cloudflare leitet die Anfragen an unseren Server weiter, liefert unveränderliche Dateien wie Skripte und Stylesheets aus seinem Zwischenspeicher aus und wehrt Überlastungsangriffe ab. Dabei verarbeitet Cloudflare technisch notwendige Daten, insbesondere Ihre IP-Adresse und die aufgerufene Adresse. Anfragen an die Programmierschnittstelle (api.openeos.de) sowie an die Adressen für Anzeigen und Drucker (display.openeos.de, printer.openeos.de) laufen nicht über Cloudflare, sondern direkt zu unserem Server; hier beantwortet Cloudflare nur die DNS-Anfrage. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und verfügbaren Angebot (Art. 6 Abs. 1 lit. f DSGVO). Mit Cloudflare besteht ein Vertrag zur Auftragsverarbeitung. Da Cloudflare seinen Sitz in den USA hat, kann es zu einer Übermittlung in ein Drittland kommen; diese stützt sich auf die Standardvertragsklauseln der EU-Kommission sowie die Zertifizierung von Cloudflare nach dem EU-US Data Privacy Framework."
-    },
-    "errors": {
-      "title": "7. Fehlerdiagnose mit Sentry",
-      "content": "Damit Störungen erkannt und behoben werden können, übermitteln die Server der Web-App (app.openeos.de) und der Programmierschnittstelle (api.openeos.de) Diagnosedaten an Sentry, einen Dienst der Functional Software, Inc., 45 Fremont Street, San Francisco, CA 94105, USA. Tritt bei der Verarbeitung einer Anfrage ein Fehler auf, entsteht ein Fehlerbericht mit technischen Angaben zum Vorgang: die aufgerufene Adresse, Angaben aus der Anfrage (z. B. Browser und Betriebssystem), der Zeitpunkt sowie gegebenenfalls Ihre IP-Adresse; sind Sie angemeldet, enthalten Fehlerberichte der Programmierschnittstelle zusätzlich Ihre Nutzerkennung und E-Mail-Adresse. Außerdem werden zu Anfragen an diese Server Leistungsdaten übermittelt (aufgerufene Adresse, Ablauf und Dauer der Verarbeitung), auch wenn kein Fehler auftritt. Aus Ihrem Browser werden keine Daten an Sentry gesendet, und Ihre Sitzungen werden nicht aufgezeichnet. Die Daten werden in der EU-Datenregion von Sentry gespeichert. Rechtsgrundlage ist unser berechtigtes Interesse an einem stabilen und sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Mit Sentry besteht ein Vertrag zur Auftragsverarbeitung. Da Sentry seinen Sitz in den USA hat, kann es zu einer Übermittlung in ein Drittland kommen; diese stützt sich auf die Standardvertragsklauseln der EU-Kommission."
-    },
-    "email": {
-      "title": "8. E-Mail-Versand",
-      "content": "E-Mails der OpenEOS-Plattform (z. B. Anmelde- und Bestätigungscodes, Einladungen, Benachrichtigungen, Nachrichten zu Helferschichten und Bestellbestätigungen des Online-Shops) versenden wir über einen eigenen Mailserver; über ihn laufen auch E-Mails, die Sie an Adressen unter openeos.de senden. Der Mailserver wird bei der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, in einem Rechenzentrum in Finnland (EU) betrieben. Verarbeitet werden Absender- und Empfängeradresse, Betreff und Inhalt der Nachricht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, bei Anfragen und Benachrichtigungen ergänzend Art. 6 Abs. 1 lit. f DSGVO. Mit Hetzner besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO."
-    },
-    "payment": {
-      "title": "9. Bezahlung mit Stripe",
-      "content": "Wird eine Veranstaltung per Karte oder Lastschrift freigeschaltet, erfolgt die Zahlung über Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, D02 H210, Irland. Dazu übermitteln wir an Stripe den Namen der Organisation, die Rechnungs-E-Mail-Adresse (ersatzweise die E-Mail-Adresse des bestellenden Nutzers), den Betrag, eine Beschreibung der Leistung sowie interne Kennungen der Organisation und der Veranstaltung. Ihre Zahlungsdaten (z. B. Karten- oder Kontodaten) geben Sie direkt auf der Bezahlseite von Stripe ein; sie werden nicht an uns übermittelt. Stripe erstellt auch die Rechnung, die Sie im Kundenkonto abrufen können. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Stripe kann Daten auch an Stripe, Inc. in den USA übermitteln und stützt dies auf das EU-US Data Privacy Framework sowie auf Standardvertragsklauseln der EU-Kommission. Weitere Informationen finden Sie in der Datenschutzerklärung von Stripe unter https://stripe.com/de/privacy."
-    },
-    "organizations": {
-      "title": "10. Daten von Gästen und Helfern; Kartenzahlung mit SumUp",
-      "content": "Organisationen nutzen die OpenEOS-Plattform, um Bestellungen ihrer Gäste aufzunehmen (an der Kasse oder über den Online-Shop) und ihre Helferschichten zu planen. Für diese Daten – z. B. Bestellungen, bei Bestellungen im Online-Shop Ihre E-Mail-Adresse und ggf. Ihr Name für die Bestellbestätigung, bei Helfern Name, E-Mail-Adresse und Schichten – ist die jeweilige Organisation verantwortlich; wir verarbeiten sie in ihrem Auftrag (Art. 28 DSGVO). Hat eine Organisation ihr eigenes SumUp-Konto verbunden, werden Kartenzahlungen an der Kasse und im Online-Shop über SumUp abgewickelt. Die Plattform übermittelt an SumUp dabei nur Betrag, Währung, eine Beschreibung und eine Vorgangsnummer; Ihre Kartendaten geben Sie direkt am Kartenterminal oder auf der Bezahlseite von SumUp ein. Verantwortlich für diese Zahlungen ist die jeweilige Organisation; Informationen zur Datenverarbeitung erhalten Sie bei ihr."
-    }
-  },
-  "terms": {
-    "title": "Allgemeine Geschäftsbedingungen",
-    "lastUpdated": "Stand: Oktober 2026",
-    "scope": {
-      "title": "1. Geltungsbereich",
-      "content": "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen OpenEOS (nachfolgend \"Anbieter\") und dem Kunden über die Nutzung der OpenEOS Software-as-a-Service (SaaS) Plattform sowie damit verbundener Dienstleistungen."
-    },
-    "services": {
-      "title": "2. Leistungsbeschreibung",
-      "content": "Der Anbieter stellt dem Kunden eine webbasierte Kassensystem-Lösung (POS) zur Verfügung. Die Leistungen umfassen:\n• Zugang zur OpenEOS Plattform\n• Hosting und Wartung der Infrastruktur\n• Regelmäßige Updates und Sicherheitspatches\n• Support (bei SaaS-Tarifen)\n• Datensicherung und Backup"
-    },
-    "registration": {
-      "title": "3. Registrierung und Vertragsschluss",
-      "content": "Die Registrierung erfolgt durch Anlegen einer Organisation auf der Plattform. Mit Abschluss der Registrierung kommt ein Vertrag zwischen dem Kunden und dem Anbieter zustande. Der Kunde versichert, dass alle angegebenen Daten korrekt und vollständig sind."
-    },
-    "pricing": {
-      "title": "4. Preise und Tarife",
-      "content": "Es gelten die zum Zeitpunkt der Buchung auf der Website ausgewiesenen Preise:\n• SaaS: 25 € pro Event-Tag\n• Starterbonus: 20 % Nachlass auf den Preis der ersten Veranstaltung einer Organisation, die bezahlt oder auf Rechnung bestellt wird (für alle Tage dieser Veranstaltung). Ist für die Organisation ein individueller Nachlass vereinbart, gilt nur der höhere der beiden Nachlässe.\n\nEin Veranstaltungstag (Event-Tag) beginnt um 6:00 Uhr und endet um 6:00 Uhr des Folgetags (Ortszeit der Organisation).\n\nAlle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer."
-    },
-    "payment": {
-      "title": "5. Zahlung",
-      "content": "Veranstaltungstage werden vor ihrer Nutzung bezahlt. Eine neu angelegte Veranstaltung startet im Testmodus und kann darin mit bis zu 25 Bestellungen kostenlos genutzt werden. Vor dem Freischalten wird der zu zahlende Betrag angezeigt (Anzahl der Veranstaltungstage × Tagespreis, abzüglich eines etwaigen Nachlasses). Die Freischaltung erfolgt gegen Zahlung dieses Betrags per Karte oder Lastschrift über den Zahlungsdienstleister Stripe. Beim Freischalten werden die Testbestellungen gelöscht; die Einrichtung der Veranstaltung (z. B. Produkte, Preise, Geräte und Drucker) bleibt erhalten. Die Rechnung wird automatisch per E-Mail versandt und steht zusätzlich im Kundenkonto unter „Rechnungen“ zum Herunterladen bereit.\n\nAbweichend kann im Einzelfall die Zahlung auf Rechnung vereinbart werden. Dann wird die Veranstaltung bereits mit der Bestellung freigeschaltet; der Betrag wird wie oben berechnet. Die Rechnung wird gesondert gestellt und ist innerhalb der darin genannten Frist zu zahlen."
-    },
-    "obligations": {
-      "title": "6. Pflichten des Kunden",
-      "content": "Der Kunde verpflichtet sich:\n• Die Zugangsdaten vertraulich zu behandeln\n• Die Plattform nicht missbräuchlich zu nutzen\n• Keine rechtswidrigen Inhalte zu verarbeiten\n• Die geltenden Datenschutzbestimmungen einzuhalten\n• Für die Richtigkeit der eingegebenen Daten zu sorgen"
-    },
-    "liability": {
-      "title": "7. Haftung",
-      "content": "Der Anbieter haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie für vorsätzlich oder grob fahrlässig verursachte Schäden. Im Übrigen ist die Haftung auf vorhersehbare, vertragstypische Schäden begrenzt. Eine Haftung für entgangenen Gewinn, mittelbare Schäden oder Datenverlust ist ausgeschlossen, soweit gesetzlich zulässig."
-    },
-    "termination": {
-      "title": "8. Vertragslaufzeit und Kündigung",
-      "content": "Der Vertrag wird auf unbestimmte Zeit geschlossen. Beide Parteien können den Vertrag jederzeit mit einer Frist von 14 Tagen zum Monatsende kündigen. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
-    },
-    "changes": {
-      "title": "9. Änderungen der AGB",
-      "content": "Der Anbieter behält sich vor, diese AGB zu ändern. Änderungen werden dem Kunden mindestens 30 Tage vor Inkrafttreten mitgeteilt. Widerspricht der Kunde nicht innerhalb von 14 Tagen nach Zugang der Mitteilung, gelten die geänderten AGB als angenommen."
-    },
-    "jurisdiction": {
-      "title": "10. Schlussbestimmungen",
-      "content": "Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten aus diesem Vertrag ist, soweit gesetzlich zulässig, der Sitz des Anbieters. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
-    }
+    "downloadPdf": "PDF herunterladen",
+    "print": "Drucken",
+    "contents": "Inhalt",
+    "versions": "Fassungen",
+    "currentLabel": "aktuell",
+    "pdf": "PDF",
+    "archived": "Archivierte Fassung vom {date} – aktuelle Fassung: <link>{current}</link>",
+    "clauseAnchor": "Link zu Ziffer {number}",
+    "headingAnchor": "Link zu „{text}“",
+    "table": "Tabelle (seitlich scrollbar)"
   },
   "changelog": {
     "metaTitle": "Neuerungen — OpenEOS",

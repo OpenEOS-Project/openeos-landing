@@ -2254,7 +2254,7 @@
 }
 
 /* ===================== RECHTSTEXTE =====================
-   Impressum, Datenschutz, AGB: derselbe Rahmen und derselbe Abstand
+   Impressum, Datenschutz, AGB, AVV: derselbe Rahmen und derselbe Abstand
    unter der Navigation wie Neuerungen und Feedback. Der Text selbst
    behaelt das Lesemass. */
 .landing .legal {
@@ -2263,6 +2263,190 @@
 }
 .landing .legal__article {
   max-width: var(--measure);
+}
+
+/* Hinweise ueber dem Text: archivierte Fassung, nur auf Deutsch. */
+.landing .legal-banner {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin: 0 0 14px;
+  padding: 12px 16px;
+  border-radius: var(--r);
+  border: 1px solid color-mix(in oklab, #b26b00 35%, transparent);
+  background: color-mix(in oklab, #f5b13d 16%, var(--paper));
+  font-size: 14px; line-height: 1.5;
+}
+.landing .legal-banner svg { width: 18px; height: 18px; flex: none; margin-top: 1px; }
+.landing .legal-banner a { text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
+.landing .legal-banner--info {
+  border-color: color-mix(in oklab, var(--ink) 14%, transparent);
+  background: color-mix(in oklab, var(--ink) 4%, var(--paper));
+}
+
+.landing .legal-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 20px; }
+
+.landing .legal-toc {
+  margin: 0 0 28px;
+  border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  border-radius: var(--r);
+  font-size: 14px;
+}
+.landing .legal-toc summary {
+  cursor: pointer; padding: 10px 16px; font-weight: 600;
+}
+.landing .legal-toc ol { padding: 0 16px 12px; margin: 0; list-style: none; }
+.landing .legal-toc li { padding: 3px 0; }
+.landing .legal-toc a { color: var(--mute); }
+.landing .legal-toc a:hover { color: var(--ink); text-decoration: underline; }
+.landing .legal-toc__d1 { font-weight: 600; margin-top: 6px; }
+.landing .legal-toc__d1 a { color: var(--ink); }
+.landing .legal-toc__d2 { padding-left: 14px !important; }
+
+/* Der Text selbst (aus Markdown). */
+.landing .legal-doc {
+  font-size: 16px; line-height: 1.65;
+  overflow-wrap: break-word;
+}
+.landing .legal-doc [id] { scroll-margin-top: 96px; }
+.landing .legal-doc h1,
+.landing .legal-doc h2,
+.landing .legal-doc h3,
+.landing .legal-doc h4 {
+  position: relative;
+  font-family: var(--f-display);
+  letter-spacing: -0.02em; line-height: 1.2;
+}
+.landing .legal-doc h1 { font-size: clamp(30px, 4.4vw, 42px); font-weight: 800; margin: 56px 0 18px; }
+.landing .legal-doc h1:first-child { margin-top: 0; }
+/* Weitere Ueberschriften erster Ordnung sind Teile (AGB Teil A–C). */
+.landing .legal-doc h1:not(:first-child) { font-size: clamp(24px, 3vw, 30px); font-weight: 800; }
+.landing .legal-doc h2 { font-size: 22px; font-weight: 700; margin: 40px 0 12px; }
+.landing .legal-doc h3 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; }
+.landing .legal-doc h4 { font-size: 16px; font-weight: 700; margin: 22px 0 8px; }
+.landing .legal-doc p { margin: 0 0 14px; }
+.landing .legal-doc p.legal-sub { padding-left: 1.5em; }
+.landing .legal-doc strong { font-weight: 650; }
+.landing .legal-doc a { text-decoration: underline; text-underline-offset: 2px; text-decoration-color: color-mix(in oklab, var(--ink) 35%, transparent); }
+.landing .legal-doc a:hover { text-decoration-color: currentColor; }
+.landing .legal-doc ul,
+.landing .legal-doc ol { margin: 0 0 16px; padding-left: 1.4em; }
+.landing .legal-doc ul { list-style: disc; }
+.landing .legal-doc ol { list-style: decimal; }
+.landing .legal-doc li { margin: 4px 0; }
+.landing .legal-doc hr {
+  border: 0; border-top: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  margin: 32px 0;
+}
+
+/* #-Links an Ziffern und Ueberschriften: unsichtbar, bis man darauf zeigt
+   oder sie per Tastatur erreicht; ein angesprungenes Ziel ist markiert. */
+.landing .legal-doc .legal-clause { position: relative; }
+.landing .legal-doc .legal-anchor {
+  position: absolute; left: -1.1em; top: 0;
+  width: 1em; text-align: center;
+  color: var(--mute); font-weight: 500;
+  text-decoration: none;
+  opacity: 0; transition: opacity .15s;
+}
+.landing .legal-doc h1 .legal-anchor,
+.landing .legal-doc h2 .legal-anchor,
+.landing .legal-doc h3 .legal-anchor,
+.landing .legal-doc h4 .legal-anchor { position: static; margin-left: .2em; font-size: .7em; vertical-align: middle; }
+.landing .legal-doc .legal-anchor:hover { color: var(--green-ink); }
+.landing .legal-doc .legal-anchor:focus-visible { opacity: 1; outline: 2px solid var(--green-ink); outline-offset: 2px; border-radius: 4px; }
+.landing .legal-doc :is(p, h1, h2, h3, h4):hover > .legal-anchor { opacity: 1; }
+.landing .legal-doc :is(p, h1, h2, h3, h4):target {
+  background: color-mix(in oklab, var(--green) 18%, transparent);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--green) 18%, transparent);
+  border-radius: 4px;
+}
+.landing .legal-doc :is(p, h1, h2, h3, h4):target > .legal-anchor { opacity: 1; }
+@media (hover: none) {
+  /* Auf Touch-Geraeten gibt es kein Zeigen: dezent dauerhaft sichtbar. */
+  .landing .legal-doc .legal-clause > .legal-anchor { opacity: .35; }
+}
+
+/* Tabellen (AVV): auf schmalen Bildschirmen seitlich scrollbar. */
+.landing .legal-table {
+  margin: 0 0 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  border-radius: var(--r-sm);
+}
+/* Breite Fenster: Tabellen duerfen ueber das Lesemass hinaus. */
+@media (min-width: 1100px) {
+  .landing .legal-table { width: min(1080px, calc(100vw - 2 * var(--pad))); }
+}
+.landing .legal-table:focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
+.landing .legal-table table {
+  width: 100%; min-width: 640px;
+  border-collapse: collapse;
+  font-size: 14px; line-height: 1.5;
+  hyphens: auto;
+}
+.landing .legal-table th,
+.landing .legal-table td {
+  padding: 8px 12px;
+  text-align: left; vertical-align: top;
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
+}
+.landing .legal-table th {
+  hyphens: manual; white-space: nowrap;
+  font-weight: 650;
+  background: color-mix(in oklab, var(--ink) 5%, transparent);
+}
+.landing .legal-table tr:last-child td { border-bottom: 0; }
+.landing .legal-table td + td,
+.landing .legal-table th + th { border-left: 1px solid color-mix(in oklab, var(--ink) 8%, transparent); }
+
+.landing .legal-versions {
+  margin-top: 48px; padding-top: 20px;
+  border-top: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  font-size: 14px; color: var(--mute);
+}
+.landing .legal-versions h2 { font-size: 14px; font-weight: 600; color: var(--ink); margin: 0 0 8px; }
+.landing .legal-versions li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; padding: 2px 0; }
+.landing .legal-versions a { text-decoration: underline; text-underline-offset: 2px; }
+.landing .legal-versions strong { color: var(--ink); font-weight: 600; }
+.landing .legal-versions__tag {
+  font-family: var(--f-mono); font-size: 11px;
+  padding: 1px 6px; border-radius: 999px;
+  background: color-mix(in oklab, var(--green) 30%, transparent);
+  color: var(--green-ink);
+}
+
+/* Druck: nur der Text, schwarz auf weiss. */
+@media print {
+  @page { size: A4; margin: 18mm 16mm; }
+  .landing { background: #fff !important; color: #000 !important; min-height: 0; }
+  .landing .grain,
+  .landing .nav,
+  .landing .foot,
+  .landing .legal-actions,
+  .landing .legal-toc,
+  .landing .legal-versions,
+  .landing .legal-banner--info,
+  .landing .legal-anchor { display: none !important; }
+  .landing .legal { padding: 0; min-height: 0; }
+  .landing .page-wrap { padding: 0; max-width: none; }
+  .landing .legal__article { max-width: none; }
+  .landing .legal-banner { border: 1px solid #000; background: none; color: #000; }
+  .landing .legal-doc { font-size: 10.5pt; line-height: 1.45; color: #000; }
+  .landing .legal-doc h1 { font-size: 18pt; margin-top: 18pt; }
+  .landing .legal-doc h1:not(:first-child) { font-size: 15pt; }
+  .landing .legal-doc h2 { font-size: 13pt; margin-top: 14pt; }
+  .landing .legal-doc h3 { font-size: 11.5pt; }
+  .landing .legal-doc :is(h1, h2, h3, h4) { break-after: avoid; page-break-after: avoid; }
+  .landing .legal-doc p,
+  .landing .legal-doc li { orphans: 3; widows: 3; }
+  .landing .legal-doc :target { background: none !important; box-shadow: none !important; }
+  .landing .legal-doc a { color: #000; text-decoration: none; }
+  .landing .legal-table { overflow: visible; border-color: #000; width: auto !important; }
+  .landing .legal-table table { min-width: 0; font-size: 8.5pt; }
+  .landing .legal-table th { background: #eee !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .landing .legal-table th,
+  .landing .legal-table td { border-color: #999 !important; padding: 4px 6px; }
+  .landing .legal-table tr { break-inside: avoid; page-break-inside: avoid; }
 }
 
 /* ===================== HÄUFIGE FRAGEN =====================

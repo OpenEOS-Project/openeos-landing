@@ -9,9 +9,10 @@ const PAGES: { path: string; priority: number; changeFrequency: MetadataRoute.Si
   { path: "/changelog", priority: 0.6, changeFrequency: "weekly" },
   { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
   { path: "/feedback", priority: 0.4, changeFrequency: "yearly" },
-  { path: "/imprint", priority: 0.2, changeFrequency: "yearly" },
-  { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
-  { path: "/terms", priority: 0.2, changeFrequency: "yearly" },
+  { path: "/impressum", priority: 0.2, changeFrequency: "yearly" },
+  { path: "/datenschutz", priority: 0.2, changeFrequency: "yearly" },
+  { path: "/agb", priority: 0.2, changeFrequency: "yearly" },
+  { path: "/avv", priority: 0.2, changeFrequency: "yearly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

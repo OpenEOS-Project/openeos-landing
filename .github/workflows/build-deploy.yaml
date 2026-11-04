@@ -5,8 +5,12 @@ on:
     branches:
       - main
       - dev
-    paths-ignore:
-      - "**.md"
+    # Reine Doku-Aenderungen (*.md) bauen nicht neu — ausser den
+    # Rechtstexten: eine neue Fassung unter content/legal/ muss ausrollen.
+    paths:
+      - "**"
+      - "!**.md"
+      - "content/legal/**"
   # Auch Pull Requests gegen dev pruefen (wie in openeos-shop). Veroeffentlicht
   # wird dabei nichts: der Push ins Registry haengt an
   # `github.event_name != 'pull_request'`, und die Deploy-Jobs verlangen ein
@@ -105,14 +109,16 @@ jobs:
           # inlined into the client bundle. These are non-secret (visible in
           # the browser anyway), so hardcoding the production URLs here is
           # fine. To override per environment, switch to ${{ vars.* }}.
+          # Pull requests against dev build like dev (staging): the legal
+          # placeholder check only blocks production builds (main, PRs to main).
           build-args: |
-            NEXT_PUBLIC_APP_URL=${{ github.ref == 'refs/heads/dev' && 'https://app.staging.openeos.de' || 'https://app.openeos.de' }}
-            NEXT_PUBLIC_API_URL=${{ github.ref == 'refs/heads/dev' && 'https://api.staging.openeos.de' || 'https://api.openeos.de' }}
+            NEXT_PUBLIC_APP_URL=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'https://app.staging.openeos.de' || 'https://app.openeos.de' }}
+            NEXT_PUBLIC_API_URL=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'https://api.staging.openeos.de' || 'https://api.openeos.de' }}
             NEXT_PUBLIC_DOCS_URL=https://docs.openeos.de
             NEXT_PUBLIC_CONTACT_EMAIL=hello@openeos.de
             NEXT_PUBLIC_DEMO_EMAIL=hello@openeos.de
-            NEXT_PUBLIC_SITE_URL=${{ github.ref == 'refs/heads/dev' && 'https://staging.openeos.de' || 'https://openeos.de' }}
-            NEXT_PUBLIC_SITE_ENV=${{ github.ref == 'refs/heads/dev' && 'staging' || 'production' }}
+            NEXT_PUBLIC_SITE_URL=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'https://staging.openeos.de' || 'https://openeos.de' }}
+            NEXT_PUBLIC_SITE_ENV=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'staging' || 'production' }}
 
   deploy:
     name: Deploy to production

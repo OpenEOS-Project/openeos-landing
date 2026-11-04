@@ -22,3 +22,8 @@ Comic illustrations (public/comic): created by the rights holder
 (LUXCODE by Lukas Lukic-Spitznagel) with Higgsfield AI, distributed under
 the license of this project. Screenshots (public/screens) show OpenEOS
 itself.
+
+The legal PDFs (public/rechtstexte, generated at build time) embed subsets
+of the Geist typeface, Copyright (c) 2023 Vercel, in collaboration with
+basement.studio, licensed under the SIL Open Font License, Version 1.1
+(taken from the npm package "geist", which ships the license text).

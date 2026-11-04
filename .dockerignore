@@ -38,6 +38,8 @@ k8s/
 # Documentation
 *.md
 !README.md
+# Rechtstexte werden beim Bauen gerendert (Seiten + PDFs)
+!content/legal/**/*.md
 
 # Tests
 __tests__

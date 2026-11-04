@@ -35,10 +35,8 @@ ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
 ENV NEXT_PUBLIC_SITE_ENV=${NEXT_PUBLIC_SITE_ENV}
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Imprint / Privacy data is read at request time (no NEXT_PUBLIC_ prefix), so
-# it does NOT need to be baked in at build time — it's injected by the
-# orchestrator (docker compose, GitHub Actions, etc.) at runtime.
-
+# `pnpm build` also renders the legal PDFs (scripts/build-legal.mjs) and fails
+# for NEXT_PUBLIC_SITE_ENV=production while the legal texts contain placeholders.
 RUN pnpm build
 
 # Production image
