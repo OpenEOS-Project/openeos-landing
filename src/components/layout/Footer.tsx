@@ -41,9 +41,10 @@ export function Footer() {
           </div>
           <div>
             <b>{t("legal")}</b>
-            <Link href="/imprint">{t("imprint")}</Link>
-            <Link href="/privacy">{t("privacy")}</Link>
-            <Link href="/terms">{t("terms")}</Link>
+            <Link href="/impressum">{t("imprint")}</Link>
+            <Link href="/datenschutz">{t("privacy")}</Link>
+            <Link href="/agb">{t("terms")}</Link>
+            <Link href="/avv">{t("dpa")}</Link>
           </div>
         </div>
       </div>

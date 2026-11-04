@@ -4,7 +4,7 @@ Diese Datei enthält alle Links, die auf zukünftige Systeme verweisen und angep
 
 ## Konfiguration via Environment
 
-Alle dynamischen Links und das Impressum werden über Umgebungsvariablen
+Alle dynamischen Links werden über Umgebungsvariablen
 konfiguriert — siehe [`.env.example`](./.env.example). Reale Werte gehören
 **nicht** ins Repo, sondern in `.env.local` (lokal) bzw. GitHub Actions
 Secrets / Docker-Compose `environment` (Produktion).
@@ -15,7 +15,6 @@ Secrets / Docker-Compose `environment` (Produktion).
 | `NEXT_PUBLIC_DOCS_URL` | Dokumentations-Links (Self-Hosted CTA, OpenSource, Footer) |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Hardware/Gateway "Anfragen" mailto |
 | `NEXT_PUBLIC_DEMO_EMAIL` | "Demo anfragen" mailto |
-| `IMPRINT_*` | Impressum + Datenschutz (server-side, kein Browser-Leak) |
 
 ## Status der Links
 
@@ -42,9 +41,7 @@ Secrets / Docker-Compose `environment` (Produktion).
 - [ ] `/changelog` Changelog-Seite
 
 ### Rechtliches
-- [x] `/imprint` — Daten aus `IMPRINT_*` Env-Vars
-- [x] `/privacy` — Verantwortliche Stelle aus `IMPRINT_*` Env-Vars
-- [x] `/terms` AGB-Seite erstellt
+- [x] `/impressum`, `/datenschutz`, `/agb`, `/avv` — Markdown aus `content/legal/de/` (siehe README, „Rechtstexte“)
 
 ### Social
 - [x] GitHub → `https://github.com/OpenEOS-Project`

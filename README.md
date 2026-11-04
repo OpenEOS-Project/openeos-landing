@@ -20,7 +20,7 @@ Die OpenEOS Landing Page ist die offizielle Marketing- und Informationswebsite f
 - Preismodelle (Self-Hosted & SaaS)
 - Open Source Informationen
 - Zugang zu Login und Registrierung
-- Rechtliche Seiten (Impressum, Datenschutz, AGB)
+- Rechtliche Seiten (Impressum, Datenschutz, AGB, AVV) mit Archiv und PDF
 
 ## Tech Stack
 
@@ -36,6 +36,33 @@ Die OpenEOS Landing Page ist die offizielle Marketing- und Informationswebsite f
 pnpm install
 pnpm dev
 ```
+
+## Rechtstexte
+
+Impressum, Datenschutzerklärung, AGB und AVV liegen als Markdown im Repo, unverändert so, wie sie freigegeben wurden:
+
+```
+content/legal/de/<doc>/<JJJJ-MM-TT>.md     doc = impressum | datenschutz | agb | avv
+```
+
+Der Dateiname ist der „Stand“ der Fassung. **Alte Fassungen werden nie gelöscht** (Archiv); die neueste Datei je Dokument ist die aktuelle. Eine neue Fassung = neue Datei mit neuem Datum, der Wortlaut wird nicht im Code angepasst.
+
+**Adressen** (andere OpenEOS-Repos verlinken darauf — nicht ändern):
+
+| Adresse | Inhalt |
+|---|---|
+| `/agb`, `/avv`, `/datenschutz`, `/impressum` | aktuelle Fassung (`/en/…`: derselbe deutsche Text mit englischem Hinweis) |
+| `/agb/2026-11-04` usw. | bestimmte Fassung; ältere mit Hinweis „Archivierte Fassung“, unbekannte → 404 |
+| `/rechtstexte/<doc>-<JJJJ-MM-TT>.pdf`, `/rechtstexte/<doc>.pdf` | PDF einer Fassung bzw. der aktuellen |
+| `#1-geltungsbereich-und-anbieter`, `#anhang-b`, `#ziffer-4-6` | Sprungmarken: Überschrift (Slug, Umlaute als ae/oe/ue/ss), kurze Marken `anhang-a…c`, `teil-a…c`, `ziffer-<n>` für „n. …“-Überschriften, `ziffer-<x>-<y>` für Absätze mit fetter Nummer (`**4.6**`) |
+| `/terms`, `/privacy`, `/imprint` (auch `/en/…` und `/…/<fassung>`) | dauerhafte Weiterleitung auf die deutschen Adressen |
+
+**Bauen:** `scripts/build-legal.mjs` läuft vor `next build` und `next dev` (`pnpm legal` einzeln) und
+
+1. prüft die Texte auf Platzhalter (`[…]` oder `[Text]` ohne Link). Mit `NEXT_PUBLIC_SITE_ENV=production` oder `LEGAL_STRICT=1` bricht der Build mit Datei:Zeile ab, sonst (Staging, CI, lokal) gibt es nur eine Warnung;
+2. erzeugt die PDFs nach `public/rechtstexte/` (nicht im Repo, `.gitignore`).
+
+Die PDFs entstehen mit [pdfkit](https://pdfkit.org) aus dem `marked`-Lexer (Überschriften, Absätze mit Fett/Kursiv, Listen, Trennlinien, Tabellen; A4, Kopfzeile mit Titel und Stand, Seitenzahlen) — ohne Headless-Browser, damit der Build auch im `node:22-alpine`-Image läuft. Schrift ist Geist als TTF aus dem npm-Paket `geist` (devDependency, SIL OFL 1.1, siehe NOTICE); sie enthält alle benötigten Zeichen („ “ – § € → …). Die Webseiten rendern dasselbe Markdown beim Bauen mit `marked` (`src/lib/legal/`). Zeilen, die mit `*Anmerkung:*` beginnen, und ein Abschnitt „Anhang – Prüfhinweise“ werden auf Seite und PDF ausgelassen.
 
 ---
 

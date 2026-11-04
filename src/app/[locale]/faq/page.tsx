@@ -100,7 +100,7 @@ export default async function FaqPage({
     changelog: (chunks: ReactNode) => <Link href="/changelog">{chunks}</Link>,
     screens: (chunks: ReactNode) => <Link href="/screens">{chunks}</Link>,
     pricing: (chunks: ReactNode) => <Link href="/#pricing">{chunks}</Link>,
-    privacy: (chunks: ReactNode) => <Link href="/privacy">{chunks}</Link>,
+    privacy: (chunks: ReactNode) => <Link href="/datenschutz">{chunks}</Link>,
     selfhost: (chunks: ReactNode) => <a href={docsUrl(locale, 'selbst-betreiben/intro/')}>{chunks}</a>,
     github: (chunks: ReactNode) => (
       <a href="https://github.com/OpenEOS-Project" target="_blank" rel="noopener noreferrer">
