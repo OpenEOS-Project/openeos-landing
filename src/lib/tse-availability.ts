@@ -2,7 +2,7 @@
  * Cloud-TSE (Bargeld in Deutschland): schon buchbar oder „Bald verfügbar“?
  *
  * Kommt beim Bauen ins Image (NEXT_PUBLIC_*), wie SITE_ENV in site.ts:
- * Produktion (main) baut mit "true", Staging (dev) mit "false" — gesetzt
+ * Produktion (main) und derzeit auch Staging (dev) bauen mit "true" — gesetzt
  * in .github/workflows/build-deploy.yaml. Nur "true" schaltet auf „Bald
  * verfügbar“; fehlt die Angabe (lokal, CI), gilt die Cloud-TSE als
  * verfügbar.
