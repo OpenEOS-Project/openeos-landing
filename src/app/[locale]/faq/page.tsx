@@ -14,6 +14,8 @@ import {
 } from 'lucide-react';
 
 import { docsUrl, pageMetadata } from '@/lib/site';
+import { tseComingSoon } from '@/lib/tse-availability';
+import { ComingSoonBadge } from '@/components/ComingSoonBadge';
 import { Link } from '@/i18n/navigation';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -30,11 +32,30 @@ import { FaqHashOpener } from '@/components/sections/FaqHashOpener';
  *
  * Eine Antwort ist eine Liste von Blöcken: Text ist ein Absatz, eine
  * Liste von Texten eine Aufzählung.
+ *
+ * Solange die Cloud-TSE „Bald verfügbar“ ist (lib/tse-availability),
+ * ersetzt `soon` die Frage und einzelne Blöcke (Schlüssel = Nummer des
+ * Blocks); `badge` setzt das Abzeichen neben die Frage.
  */
 
 type Block = string | string[];
-type Item = { q: string; a: Block[] };
+type Soon = { q?: string; a?: Record<string, Block>; badge?: boolean };
+type Item = { q: string; a: Block[]; soon?: Soon };
 type Section = { title: string; items: Record<string, Item>; note?: string };
+
+/** Pfad (für t.rich) und Inhalt jedes Blocks — mit `soon`, wenn es gilt. */
+function answerBlocks(base: string, item: Item) {
+  return item.a.map((block, i) => {
+    const soon = tseComingSoon ? item.soon?.a?.[i] : undefined;
+    return soon === undefined
+      ? { path: `${base}.a.${i}`, block }
+      : { path: `${base}.soon.a.${i}`, block: soon };
+  });
+}
+
+function question(item: Item) {
+  return (tseComingSoon && item.soon?.q) || item.q;
+}
 
 const ICONS: Record<string, LucideIcon> = {
   tse: Receipt,
@@ -73,6 +94,7 @@ export default async function FaqPage({
   setRequestLocale(locale);
   const t = await getTranslations('faq');
   const sections = t.raw('sections') as Record<string, Section>;
+  const itemBase = (key: string, id: string) => `sections.${key}.items.${id}`;
 
   const tags = {
     b: (chunks: ReactNode) => <strong>{chunks}</strong>,
@@ -118,11 +140,14 @@ export default async function FaqPage({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     inLanguage: locale,
-    mainEntity: Object.values(sections).flatMap((section) =>
-      Object.values(section.items).map((item) => ({
+    mainEntity: Object.entries(sections).flatMap(([key, section]) =>
+      Object.entries(section.items).map(([id, item]) => ({
         '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: { '@type': 'Answer', text: plainAnswer(item.a) },
+        name: plain(question(item)),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: plainAnswer(answerBlocks(itemBase(key, id), item).map(({ block }) => block)),
+        },
       })),
     ),
   };
@@ -175,15 +200,28 @@ export default async function FaqPage({
                   </h2>
 
                   <div className="faq__items">
+                    {key === 'tse' && tseComingSoon && (
+                      <p className="faq__soon">
+                        <ComingSoonBadge />
+                        <span>{t.rich('tseSoon', tags)}</span>
+                      </p>
+                    )}
                     {Object.entries(section.items).map(([id, item]) => (
                       <details key={id} id={id} className="faq__item">
                         <summary className="faq__q">
-                          <span>{item.q}</span>
+                          <span>
+                            {question(item)}
+                            {tseComingSoon && item.soon?.badge && (
+                              <>
+                                {' '}
+                                <ComingSoonBadge />
+                              </>
+                            )}
+                          </span>
                           <ChevronDown aria-hidden="true" className="faq__chevron" />
                         </summary>
                         <div className="faq__a">
-                          {item.a.map((block, i) => {
-                            const path = `sections.${key}.items.${id}.a.${i}`;
+                          {answerBlocks(itemBase(key, id), item).map(({ path, block }, i) => {
                             return Array.isArray(block) ? (
                               <ul key={i}>
                                 {block.map((_, j) => (

@@ -163,8 +163,9 @@
         "copy": "Echtzeit-Anzeige für Küche & Ausgabe — keine verlorenen Bons mehr."
       },
       "payment": {
-        "title": "Digitale Zahlung",
-        "copy": "SumUp-Integration für Kartenzahlung — schnell und sicher."
+        "title": "Bezahlen",
+        "copy": "SumUp-Integration für Kartenzahlung — schnell und sicher.",
+        "tse": "Bargeld in Deutschland mit Cloud-TSE – im Preis inklusive."
       },
       "printer": {
         "title": "Bondruck",
@@ -308,8 +309,13 @@
         "Bezahlung beim Freischalten per Karte oder Lastschrift",
         "Kostenlos stornierbar bis 7 Tage vor Beginn"
       ],
+      "tse": "Cloud-TSE für Bargeld in Deutschland inklusive",
+      "tseSoonNote": "Die Cloud-TSE für Barzahlungen in Deutschland kommt in Kürze. Bis dahin kannst du „Nur Bons“ oder „Bargeldlos“ nutzen. <faq>Mehr in den FAQ</faq>",
       "cta": "Jetzt starten →"
     }
+  },
+  "tse": {
+    "comingSoon": "Bald verfügbar"
   },
   "openSource": {
     "eyebrow": "Open Source",
@@ -553,6 +559,7 @@
     "sub": "Kurz und verständlich beantwortet – von Kasse, Bargeld und TSE bis zu Kosten und Geräten.",
     "topics": "Themen",
     "foot": "Deine Frage ist nicht dabei? <link>Schreib uns.</link>",
+    "tseSoon": "Die Cloud-TSE für Barzahlungen in Deutschland kommt in Kürze. Bis dahin kannst du <notse>„Nur Bons“ oder „Bargeldlos“</notse> nutzen. Außerhalb Deutschlands wählst du „Alle Funktionen“ mit Bargeld schon heute (<laender>Österreich, Schweiz und andere Länder</laender>).",
     "sections": {
       "tse": {
         "title": "Kasse, Bargeld und TSE",
@@ -577,8 +584,13 @@
               ],
               "Nach Auskunft des Bundesfinanzministeriums liegt eine Kassenfunktion schon vor, wenn dein Verein Bargeld selbst einschalten kann. Deshalb lässt sich die dritte Betriebsart <b>„Alle Funktionen“</b> mit Bargeld in Deutschland nur mit aktiver Cloud-TSE wählen. Zwischen „Nur Bons“ und „Bargeldlos“ wechselst du dagegen jederzeit selbst unter Einstellungen → Organisation → Betriebsart – Bargeld kommt dadurch nicht zurück.",
               "Für deine Verfahrensdokumentation lädst du in beiden Betriebsarten eine Herstellerbescheinigung (PDF) herunter. Sie bestätigt, dass Bargeld in deiner Organisation nicht erfasst werden kann und nur mit aktiver zertifizierter TSE möglich ist. Im Einzelfall entscheidet dein Finanzamt.",
-              "Willst du mit OpenEOS Bargeld annehmen, brauchst du eine TSE. Die <integration>TSE-Anbindung</integration> ist in Vorbereitung. Mehr zu allen drei Betriebsarten in der <modesdocs>Dokumentation</modesdocs>."
-            ]
+              "Willst du mit OpenEOS Bargeld annehmen, wählst du „Alle Funktionen“ mit der <integration>Cloud-TSE</integration>. Mehr zu allen drei Betriebsarten in der <modesdocs>Dokumentation</modesdocs>."
+            ],
+            "soon": {
+              "a": {
+                "4": "Willst du mit OpenEOS Bargeld annehmen, brauchst du eine TSE. Die <integration>Cloud-TSE</integration> kommt in Kürze. Mehr zu allen drei Betriebsarten in der <modesdocs>Dokumentation</modesdocs>."
+              }
+            }
           },
           "nur-bestellen": {
             "q": "Kann ich OpenEOS nur zum Bestellen nutzen?",
@@ -594,10 +606,15 @@
             "q": "Kann ich weiterhin Bargeld über OpenEOS annehmen?",
             "a": [
               "Ja, mit der Betriebsart <b>„Alle Funktionen“</b>: Bargeld, Karte und Online-Zahlung. Ob du sie wählen kannst, hängt vom Land deiner Organisation ab.",
-              "<b>In Deutschland</b> braucht eine Kasse, die Bargeld annehmen kann, eine <tse>TSE</tse>. „Alle Funktionen“ gibt es hier deshalb nur mit aktiver Cloud-TSE; die Anbindung ist in Vorbereitung. Bis dahin wählst du <notse>„Nur Bons“ oder „Bargeldlos“</notse> und nimmst Bargeld außerhalb von OpenEOS an, zum Beispiel in einer <ladenkasse>offenen Ladenkasse</ladenkasse>.",
+              "<b>In Deutschland</b> braucht eine Kasse, die Bargeld annehmen kann, eine <tse>TSE</tse>. „Alle Funktionen“ gibt es hier deshalb nur mit aktiver <integration>Cloud-TSE</integration>; sie ist im Preis deiner Veranstaltung inklusive und wird automatisch eingerichtet. Ohne TSE wählst du <notse>„Nur Bons“ oder „Bargeldlos“</notse> und nimmst Bargeld außerhalb von OpenEOS an, zum Beispiel in einer <ladenkasse>offenen Ladenkasse</ladenkasse>.",
               "<b>Organisationen, die es schon vorher gab</b>, arbeiten als „Alle Funktionen (Bestand)“ wie bisher weiter – auch in Deutschland, bis du eine Betriebsart wählst. Ein Hinweis im Dashboard und in den Einstellungen erklärt die TSE-Pflicht und bittet dich, Land und Betriebsart zu wählen. Ob du bis dahin Bargeld ohne TSE in OpenEOS erfasst, entscheidest du selbst; stimm dich am besten mit deiner Steuerberatung ab. Wählst du in Deutschland einmal eine andere Betriebsart, kommst du zu „Alle Funktionen“ nur mit aktiver TSE zurück.",
               "<b>In Österreich, der Schweiz und anderen Ländern</b> kannst du „Alle Funktionen“ auch ohne TSE wählen. Was dort gilt, steht unter <laender>Gilt das auch in Österreich und der Schweiz?</laender>"
-            ]
+            ],
+            "soon": {
+              "a": {
+                "1": "<b>In Deutschland</b> braucht eine Kasse, die Bargeld annehmen kann, eine <tse>TSE</tse>. „Alle Funktionen“ gibt es hier deshalb nur mit aktiver <integration>Cloud-TSE</integration> – und die kommt in Kürze. Bis dahin wählst du <notse>„Nur Bons“ oder „Bargeldlos“</notse> und nimmst Bargeld außerhalb von OpenEOS an, zum Beispiel in einer <ladenkasse>offenen Ladenkasse</ladenkasse>."
+              }
+            }
           },
           "laender": {
             "q": "Gilt das auch in Österreich und der Schweiz?",
@@ -625,13 +642,22 @@
             ]
           },
           "tse-integration": {
-            "q": "Wie geht es weiter – wann kommt die TSE?",
+            "q": "Wie bekomme ich die Cloud-TSE?",
             "a": [
-              "Wir arbeiten an der Anbindung einer Cloud-TSE. Damit sollst du in Deutschland die Betriebsart „Alle Funktionen“ wählen und mit OpenEOS Bargeld annehmen können, ohne zusätzliche Hardware anzuschaffen. Einen Termin nennen wir noch nicht. Sobald es so weit ist, kündigen wir es in den <changelog>Neuerungen</changelog> an."
-            ]
+              "OpenEOS bindet eine zertifizierte Cloud-TSE an – du brauchst keine zusätzliche Hardware. Wählst du in Deutschland die Betriebsart „Alle Funktionen“ und schaltest eine Veranstaltung frei, richtet OpenEOS die TSE automatisch ein. Alle Geräte arbeiten dann als eine gemeinsame Kasse.",
+              "Die Cloud-TSE ist im Preis deines Event-Tags inklusive. Du brauchst dafür nur die Steuernummer oder USt-IdNr. und die Anschrift deiner Organisation. Mehr zu den Betriebsarten in der <modesdocs>Dokumentation</modesdocs>."
+            ],
+            "soon": {
+              "badge": true,
+              "q": "Wann kommt die Cloud-TSE?",
+              "a": {
+                "0": "Die Cloud-TSE für Barzahlungen in Deutschland kommt in Kürze. Damit wählst du in Deutschland die Betriebsart „Alle Funktionen“ und nimmst mit OpenEOS Bargeld an – ohne zusätzliche Hardware, im Preis deines Event-Tags inklusive.",
+                "1": "Bis dahin kannst du <notse>„Nur Bons“ oder „Bargeldlos“</notse> nutzen. Sobald die Cloud-TSE verfügbar ist, kündigen wir das in den <changelog>Neuerungen</changelog> an."
+              }
+            }
           }
         },
-        "note": "Allgemeine Information, keine Steuer- oder Rechtsberatung. Stand: 2. November 2026. Ob und wie die Regeln für deinen Verein gelten, klärst du am besten mit deiner Steuerberatung."
+        "note": "Allgemeine Information, keine Steuer- oder Rechtsberatung. Stand: 9. November 2026. Ob und wie die Regeln für deinen Verein gelten, klärst du am besten mit deiner Steuerberatung."
       },
       "allgemein": {
         "title": "Allgemein",
@@ -677,10 +703,18 @@
               "Es gibt zwei Wege:",
               [
                 "<b>Self-Hosted:</b> kostenlos, für immer. Du betreibst OpenEOS auf deinem eigenen Server – mit allen Features, einer Organisation, unbegrenzten Events und Community-Support.",
-                "<b>SaaS:</b> 25 € pro Event-Tag. Alle Features, Hosting, Backups, automatische Updates und Support sind inklusive."
+                "<b>SaaS:</b> 25 € pro Event-Tag. Alle Features, Hosting, Backups, automatische Updates, Support und die Cloud-TSE für Bargeld in Deutschland sind inklusive."
               ],
               "Keine Einrichtungsgebühr, keine Mindestlaufzeit, keine versteckten Kosten. Auf deine erste Veranstaltung bekommst du 20 % Starterbonus. Alle Details findest du bei den <pricing>Preisen</pricing>."
-            ]
+            ],
+            "soon": {
+              "a": {
+                "1": [
+                  "<b>Self-Hosted:</b> kostenlos, für immer. Du betreibst OpenEOS auf deinem eigenen Server – mit allen Features, einer Organisation, unbegrenzten Events und Community-Support.",
+                  "<b>SaaS:</b> 25 € pro Event-Tag. Alle Features, Hosting, Backups, automatische Updates und Support sind inklusive – ebenso die <integration>Cloud-TSE</integration> für Bargeld in Deutschland, sobald sie verfügbar ist."
+                ]
+              }
+            }
           },
           "event-tag": {
             "q": "Was zählt als Event-Tag, und wann zahle ich?",

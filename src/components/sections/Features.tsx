@@ -9,6 +9,8 @@ import {
   Github,
   CalendarClock,
 } from "lucide-react";
+import { tseComingSoon } from "@/lib/tse-availability";
+import { ComingSoonBadge } from "@/components/ComingSoonBadge";
 
 const items = [
   { key: "mobile", Icon: Smartphone },
@@ -42,6 +44,13 @@ export function Features() {
             </span>
             <h3>{t(`items.${key}.title`)}</h3>
             <p>{t(`items.${key}.copy`)}</p>
+            {/* Bargeld mit Cloud-TSE (Deutschland) gehört zur Zahlung. */}
+            {key === "payment" && (
+              <p className="fbox__tse">
+                {t("items.payment.tse")}
+                {tseComingSoon && <ComingSoonBadge />}
+              </p>
+            )}
           </article>
         ))}
       </div>
