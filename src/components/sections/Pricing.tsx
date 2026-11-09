@@ -1,5 +1,9 @@
+import { Fragment } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { docsUrl } from "@/lib/site";
+import { tseComingSoon } from "@/lib/tse-availability";
+import { Link } from "@/i18n/navigation";
+import { ComingSoonBadge } from "@/components/ComingSoonBadge";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
 
@@ -77,10 +81,26 @@ export function Pricing({ pricingData }: { pricingData?: PricingData | null }) {
           </div>
           <span className="plan__bonus">★ {t("saas.bonus")}</span>
           <ul>
-            {(t.raw("saas.features") as string[]).map((f) => (
-              <li key={f}>{f}</li>
+            {(t.raw("saas.features") as string[]).map((f, i) => (
+              <Fragment key={f}>
+                <li>{f}</li>
+                {/* Gleich nach "Alle Features inklusive". */}
+                {i === 0 && (
+                  <li className="plan__tse">
+                    {t("saas.tse")}
+                    {tseComingSoon && <ComingSoonBadge />}
+                  </li>
+                )}
+              </Fragment>
             ))}
           </ul>
+          {tseComingSoon && (
+            <p className="plan__note">
+              {t.rich("saas.tseSoonNote", {
+                faq: (chunks) => <Link href="/faq#tse">{chunks}</Link>,
+              })}
+            </p>
+          )}
           <a href={`${APP_URL}/register`} className="btn btn--light btn--block">
             {t("saas.cta")}
           </a>

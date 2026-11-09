@@ -996,7 +996,7 @@
 .landing .plan__price { display: flex; align-items: baseline; gap: 8px; padding-bottom: 20px; border-bottom: 1px dashed color-mix(in oklab, var(--ink) 14%, transparent); }
 .landing .plan__price b { font-size: clamp(36px, 4.5vw, 56px); font-weight: 800; letter-spacing: -.03em; line-height: 1; }
 .landing .plan__price span { font-family: var(--f-mono); font-size: 12px; color: var(--mute); }
-.landing .plan ul { display: grid; gap: 10px; flex: 1; }
+.landing .plan ul { display: grid; gap: 10px; flex: 1; align-content: start; }
 .landing .plan li { position: relative; padding-left: 22px; font-size: 14px; }
 .landing .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--green-ink); font-weight: 700; font-family: var(--f-mono); }
 
@@ -1023,6 +1023,37 @@
   font-size: 11px; font-weight: 700;
   letter-spacing: .03em;
   align-self: flex-start;
+}
+
+/* „Bald verfügbar“ (Cloud-TSE, lib/tse-availability): Farbe wie der
+   Hinweis-Ton der Neuerungen, Form wie plan__tag. */
+.landing .soon-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  background: color-mix(in oklab, var(--warn, #d9a441) 25%, transparent);
+  color: color-mix(in oklab, var(--warn, #d9a441) 60%, var(--ink));
+  font-family: var(--f-mono);
+  font-size: 11px; font-weight: 600; line-height: 1.3;
+  letter-spacing: .03em;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.landing .soon-badge svg { width: 12px; height: 12px; flex: none; }
+.landing .plan--featured .soon-badge {
+  background: color-mix(in oklab, var(--warn, #d9a441) 22%, transparent);
+  color: #f5c66b;
+}
+.landing .plan__tse { display: flex; flex-wrap: wrap; align-items: center; column-gap: 8px; row-gap: 4px; }
+.landing .plan__tse::before { top: 0; }
+.landing .plan__note {
+  margin: -6px 0 0;
+  font-size: 12.5px; line-height: 1.5;
+  color: var(--mute-2);
+}
+.landing .plan__note a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.landing .fbox__tse {
+  display: flex; flex-wrap: wrap; align-items: center; column-gap: 8px; row-gap: 6px;
 }
 
 /* ============================= OSS (DARK, CENTERED) ============================= */
@@ -2603,6 +2634,27 @@
   margin-top: 1px;
   color: var(--ink);
 }
+
+/* Cloud-TSE „Bald verfügbar“: über den Fragen des Abschnitts #tse. */
+.landing .faq__soon {
+  margin: 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 14px 16px;
+  border-radius: var(--r);
+  background: color-mix(in oklab, var(--warn, #d9a441) 10%, transparent);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.landing .faq__soon a {
+  color: var(--green-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.landing .faq__q .soon-badge { margin-left: 4px; }
 
 .landing .faq__foot {
   margin-top: 56px;

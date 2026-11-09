@@ -163,8 +163,9 @@
         "copy": "Real-time view for kitchen & pickup — no more lost tickets."
       },
       "payment": {
-        "title": "Card payments",
-        "copy": "SumUp integration for card payments — fast and secure."
+        "title": "Payments",
+        "copy": "SumUp integration for card payments — fast and secure.",
+        "tse": "Cash in Germany with a cloud TSE – included in the price."
       },
       "printer": {
         "title": "Receipt printing",
@@ -308,8 +309,13 @@
         "Pay by card or direct debit when you activate an event",
         "Free cancellation up to 7 days before the start"
       ],
+      "tse": "Cloud TSE for cash in Germany included",
+      "tseSoonNote": "The cloud TSE for cash payments in Germany is coming soon. Until then you can use “Orders only” or “Cashless”. <faq>More in the FAQ</faq>",
       "cta": "Get started →"
     }
+  },
+  "tse": {
+    "comingSoon": "Coming soon"
   },
   "openSource": {
     "eyebrow": "Open Source",
@@ -554,6 +560,7 @@
     "sub": "Short, plain answers – from cash, the register and TSE to pricing and devices.",
     "topics": "Topics",
     "foot": "Your question isn’t here? <link>Get in touch.</link>",
+    "tseSoon": "The cloud TSE for cash payments in Germany is coming soon. Until then you can use <notse>“Orders only” or “Cashless”</notse>. Outside Germany you can already choose “All features” with cash today (<laender>Austria, Switzerland and other countries</laender>).",
     "sections": {
       "tse": {
         "title": "Cash, POS and TSE",
@@ -578,8 +585,13 @@
               ],
               "According to the German Federal Ministry of Finance, a cash register function already exists if your club can switch cash on itself. That is why the third operating mode, <b>“All features”</b> with cash, can only be chosen in Germany with an active cloud TSE. You can switch between “Orders only” and “Cashless” yourself at any time under Settings → Organization → Operating mode – that does not bring cash back.",
               "For your system documentation (Verfahrensdokumentation) you can download a manufacturer certificate (PDF) in both modes. It confirms that cash cannot be recorded in your organization and is only possible with an active certified TSE. In individual cases your tax office decides.",
-              "If you want to accept cash with OpenEOS, you need a TSE. The <integration>TSE integration</integration> is in preparation. More about all three operating modes in the <modesdocs>documentation</modesdocs>."
-            ]
+              "If you want to accept cash with OpenEOS, choose “All features” with the <integration>cloud TSE</integration>. More about all three operating modes in the <modesdocs>documentation</modesdocs>."
+            ],
+            "soon": {
+              "a": {
+                "4": "If you want to accept cash with OpenEOS, you need a TSE. The <integration>cloud TSE</integration> is coming soon. More about all three operating modes in the <modesdocs>documentation</modesdocs>."
+              }
+            }
           },
           "nur-bestellen": {
             "q": "Can I use OpenEOS for ordering only?",
@@ -595,10 +607,15 @@
             "q": "Can I still accept cash with OpenEOS?",
             "a": [
               "Yes, with the <b>“All features”</b> operating mode (Alle Funktionen): cash, card and online payment. Whether you can choose it depends on your organization’s country.",
-              "<b>In Germany</b> a register that can accept cash needs a <tse>TSE</tse>. “All features” is therefore only available there with an active cloud TSE; the integration is in preparation. Until then you choose <notse>“Orders only” or “Cashless”</notse> and take cash outside OpenEOS, for example in an <ladenkasse>open cash box</ladenkasse>.",
+              "<b>In Germany</b> a register that can accept cash needs a <tse>TSE</tse>. “All features” is therefore only available there with an active <integration>cloud TSE</integration>; it is included in the price of your event and set up automatically. Without a TSE you choose <notse>“Orders only” or “Cashless”</notse> and take cash outside OpenEOS, for example in an <ladenkasse>open cash box</ladenkasse>.",
               "<b>Organizations that existed before</b> keep working as before as “All features (existing)” – also in Germany, until you pick an operating mode. A notice in the dashboard and in the settings explains the TSE requirement and asks you to choose the country and operating mode. Whether you record cash in OpenEOS without a TSE until then is your own decision; ideally check with your tax advisor. Once you pick another mode in Germany, you can only go back to “All features” with an active TSE.",
               "<b>In Austria, Switzerland and other countries</b> you can choose “All features” without a TSE as well. What applies there is described under <laender>Does this also apply in Austria and Switzerland?</laender>"
-            ]
+            ],
+            "soon": {
+              "a": {
+                "1": "<b>In Germany</b> a register that can accept cash needs a <tse>TSE</tse>. “All features” is therefore only available there with an active <integration>cloud TSE</integration> – and that is coming soon. Until then you choose <notse>“Orders only” or “Cashless”</notse> and take cash outside OpenEOS, for example in an <ladenkasse>open cash box</ladenkasse>."
+              }
+            }
           },
           "laender": {
             "q": "Does this also apply in Austria and Switzerland?",
@@ -626,13 +643,22 @@
             ]
           },
           "tse-integration": {
-            "q": "What’s next – when is the TSE coming?",
+            "q": "How do I get the cloud TSE?",
             "a": [
-              "We are working on a cloud TSE integration. It is meant to let you choose the “All features” operating mode in Germany and accept cash with OpenEOS without buying extra hardware. We are not giving a date yet. As soon as it’s ready, we’ll announce it under <changelog>What’s new</changelog>."
-            ]
+              "OpenEOS connects a certified cloud TSE – you don’t need any extra hardware. If you choose the “All features” operating mode in Germany and activate an event, OpenEOS sets up the TSE automatically. All your devices then work as one shared register.",
+              "The cloud TSE is included in the price of your event day. All you need is your organization’s tax number or VAT ID and its address. More about the operating modes in the <modesdocs>documentation</modesdocs>."
+            ],
+            "soon": {
+              "badge": true,
+              "q": "When is the cloud TSE coming?",
+              "a": {
+                "0": "The cloud TSE for cash payments in Germany is coming soon. It will let you choose the “All features” operating mode in Germany and accept cash with OpenEOS – without extra hardware, included in the price of your event day.",
+                "1": "Until then you can use <notse>“Orders only” or “Cashless”</notse>. As soon as the cloud TSE is available, we’ll announce it under <changelog>What’s new</changelog>."
+              }
+            }
           }
         },
-        "note": "General information, not tax or legal advice. As of 2 November 2026. Whether and how the rules apply to your club is best clarified with your tax advisor."
+        "note": "General information, not tax or legal advice. As of 9 November 2026. Whether and how the rules apply to your club is best clarified with your tax advisor."
       },
       "allgemein": {
         "title": "General",
@@ -678,10 +704,18 @@
               "There are two ways:",
               [
                 "<b>Self-hosted:</b> free, forever. You run OpenEOS on your own server – with all features, one organization, unlimited events and community support.",
-                "<b>SaaS:</b> € 25 per event day. All features, hosting, backups, automatic updates and support are included."
+                "<b>SaaS:</b> € 25 per event day. All features, hosting, backups, automatic updates, support and the cloud TSE for cash in Germany are included."
               ],
               "No setup fee, no minimum term, no hidden costs. You get a 20% starter bonus on your first event. All details are under <pricing>Pricing</pricing>."
-            ]
+            ],
+            "soon": {
+              "a": {
+                "1": [
+                  "<b>Self-hosted:</b> free, forever. You run OpenEOS on your own server – with all features, one organization, unlimited events and community support.",
+                  "<b>SaaS:</b> € 25 per event day. All features, hosting, backups, automatic updates and support are included – as is the <integration>cloud TSE</integration> for cash in Germany, once it is available."
+                ]
+              }
+            }
           },
           "event-tag": {
             "q": "What counts as an event day, and when do I pay?",
