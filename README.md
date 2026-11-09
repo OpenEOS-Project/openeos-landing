@@ -39,7 +39,7 @@ pnpm dev
 
 ### Cloud-TSE „Bald verfügbar“
 
-`NEXT_PUBLIC_TSE_COMING_SOON=true` (beim Bauen) zeigt die Cloud-TSE für Bargeld in Deutschland auf Preisen, Features und in der FAQ (`/faq#tse`) als „Bald verfügbar“; jeder andere Wert oder keiner zeigt sie als verfügbar. Die CI baut Produktion (`main`) mit `true` und Staging (`dev`) mit `false` (`.github/workflows/build-deploy.yaml`). Ausgewertet wird der Schalter nur in `src/lib/tse-availability.ts`.
+`NEXT_PUBLIC_TSE_COMING_SOON=true` (beim Bauen) zeigt die Cloud-TSE für Bargeld in Deutschland auf Preisen, Features und in der FAQ (`/faq#tse`) als „Bald verfügbar“; jeder andere Wert oder keiner zeigt sie als verfügbar. Die CI baut derzeit Produktion (`main`) und Staging (`dev`) mit `true`, damit sich die Texte auf Staging prüfen lassen (`.github/workflows/build-deploy.yaml`); ist die Cloud-TSE live, beide auf `false` stellen. Ausgewertet wird der Schalter nur in `src/lib/tse-availability.ts`.
 
 ## Rechtstexte
 

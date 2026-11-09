@@ -111,8 +111,10 @@ jobs:
           # fine. To override per environment, switch to ${{ vars.* }}.
           # Pull requests against dev build like dev (staging): the legal
           # placeholder check only blocks production builds (main, PRs to main).
-          # NEXT_PUBLIC_TSE_COMING_SOON: production shows the cloud TSE as
-          # "Bald verfügbar" (no signed TSE contract yet), staging as available.
+          # NEXT_PUBLIC_TSE_COMING_SOON: production and staging show the cloud
+          # TSE as "Bald verfügbar" (no signed TSE contract yet). Staging uses
+          # the same value so the coming-soon texts can be reviewed there; set
+          # 'false' for both once the TSE is live.
           build-args: |
             NEXT_PUBLIC_APP_URL=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'https://app.staging.openeos.de' || 'https://app.openeos.de' }}
             NEXT_PUBLIC_API_URL=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'https://api.staging.openeos.de' || 'https://api.openeos.de' }}
@@ -121,7 +123,7 @@ jobs:
             NEXT_PUBLIC_DEMO_EMAIL=hello@openeos.de
             NEXT_PUBLIC_SITE_URL=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'https://staging.openeos.de' || 'https://openeos.de' }}
             NEXT_PUBLIC_SITE_ENV=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'staging' || 'production' }}
-            NEXT_PUBLIC_TSE_COMING_SOON=${{ (github.ref == 'refs/heads/dev' || github.base_ref == 'dev') && 'false' || 'true' }}
+            NEXT_PUBLIC_TSE_COMING_SOON=true
 
   deploy:
     name: Deploy to production
