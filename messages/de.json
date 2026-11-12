@@ -374,7 +374,7 @@
     "pricing": "Preise",
     "demo": "Demo anfragen",
     "docs": "Dokumentation",
-    "github": "GitHub",
+    "github": "Quellcode",
     "changelog": "Neuerungen",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
@@ -384,7 +384,9 @@
     "productBy": "Ein Produkt von LUXCODE by Lukas Lukic-Spitznagel",
     "feedback": "Feedback & Wünsche",
     "screens": "Einblicke",
-    "faq": "Häufige Fragen"
+    "faq": "Häufige Fragen",
+    "dataAct": "Data Act",
+    "serviceDescription": "Leistungsbeschreibung"
   },
   "legal": {
     "docs": {
@@ -407,6 +409,11 @@
         "label": "AVV",
         "metaTitle": "Auftragsverarbeitungsvertrag (AVV) — OpenEOS",
         "metaDescription": "Auftragsverarbeitungsvertrag nach Art. 28 DSGVO (Anlage 2 zu den AGB) mit Unterauftragsverarbeitern und TOM."
+      },
+      "leistungsbeschreibung": {
+        "label": "Leistungsbeschreibung",
+        "metaTitle": "Anlage 1 – Leistungsbeschreibung und Preisliste — OpenEOS",
+        "metaDescription": "Leistungsumfang und Preise von OpenEOS (Anlage 1 zu den AGB)."
       }
     },
     "downloadPdf": "PDF herunterladen",
@@ -780,5 +787,100 @@
         }
       }
     }
+  },
+  "dataAct": {
+    "metaTitle": "Data Act: Standorte, Datenexport und Anbieterwechsel — OpenEOS",
+    "metaDescription": "Wo OpenEOS deine Daten verarbeitet, wie wir sie vor Zugriffen aus Drittstaaten schützen, in welchen Formaten du sie exportierst und wie ein Anbieterwechsel abläuft.",
+    "titleL1": "Deine Daten,",
+    "titleL2": "dein Wechsel",
+    "sub": "Angaben nach dem EU Data Act (Verordnung (EU) 2023/2854) zu OpenEOS als Cloud-Dienst: Standorte, Schutz vor Zugriffen aus Drittstaaten, Exportformate und Anbieterwechsel.",
+    "note": "Diese Seite fasst die Angaben verständlich zusammen. Verbindlich sind die <agb>AGB</agb> (Ziffer 10) und der <avv>Auftragsverarbeitungsvertrag</avv> (Anlage 2 mit der Liste der Unterauftragsverarbeiter).",
+    "toc": "Auf dieser Seite",
+    "provider": {
+      "title": "Anbieter und Rechtsordnung",
+      "p1": "OpenEOS ist ein Produkt von LUXCODE by Lukas Lukic-Spitznagel mit Sitz in St. Georgen im Schwarzwald, Deutschland. Dein Vertrag kommt mit LUXCODE zustande; es gilt deutsches Recht (AGB Ziffer 14.2).",
+      "p2": "Support-Tätigkeiten von LUXCODE finden am Sitz in Deutschland statt. Dort werden keine Kundendaten dauerhaft gespeichert – sie liegen in den Rechenzentren unten."
+    },
+    "locations": {
+      "title": "Wo deine Daten verarbeitet werden",
+      "intro": "Deine Daten liegen in Rechenzentren in Deutschland. Diese Dienstleister setzen wir ein:",
+      "colPurpose": "Wofür",
+      "colCompany": "Unternehmen",
+      "colLocation": "Standort",
+      "rows": {
+        "hosting": [
+          "Betrieb der Software (Server, Datenbank, Dateien)",
+          "IONOS SE, Montabaur (Deutschland)",
+          "Rechenzentren in Deutschland"
+        ],
+        "backup": [
+          "Datensicherung (verschlüsselt)",
+          "Hetzner Online GmbH, Gunzenhausen (Deutschland)",
+          "Rechenzentrum in Deutschland"
+        ],
+        "mail": [
+          "E-Mail-Versand (eigener Mailserver von LUXCODE)",
+          "Hetzner Online GmbH, Gunzenhausen (Deutschland)",
+          "Rechenzentrum in Finnland"
+        ],
+        "ai": [
+          "Assistent-Funktionen (Speisekarten-Import, Icon-Vorschläge) – nur wenn du sie einschaltest",
+          "IONOS SE (AI Model Hub), Montabaur (Deutschland)",
+          "Rechenzentrum in Berlin"
+        ],
+        "tse": [
+          "Cloud-TSE – nur wenn du sie nutzt",
+          "Swissbit AG, Bronschhofen (Schweiz; Angemessenheitsbeschluss der EU-Kommission)",
+          "nach Angabe des Anbieters Deutschland"
+        ],
+        "cdn": [
+          "DNS und vorgeschalteter Dienst (Weiterleitung, Zwischenspeicher, Schutz vor Überlastungsangriffen)",
+          "Cloudflare, Inc., San Francisco (USA)",
+          "weltweites Netz"
+        ],
+        "sentry": [
+          "Fehlerdiagnose der Server",
+          "Functional Software, Inc. (Sentry), San Francisco (USA)",
+          "EU-Datenregion"
+        ]
+      },
+      "outro": "Cloudflare und Sentry haben ihren Sitz in den USA und unterliegen damit auch dem Recht der USA. Für beide gelten die Standardvertragsklauseln der EU-Kommission und das EU-US Data Privacy Framework. Alle anderen Verarbeitungen finden in der EU bzw. im EWR statt. Die jeweils aktuelle Liste steht im <avv>Auftragsverarbeitungsvertrag, Anhang B</avv>."
+    },
+    "protection": {
+      "title": "Schutz vor Zugriffen aus Drittstaaten",
+      "intro": "Damit Behörden außerhalb der EU nicht unrechtmäßig an deine Daten kommen, setzen wir auf:",
+      "items": [
+        "<b>Speicherung in Deutschland</b> bei deutschen Unternehmen (IONOS, Hetzner). Die Fehlerdiagnose mit Sentry läuft in der EU-Datenregion.",
+        "<b>Verschlüsselung bei der Übertragung:</b> jede Verbindung zwischen Geräten, Software, TSE und Schnittstellen läuft über TLS 1.2 oder höher; unverschlüsselte Verbindungen werden abgewiesen.",
+        "<b>Verschlüsselung bei der Speicherung:</b> verschlüsselte Datenträger; Datensicherungen werden vor der Übertragung zu Hetzner mit AES-256 verschlüsselt. Zugangsdaten (z. B. der Cloud-TSE und deiner Zahlungsanbieter) und Geheimnisse der Zwei-Faktor-Anmeldung speichern wir verschlüsselt, Passwörter, Kassen-PINs und API-Tokens nur als Hash.",
+        "<b>Die Schlüssel bleiben bei LUXCODE</b> – kein Dienstleister erhält sie.",
+        "<b>Prüfung von Herausgabeverlangen:</b> Verlangt eine Behörde Daten von dir, prüfen wir das Verlangen vor jeder Herausgabe auf seine Rechtsgrundlage und geben nur heraus, wozu wir rechtlich verpflichtet sind. Wir informieren dich vorher, soweit das rechtlich zulässig ist (AVV Ziffer 4.3)."
+      ]
+    },
+    "export": {
+      "title": "Exportformate und Datenstrukturen",
+      "intro": "Deine Daten gehören dir. Du exportierst sie jederzeit selbst und kostenlos (AGB Ziffer 10.2 und 10.10):",
+      "items": [
+        "<b>CSV</b> (Semikolon, UTF-8): Bestellungen je Bestellung oder je Position, Berichte und Inventur – siehe <orders>Bestellungen exportieren</orders> und <reports>Auswertung</reports>.",
+        "<b>DSFinV-K</b> (ZIP mit den CSV-Tabellen und index.xml) und <b>TSE-Export</b> (TAR nach BSI TR-03153) – mit Cloud-TSE, siehe <cashaudit>Kassen-Nachschau</cashaudit>.",
+        "<b>JSON über die REST-API</b> mit API-Token: Datenstrukturen, Felder und Endpunkte beschreibt die <apiref>API-Referenz</apiref> (OpenAPI), den Zugang die Seite <tokens>API-Zugänge</tokens>.",
+        "<b>Webhooks</b> melden Ereignisse wie bezahlte Bestellungen sofort an dein System – siehe <webhooks>Webhooks</webhooks>.",
+        "<b>PDF</b> für Berichte, Schichtpläne, Kassenbuch und Rechnungen."
+      ],
+      "outro": "Nach dem Ende deines Vertrags kannst du alles noch 30 Tage lang exportieren. Das Steuerarchiv (bei Cloud-TSE) bleibt zehn Jahre abrufbar. Mehr dazu unter <deletion>Konto und Löschung</deletion>."
+    },
+    "switching": {
+      "title": "Anbieterwechsel",
+      "intro": "Du kannst jederzeit zu einem anderen Anbieter oder auf eine eigene Installation wechseln – OpenEOS ist Open Source und läuft auch auf deinem eigenen Server. So läuft der Wechsel:",
+      "steps": [
+        "<b>Melde dich</b> per E-Mail an <mail>hello@openeos.de</mail> oder über den Support in der App. Wir beantworten deine Fragen zu Formaten, Schnittstellen und Export.",
+        "<b>Kündigungsfrist:</b> Eine Tagesnutzung endet ohnehin mit dem letzten gebuchten Tag, ohne Kündigung. Dein Kundenkonto kannst du für den Wechsel jederzeit ohne Frist kündigen – per E-Mail oder indem du die Organisation im Kundenportal löschst; für ein Abonnement gilt die Frist der AGB (Ziffer 10.8). Beides liegt unter den nach dem Data Act höchstens zulässigen zwei Monaten.",
+        "<b>Übergangszeitraum von 30 Tagen:</b> Wir führen die Leistung fort, unterstützen dich und stellen alle exportierbaren Daten bereit. Reicht das aus technischen Gründen nicht, sagen wir dir das innerhalb von 14 Werktagen und nennen einen Zeitraum von höchstens sieben Monaten. Auf deinen Wunsch verlängern wir einmalig.",
+        "<b>Abruf und Löschung:</b> Danach stehen deine Daten mindestens 30 weitere Tage zum Abruf bereit. Bestätigst du früher, dass der Wechsel abgeschlossen ist, oder läuft die Frist ab, löschen wir sie (AGB Ziffer 10.11)."
+      ],
+      "fees": "<b>Keine Wechselentgelte:</b> Für den Wechsel, die Bereitstellung der Daten und unsere Unterstützung berechnen wir nichts (AGB Ziffer 10.12).",
+      "selfhost": "Selbst betreiben: Die <selfhost>Anleitung zur eigenen Installation</selfhost> zeigt, wie du OpenEOS auf deinem eigenen Server einrichtest. Den Quellcode findest du auf <github>GitHub</github>."
+    },
+    "contact": "Fragen zum Data Act? Schreib uns an <mail>hello@openeos.de</mail> (Deutsch oder Englisch)."
   }
 }

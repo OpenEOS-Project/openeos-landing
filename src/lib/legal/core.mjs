@@ -12,7 +12,15 @@ import fs from "node:fs";
 import path from "node:path";
 
 /** Reihenfolge = Reihenfolge in Fusszeile und Sitemap. */
-export const LEGAL_DOCS = ["impressum", "datenschutz", "agb", "avv"];
+export const LEGAL_DOCS = ["impressum", "datenschutz", "agb", "avv", "leistungsbeschreibung"];
+
+/**
+ * Dokumente, die (noch) fehlen duerfen: ohne Fassung gibt es weder Seite
+ * noch PDF, Link oder Sitemap-Eintrag, und der Bau laeuft trotzdem durch.
+ * Anlage 1 (Leistungsbeschreibung und Preisliste) erscheint, sobald
+ * content/legal/de/leistungsbeschreibung/<JJJJ-MM-TT>.md existiert.
+ */
+export const OPTIONAL_LEGAL_DOCS = ["leistungsbeschreibung"];
 
 export const LEGAL_CONTENT_DIR = path.join(process.cwd(), "content", "legal", "de");
 
@@ -25,6 +33,7 @@ export function isLegalDoc(doc) {
 /** Alle Fassungen eines Dokuments, neueste zuerst. */
 export function listVersions(doc) {
   const dir = path.join(LEGAL_CONTENT_DIR, doc);
+  if (OPTIONAL_LEGAL_DOCS.includes(doc) && !fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir)
     .filter((f) => f.endsWith(".md"))
@@ -32,6 +41,16 @@ export function listVersions(doc) {
     .filter((v) => VERSION_RE.test(v))
     .sort()
     .reverse();
+}
+
+/** Gibt es mindestens eine Fassung? (Pflichtdokumente: immer.) */
+export function hasLegalDoc(doc) {
+  return listVersions(doc).length > 0;
+}
+
+/** Dokumente mit mindestens einer Fassung, in der Reihenfolge von LEGAL_DOCS. */
+export function availableLegalDocs() {
+  return LEGAL_DOCS.filter(hasLegalDoc);
 }
 
 export function currentVersion(doc) {
