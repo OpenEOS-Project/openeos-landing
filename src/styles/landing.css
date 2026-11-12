@@ -2332,6 +2332,17 @@
 .landing .legal-toc__d1 a { color: var(--ink); }
 .landing .legal-toc__d2 { padding-left: 14px !important; }
 
+/* Data-Act-Seite: Informationsseite im Rahmen der Rechtstexte, aber mit
+   Seitenkopf wie Neuerungen/Feedback und festem Inhaltsverzeichnis. */
+.landing .data-act__head { padding-bottom: 20px; }
+.landing .data-act__head .section-title { font-size: clamp(34px, 5vw, 52px); }
+.landing .data-act__toc { padding: 10px 16px 4px; }
+.landing .data-act__toc ol { padding: 0 0 6px; list-style: decimal; padding-left: 1.2em; }
+.landing .data-act__body section h2 { margin-top: 36px; }
+.landing .data-act__body section:first-child h2 { margin-top: 8px; }
+.landing .data-act__body [id] { scroll-margin-top: 96px; }
+.landing .data-act__body .soon-badge { vertical-align: middle; }
+
 /* Der Text selbst (aus Markdown). */
 .landing .legal-doc {
   font-size: 16px; line-height: 1.65;

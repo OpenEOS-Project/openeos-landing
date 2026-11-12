@@ -1,6 +1,14 @@
 import { currentVersion, extractStand, extractTitle, listVersions, readSource, type LegalDoc } from "./core.mjs";
 
-export { LEGAL_DOCS, isLegalDoc, listVersions, currentVersion, type LegalDoc } from "./core.mjs";
+export {
+  LEGAL_DOCS,
+  availableLegalDocs,
+  currentVersion,
+  hasLegalDoc,
+  isLegalDoc,
+  listVersions,
+  type LegalDoc,
+} from "./core.mjs";
 
 /** Oeffentliche Adresse eines Rechtstexts (deutsche Route, ohne Sprache). */
 export function legalPath(doc: LegalDoc, version?: string) {
@@ -25,6 +33,8 @@ export type LegalDocument = {
 
 export function getLegalDocument(doc: LegalDoc, version?: string): LegalDocument | null {
   const versions = listVersions(doc);
+  /* Optionales Dokument ohne Fassung (Anlage 1): keine Seite. */
+  if (!versions.length) return null;
   const current = currentVersion(doc);
   const v = version ?? current;
   if (!versions.includes(v)) return null;

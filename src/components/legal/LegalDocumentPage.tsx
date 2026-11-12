@@ -19,7 +19,7 @@ import {
 import { renderLegal } from "@/lib/legal/render";
 
 /*
- * Ein Rechtstext (Impressum, Datenschutz, AGB, AVV) in einer Fassung.
+ * Ein Rechtstext (Impressum, Datenschutz, AGB, AVV, Anlage 1) in einer Fassung.
  *
  * Adressen (andere Teile von OpenEOS verlinken darauf — nicht aendern):
  *   /<doc>              aktuelle Fassung

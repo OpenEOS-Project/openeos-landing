@@ -1,7 +1,10 @@
-export type LegalDoc = "impressum" | "datenschutz" | "agb" | "avv";
+export type LegalDoc = "impressum" | "datenschutz" | "agb" | "avv" | "leistungsbeschreibung";
 
 export const LEGAL_DOCS: LegalDoc[];
+export const OPTIONAL_LEGAL_DOCS: LegalDoc[];
 export const LEGAL_CONTENT_DIR: string;
+export function hasLegalDoc(doc: LegalDoc): boolean;
+export function availableLegalDocs(): LegalDoc[];
 export function isLegalDoc(doc: string): doc is LegalDoc;
 export function listVersions(doc: LegalDoc): string[];
 export function currentVersion(doc: LegalDoc): string;
