@@ -20,6 +20,7 @@ import PDFDocument from "pdfkit";
 
 import {
   LEGAL_DOCS,
+  OPTIONAL_LEGAL_DOCS,
   currentVersion,
   extractStand,
   extractTitle,
@@ -385,7 +386,14 @@ async function buildPdfs() {
   fs.rmSync(OUT_DIR, { recursive: true, force: true });
   fs.mkdirSync(OUT_DIR, { recursive: true });
   for (const doc of LEGAL_DOCS) {
-    for (const version of listVersions(doc)) {
+    const versions = listVersions(doc);
+    /* Optionales Dokument ohne Fassung (Anlage 1): kein PDF. Pflicht-
+       dokumente ohne Fassung brechen weiter in currentVersion() ab. */
+    if (!versions.length && OPTIONAL_LEGAL_DOCS.includes(doc)) {
+      console.log(`[legal] ${doc}: noch keine Fassung – übersprungen.`);
+      continue;
+    }
+    for (const version of versions) {
       const { file, pages } = await buildPdf(doc, version);
       console.log(`[legal] ${path.relative(ROOT, file)} (${pages} S.)`);
     }

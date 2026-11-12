@@ -374,7 +374,7 @@
     "pricing": "Pricing",
     "demo": "Request demo",
     "docs": "Documentation",
-    "github": "GitHub",
+    "github": "Source code",
     "changelog": "What's new",
     "imprint": "Imprint",
     "privacy": "Privacy",
@@ -384,7 +384,9 @@
     "productBy": "A product of LUXCODE by Lukas Lukic-Spitznagel",
     "feedback": "Feedback & ideas",
     "screens": "A look inside",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "dataAct": "Data Act",
+    "serviceDescription": "Service description"
   },
   "legal": {
     "docs": {
@@ -407,6 +409,11 @@
         "label": "DPA",
         "metaTitle": "Data Processing Agreement (AVV) — OpenEOS",
         "metaDescription": "Data processing agreement under Art. 28 GDPR (annex 2 to the terms). The German version is binding."
+      },
+      "leistungsbeschreibung": {
+        "label": "Service description",
+        "metaTitle": "Annex 1 – Service Description and Price List (Leistungsbeschreibung) — OpenEOS",
+        "metaDescription": "Scope of services and prices of OpenEOS (annex 1 to the terms). The German version is binding."
       }
     },
     "downloadPdf": "Download PDF",
@@ -781,5 +788,100 @@
         }
       }
     }
+  },
+  "dataAct": {
+    "metaTitle": "Data Act: locations, data export and switching — OpenEOS",
+    "metaDescription": "Where OpenEOS processes your data, how we protect it against access from third countries, which export formats you get and how switching to another provider works.",
+    "titleL1": "Your data,",
+    "titleL2": "your switch",
+    "sub": "Information under the EU Data Act (Regulation (EU) 2023/2854) about OpenEOS as a cloud service: locations, protection against third-country access, export formats and switching providers.",
+    "note": "This page summarizes the information in plain language. The binding documents are the <agb>terms (AGB)</agb> (clause 10) and the <avv>data processing agreement</avv> (annex 2 with the list of subprocessors), both in German.",
+    "toc": "On this page",
+    "provider": {
+      "title": "Provider and jurisdiction",
+      "p1": "OpenEOS is a product of LUXCODE by Lukas Lukic-Spitznagel, based in St. Georgen im Schwarzwald, Germany. Your contract is with LUXCODE and governed by German law (terms, clause 14.2).",
+      "p2": "LUXCODE's support work takes place at its registered office in Germany. No customer data is stored there permanently – it stays in the data centers listed below."
+    },
+    "locations": {
+      "title": "Where your data is processed",
+      "intro": "Your data is stored in data centers in Germany. We use these service providers:",
+      "colPurpose": "Purpose",
+      "colCompany": "Company",
+      "colLocation": "Location",
+      "rows": {
+        "hosting": [
+          "Running the software (servers, database, files)",
+          "IONOS SE, Montabaur (Germany)",
+          "Data centers in Germany"
+        ],
+        "backup": [
+          "Backups (encrypted)",
+          "Hetzner Online GmbH, Gunzenhausen (Germany)",
+          "Data center in Germany"
+        ],
+        "mail": [
+          "Sending e-mails (LUXCODE's own mail server)",
+          "Hetzner Online GmbH, Gunzenhausen (Germany)",
+          "Data center in Finland"
+        ],
+        "ai": [
+          "Assistant features (menu import, icon suggestions) – only if you turn them on",
+          "IONOS SE (AI Model Hub), Montabaur (Germany)",
+          "Data center in Berlin"
+        ],
+        "tse": [
+          "Cloud TSE – only if you use it",
+          "Swissbit AG, Bronschhofen (Switzerland; EU adequacy decision)",
+          "Germany, according to the provider"
+        ],
+        "cdn": [
+          "DNS and upstream service (routing, caching, protection against overload attacks)",
+          "Cloudflare, Inc., San Francisco (USA)",
+          "Global network"
+        ],
+        "sentry": [
+          "Server error diagnostics",
+          "Functional Software, Inc. (Sentry), San Francisco (USA)",
+          "EU data region"
+        ]
+      },
+      "outro": "Cloudflare and Sentry are based in the USA and are therefore also subject to US law. The European Commission's standard contractual clauses and the EU-US Data Privacy Framework apply to both. All other processing takes place in the EU or EEA. The current list is in the <avv>data processing agreement, annex B</avv>."
+    },
+    "protection": {
+      "title": "Protection against third-country access",
+      "intro": "To keep authorities outside the EU from unlawfully accessing your data, we rely on:",
+      "items": [
+        "<b>Storage in Germany</b> with German companies (IONOS, Hetzner). Error diagnostics with Sentry run in the EU data region.",
+        "<b>Encryption in transit:</b> every connection between devices, software, TSE and interfaces uses TLS 1.2 or higher; unencrypted connections are rejected.",
+        "<b>Encryption at rest:</b> encrypted storage; backups are encrypted with AES-256 before they are transferred to Hetzner. Credentials (e.g. for the Cloud TSE and your payment providers) and two-factor secrets are stored encrypted; passwords, POS PINs and API tokens only as hashes.",
+        "<b>The keys stay with LUXCODE</b> – no service provider gets them.",
+        "<b>Review of disclosure requests:</b> if an authority asks for your data, we check the legal basis of the request before any disclosure and only disclose what we are legally required to. We inform you beforehand where legally permitted (DPA clause 4.3)."
+      ]
+    },
+    "export": {
+      "title": "Export formats and data structures",
+      "intro": "Your data belongs to you. You export it yourself at any time, free of charge (terms, clauses 10.2 and 10.10):",
+      "items": [
+        "<b>CSV</b> (semicolon, UTF-8): orders per order or per line item, reports and stocktaking – see <orders>exporting orders</orders> and <reports>reports</reports>.",
+        "<b>DSFinV-K</b> (ZIP with the CSV tables and index.xml) and <b>TSE export</b> (TAR according to BSI TR-03153) – with the Cloud TSE, see <cashaudit>cash audit</cashaudit>.",
+        "<b>JSON via the REST API</b> with an API token: data structures, fields and endpoints are described in the <apiref>API reference</apiref> (OpenAPI), access in <tokens>API access</tokens>.",
+        "<b>Webhooks</b> notify your system of events such as paid orders right away – see <webhooks>webhooks</webhooks>.",
+        "<b>PDF</b> for reports, shift plans, cash book and invoices."
+      ],
+      "outro": "After your contract ends you can still export everything for 30 days. The fiscal archive (with the Cloud TSE) remains available for ten years. More under <deletion>account and deletion</deletion>."
+    },
+    "switching": {
+      "title": "Switching providers",
+      "intro": "You can switch to another provider or to your own installation at any time – OpenEOS is open source and also runs on your own server. This is how switching works:",
+      "steps": [
+        "<b>Get in touch</b> by e-mail at <mail>hello@openeos.de</mail> or via support in the app. We answer your questions about formats, interfaces and export.",
+        "<b>Notice period:</b> a day booking ends with the last booked day anyway, without notice. You can cancel your customer account for a switch at any time without notice – by e-mail or by deleting the organization in the customer portal; a subscription follows the notice period of the terms (clause 10.8). Both are shorter than the maximum of two months allowed under the Data Act.",
+        "<b>Transition period of 30 days:</b> we continue the service, support you and provide all exportable data. If that is not enough for technical reasons, we tell you within 14 working days and name a period of at most seven months. At your request we extend it once.",
+        "<b>Retrieval and deletion:</b> afterwards your data remains available for at least another 30 days. If you confirm earlier that the switch is complete, or when the period ends, we delete it (terms, clause 10.11)."
+      ],
+      "fees": "<b>No switching charges:</b> we charge nothing for switching, providing the data or our support (terms, clause 10.12).",
+      "selfhost": "Self-hosting: the <selfhost>installation guide</selfhost> shows how to set up OpenEOS on your own server. The source code is on <github>GitHub</github>."
+    },
+    "contact": "Questions about the Data Act? Write to <mail>hello@openeos.de</mail> (German or English)."
   }
 }

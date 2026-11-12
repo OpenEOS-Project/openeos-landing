@@ -2,11 +2,14 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ContactTrigger } from "@/components/ContactTrigger";
 import { docsUrl } from "@/lib/site";
+import { hasLegalDoc } from "@/lib/legal";
 
 export function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
   const year = new Date().getFullYear();
+  /* Anlage 1 erst verlinken, wenn es eine Fassung gibt (lib/legal). */
+  const serviceDescription = hasLegalDoc("leistungsbeschreibung");
 
   return (
     <footer className="foot">
@@ -31,6 +34,7 @@ export function Footer() {
             <Link href="/changelog">{t("changelog")}</Link>
             <Link href="/faq">{t("faq")}</Link>
             <Link href="/feedback">{t("feedback")}</Link>
+            {/* AGPL-3.0 § 13: Quellcode-Link */}
             <a
               href="https://github.com/OpenEOS-Project"
               target="_blank"
@@ -45,6 +49,10 @@ export function Footer() {
             <Link href="/datenschutz">{t("privacy")}</Link>
             <Link href="/agb">{t("terms")}</Link>
             <Link href="/avv">{t("dpa")}</Link>
+            {serviceDescription && (
+              <Link href="/leistungsbeschreibung">{t("serviceDescription")}</Link>
+            )}
+            <Link href="/data-act">{t("dataAct")}</Link>
           </div>
         </div>
       </div>
