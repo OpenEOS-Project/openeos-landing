@@ -164,8 +164,31 @@
       },
       "payment": {
         "title": "Bezahlen",
-        "copy": "SumUp-Integration für Kartenzahlung — schnell und sicher.",
-        "tse": "Bargeld in Deutschland mit Cloud-TSE – im Preis inklusive."
+        "copy": "Kartenzahlung über SumUp – an der Kasse und bei QR-Bestellungen, auch mit Apple Pay und Google Pay."
+      },
+      "tse": {
+        "title": "Cloud-TSE",
+        "copy": "Bargeld in Deutschland mit zertifizierter Cloud-TSE – im Preis inklusive, samt DSFinV-K-Export und Kassenbuch."
+      },
+      "tokens": {
+        "title": "Wertmarken",
+        "copy": "Wertmarken verkaufen, an der Theke annehmen und zurücktauschen – steuerlich richtig gebucht."
+      },
+      "pfand": {
+        "title": "Pfand",
+        "copy": "Pfand auf Becher und Flaschen, Rückgabe an der Kasse mit eigenem Beleg."
+      },
+      "receipts": {
+        "title": "Digitale Belege",
+        "copy": "Beleg per QR-Code oder E-Mail statt Papier – auf Wunsch als Bewirtungsbeleg."
+      },
+      "waiters": {
+        "title": "Bedienungen",
+        "copy": "Bedienungen melden sich mit PIN an der Kasse an. Abrechnung, Kassensturz und Trinkgeld per Knopfdruck."
+      },
+      "tables": {
+        "title": "Tischplan",
+        "copy": "Tische und Bereiche im Saalplan anlegen und Bestellungen direkt dem Tisch zuordnen."
       },
       "printer": {
         "title": "Bondruck",
@@ -178,6 +201,14 @@
       "stats": {
         "title": "Statistiken",
         "copy": "Echtzeit-Auswertungen und Berichte — immer den Überblick."
+      },
+      "assistant": {
+        "title": "KI-Assistent",
+        "copy": "Speisekarte als Foto oder PDF hochladen – der Assistent schlägt Kategorien und Artikel vor, du bestätigst."
+      },
+      "api": {
+        "title": "API & Webhooks",
+        "copy": "Eigene Systeme und KI-Agenten anbinden – über API-Zugänge, Webhooks und MCP."
       },
       "openSource": {
         "title": "Open Source",

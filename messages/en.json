@@ -164,8 +164,31 @@
       },
       "payment": {
         "title": "Payments",
-        "copy": "SumUp integration for card payments — fast and secure.",
-        "tse": "Cash in Germany with a cloud TSE – included in the price."
+        "copy": "Card payments via SumUp – at the till and for QR orders, including Apple Pay and Google Pay."
+      },
+      "tse": {
+        "title": "Cloud TSE",
+        "copy": "Cash in Germany with a certified cloud TSE – included in the price, with DSFinV-K export and cash book."
+      },
+      "tokens": {
+        "title": "Drink tokens",
+        "copy": "Sell tokens, accept them at the bar and buy them back – booked correctly for tax."
+      },
+      "pfand": {
+        "title": "Deposits",
+        "copy": "Deposits on cups and bottles, returns at the till with their own receipt."
+      },
+      "receipts": {
+        "title": "Digital receipts",
+        "copy": "Receipts by QR code or e-mail instead of paper – as a hospitality receipt on request."
+      },
+      "waiters": {
+        "title": "Waiters",
+        "copy": "Waiters sign in at the till with a PIN. Settlement, cash count and tips at the push of a button."
+      },
+      "tables": {
+        "title": "Floor plan",
+        "copy": "Set up tables and areas on a floor plan and assign orders straight to the table."
       },
       "printer": {
         "title": "Receipt printing",
@@ -178,6 +201,14 @@
       "stats": {
         "title": "Analytics",
         "copy": "Real-time reports and dashboards — always in the loop."
+      },
+      "assistant": {
+        "title": "AI assistant",
+        "copy": "Upload your menu as a photo or PDF – the assistant suggests categories and items, you confirm."
+      },
+      "api": {
+        "title": "API & webhooks",
+        "copy": "Connect your own systems and AI agents – via API access, webhooks and MCP."
       },
       "openSource": {
         "title": "Open Source",
