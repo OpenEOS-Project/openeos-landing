@@ -204,7 +204,7 @@
       },
       "assistant": {
         "title": "AI assistant",
-        "copy": "Upload your menu as a photo or PDF – the assistant suggests categories and items, you confirm."
+        "copy": "Upload your menu as a photo or PDF – the assistant suggests categories and items, you confirm. The AI runs in data centres in Germany."
       },
       "api": {
         "title": "API & webhooks",
