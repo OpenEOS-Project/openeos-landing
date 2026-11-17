@@ -1052,7 +1052,7 @@
   color: var(--mute-2);
 }
 .landing .plan__note a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
-.landing .fbox__tse {
+.landing .fbox__title {
   display: flex; flex-wrap: wrap; align-items: center; column-gap: 8px; row-gap: 6px;
 }
 

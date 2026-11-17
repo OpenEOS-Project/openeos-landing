@@ -7,7 +7,7 @@
  * verfügbar“; fehlt die Angabe (lokal, CI), gilt die Cloud-TSE als
  * verfügbar.
  *
- * Betroffen sind Preise, das Feature „Zahlung“ und die FAQ (#tse). Die
+ * Betroffen sind Preise, die Kachel „Cloud-TSE“ und die FAQ (#tse). Die
  * Rechtstexte bleiben, wie sie sind.
  */
 export const tseComingSoon = process.env.NEXT_PUBLIC_TSE_COMING_SOON === "true";
