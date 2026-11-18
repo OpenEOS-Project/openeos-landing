@@ -826,6 +826,7 @@
     "titleL1": "Your data,",
     "titleL2": "your switch",
     "sub": "Information under the EU Data Act (Regulation (EU) 2023/2854) about OpenEOS as a cloud service: locations, protection against third-country access, export formats and switching providers.",
+    "stand": "As of 18 November 2026",
     "note": "This page summarizes the information in plain language. The binding documents are the <agb>terms (AGB)</agb> (clause 10) and the <avv>data processing agreement</avv> (annex 2 with the list of subprocessors), both in German.",
     "toc": "On this page",
     "provider": {
@@ -885,7 +886,7 @@
         "<b>Storage in Germany</b> with German companies (IONOS, Hetzner). Error diagnostics with Sentry run in the EU data region.",
         "<b>Encryption in transit:</b> every connection between devices, software, TSE and interfaces uses TLS 1.2 or higher; unencrypted connections are rejected.",
         "<b>Encryption at rest:</b> encrypted storage; backups are encrypted with AES-256 before they are transferred to Hetzner. Credentials (e.g. for the Cloud TSE and your payment providers) and two-factor secrets are stored encrypted; passwords, POS PINs and API tokens only as hashes.",
-        "<b>The keys stay with LUXCODE</b> – no service provider gets them.",
+        "<b>The keys of the backups stay with LUXCODE</b> – Hetzner only stores the backups encrypted and does not get the keys. As an upstream service, Cloudflare decrypts the connections to the website, web app, online shop and documentation and processes the transmitted content without storing it beyond delivery; requests to the API (api.openeos.de) do not go through Cloudflare (privacy policy section 3.6).",
         "<b>Review of disclosure requests:</b> if an authority asks for your data, we check the legal basis of the request before any disclosure and only disclose what we are legally required to. We inform you beforehand where legally permitted (DPA clause 4.3)."
       ]
     },
@@ -899,7 +900,8 @@
         "<b>Webhooks</b> notify your system of events such as paid orders right away – see <webhooks>webhooks</webhooks>.",
         "<b>PDF</b> for reports, shift plans, cash book and invoices."
       ],
-      "outro": "After your contract ends you can still export everything for 30 days. The fiscal archive (with the Cloud TSE) remains available for ten years. More under <deletion>account and deletion</deletion>."
+      "outro": "After your contract ends you can still export everything for 30 days. The fiscal archive (with the Cloud TSE) remains available for ten years. More under <deletion>account and deletion</deletion>.",
+      "limits": "<b>Known limitations:</b> There is currently no complete export of all data in one step – you export via the individual exports above. The API returns administrative data (e.g. events, items, tables, shift plans, reports). Data you cannot retrieve this way we provide on request via support in one of the formats listed when you switch (annex 1, section 10). The only data that cannot be exported are password and PIN hashes, security and system logs of LUXCODE and trade secrets of LUXCODE such as internal infrastructure configuration (terms, section 10.10)."
     },
     "switching": {
       "title": "Switching providers",

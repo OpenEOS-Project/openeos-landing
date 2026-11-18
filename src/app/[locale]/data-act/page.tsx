@@ -78,6 +78,7 @@ export default async function DataActPage({ params }: Props) {
                 {t("titleL1")} <span className="u-accent">{t("titleL2")}</span>
               </h1>
               <p className="section-sub">{t("sub")}</p>
+              <p className="data-act__stand">{t("stand")}</p>
             </header>
 
             <p className="legal-banner legal-banner--info" role="note">
@@ -155,6 +156,7 @@ export default async function DataActPage({ params }: Props) {
                   ))}
                 </ul>
                 <p>{rich("export.outro")}</p>
+                <p>{rich("export.limits")}</p>
               </section>
 
               <section aria-labelledby="switching">
