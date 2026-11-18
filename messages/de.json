@@ -204,7 +204,7 @@
       },
       "assistant": {
         "title": "KI-Assistent",
-        "copy": "Speisekarte als Foto oder PDF hochladen – der Assistent schlägt Kategorien und Artikel vor, du bestätigst."
+        "copy": "Speisekarte als Foto oder PDF hochladen – der Assistent schlägt Kategorien und Artikel vor, du bestätigst. Die KI läuft in Rechenzentren in Deutschland."
       },
       "api": {
         "title": "API & Webhooks",
