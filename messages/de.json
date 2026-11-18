@@ -825,16 +825,17 @@
     "titleL1": "Deine Daten,",
     "titleL2": "dein Wechsel",
     "sub": "Angaben nach dem EU Data Act (Verordnung (EU) 2023/2854) zu OpenEOS als Cloud-Dienst: Standorte, Schutz vor Zugriffen aus Drittstaaten, Exportformate und Anbieterwechsel.",
+    "stand": "Stand: 18. November 2026",
     "note": "Diese Seite fasst die Angaben verständlich zusammen. Verbindlich sind die <agb>AGB</agb> (Ziffer 10) und der <avv>Auftragsverarbeitungsvertrag</avv> (Anlage 2 mit der Liste der Unterauftragsverarbeiter).",
     "toc": "Auf dieser Seite",
     "provider": {
       "title": "Anbieter und Rechtsordnung",
       "p1": "OpenEOS ist ein Produkt von LUXCODE by Lukas Lukic-Spitznagel mit Sitz in St. Georgen im Schwarzwald, Deutschland. Dein Vertrag kommt mit LUXCODE zustande; es gilt deutsches Recht (AGB Ziffer 14.2).",
-      "p2": "Support-Tätigkeiten von LUXCODE finden am Sitz in Deutschland statt. Dort werden keine Kundendaten dauerhaft gespeichert – sie liegen in den Rechenzentren unten."
+      "p2": "Support-Tätigkeiten von LUXCODE finden am Sitz in Deutschland statt. Dort werden keine Kundendaten dauerhaft gespeichert – gespeichert werden sie in den Rechenzentren unten."
     },
     "locations": {
       "title": "Wo deine Daten verarbeitet werden",
-      "intro": "Deine Daten liegen in Rechenzentren in Deutschland. Diese Dienstleister setzen wir ein:",
+      "intro": "Deine Daten werden in Rechenzentren in Deutschland gespeichert. Diese Dienstleister setzen wir ein:",
       "colPurpose": "Wofür",
       "colCompany": "Unternehmen",
       "colLocation": "Standort",
@@ -884,7 +885,7 @@
         "<b>Speicherung in Deutschland</b> bei deutschen Unternehmen (IONOS, Hetzner). Die Fehlerdiagnose mit Sentry läuft in der EU-Datenregion.",
         "<b>Verschlüsselung bei der Übertragung:</b> jede Verbindung zwischen Geräten, Software, TSE und Schnittstellen läuft über TLS 1.2 oder höher; unverschlüsselte Verbindungen werden abgewiesen.",
         "<b>Verschlüsselung bei der Speicherung:</b> verschlüsselte Datenträger; Datensicherungen werden vor der Übertragung zu Hetzner mit AES-256 verschlüsselt. Zugangsdaten (z. B. der Cloud-TSE und deiner Zahlungsanbieter) und Geheimnisse der Zwei-Faktor-Anmeldung speichern wir verschlüsselt, Passwörter, Kassen-PINs und API-Tokens nur als Hash.",
-        "<b>Die Schlüssel bleiben bei LUXCODE</b> – kein Dienstleister erhält sie.",
+        "<b>Die Schlüssel der Datensicherungen bleiben bei LUXCODE</b> – Hetzner speichert die Sicherungen nur verschlüsselt und erhält die Schlüssel nicht. Cloudflare entschlüsselt als vorgeschalteter Dienst die Verbindungen zu Website, Web-App, Online-Shop und Dokumentation und verarbeitet dabei die übertragenen Inhalte, ohne sie über die Auslieferung hinaus zu speichern; Anfragen an die Programmierschnittstelle (api.openeos.de) laufen nicht über Cloudflare (Datenschutzerklärung Ziffer 3.6).",
         "<b>Prüfung von Herausgabeverlangen:</b> Verlangt eine Behörde Daten von dir, prüfen wir das Verlangen vor jeder Herausgabe auf seine Rechtsgrundlage und geben nur heraus, wozu wir rechtlich verpflichtet sind. Wir informieren dich vorher, soweit das rechtlich zulässig ist (AVV Ziffer 4.3)."
       ]
     },
@@ -898,7 +899,8 @@
         "<b>Webhooks</b> melden Ereignisse wie bezahlte Bestellungen sofort an dein System – siehe <webhooks>Webhooks</webhooks>.",
         "<b>PDF</b> für Berichte, Schichtpläne, Kassenbuch und Rechnungen."
       ],
-      "outro": "Nach dem Ende deines Vertrags kannst du alles noch 30 Tage lang exportieren. Das Steuerarchiv (bei Cloud-TSE) bleibt zehn Jahre abrufbar. Mehr dazu unter <deletion>Konto und Löschung</deletion>."
+      "outro": "Nach dem Ende deines Vertrags kannst du alles noch 30 Tage lang exportieren. Das Steuerarchiv (bei Cloud-TSE) bleibt zehn Jahre abrufbar. Mehr dazu unter <deletion>Konto und Löschung</deletion>.",
+      "limits": "<b>Bekannte Einschränkungen:</b> Einen Gesamtexport aller Daten in einem Schritt gibt es derzeit nicht – du exportierst über die einzelnen Exporte oben. Die API liefert Verwaltungsdaten (u. a. Veranstaltungen, Artikel, Tische, Schichtpläne, Berichte). Daten, die du über diese Wege nicht abrufen kannst, stellen wir dir beim Wechsel auf Anfrage über den Support in einem der genannten Formate bereit (Anlage 1 Ziffer 10). Nicht exportierbar sind nur Passwort- und PIN-Hashes, Sicherheits- und Systemprotokolle von LUXCODE sowie Geschäftsgeheimnisse von LUXCODE wie interne Konfigurationen der Infrastruktur (AGB Ziffer 10.10)."
     },
     "switching": {
       "title": "Anbieterwechsel",
