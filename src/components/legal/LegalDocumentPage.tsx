@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Download, Info, Archive } from "lucide-react";
+import { Download, Info, Archive, CalendarClock } from "lucide-react";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -22,8 +22,9 @@ import { renderLegal } from "@/lib/legal/render";
  * Ein Rechtstext (Impressum, Datenschutz, AGB, AVV, Anlage 1) in einer Fassung.
  *
  * Adressen (andere Teile von OpenEOS verlinken darauf — nicht aendern):
- *   /<doc>              aktuelle Fassung
- *   /<doc>/<JJJJ-MM-TT> jede Fassung, auch die aktuelle (unbekannt → 404)
+ *   /<doc>              aktuelle Fassung (neueste, deren Datum erreicht ist)
+ *   /<doc>/<JJJJ-MM-TT> jede Fassung, auch die aktuelle und kuenftige
+ *                       (unbekannt → 404)
  *   /rechtstexte/<doc>-<JJJJ-MM-TT>.pdf und /rechtstexte/<doc>.pdf
  *   #<ueberschrift>, #anhang-b, #ziffer-4-6 als Sprungmarken
  * Englisch (/en/…) zeigt denselben deutschen Text mit einem Hinweis.
@@ -40,19 +41,22 @@ export async function legalMetadata(doc: LegalDoc, { locale, version }: Params):
   const data = getLegalDocument(doc, version);
   if (!data) return {};
   const t = await getTranslations({ locale, namespace: "legal" });
-  const archived = !data.isCurrent;
+  const other = !data.isCurrent;
+  const date = formatVersion(data.version, locale);
   const meta = await pageMetadata({
     locale,
     /* Die aktuelle Fassung ist auch unter /<doc>/<datum> erreichbar;
        kanonisch ist dann /<doc>. */
-    path: archived ? legalPath(doc, data.version) : legalPath(doc),
-    title: archived
-      ? `${t(`docs.${doc}.metaTitle`)} (${formatVersion(data.version, locale)})`
-      : t(`docs.${doc}.metaTitle`),
+    path: other ? legalPath(doc, data.version) : legalPath(doc),
+    title: !other
+      ? t(`docs.${doc}.metaTitle`)
+      : data.status === "upcoming"
+        ? `${t(`docs.${doc}.metaTitle`)} (${t("upcomingTitle", { date })})`
+        : `${t(`docs.${doc}.metaTitle`)} (${date})`,
     description: t(`docs.${doc}.metaDescription`),
   });
-  /* Alte Fassungen gehoeren ins Archiv, nicht in die Suchergebnisse. */
-  if (archived) meta.robots = { index: false, follow: true };
+  /* Alte und kuenftige Fassungen gehoeren nicht in die Suchergebnisse. */
+  if (other) meta.robots = { index: false, follow: true };
   return meta;
 }
 
@@ -69,6 +73,8 @@ export async function LegalDocumentPage({ doc, locale, version }: Params & { doc
   });
   const pdf = legalPdfPath(doc, data.version);
   const pdfName = `openeos-${doc}-${data.version}.pdf`;
+  /* Hinweis auf der aktuellen Fassung, wenn schon eine neue angekuendigt ist. */
+  const nextVersion = data.upcoming[0];
   /* Inhaltsverzeichnis erst ab ein paar Abschnitten (nicht im Impressum). */
   const showToc = toc.length > 8;
 
@@ -78,7 +84,7 @@ export async function LegalDocumentPage({ doc, locale, version }: Params & { doc
       <main className="legal">
         <div className="page-wrap">
           <div className="legal__article">
-            {!data.isCurrent && (
+            {data.status === "archived" && data.current && (
               <p className="legal-banner" role="note">
                 <Archive aria-hidden="true" />
                 <span>
@@ -86,6 +92,31 @@ export async function LegalDocumentPage({ doc, locale, version }: Params & { doc
                     date: formatVersion(data.version, locale),
                     current: formatVersion(data.current, locale),
                     link: (chunks) => <Link href={legalPath(doc)}>{chunks}</Link>,
+                  })}
+                </span>
+              </p>
+            )}
+            {data.status === "upcoming" && (
+              <p className="legal-banner legal-banner--upcoming" role="note">
+                <CalendarClock aria-hidden="true" />
+                <span>
+                  {data.current
+                    ? t.rich("upcoming", {
+                        date: formatVersion(data.version, locale),
+                        current: formatVersion(data.current, locale),
+                        link: (chunks) => <Link href={legalPath(doc)}>{chunks}</Link>,
+                      })
+                    : t("upcomingOnly", { date: formatVersion(data.version, locale) })}
+                </span>
+              </p>
+            )}
+            {data.isCurrent && nextVersion && (
+              <p className="legal-banner legal-banner--info" role="note">
+                <CalendarClock aria-hidden="true" />
+                <span>
+                  {t.rich("upcomingNotice", {
+                    date: formatVersion(nextVersion, locale),
+                    link: (chunks) => <Link href={legalPath(doc, nextVersion)}>{chunks}</Link>,
                   })}
                 </span>
               </p>
@@ -139,6 +170,11 @@ export async function LegalDocumentPage({ doc, locale, version }: Params & { doc
                       </Link>
                     )}
                     {v === data.current && <span className="legal-versions__tag">{t("currentLabel")}</span>}
+                    {data.upcoming.includes(v) && (
+                      <span className="legal-versions__tag legal-versions__tag--upcoming">
+                        {t("upcomingLabel")}
+                      </span>
+                    )}
                     <a className="legal-versions__pdf" href={legalPdfPath(doc, v)} download={`openeos-${doc}-${v}.pdf`}>
                       {t("pdf")}
                     </a>

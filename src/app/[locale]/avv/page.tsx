@@ -2,6 +2,10 @@ import { LegalDocumentPage, legalMetadata } from "@/components/legal/LegalDocume
 
 type Props = { params: Promise<{ locale: string }> };
 
+/* Neu erzeugen, damit eine kuenftige Fassung an ihrem Datum aktuell wird
+   (ohne neuen Deploy). Wert muss hier als Zahl stehen (Next). */
+export const revalidate = 300;
+
 export async function generateMetadata({ params }: Props) {
   return legalMetadata("avv", await params);
 }

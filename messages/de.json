@@ -454,6 +454,11 @@
     "currentLabel": "aktuell",
     "pdf": "PDF",
     "archived": "Archivierte Fassung vom {date} – aktuelle Fassung: <link>{current}</link>",
+    "upcoming": "Diese Fassung gilt ab {date}. Bis dahin gilt die <link>Fassung vom {current}</link>.",
+    "upcomingOnly": "Diese Fassung gilt ab {date}.",
+    "upcomingNotice": "Ab {date} gilt eine neue Fassung. <link>Neue Fassung ansehen</link>",
+    "upcomingLabel": "künftig",
+    "upcomingTitle": "gilt ab {date}",
     "clauseAnchor": "Link zu Ziffer {number}",
     "headingAnchor": "Link zu „{text}“",
     "table": "Tabelle (seitlich scrollbar)"
