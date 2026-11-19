@@ -1,0 +1,53 @@
+# Haelt Abhaengigkeiten aktuell, ohne dass jemand daran denken muss.
+#
+# Woechentlich und gruppiert: einzelne PRs je Paket erzeugen so viel Rauschen,
+# dass am Ende keiner mehr hinsieht — und genau dann bleiben auch die
+# Sicherheitsupdates liegen. Sicherheitsrelevante Aktualisierungen laufen
+# ausserhalb dieser Gruppen und erscheinen sofort.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    # PRs gegen dev: main ist Produktion und bekommt nur, was auf Staging lief.
+    target-branch: "dev"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "05:00"
+      timezone: "Europe/Berlin"
+    open-pull-requests-limit: 5
+    groups:
+      # Patches und Minor-Updates gebuendelt — die brechen selten etwas.
+      routine:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+    # Major-Updates kommen einzeln: die will man einzeln lesen.
+    labels: ["dependencies"]
+    ignore:
+      # @types/node folgt der Node-Laufzeit (LTS-Linie im Dockerfile).
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    target-branch: "dev"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    ignore:
+      # Nur LTS-Linien von Node (gerade Majors); ungerade sind kurzlebig.
+      - dependency-name: "node"
+        versions: [">= 25, < 26", ">= 27, < 28", ">= 29, < 30", ">= 31, < 32"]
+    labels: ["dependencies", "docker"]
+
+  # Die Actions selbst altern genauso — und sie laufen mit Schreibrechten.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    target-branch: "dev"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    groups:
+      actions:
+        patterns: ["*"]
+    labels: ["dependencies", "ci"]
