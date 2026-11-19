@@ -39,7 +39,7 @@
     "geist": "1.9.0",
     "pdfkit": "^0.20.2",
     "tailwindcss": "^4.3.5",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "//pnpm.overrides": "postcss-selector-parser: @tailwindcss/typography still asks for 6.0.x; 6.1.x is API-compatible.",
   "pnpm": {
