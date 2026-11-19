@@ -73,6 +73,35 @@ Weil die Seiten zur Laufzeit neu erzeugt werden, liegen die Markdown-Dateien auc
 
 Die PDFs entstehen mit [pdfkit](https://pdfkit.org) aus dem `marked`-Lexer (Überschriften, Absätze mit Fett/Kursiv, Listen, Trennlinien, Tabellen; A4, Kopfzeile mit Titel und Stand, Seitenzahlen) — ohne Headless-Browser, damit der Build auch im `node:22-alpine`-Image läuft. Schrift ist Geist als TTF aus dem npm-Paket `geist` (devDependency, SIL OFL 1.1, siehe NOTICE); sie enthält alle benötigten Zeichen („ “ – § € → …). Die Webseiten rendern dasselbe Markdown mit `marked` (`src/lib/legal/`). Zeilen, die mit `*Anmerkung:*` beginnen, und ein Abschnitt „Anhang – Prüfhinweise“ werden auf Seite und PDF ausgelassen.
 
+## Ratgeber
+
+Artikel unter `/ratgeber/<slug>`, Übersicht `/ratgeber`, RSS `/ratgeber/rss.xml`. Je Artikel eine Datei:
+
+```
+content/ratgeber/de/<slug>.md      slug = Adresse: Kleinbuchstaben, Ziffern, Bindestriche
+```
+
+Neuer Artikel: Datei anlegen, Kopf ausfüllen, Pull Request gegen `dev` — Übersicht, Sitemap und RSS nehmen ihn beim nächsten Bauen automatisch auf (neueste zuerst, nach `date`).
+
+```markdown
+---
+title: "Titel des Artikels"
+description: "Ein, zwei Sätze für Übersicht, Suchmaschinen und RSS."
+date: "2026-11-19"
+author: "Vorname Nachname"
+tags: ["Steuern", "Kasse"]
+---
+
+Einleitung …
+
+> **Kurz gesagt**
+> - wird zum hervorgehobenen Kasten
+
+## Zwischenüberschrift   (h2 = Eintrag im Inhaltsverzeichnis)
+```
+
+Der Titel ist die h1 der Seite; im Text beginnt man mit `##`. HTML im Markdown wird nicht übernommen (erscheint als Text), Links nur auf `http(s)`, `mailto:` und eigene Pfade; externe Links öffnen in einem neuen Tab. Fehlt ein Feld im Kopf oder ist das Datum nicht `JJJJ-MM-TT`, schlagen `pnpm test` und der Build fehl. Die Artikel gibt es nur auf Deutsch: `/en/ratgeber/<slug>` zeigt denselben Text mit englischem Hinweis, kanonisch ist die deutsche Adresse. Code: `src/lib/ratgeber/`, Seiten: `src/app/[locale]/ratgeber/`.
+
 ---
 
 ## Deployment

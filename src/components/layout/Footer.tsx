@@ -32,6 +32,7 @@ export function Footer() {
             <b>{t("resources")}</b>
             <a href={docsUrl(locale)}>{t("docs")}</a>
             <Link href="/changelog">{t("changelog")}</Link>
+            <Link href="/ratgeber">{t("ratgeber")}</Link>
             <Link href="/faq">{t("faq")}</Link>
             <Link href="/feedback">{t("feedback")}</Link>
             {/* AGPL-3.0 § 13: Quellcode-Link */}

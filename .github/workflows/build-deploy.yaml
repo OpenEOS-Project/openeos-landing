@@ -6,11 +6,13 @@ on:
       - main
       - dev
     # Reine Doku-Aenderungen (*.md) bauen nicht neu — ausser den
-    # Rechtstexten: eine neue Fassung unter content/legal/ muss ausrollen.
+    # Rechtstexten und dem Ratgeber: eine neue Fassung unter content/legal/
+    # oder ein neuer Artikel unter content/ratgeber/ muss ausrollen.
     paths:
       - "**"
       - "!**.md"
       - "content/legal/**"
+      - "content/ratgeber/**"
   # Auch Pull Requests gegen dev pruefen (wie in openeos-shop). Veroeffentlicht
   # wird dabei nichts: der Push ins Registry haengt an
   # `github.event_name != 'pull_request'`, und die Deploy-Jobs verlangen ein

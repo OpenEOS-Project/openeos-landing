@@ -105,6 +105,7 @@
     "login": "Sign in",
     "register": "Sign up",
     "changelog": "What's new",
+    "ratgeber": "Guides",
     "screens": "A look inside",
     "mainNav": "Main navigation",
     "mobileNav": "Navigation",
@@ -407,6 +408,7 @@
     "docs": "Documentation",
     "github": "Source code",
     "changelog": "What's new",
+    "ratgeber": "Guides",
     "imprint": "Imprint",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -699,6 +701,13 @@
                 "1": "Until then you can use <notse>“Orders only” or “Cashless”</notse>. As soon as the cloud TSE is available, we’ll announce it under <changelog>What’s new</changelog>."
               }
             }
+          },
+          "bratwurststeuer": {
+            "q": "What does Germany’s “Bratwurststeuer” from 2027 mean for our festival?",
+            "a": [
+              "It is not a new tax: from 1 January 2027, § 2b of the German VAT Act applies to all municipalities without a transition period. It affects festivals organized by the municipality itself – including through its volunteer fire brigade – but not independent clubs or support associations.",
+              "Who is affected, when no VAT is due after all and how to prepare your checkout is explained in our <ratgeber>guide on the “Bratwurststeuer”</ratgeber> (in German)."
+            ]
           }
         },
         "note": "General information, not tax or legal advice. As of 9 November 2026. Whether and how the rules apply to your club is best clarified with your tax advisor."
@@ -921,5 +930,29 @@
       "selfhost": "Self-hosting: the <selfhost>installation guide</selfhost> shows how to set up OpenEOS on your own server. The source code is on <github>GitHub</github>."
     },
     "contact": "Questions about the Data Act? Write to <mail>hello@openeos.de</mail> (German or English)."
+  },
+  "ratgeber": {
+    "metaTitle": "Guides — OpenEOS",
+    "metaDescription": "Practical know-how about checkouts, taxes and club festivals – clearly explained.",
+    "title": "Guides",
+    "sub": "Practical know-how about checkouts, taxes and club festivals – clearly explained.",
+    "germanOnly": "Our guides are currently available in German only.",
+    "articles": "Articles",
+    "readingTime": "{minutes} min read",
+    "tags": "Topics",
+    "author": "By {author}",
+    "toc": "Contents",
+    "table": "Table (scrolls sideways)",
+    "newTab": "opens in a new tab",
+    "back": "Back to the guides",
+    "empty": "The first articles will appear here soon.",
+    "rss": "Subscribe to the guides via RSS",
+    "rssTitle": "OpenEOS Ratgeber",
+    "cta": {
+      "title": "Ready for your next festival?",
+      "text": "Orders, checkout, receipts and reports in one system – made for clubs, fire brigades and events.",
+      "try": "Try OpenEOS",
+      "docs": "Go to the documentation"
+    }
   }
 }

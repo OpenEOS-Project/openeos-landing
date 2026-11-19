@@ -40,6 +40,8 @@ k8s/
 !README.md
 # Rechtstexte werden beim Bauen gerendert (Seiten + PDFs)
 !content/legal/**/*.md
+# Ratgeber-Artikel ebenso (Seiten, RSS, Sitemap)
+!content/ratgeber/**/*.md
 
 # Tests
 __tests__

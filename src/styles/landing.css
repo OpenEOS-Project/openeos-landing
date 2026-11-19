@@ -48,7 +48,10 @@
   line-height: 1.5;
   font-feature-settings: "ss01", "cv11";
   min-height: 100vh;
-  overflow-x: hidden;
+  /* clip statt hidden: hidden macht .landing zum Scroll-Container, und
+     darin klebte nichts — weder die Navigation noch Inhaltsverzeichnisse
+     (position: sticky bezieht sich dann auf .landing, nicht das Fenster). */
+  overflow-x: clip;
 }
 
 .landing * { box-sizing: border-box; }
@@ -1567,8 +1570,14 @@
   .landing .nav__links { gap: 14px; }
   .landing .nav__group { gap: 16px; }
 }
-@media (max-width: 960px) {
+/* Schmaler passen die Links (seit dem Ratgeber sieben) nicht mehr
+   zwischen Logo und Anmelde-Knoepfe: dann das Menue. Vorher verschwanden
+   sie ab 960px ganz, das Menue kam aber erst ab 720px — dazwischen gab
+   es keine Navigation, und die Leiste fiel auf 33px zusammen. */
+@media (max-width: 1060px) {
   .landing .nav__links { display: none; }
+  .landing .nav__burger { display: flex; z-index: 201; position: relative; }
+  .landing .nav { min-height: 64px; }
 }
 
 @media (max-width: 720px) {
@@ -2702,4 +2711,254 @@
 @media (max-width: 720px) {
   .landing .faq__q { font-size: 16px; }
   .landing .faq__a { padding-right: 0; }
+}
+
+/* ===================== RATGEBER =====================
+   Uebersicht (/ratgeber) und Artikel (/ratgeber/<slug>) — Rahmen und Kopf
+   wie Neuerungen und Haeufige Fragen. Im Artikel steht der Text im
+   Lesemass; auf breiten Fenstern klebt das Inhaltsverzeichnis rechts
+   daneben, schmaler steht es ueber dem Text. */
+
+/* Nur fuer Screenreader (z. B. „oeffnet in neuem Tab“ an externen Links). */
+.landing .sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.landing .ratgeber {
+  padding: var(--sec-y) 0 calc(var(--sec-y) * 1.5);
+}
+.landing .ratgeber .section-head { padding: 0 0 28px; }
+.landing .ratgeber .section-title { font-size: clamp(34px, 5vw, 52px); }
+.landing .ratgeber__note { max-width: var(--measure); margin-bottom: 24px; }
+
+.landing .ratgeber__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr));
+  gap: 20px;
+}
+.landing .ratgeber-card {
+  position: relative;
+  height: 100%;
+  display: flex; flex-direction: column; gap: 14px;
+  padding: clamp(20px, 2.4vw, 28px);
+  border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  border-radius: var(--r-lg);
+  background: color-mix(in oklab, #fff 45%, var(--paper));
+  transition: border-color .15s ease, transform .15s ease;
+}
+.landing .ratgeber-card:hover { border-color: var(--green-ink); transform: translateY(-2px); }
+.landing .ratgeber-card:has(a:focus-visible) { outline: 2px solid var(--green-ink); outline-offset: 3px; }
+.landing .ratgeber-card__title {
+  margin: 0;
+  font-family: var(--f-display); font-weight: 800;
+  font-size: clamp(20px, 2vw, 24px); line-height: 1.2; letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+/* Die ganze Karte ist der Link (eine Tabulator-Station je Artikel). */
+.landing .ratgeber-card__title a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.landing .ratgeber-card__title a:focus-visible { outline: none; }
+.landing .ratgeber-card__desc { margin: 0; flex: 1; color: var(--mute); line-height: 1.55; }
+
+.landing .ratgeber-meta {
+  display: flex; flex-wrap: wrap; gap: 4px 8px;
+  margin: 0;
+  font-size: 14px; color: var(--mute);
+}
+.landing .ratgeber-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.landing .ratgeber-tags li {
+  font-family: var(--f-mono); font-size: 12px;
+  padding: 2px 9px; border-radius: 999px;
+  background: color-mix(in oklab, var(--green) 24%, transparent);
+  color: var(--green-ink);
+}
+
+.landing .ratgeber__empty { color: var(--mute); }
+.landing .ratgeber__rss { margin: 40px 0 0; font-size: 14px; }
+.landing .ratgeber__rss a,
+.landing .ratgeber-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--green-ink); font-weight: 600; font-size: 14px;
+}
+.landing .ratgeber__rss a:hover,
+.landing .ratgeber-back:hover { text-decoration: underline; text-underline-offset: 3px; }
+.landing .ratgeber__rss svg,
+.landing .ratgeber-back svg { width: 16px; height: 16px; flex: none; }
+.landing .ratgeber-back--top { margin-bottom: 28px; }
+
+/* ---------- Artikel ---------- */
+.landing .ratgeber-article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: var(--measure);
+}
+.landing .ratgeber-article__head {
+  padding-bottom: 24px; margin-bottom: 28px;
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+}
+.landing .ratgeber-article__head .ratgeber-tags { margin-bottom: 18px; }
+.landing .ratgeber-article__title {
+  font-size: clamp(30px, 4.4vw, 50px);
+  line-height: 1.04;
+}
+.landing .ratgeber-article__lead {
+  margin: 18px 0 0;
+  font-size: clamp(17px, 1.6vw, 19px); line-height: 1.5;
+  color: var(--mute);
+}
+.landing .ratgeber-article__head .ratgeber-meta { margin-top: 18px; }
+
+.landing .ratgeber-toc {
+  margin: 0 0 32px;
+  padding: 14px 18px;
+  border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  border-radius: var(--r);
+  font-size: 14px;
+}
+.landing .ratgeber-toc__title {
+  margin: 0 0 8px;
+  font-family: var(--f-mono); font-size: 12px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--mute);
+}
+.landing .ratgeber-toc ol { margin: 0; padding-left: 1.4em; list-style: decimal; }
+.landing .ratgeber-toc li { padding: 3px 0; }
+.landing .ratgeber-toc li::marker { color: var(--mute); }
+.landing .ratgeber-toc a { line-height: 1.4; }
+.landing .ratgeber-toc a:hover { color: var(--green-ink); text-decoration: underline; text-underline-offset: 2px; }
+
+@media (min-width: 1100px) {
+  .landing .ratgeber-article {
+    max-width: none;
+    grid-template-columns: minmax(0, var(--measure)) minmax(220px, 280px);
+    column-gap: clamp(48px, 5vw, 88px);
+  }
+  .landing .ratgeber-article__head { grid-column: 1; grid-row: 1; }
+  .landing .ratgeber-article__body { grid-column: 1; grid-row: 2; }
+  .landing .ratgeber-toc {
+    grid-column: 2; grid-row: 1 / span 2;
+    align-self: start;
+    position: sticky; top: 96px;
+    max-height: calc(100vh - 120px); overflow-y: auto;
+    margin: 0;
+    padding: 2px 0 2px 18px;
+    border: 0; border-left: 2px solid color-mix(in oklab, var(--green-ink) 30%, transparent);
+    border-radius: 0;
+  }
+}
+
+/* Der Text selbst (aus Markdown, lib/ratgeber/render.mjs). */
+.landing .ratgeber-doc {
+  font-size: 17px; line-height: 1.7;
+  overflow-wrap: break-word;
+}
+.landing .ratgeber-doc [id] { scroll-margin-top: 96px; }
+.landing .ratgeber-doc h2,
+.landing .ratgeber-doc h3,
+.landing .ratgeber-doc h4 {
+  font-family: var(--f-display);
+  letter-spacing: -0.02em; line-height: 1.2;
+  text-wrap: balance;
+}
+.landing .ratgeber-doc h2 { font-size: clamp(22px, 2.4vw, 28px); font-weight: 800; margin: 48px 0 14px; }
+.landing .ratgeber-doc h3 { font-size: 19px; font-weight: 700; margin: 32px 0 10px; }
+.landing .ratgeber-doc h4 { font-size: 17px; font-weight: 700; margin: 24px 0 8px; }
+.landing .ratgeber-doc p { margin: 0 0 16px; }
+.landing .ratgeber-doc strong { font-weight: 650; }
+.landing .ratgeber-doc a {
+  color: var(--green-ink);
+  text-decoration: underline; text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklab, var(--green-ink) 45%, transparent);
+}
+.landing .ratgeber-doc a:hover { text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+.landing .ratgeber-doc ul,
+.landing .ratgeber-doc ol { margin: 0 0 18px; padding-left: 1.4em; }
+.landing .ratgeber-doc ul { list-style: disc; }
+.landing .ratgeber-doc ol { list-style: decimal; }
+.landing .ratgeber-doc li { margin: 6px 0; padding-left: 2px; }
+.landing .ratgeber-doc li::marker { color: var(--green-ink); }
+.landing .ratgeber-doc ol > li::marker { font-weight: 700; }
+.landing .ratgeber-doc img { height: auto; border-radius: var(--r); margin: 8px 0 20px; }
+.landing .ratgeber-doc hr {
+  border: 0; border-top: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  margin: 36px 0;
+}
+.landing .ratgeber-doc blockquote {
+  margin: 0 0 18px; padding: 2px 0 2px 18px;
+  border-left: 3px solid color-mix(in oklab, var(--ink) 20%, transparent);
+  color: var(--mute);
+}
+.landing .ratgeber-doc code {
+  font-family: var(--f-mono); font-size: .9em;
+  padding: 1px 5px; border-radius: 4px;
+  background: color-mix(in oklab, var(--ink) 6%, transparent);
+}
+
+/* „Kurz gesagt“: Zitat mit fetter erster Zeile. */
+.landing .ratgeber-callout {
+  margin: 28px 0 8px;
+  padding: 20px 24px 18px;
+  border: 1px solid color-mix(in oklab, var(--green-ink) 28%, transparent);
+  border-radius: var(--r-lg);
+  background: color-mix(in oklab, var(--green) 14%, var(--paper));
+  font-size: 16px; line-height: 1.6;
+}
+.landing .ratgeber-doc .ratgeber-callout__title {
+  margin: 0 0 10px;
+  font-family: var(--f-mono); font-size: 12px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--green-ink);
+}
+.landing .ratgeber-callout > :last-child { margin-bottom: 0; }
+
+/* Tabellen: auf schmalen Bildschirmen seitlich scrollbar. */
+.landing .ratgeber-table {
+  margin: 4px 0 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  border-radius: var(--r);
+}
+.landing .ratgeber-table:focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
+.landing .ratgeber-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px; line-height: 1.5;
+}
+.landing .ratgeber-table th,
+.landing .ratgeber-table td {
+  padding: 10px 14px;
+  text-align: left; vertical-align: top;
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
+}
+.landing .ratgeber-table th {
+  font-weight: 650;
+  background: color-mix(in oklab, var(--ink) 5%, transparent);
+}
+.landing .ratgeber-table tr:last-child td { border-bottom: 0; }
+.landing .ratgeber-table td + td,
+.landing .ratgeber-table th + th { border-left: 1px solid color-mix(in oklab, var(--ink) 8%, transparent); }
+
+/* Abschluss: zur App und zur Doku. */
+.landing .ratgeber-cta {
+  margin: 48px 0 32px;
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: var(--r-lg);
+  background: var(--ink);
+  color: var(--paper);
+}
+.landing .ratgeber-cta h2 {
+  margin: 0 0 10px;
+  font-family: var(--f-display); font-weight: 800;
+  font-size: clamp(26px, 3.4vw, 36px); line-height: 1.05; letter-spacing: -0.03em;
+}
+.landing .ratgeber-cta p { margin: 0 0 24px; color: var(--mute-2); max-width: 560px; }
+.landing .ratgeber-cta__row { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 540px) {
+  .landing .ratgeber-cta__row .btn { width: 100%; }
 }

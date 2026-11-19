@@ -105,6 +105,7 @@
     "login": "Anmelden",
     "register": "Registrieren",
     "changelog": "Neuerungen",
+    "ratgeber": "Ratgeber",
     "screens": "Einblicke",
     "mainNav": "Hauptnavigation",
     "mobileNav": "Navigation",
@@ -407,6 +408,7 @@
     "docs": "Dokumentation",
     "github": "Quellcode",
     "changelog": "Neuerungen",
+    "ratgeber": "Ratgeber",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "terms": "AGB",
@@ -698,6 +700,13 @@
                 "1": "Bis dahin kannst du <notse>„Nur Bons“ oder „Bargeldlos“</notse> nutzen. Sobald die Cloud-TSE verfügbar ist, kündigen wir das in den <changelog>Neuerungen</changelog> an."
               }
             }
+          },
+          "bratwurststeuer": {
+            "q": "Was bedeutet die „Bratwurststeuer“ ab 2027 für unser Fest?",
+            "a": [
+              "Eine neue Steuer ist das nicht: Ab 1. Januar 2027 gilt § 2b UStG ohne Übergangsfrist für alle Gemeinden. Betroffen sind Feste, die die Gemeinde selbst veranstaltet – auch über ihre Freiwillige Feuerwehr –, eigenständige Vereine und Fördervereine dagegen nicht.",
+              "Wer betroffen ist, wann trotzdem keine Umsatzsteuer anfällt und wie du deine Kasse vorbereitest, erklären wir im <ratgeber>Ratgeber zur „Bratwurststeuer“</ratgeber>."
+            ]
           }
         },
         "note": "Allgemeine Information, keine Steuer- oder Rechtsberatung. Stand: 9. November 2026. Ob und wie die Regeln für deinen Verein gelten, klärst du am besten mit deiner Steuerberatung."
@@ -920,5 +929,29 @@
       "selfhost": "Selbst betreiben: Die <selfhost>Anleitung zur eigenen Installation</selfhost> zeigt, wie du OpenEOS auf deinem eigenen Server einrichtest. Den Quellcode findest du auf <github>GitHub</github>."
     },
     "contact": "Fragen zum Data Act? Schreib uns an <mail>hello@openeos.de</mail> (Deutsch oder Englisch)."
+  },
+  "ratgeber": {
+    "metaTitle": "Ratgeber — OpenEOS",
+    "metaDescription": "Praxiswissen rund um Kasse, Steuern und Vereinsfeste – verständlich erklärt.",
+    "title": "Ratgeber",
+    "sub": "Praxiswissen rund um Kasse, Steuern und Vereinsfeste – verständlich erklärt.",
+    "germanOnly": "",
+    "articles": "Beiträge",
+    "readingTime": "{minutes} Min. Lesezeit",
+    "tags": "Themen",
+    "author": "Von {author}",
+    "toc": "Inhalt",
+    "table": "Tabelle (seitlich scrollbar)",
+    "newTab": "öffnet in neuem Tab",
+    "back": "Zurück zum Ratgeber",
+    "empty": "Hier erscheinen bald die ersten Beiträge.",
+    "rss": "Ratgeber als RSS-Feed abonnieren",
+    "rssTitle": "OpenEOS Ratgeber",
+    "cta": {
+      "title": "Bereit für dein nächstes Fest?",
+      "text": "Bestellungen, Kasse, Belege und Auswertung in einem System – gemacht für Vereine, Feuerwehren und Veranstaltungen.",
+      "try": "OpenEOS ausprobieren",
+      "docs": "Zur Dokumentation"
+    }
   }
 }

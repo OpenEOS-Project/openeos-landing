@@ -23,9 +23,10 @@ const nextConfig: NextConfig = {
   output: "standalone",
   /* Die Rechtstexte werden zur Laufzeit gelesen (Neuerzeugung der Seiten,
      /rechtstexte/<doc>.pdf): Welche Fassung aktuell ist, haengt vom Datum
-     ab. Deshalb gehoeren die Markdown-Dateien ins Standalone-Paket. */
+     ab. Deshalb gehoeren die Markdown-Dateien ins Standalone-Paket —
+     ebenso die Ratgeber-Artikel, die die Sitemap beim Neuerzeugen liest. */
   outputFileTracingIncludes: {
-    "/**": ["./content/legal/**/*"],
+    "/**": ["./content/legal/**/*", "./content/ratgeber/**/*"],
   },
   // @openeos/ui liefert das Font-Modul als TypeScript-Quelle aus; die
   // next/font/local-Aufrufe darin muessen von Next selbst kompiliert werden.
