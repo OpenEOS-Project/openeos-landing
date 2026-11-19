@@ -18,7 +18,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.43.0",
     "lucide-react": "^0.562.0",
-    "marked": "^18.2.0",
+    "marked": "^18.2.1",
     "next": "16.4.6",
     "next-intl": "^4.15.1",
     "next-themes": "^0.4.6",
@@ -30,15 +30,21 @@
     "tailwindcss-react-aria-components": "^2.2.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.1",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.6",
     "geist": "1.9.0",
     "pdfkit": "^0.20.2",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.9.3"
+  },
+  "//pnpm.overrides": "postcss-selector-parser: @tailwindcss/typography still asks for 6.0.x; 6.1.x is API-compatible.",
+  "pnpm": {
+    "overrides": {
+      "postcss-selector-parser@<6.1.5": "^6.1.5"
+    }
   }
 }
