@@ -2312,6 +2312,11 @@
   border-color: color-mix(in oklab, var(--ink) 14%, transparent);
   background: color-mix(in oklab, var(--ink) 4%, var(--paper));
 }
+/* Kuenftige Fassung: noch nicht gueltig (blau statt Archiv-Gelb). */
+.landing .legal-banner--upcoming {
+  border-color: color-mix(in oklab, #2563eb 40%, transparent);
+  background: color-mix(in oklab, #3b82f6 14%, var(--paper));
+}
 
 .landing .legal-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 20px; }
 
@@ -2456,6 +2461,10 @@
   padding: 1px 6px; border-radius: 999px;
   background: color-mix(in oklab, var(--green) 30%, transparent);
   color: var(--green-ink);
+}
+.landing .legal-versions__tag--upcoming {
+  background: color-mix(in oklab, #3b82f6 22%, transparent);
+  color: var(--ink);
 }
 
 /* Druck: nur der Text, schwarz auf weiss. */

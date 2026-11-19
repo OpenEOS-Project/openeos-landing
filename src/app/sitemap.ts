@@ -17,13 +17,16 @@ const PAGES: { path: string; priority: number; changeFrequency: MetadataRoute.Si
   { path: "/data-act", priority: 0.3, changeFrequency: "yearly" },
 ];
 
-/* Anlage 1 nur, wenn es eine Fassung gibt (lib/legal). */
-const OPTIONAL_PAGES: typeof PAGES = hasLegalDoc("leistungsbeschreibung")
-  ? [{ path: "/leistungsbeschreibung", priority: 0.2, changeFrequency: "yearly" }]
-  : [];
+/* Neu erzeugen wie die Rechtstexte (Anlage 1 erscheint mit ihrer ersten
+   geltenden Fassung). */
+export const revalidate = 3600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [...PAGES, ...OPTIONAL_PAGES].flatMap(({ path, priority, changeFrequency }) =>
+  /* Anlage 1 nur, wenn es eine geltende Fassung gibt (lib/legal). */
+  const optionalPages: typeof PAGES = hasLegalDoc("leistungsbeschreibung")
+    ? [{ path: "/leistungsbeschreibung", priority: 0.2, changeFrequency: "yearly" }]
+    : [];
+  return [...PAGES, ...optionalPages].flatMap(({ path, priority, changeFrequency }) =>
     locales.map((locale) => ({
       url: `${SITE_URL}${localePath(locale, path)}`,
       changeFrequency,

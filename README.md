@@ -49,24 +49,29 @@ Impressum, Datenschutzerklärung, AGB und AVV liegen als Markdown im Repo, unver
 content/legal/de/<doc>/<JJJJ-MM-TT>.md     doc = impressum | datenschutz | agb | avv
 ```
 
-Der Dateiname ist der „Stand“ der Fassung. **Alte Fassungen werden nie gelöscht** (Archiv); die neueste Datei je Dokument ist die aktuelle. Eine neue Fassung = neue Datei mit neuem Datum, der Wortlaut wird nicht im Code angepasst.
+Der Dateiname ist der „Stand“ der Fassung, also das Datum, ab dem sie gilt. **Alte Fassungen werden nie gelöscht** (Archiv). Eine neue Fassung = neue Datei mit neuem Datum, der Wortlaut wird nicht im Code angepasst.
+
+**Aktuell** ist je Dokument die neueste Fassung, deren Datum erreicht ist (Kalendertag in Europe/Berlin, wie in der API). Eine Fassung mit Datum in der Zukunft ist **künftig**: Sie wird vorab veröffentlicht, damit eine Änderung angekündigt werden kann (die API prüft beim Ankündigen, dass `/<doc>/<fassung>` erreichbar ist), ist unter `/<doc>/<fassung>` mit dem Hinweis „Diese Fassung gilt ab …“ erreichbar und in der Fassungsliste als „künftig“ markiert; `/<doc>` zeigt bis dahin die geltende Fassung mit einem Hinweis auf die neue. Am Stichtag wechselt die Website ohne neuen Deploy: Die Seiten werden alle 5 Minuten neu erzeugt (ISR, `revalidate` in den Routen), `/rechtstexte/<doc>.pdf` wird bei jedem Aufruf aufgelöst. Ein Dokument, das nur künftige Fassungen hat (z. B. eine neue Anlage), erscheint erst ab seinem Datum in Fußzeile und Sitemap. Tests: `pnpm test` (`src/lib/legal/core.test.mjs`).
 
 **Adressen** (andere OpenEOS-Repos verlinken darauf — nicht ändern):
 
 | Adresse | Inhalt |
 |---|---|
 | `/agb`, `/avv`, `/datenschutz`, `/impressum` | aktuelle Fassung (`/en/…`: derselbe deutsche Text mit englischem Hinweis) |
-| `/agb/2026-11-04` usw. | bestimmte Fassung; ältere mit Hinweis „Archivierte Fassung“, unbekannte → 404 |
-| `/rechtstexte/<doc>-<JJJJ-MM-TT>.pdf`, `/rechtstexte/<doc>.pdf` | PDF einer Fassung bzw. der aktuellen |
+| `/agb/2026-11-04` usw. | bestimmte Fassung; ältere mit Hinweis „Archivierte Fassung“, künftige mit „Diese Fassung gilt ab …“, unbekannte → 404 |
+| `/rechtstexte/<doc>-<JJJJ-MM-TT>.pdf` | PDF einer Fassung (beim Bauen erzeugt) |
+| `/rechtstexte/<doc>.pdf` | Weiterleitung (307) auf das PDF der aktuellen Fassung, zur Laufzeit (`src/app/rechtstexte/[file]/route.ts`) |
 | `#1-geltungsbereich-und-anbieter`, `#anhang-b`, `#ziffer-4-6` | Sprungmarken: Überschrift (Slug, Umlaute als ae/oe/ue/ss), kurze Marken `anhang-a…c`, `teil-a…c`, `ziffer-<n>` für „n. …“-Überschriften, `ziffer-<x>-<y>` für Absätze mit fetter Nummer (`**4.6**`) |
 | `/terms`, `/privacy`, `/imprint` (auch `/en/…` und `/…/<fassung>`) | dauerhafte Weiterleitung auf die deutschen Adressen |
 
 **Bauen:** `scripts/build-legal.mjs` läuft vor `next build` und `next dev` (`pnpm legal` einzeln) und
 
 1. prüft die Texte auf Platzhalter (`[…]` oder `[Text]` ohne Link). Mit `NEXT_PUBLIC_SITE_ENV=production` oder `LEGAL_STRICT=1` bricht der Build mit Datei:Zeile ab, sonst (Staging, CI, lokal) gibt es nur eine Warnung;
-2. erzeugt die PDFs nach `public/rechtstexte/` (nicht im Repo, `.gitignore`).
+2. erzeugt die PDFs je Fassung (auch künftige) nach `public/rechtstexte/` (nicht im Repo, `.gitignore`).
 
-Die PDFs entstehen mit [pdfkit](https://pdfkit.org) aus dem `marked`-Lexer (Überschriften, Absätze mit Fett/Kursiv, Listen, Trennlinien, Tabellen; A4, Kopfzeile mit Titel und Stand, Seitenzahlen) — ohne Headless-Browser, damit der Build auch im `node:22-alpine`-Image läuft. Schrift ist Geist als TTF aus dem npm-Paket `geist` (devDependency, SIL OFL 1.1, siehe NOTICE); sie enthält alle benötigten Zeichen („ “ – § € → …). Die Webseiten rendern dasselbe Markdown beim Bauen mit `marked` (`src/lib/legal/`). Zeilen, die mit `*Anmerkung:*` beginnen, und ein Abschnitt „Anhang – Prüfhinweise“ werden auf Seite und PDF ausgelassen.
+Weil die Seiten zur Laufzeit neu erzeugt werden, liegen die Markdown-Dateien auch im Standalone-Paket (`outputFileTracingIncludes` in `next.config.ts`).
+
+Die PDFs entstehen mit [pdfkit](https://pdfkit.org) aus dem `marked`-Lexer (Überschriften, Absätze mit Fett/Kursiv, Listen, Trennlinien, Tabellen; A4, Kopfzeile mit Titel und Stand, Seitenzahlen) — ohne Headless-Browser, damit der Build auch im `node:22-alpine`-Image läuft. Schrift ist Geist als TTF aus dem npm-Paket `geist` (devDependency, SIL OFL 1.1, siehe NOTICE); sie enthält alle benötigten Zeichen („ “ – § € → …). Die Webseiten rendern dasselbe Markdown mit `marked` (`src/lib/legal/`). Zeilen, die mit `*Anmerkung:*` beginnen, und ein Abschnitt „Anhang – Prüfhinweise“ werden auf Seite und PDF ausgelassen.
 
 ---
 

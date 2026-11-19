@@ -56,6 +56,9 @@ jobs:
       - name: Run linter
         run: pnpm lint
 
+      - name: Run tests
+        run: pnpm test
+
       - name: Build (type check)
         run: pnpm build
 

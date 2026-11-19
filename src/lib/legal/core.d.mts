@@ -3,11 +3,20 @@ export type LegalDoc = "impressum" | "datenschutz" | "agb" | "avv" | "leistungsb
 export const LEGAL_DOCS: LegalDoc[];
 export const OPTIONAL_LEGAL_DOCS: LegalDoc[];
 export const LEGAL_CONTENT_DIR: string;
-export function hasLegalDoc(doc: LegalDoc): boolean;
-export function availableLegalDocs(): LegalDoc[];
+export const LEGAL_TIME_ZONE: string;
+export type LegalVersionStatus = "current" | "upcoming" | "archived";
+export function hasLegalDoc(doc: LegalDoc, now?: Date): boolean;
+export function availableLegalDocs(now?: Date): LegalDoc[];
 export function isLegalDoc(doc: string): doc is LegalDoc;
 export function listVersions(doc: LegalDoc): string[];
-export function currentVersion(doc: LegalDoc): string;
+export function legalToday(now?: Date): string;
+export function splitVersions(
+  versions: string[],
+  today: string,
+): { current: string | null; upcoming: string[]; archived: string[] };
+export function currentVersion(doc: LegalDoc, now?: Date): string | null;
+export function upcomingVersions(doc: LegalDoc, now?: Date): string[];
+export function versionStatus(version: string, current: string | null, today: string): LegalVersionStatus;
 export function sourcePath(doc: LegalDoc, version: string): string;
 export function readRaw(doc: LegalDoc, version: string): string;
 export function cleanSource(raw: string): string;

@@ -3,10 +3,13 @@
  * PDF-Bau (scripts/build-legal.mjs).
  *
  * Die Texte liegen unveraendert unter content/legal/de/<doc>/<fassung>.md,
- * die Fassung ist das Datum des „Stand“ als JJJJ-MM-TT. Alte Fassungen
- * bleiben als Datei liegen (Archiv); die neueste je Dokument ist die
- * aktuelle. Am Wortlaut wird hier nichts geaendert — entfernt werden nur
- * interne Anmerkungen, falls eine Fassung welche enthaelt.
+ * die Fassung ist das Datum, ab dem sie gilt, als JJJJ-MM-TT. Alte
+ * Fassungen bleiben als Datei liegen (Archiv). Aktuell ist die neueste
+ * Fassung, deren Datum erreicht ist (Kalendertag in Europe/Berlin);
+ * Fassungen mit einem Datum in der Zukunft sind „kuenftig“: Sie werden
+ * vorab veroeffentlicht (Ankuendigung von Aenderungen), gelten aber erst
+ * ab ihrem Datum. Am Wortlaut wird hier nichts geaendert — entfernt werden
+ * nur interne Anmerkungen, falls eine Fassung welche enthaelt.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -43,20 +46,69 @@ export function listVersions(doc) {
     .reverse();
 }
 
-/** Gibt es mindestens eine Fassung? (Pflichtdokumente: immer.) */
-export function hasLegalDoc(doc) {
-  return listVersions(doc).length > 0;
+/**
+ * Gibt es eine geltende Fassung? (Pflichtdokumente: immer.) Ein Dokument,
+ * das nur eine kuenftige Fassung hat, ist noch nicht verlinkt; die
+ * Fassung ist aber unter /<doc>/<fassung> erreichbar.
+ */
+export function hasLegalDoc(doc, now = new Date()) {
+  return currentVersion(doc, now) !== null;
 }
 
-/** Dokumente mit mindestens einer Fassung, in der Reihenfolge von LEGAL_DOCS. */
-export function availableLegalDocs() {
-  return LEGAL_DOCS.filter(hasLegalDoc);
+/** Dokumente mit geltender Fassung, in der Reihenfolge von LEGAL_DOCS. */
+export function availableLegalDocs(now = new Date()) {
+  return LEGAL_DOCS.filter((doc) => hasLegalDoc(doc, now));
 }
 
-export function currentVersion(doc) {
-  const [latest] = listVersions(doc);
-  if (!latest) throw new Error(`Keine Fassung fuer Rechtstext "${doc}" in ${LEGAL_CONTENT_DIR}`);
-  return latest;
+/** Zeitzone, in der eine Fassung „ab dem Datum“ gilt (wie in der API). */
+export const LEGAL_TIME_ZONE = "Europe/Berlin";
+
+/** Heutiger Kalendertag in Europe/Berlin als JJJJ-MM-TT. */
+export function legalToday(now = new Date()) {
+  /* en-CA formatiert als JJJJ-MM-TT. */
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: LEGAL_TIME_ZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(now);
+}
+
+/**
+ * Teilt Fassungen (beliebige Reihenfolge) nach dem Stichtag `today`:
+ * aktuell ist die neueste mit Datum <= today (oder null, wenn alle in der
+ * Zukunft liegen), kuenftig alle danach (aelteste zuerst), archiviert alle
+ * davor (neueste zuerst).
+ */
+export function splitVersions(versions, today) {
+  const sorted = [...versions].sort();
+  const past = sorted.filter((v) => v <= today);
+  const current = past.length ? past[past.length - 1] : null;
+  return {
+    current,
+    upcoming: sorted.filter((v) => v > today),
+    archived: past.slice(0, -1).reverse(),
+  };
+}
+
+/**
+ * Aktuelle Fassung eines Dokuments: die neueste, deren Datum erreicht ist.
+ * null, wenn es (noch) keine gibt — nur kuenftige oder gar keine Fassung.
+ */
+export function currentVersion(doc, now = new Date()) {
+  return splitVersions(listVersions(doc), legalToday(now)).current;
+}
+
+/** Kuenftige Fassungen eines Dokuments, die naechste zuerst. */
+export function upcomingVersions(doc, now = new Date()) {
+  return splitVersions(listVersions(doc), legalToday(now)).upcoming;
+}
+
+/** „current“ | „upcoming“ | „archived“ — Stand einer Fassung am Tag `now`. */
+export function versionStatus(version, current, today) {
+  if (version === current) return "current";
+  if (version > today) return "upcoming";
+  return "archived";
 }
 
 export function sourcePath(doc, version) {

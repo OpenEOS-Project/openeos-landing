@@ -7,7 +7,9 @@
  *    Liste ausgeben und mit Fehler abbrechen. Sonst (Staging, CI, lokal):
  *    nur warnen.
  * 2. PDFs erzeugen: public/rechtstexte/<doc>-<fassung>.pdf fuer jede
- *    Fassung und public/rechtstexte/<doc>.pdf fuer die aktuelle.
+ *    Fassung (auch kuenftige). /rechtstexte/<doc>.pdf gibt es nicht als
+ *    Datei: welche Fassung aktuell ist, haengt vom Datum ab, daher leitet
+ *    src/app/rechtstexte/[file]/route.ts zur Laufzeit weiter.
  *    pdfkit statt Headless-Browser, damit der Bau auch im Alpine-Image
  *    laeuft. Schrift: Geist (SIL OFL 1.1) aus dem npm-Paket „geist“.
  *
@@ -23,6 +25,7 @@ import {
   OPTIONAL_LEGAL_DOCS,
   currentVersion,
   extractStand,
+  upcomingVersions,
   extractTitle,
   findPlaceholders,
   listVersions,
@@ -388,18 +391,28 @@ async function buildPdfs() {
   for (const doc of LEGAL_DOCS) {
     const versions = listVersions(doc);
     /* Optionales Dokument ohne Fassung (Anlage 1): kein PDF. Pflicht-
-       dokumente ohne Fassung brechen weiter in currentVersion() ab. */
+       dokumente ohne Fassung brechen ab. */
     if (!versions.length && OPTIONAL_LEGAL_DOCS.includes(doc)) {
       console.log(`[legal] ${doc}: noch keine Fassung – übersprungen.`);
       continue;
+    }
+    if (!versions.length) {
+      console.error(`[legal] Keine Fassung fuer Rechtstext "${doc}" in content/legal/de/${doc}/`);
+      process.exit(1);
     }
     for (const version of versions) {
       const { file, pages } = await buildPdf(doc, version);
       console.log(`[legal] ${path.relative(ROOT, file)} (${pages} S.)`);
     }
     const current = currentVersion(doc);
-    fs.copyFileSync(path.join(OUT_DIR, `${doc}-${current}.pdf`), path.join(OUT_DIR, `${doc}.pdf`));
-    console.log(`[legal] public/rechtstexte/${doc}.pdf = ${current}`);
+    const upcoming = upcomingVersions(doc);
+    if (!current && !OPTIONAL_LEGAL_DOCS.includes(doc)) {
+      console.warn(`[legal] WARNUNG: ${doc} hat nur kuenftige Fassungen — /${doc} ist bis zum Datum eine 404.`);
+    }
+    console.log(
+      `[legal] ${doc}: aktuell ${current ?? "– (noch keine geltende Fassung)"}` +
+        (upcoming.length ? `, kuenftig ${upcoming.join(", ")}` : ""),
+    );
   }
 }
 

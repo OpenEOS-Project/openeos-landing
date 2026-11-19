@@ -2,6 +2,10 @@ import { LegalDocumentPage, legalMetadata, legalVersionParams } from "@/componen
 
 type Props = { params: Promise<{ locale: string; version: string }> };
 
+/* Neu erzeugen, damit eine kuenftige Fassung an ihrem Datum aktuell wird
+   (ohne neuen Deploy). Wert muss hier als Zahl stehen (Next). */
+export const revalidate = 300;
+
 /* Nur vorhandene Fassungen; jede andere Adresse ist eine 404. */
 export const dynamicParams = false;
 
