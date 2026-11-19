@@ -120,6 +120,7 @@ export default async function FaqPage({
       </ContactTrigger>
     ),
     changelog: (chunks: ReactNode) => <Link href="/changelog">{chunks}</Link>,
+    ratgeber: (chunks: ReactNode) => <Link href="/ratgeber/bratwurststeuer-2027">{chunks}</Link>,
     screens: (chunks: ReactNode) => <Link href="/screens">{chunks}</Link>,
     pricing: (chunks: ReactNode) => <Link href="/#pricing">{chunks}</Link>,
     privacy: (chunks: ReactNode) => <Link href="/datenschutz">{chunks}</Link>,
